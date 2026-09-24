@@ -35,6 +35,9 @@
 
  Changelog
  ---------
+ v1.0.1 2026-09-24 Histogram/trace colours now match the corner plot
+                   (uniform = blue, observable = orange; previously swapped).
+                   Trace-plot legend moved outside the axis.
  v1.0  2026-09-24  Initial version on the OctofitterRelAstrom v1.0
                    scaffolding ([OOP +t] debug stages, soft optional stages,
                    env bootstrap, v9 guard, @__DIR__ outputs, dark theme with
@@ -126,7 +129,7 @@ import Statistics
 export run_obsprior, build_star, build_planet, astrometry_table, build_obs,
        build_tutorial_system, derived_a, set_plot_theme!
 
-const VERSION_STRING = "1.0"
+const VERSION_STRING = "1.0.1"
 
 const OCTOFITTER_VERSION = pkgversion(Octofitter)
 if OCTOFITTER_VERSION !== nothing && OCTOFITTER_VERSION < v"9"
@@ -352,8 +355,10 @@ corner(model, chains...; dark::Bool=false, small::Bool=true) =
     dark ? octocorner(model, chains...; small=small) :
            with_theme(() -> octocorner(model, chains...; small=small), Theme())
 
-const C_UNIF = "#E69F00"   # orange
-const C_OBSP = "#56B4E9"   # sky blue
+# Match PairPlots' series order in the corner plot (1st = blue, 2nd = orange),
+# since the comparison corner is drawn as (uniform, observable).
+const C_UNIF = "#0072B2"   # blue
+const C_OBSP = "#E69F00"   # orange
 
 "Histograms of log10 P, derived a and e for both fits."
 function comparison_figure(chain_u, chain_op)
@@ -386,7 +391,7 @@ function trace_figure(chain_u, chain_op)
     ax = Axis(fig[1, 1], xlabel="iteration", ylabel="log₁₀ P [days]", title="Trace: b_P")
     lines!(ax, log10.(colvec(chain_u, :b_P)), color=C_UNIF, linewidth=0.6, label="uniform priors")
     lines!(ax, log10.(colvec(chain_op, :b_P)), color=C_OBSP, linewidth=0.6, label="observable priors")
-    axislegend(ax, position=:rt)
+    Legend(fig[1, 2], ax, framevisible=false)   # outside the axis: traces fill it
     return fig
 end
 
