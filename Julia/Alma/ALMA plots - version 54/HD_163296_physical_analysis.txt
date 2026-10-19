@@ -1,0 +1,199 @@
+========================================================================================
+PHYSICAL ANALYSIS: HD 163296
+========================================================================================
+Generated 2026-10-19 11:59 by alma_target_explorer_julia (v7)
+Image: member.uid___A001_X8c5_X96.calibrated_final_cont.pbcor.fits
+Distance 101.0 pc; inclination 46.7 deg, PA 133.3 deg; beam 0.0454 x 0.0347 arcsec = 4.6 x 3.5 au (radial beam sigma 1.7 au)
+Observing frequency 239.0 GHz (1.25 mm)
+Stellar parameters (Andrews+18 (approx.); verify): L* = 17.00 Lsun, M* = 2.00 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 5 Gaussian ring(s); chi2_red = 3.13 (dof 114). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 0.23 mJy/beam, characteristic radius 85 au, power-law index -0.46
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r   FWHM/H     share  seed      
+   1  1.8 +/- 0.6     2.21 +/- 0.68       3.2  9.8 +/- 3.0          5.38   204.82       81%  residual  
+   2  15.3 +/- 1.7    1.71 +/- 0.094     18.1  19.1 +/- 8.8         1.25    27.98       93%  literature [parameter at its bound]
+   3  31.4 +/- 1.5    0.773 +/- 0.37      2.1  11.9 +/- 1.8         0.38     7.09       66%  detected   [amplitude < 3 sigma]
+   4  67.6 +/- 0.2    0.354 +/- 0.012    30.1  15.6 +/- 0.7         0.23     3.56       75%  detected  
+   5  100.8 +/- 0.2   0.187 +/- 0.0079   23.6  12.6 +/- 0.7         0.12     1.74       77%  detected  
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 1.7 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+  FWHM/H: width over the gas pressure scale height H = (c_s/v_K) r from the passive-disk T_d. A ring narrower than H cannot be a gas density bump alone: it needs dust trapping in a pressure maximum (a gap-opening planet or similar).
+
+  PUBLISHED RING WIDTHS (Huang+18, DSHARP Table 1; rescaled to the adopted distance) against the observed Gaussian FWHM (beam NOT removed):
+    r [au] |  pub r pub width       | observed FWHM
+      15.3 |   14.0 3.6 (<beam)     | 19.6
+      67.6 |   67.0 15.8            | 16.1
+     100.8 |   99.7 12.0            | 13.2
+  Published ring width = outer minus inner edge, essentially the FWHM for an isolated Gaussian ring; (<beam) = narrower than the beam.
+
+  Radius ratios of neighbouring rings (3 sigma and above): 2->15 au: 8.38;  15->68 au: 4.42;  68->101 au: 1.49
+  1 component(s) have amplitude below 3 sigma: treat them as unconfirmed (blended components have inflated errors: one is kept only if removing it makes the fit much worse).
+  NOTE: chi2_red is 3.1: the Gaussians do not capture all the structure (unseeded rings, asymmetric ring profiles or an unresolved core). Radii are reliable to about a bin; widths and amplitudes less so. Try extra_seeds_au = [...].
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  2 narrow, isolated ring(s) with amplitude S/N >= 10, 72 ridge points (azimuth wedges ~1 beam wide), chi2_red = 20.16. Errors are formal.
+  One shared geometry is fitted to all ridges; each ring has its own free radius.
+
+  parameter                 assumed     fitted +/- err      shift
+  centre dE [mas]                 0       -2.1 +/- 1.9           
+  centre dN [mas]                 0       +4.6 +/- 1.6           
+  inclination [deg]            46.7       46.5 +/- 0.3      -0.2
+  position angle [deg]        133.3      132.9 +/- 0.4      -0.4
+
+  Centre shift 5.0 mas = 0.8 pixels (15% of the beam minor axis).
+
+    R [au] R err [au]  points rms [mas] ellipticity e      ridge radius max at [deg]
+      67.8       0.23      36      12.6 0.005 +/- 0.005 (1.2 s) 149
+      99.9       0.37      36       9.5 0.008 +/- 0.002 (3.9 s) 336
+
+  rms: scatter of the ridge radius about the fitted circle (the ridge position is good to a few mas where it is bright). ellipticity: residual m=1 wobble of the radius, amplitude / R;
+  a significant e after the shared geometry is removed means that ring is eccentric on its own (or the geometry differs between rings, e.g. a warp).
+  Caveats: a flared, optically thick ring appears shifted along the minor axis (near side vs far side), which mimics a centre offset along that axis (section 1c tests it);
+  formal errors exclude this. The asymmetry step applies the full (sub-pixel) centre shift to the residual image; the radial profile is recomputed about the nearest pixel (3.0 mas rounding).
+  To adopt these values: physical_analysis(out; use_fitted_geometry = true), or pass incl_deg / pa_deg to run_alma_pipeline.
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Residual = pixel value minus the azimuthal mean at the same deprojected radius. Noise: image rms 0.0348 mJy/beam per beam.
+  Fourier amplitudes around each ring (window = +/- one observed sigma, at least half a beam), relative to the fitted ring amplitude.
+  FAP = false-alarm probability exp(-S/N^2/2) for one ring (floored at 1e-6), for pure noise only; with N rings expect N x FAP chance detections. Geometry errors are NOT in the noise.
+
+    r [au]  bins | m=1 [%]          S/N     FAP  max @PA | m=2 [%]          S/N     FAP | peak +/- [%] (S/N)
+       1.8     8 | 7.7 +/- 0.8      9.8 1.0e-06     221° | 4.7 +/- 0.8      6.0 1.0e-06 | +13 / -8 (8.5)
+      15.3    20 | 0.5 +/- 0.4      1.3 4.4e-01       6° | 4.0 +/- 0.4     10.9 1.0e-06 | +5 / -4 (4.4)
+      31.4    36 | 3.0 +/- 0.7      4.3 1.1e-04      70° | 3.0 +/- 0.7      4.2 1.7e-04 | +9 / -8 (3.1)
+      67.6    36 | 5.7 +/- 0.9      6.1 1.0e-06     330° | 3.8 +/- 0.9      4.1 2.4e-04 | +24 / -23 (6.1)
+     100.8    36 | 5.1 +/- 1.6      3.2 6.8e-03     157° | 11.9 +/- 1.6     7.4 1.0e-06 | +35 / -26 (5.1)
+
+  r =    1.8 au: m=1 at 9.8 sigma, m=2 at 6.0 sigma; maximum within 25 deg of the minor axis (near/far-side brightness asymmetry?)
+  r =   15.3 au: m=2 at 10.9 sigma
+  r =   31.4 au: m=1 at 4.3 sigma, m=2 at 4.2 sigma
+  r =   67.6 au: m=1 at 6.1 sigma, m=2 at 4.1 sigma
+  r =  100.8 au: m=1 at 3.2 sigma, m=2 at 7.4 sigma
+
+  Elliptical-beam check for m=2: an axisymmetric ring convolved with a beam that is not round has a higher peak where the ring runs along the
+  beam's short axis, i.e. a pure m=2 pattern with no real structure. Expectation for each ring (fitted intrinsic width) versus what is measured;
+  excess = size of the vector difference between the measured and the expected m=2 term (formal S/N, noise only):
+    r [au] | beam alone: % @ az | measured: % @ az   | excess [%] (S/N)
+       1.8 | 3.8 @ 11 deg       | 4.7 @ 102 deg      | 8.5 (10.8 s)
+      15.3 | 1.1 @ 11 deg       | 4.0 @ 156 deg      | 3.8 (10.3 s)
+      31.4 | 2.7 @ 11 deg       | 3.0 @ 68 deg       | 4.7 (6.6 s)
+      67.6 | 1.6 @ 11 deg       | 3.8 @ 32 deg       | 2.8 (3.0 s)
+     100.8 | 2.4 @ 11 deg       | 11.9 @ 71 deg      | 13.3 (8.2 s)
+  Azimuths are disk-plane angles from the major axis (mod 180). The expectation uses the same window-mean estimator as the measurement (the m=2 of the ring PEAK is ~1.65x larger).
+  Not included: ring curvature at small r, non-Gaussian ring profiles, CLEAN / uv-coverage effects (the vertical-thickness scan is opt-in: do_thickness = true).
+
+  Round-beam test: switched off (do_roundbeam = false).
+
+  Before / after the geometry correction (m=1 and m=2 amplitude [%] and S/N; first = assumed geometry as in the table above, second = fitted):
+    r [au] | m=1: this -> other     | m=2: this -> other    
+       1.8 | 7.7 (9.8 s) -> 8.6 (11.0 s) | 4.7 (6.0 s) -> 5.3 (6.8 s)
+      15.3 | 0.5 (1.3 s) -> 1.1 (3.1 s) | 4.0 (10.9 s) -> 3.9 (10.5 s)
+      31.4 | 3.0 (4.3 s) -> 5.1 (7.2 s) | 3.0 (4.2 s) -> 3.2 (4.6 s)
+      67.6 | 5.7 (6.1 s) -> 5.5 (5.9 s) | 3.8 (4.1 s) -> 3.7 (3.9 s)
+     100.8 | 5.1 (3.2 s) -> 5.3 (3.3 s) | 11.9 (7.4 s) -> 12.7 (7.9 s)
+  Note: this window-mean estimator is blind to small geometry errors at first order (they move the ridge, not the ring's brightness), so amplitudes are expected to survive;
+  the ridge-based geometry fit (section 1b) is the sensitive test of centre, inclination and PA.
+
+  Coherence across rings (a vortex sits at one radius; a centre / inclination / PA error shows at every ring with the same orientation):
+    m=1 maxima (sky PA, deg) by ring radius: 2 au: 221;  31 au: 70;  68 au: 330;  101 au: 157
+    m=1: 4 rings above 3 sigma, maxima at sky PA 160 deg, resultant length R = 0.13 (random orientations give ~0.50)
+    m=2 orientation (disk azimuth of a maximum, deg from the major axis, mod 180) by ring radius: 2 au: 102;  15 au: 156;  31 au: 68;  68 au: 32;  101 au: 71
+    m=2: 5 rings above 3 sigma, orientation 70 deg from the major axis (mod 180), R = 0.34 (random ~0.45)
+    1 of 5 of these orientations lie within ~20 deg of the one the beam alone predicts (modulo the excess in the beam table).
+
+  Candidate arcs / clumps (beam-smoothed residual above 4.0 sigma of the smoothed residual, >= 1 beam of area, outside 1 beam from the centre):
+    #  sign   r [au]  az [deg] span[deg]   sky PA      S/N contrast area[beams]  note
+    1     +     55.6       -12        36     125°     12.2   +137%        12.1  nearest ring 68 au (-12.0 au); a centre error would need 21.4 au
+    2     +      5.4       113       130     261°      7.1     +7%         1.7  nearest ring 2 au (+3.6 au); a centre error would need 2.2 au
+    3     -     56.3      -174        10     317°      6.2    -68%         3.4  nearest ring 68 au (-11.3 au); a centre error would need 10.3 au
+    4     -     11.9      -125        81     360°      6.2     -9%         1.7  nearest ring 15 au (-3.4 au); on a ring crest, so a centre error has no first-order effect (slope ~0): not informative
+    5     -     18.5        89        23     221°      5.6     -9%         1.0  nearest ring 15 au (+3.2 au); on a ring crest, so a centre error has no first-order effect (slope ~0): not informative
+    6     -     41.9      -171        20     320°      5.5    -56%         2.5  nearest ring 31 au (+10.5 au); a centre error would need 2.8 au
+    7     +     66.2      -151        12     334°      5.5    +30%         2.3  nearest ring 68 au (-1.4 au); on a ring crest, so a centre error has no first-order effect (slope ~0): not informative
+    8     +     39.6       -74        23      66°      5.5    +35%         4.0  nearest ring 31 au (+8.2 au); a centre error would need 1.9 au
+    9     +     77.0       -67         7      75°      5.4    +58%         1.5  nearest ring 68 au (+9.4 au); a centre error would need 5.0 au
+   10     +     78.4       139        14     282°      5.4    +69%         5.7  nearest ring 68 au (+10.8 au); a centre error would need 5.6 au
+    10 region(s) are not part of a comparable +/- pair.
+    'a centre error would need X au': the centre shift whose dipole (shift x local profile slope) equals this residual; compare with the fitted centre uncertainty (~1 au or less).
+    az: disk-plane azimuth from the major axis; span: full azimuthal extent; contrast: peak smoothed residual / local azimuthal mean.
+
+  How to read this: a single significant positive arc covering a limited azimuth range at a ring radius (span of tens of degrees,
+  contrast tens of percent) is the signature of a dust trap such as a vortex. A +/- pair 180 deg apart (in the residual image, not the ring-averaged amplitudes)
+  is what a small centre or inclination error produces.
+  The noise estimate for the arcs is the robust scatter of the smoothed residual itself, so real structure inflates it: the threshold is conservative.
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 239.0 GHz from the azimuthal mean; T_d = (phi L* / 8 pi r^2 sigma_SB)^(1/4) with phi = 0.020, L* = 17.00 Lsun, floor 10 K.
+  tau = -ln(1 - T_b/T_d), absorption only. T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  type     r [au] | T_b [K]           T_d [K] T_b/T_d     tau      H/r
+  ring        1.8 | 41.5 +/- 0.5        235.9    0.18    0.19    0.023
+  ring       15.3 | 31.1 +/- 0.2         65.4    0.48    0.65    0.044
+  gap        42.5 | 7.5 +/- 0.1          38.8    0.19    0.21    0.058
+  ring       67.6 | 11.2 +/- 0.1         30.7    0.37    0.45    0.065
+  gap        83.8 | 5.2 +/- 0.1          27.6    0.19    0.21    0.068
+  ring      100.8 | 8.0 +/- 0.1          25.3    0.32    0.38    0.071
+
+  Interpretation: tau well below 1 means the emission is optically thin and the flux traces the dust surface density directly;
+  tau of order 1 or more means a column that is partly or fully optically thick. Scattering lowers T_b below the
+  absorption-only value, so the true optical depth of strongly scattering grains is higher than tau here.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Gap depth and width are measured on the azimuthal-mean profile (Zhang et al. 2018 definitions: next ring peak outside the gap, edge level = (peak + minimum)/2).
+  Width estimate: Kanagawa et al. (2016) Delta_gap/Rp = 0.41 (Mp/M*)^(1/2) (h/r)^(-3/4) alpha^(-1/4), i.e. Mp/M* = 2.1e-3 (Delta_gap/Rp)^2 (h/r / 0.05)^(3/2) (alpha/1e-3)^(1/2).
+  Depth estimate: Kanagawa et al. (2015) Sigma_min/Sigma_0 = 1/(1 + 0.04 K), K = (Mp/M*)^2 (h/r)^(-5) alpha^(-1), with Sigma_0/Sigma_min taken as the dust-intensity contrast.
+  (Zhang et al. 2018 give dust-specific calibrations that also depend on grain size; they are not applied here, so the dust gaps are read with the gas relations.)
+  M* = 2.00 Msun; h/r from the passive-disk T_d at each gap (H = c_s/v_K r). Both alpha values are shown because the mass scales roughly as alpha^(1/2) (width) and alpha^(1/2) (depth).
+
+     gap    r_c    h/r  depth | W_obs W_int    W/r | width a=1e-3       width a=1e-4       | depth a=1e-3       depth a=1e-4        notes
+    42.5   50.8  0.060   3.22 |  19.5  19.1  0.385 | 0.83-0.86 Mjup     4.8-5.1 Mnep       | 0.44 Mjup          2.6 Mnep            asymmetric gap: half-widths 6.1 au inside, 13.5 au outside the minimum (47.1 au); a sloping baseline or a neighbouring arc may bias the width
+    83.8   87.2  0.069   2.86 |  15.8  15.2  0.181 | 4-4.3 Mnep         1.3-1.4 Mnep       | 0.57 Mjup          3.3 Mnep            
+
+  Columns: gap = radius you asked for, r_c = centre of the measured gap; depth = I(ring peak outside) / I(gap minimum); W_obs / W_int = gap width at the edge level, observed and with the beam (geometric-mean FWHM 4.0 au) removed in quadrature; W/r = observed width over the gap centre.
+  The width range runs from the deconvolved to the observed width. Treat the numbers as order-of-magnitude: alpha is unknown (the two values bracket the usual range),
+  h/r comes from an assumed passive-disk temperature, the width relation was calibrated for gas gaps (dust gaps from large grains are wider, so masses are upper estimates),
+  the depth is diluted by the beam (lower bound on the contrast) but dust gaps are deeper than gas gaps (upper bound on the mass), and several gaps may be carved by one planet or by other mechanisms.
+
+  PUBLISHED WIDTHS AND DEPTHS of the matched gaps (Huang+18, DSHARP Table 1; radii and widths rescaled to the adopted distance):
+     r_c |  pub r pub width       pub I_gap/I_ring |  W_obs depth     W_obs/W_pub
+    50.8 |   48.0 20.2            0.033 (x30.3)    |   19.5 x3.22     0.97
+    87.2 |   86.4 16.2            0.151 (x6.62)    |   15.8 x2.86     0.97
+  Published width = outer minus inner edge of the gap, with the beam NOT removed, so W_obs is the comparable number. Published depth = mean intensity in the radial bin at the gap over that at the exterior ring;
+  'x' is its inverse, to compare with the depth column above, which uses the gap minimum and the next ring peak (so it is the larger of the two for the same gap). (<beam) = narrower than the beam, so diluted.
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  A dust ring in a Gaussian gas pressure bump of width w has width w_d = w sqrt(alpha / (alpha + St)), i.e. alpha / St = 1 / ((w / w_d)^2 - 1) (Dullemond et al. 2018, DSHARP VI).
+  w_d = Gaussian sigma of the fitted ring with the beam removed. A long-lived bump cannot be narrower than about one gas scale height H (passive-disk temperature, M* = 2.00 Msun), so w = H gives the LARGEST alpha / St the ring allows;
+  a bump as wide as the distance to the nearest gap gives the smallest. A ring wider than H gives no limit: the bump could be as wide as the ring.
+
+    r [au]   sigma_d  H [au]   sd/H | alpha/St max (w=H)   min (w=w_max) | St (alpha=1e-3)     St (alpha=1e-4)      notes
+       1.8 4.2+/-1.3     0.0  86.98 | no limit             -            | -                   -                    ring at least as wide as H
+      15.3 8.1+/-3.8     0.7  11.88 | no limit             -            | -                   -                    ring at least as wide as H
+      67.6 6.6+/-0.3     4.4   1.51 | no limit             -            | -                   -                    ring at least as wide as H
+     100.8 5.3+/-0.3     7.2   0.74 | 1.21 (0.94-1.59)     0.110        | 8.3e-04-9.1e-03     8.3e-05-9.1e-04      
+
+  alpha/St: ratio of the turbulent diffusion parameter to the Stokes number of the trapped grains (smaller = stronger trapping). The range in the 'St' columns is alpha divided by the two limits,
+  for the two alpha values of section 4; '>=' means no upper limit (the nearest gap is not wider than H). The ring width is the intensity width: for optically thick rings it overestimates the dust-density width,
+  so the true rings are, if anything, narrower (stronger trapping). Blended components (see the warning in section 1) and rings with large errors are unreliable; trust the isolated rings.
+
+  Spacing of the gaps (planets sit in the gaps): radius ratio, orbital period ratio (r2/r1)^(3/2) and the nearest low-order commensurability (measured gaps only, at their measured centres r_c):
+      50.8 ->   87.2 au: radius ratio 1.72, period ratio 2.25, nearest 5:2 (-10.0%)
+  Suggestive only: the ratios above are of the gap radii, not of measured planet orbits, and a +/-3% match to one of the eight ratios 6:5, 5:4, 4:3, 3:2, 5:3, 2:1, 5:2, 3:1
+  happens by chance for about 40% of all values between 1.1 and 3.2, so a near-resonance is weak evidence on its own.
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

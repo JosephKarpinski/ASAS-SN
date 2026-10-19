@@ -1,0 +1,103 @@
+========================================================================================
+TARGET SUMMARY: Elias 24
+========================================================================================
+Generated 2026-10-19 11:32 by alma_target_explorer_julia (v7)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=Elias%2024&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : Elias 24
+  Coordinates    : 16:26:24.07  -24:16:13.4  (RA 246.60030, Dec -24.27040 deg, J2000)
+  Distance       : 136.0 pc
+  Class          : T Tauri analogue
+  Catalogue note : Wide gap (DSHARP 2016.1.00484.L)
+  Versus TW Hya  : Closest analogue: axisymmetric rings/gaps
+  Catalogue geometry: inclination 29.0 deg, PA 45.7 deg east of north
+
+  What kind of object this is:
+    A low-mass (K-M) T Tauri star surrounded by a gas-rich protoplanetary disk a few Myr old. ALMA continuum images of such disks very often show concentric rings and gaps, commonly interpreted as pressure traps or the imprint of forming planets.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2016.1.00484.L
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0222 arcsec (3.0 au; the beam of the image used is given below)
+  Exposure time  : 4064 s (1.13 h)
+  Public release : 2018-10-16
+  Member OUS     : uid://A001/X8c5/X4e
+  Observations in the archive query: 3; the finest has 0.0222 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2016.1.00484.L_uid___A001_X8c5_X4e_001_of_001.tar (0.49 GB)
+  FITS image used: member.uid___A001_X8c5_X4e.calibrated_final_cont.pbcor.fits
+  Pixel scale    : 0.0030 arcsec
+  Synthesised beam: 0.0458 x 0.0292 arcsec = 6.2 x 4.0 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 29.0 deg, position angle 45.7 deg (east of north)
+  Source: catalogue (literature) values.
+  Profile centre (pixel): (4573, 4481); profile out to 1.80 arcsec = 245 au in 79 bins of 3.10 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 1.8, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 3.91 mJy/beam at r = 1.5 au (0.2 beams)
+  Innermost bin              : 3.91 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 45 au / 122 au (7.2 / 19.7 beams)
+  Outer edge (last radius with the mean above 10% of the peak): 42 au
+  Integrated flux out to the profile edge: ~328.0 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.0711 mJy/beam
+  Profile dynamic range (peak / residual sigma): 55
+  Image noise (robust rms): 0.0198 mJy/beam; the peak of the azimuthal mean is 197.6 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 1 ring(s), 1 gap(s).
+  After subtracting a smooth baseline: 3 ring(s), 3 gap(s).
+  Detections inside 16 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.00711 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       20.1    0.148         3.2        0.151 mJy/beam    +17.5%   +26.7 s
+  ring       41.8    0.308         6.7        0.103 mJy/beam    +25.7%   +26.2 s
+  ring       75.9    0.558        12.2        0.123 mJy/beam    +75.8%   +42.1 s
+  gap        32.5    0.239         5.2       0.0492 mJy/beam     +7.4%   +11.1 s
+  gap        51.1    0.376         8.2      -0.0907 mJy/beam    -64.7%   -25.6 s
+  gap        88.3    0.649        14.2      -0.0554 mJy/beam    -36.7%   -20.5 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: R 20 au  ->  G 33 au  ->  R 42 au  ->  G 51 au  ->  R 76 au  ->  G 88 au
+  6 of 6 features are at least 3 sigma (5 of them also with modulation >= 10%); weaker ones are tentative.
+  Ring spacing: 22 au (x2.08), 34 au (x1.81)
+  Gap spacing : 19 au (x1.57), 37 au (x1.73)
+
+6. COMPARISON WITH PUBLISHED FEATURES (radii rescaled to the adopted distance)
+----------------------------------------------------------------------------------------
+  Tolerance = 1 beam = 6.2 au; a feature counts as recovered if either the baseline-subtracted or the raw profile has one within it.
+  gap (lit.)                56.8 au : RECOVERED, gap at 57.3 au (+0.5 au, +0.08 beams; raw profile)
+  ring (lit.)               76.7 au : RECOVERED, ring at 75.9 au (-0.8 au, -0.13 beams; baseline-subtracted)
+  gap (lit.)                89.0 au : RECOVERED, gap at 88.3 au (-0.7 au, -0.11 beams; baseline-subtracted)
+  ring (lit.)              123.0 au : not detected (residual +0.00445 mJy/beam = +1.9 sigma at r = 122.4 au)
+  Recovered 3 of 4 testable published features.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Resolution: the disk (90% of the flux within 122 au) spans 19.7 beams of 6.2 au, well resolved; features down to ~12 au (2 beams) can be recovered.
+  (2) Excluded zone: detections inside 16 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (2 au) and a large part of the disk (90% of the flux lies within 122 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (3) Shape: the emission is centrally peaked (the maximum lies at 2 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (4) Substructure: 3 ring(s) and 3 gap(s) after baseline subtraction, with 6 of 6 at >= 3 sigma (5 also with modulation >= 10%). Detected radii: 20 au, 33 au, 42 au, 51 au, 76 au, 88 au.
+  (5) 4 of the 6 baseline-subtracted features have no peak or dip within 1 beam in the raw profile: they are shoulders or inflections that only appear after the smooth baseline is removed, not isolated rings or gaps. Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (6) Published features: 3 of 4 testable published rings/gaps were recovered within 1 beam (baseline-subtracted or raw profile). Misses usually mean the published feature is narrower or shallower than this beam and sensitivity can show.
+  (7) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  Elias_24_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+  Elias_24_radial_profile.png : azimuthal mean flux versus deprojected radius, with the raw peak-finder detections
+  Elias_24_substructure.png : baseline-subtracted profile: detected rings (yellow) and gaps (blue), literature features
+  Elias_24_substructure_retuned.png : the same with the re-tuned detection settings
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

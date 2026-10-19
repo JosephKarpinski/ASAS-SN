@@ -1,0 +1,108 @@
+========================================================================================
+TARGET SUMMARY: HD 163296
+========================================================================================
+Generated 2026-10-19 11:58 by alma_target_explorer_julia (v7)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HD%20163296&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : HD 163296
+  Coordinates    : 17:56:21.29  -21:57:22.0  (RA 269.08870, Dec -21.95610 deg, J2000)
+  Distance       : 101.0 pc
+  Class          : Herbig
+  Catalogue note : Rings and gaps (DSHARP 2016.1.00484.L, radii from Huang+18; MAPS 2018.1.01055.L)
+  Versus TW Hya  : Higher-mass star; warmer, larger disk
+  Catalogue geometry: inclination 46.7 deg, PA 133.3 deg east of north
+
+  What kind of object this is:
+    An intermediate-mass (A/B/F) Herbig star. Its disk is warmer and usually larger than a T Tauri disk, often with a large cavity and rings, spirals or shadows.
+    Analysis caveat for this class: Large disks need long baselines and short spacings; the largest scales may be partly filtered out.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2016.1.00484.L
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0475 arcsec (4.8 au; the beam of the image used is given below)
+  Exposure time  : 3230 s (0.90 h)
+  Public release : 2018-10-12
+  Member OUS     : uid://A001/X8c5/X96
+  Observations in the archive query: 59; the finest has 0.0475 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2016.1.00484.L_uid___A001_X8c5_X96_001_of_001.tar (0.11 GB)
+  FITS image used: member.uid___A001_X8c5_X96.calibrated_final_cont.pbcor.fits
+  Pixel scale    : 0.0060 arcsec
+  Synthesised beam: 0.0454 x 0.0347 arcsec = 4.6 x 3.5 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 46.7 deg, position angle 133.3 deg (east of north)
+  Source: catalogue (literature) values.
+  Profile centre (pixel): (2303, 2303); profile out to 3.00 arcsec = 303 au in 132 bins of 2.30 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 3.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 2.68 mJy/beam at r = 3.4 au (0.8 beams)
+  Innermost bin              : 2.65 mJy/beam (99% of the peak)
+  Radius holding 50% / 90% of the flux : 54 au / 102 au (11.8 / 22.3 beams)
+  Outer edge (last radius with the mean above 10% of the peak): 75 au
+  Integrated flux out to the profile edge: ~521.7 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.0861 mJy/beam
+  Profile dynamic range (peak / residual sigma): 31
+  Image noise (robust rms): 0.0348 mJy/beam; the peak of the azimuthal mean is 77.0 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 2 ring(s), 2 gap(s).
+  After subtracting a smooth baseline: 3 ring(s), 2 gap(s).
+  Detections inside 11 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.00861 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       33.3    0.330         7.3        0.189 mJy/beam    +22.9%   +23.5 s
+  ring       65.4    0.648        14.3        0.232 mJy/beam    +95.6%   +40.2 s
+  ring       99.9    0.989        21.8        0.138 mJy/beam   +110.2%   +29.2 s
+  gap        42.5    0.420         9.3       -0.257 mJy/beam    -52.6%   -35.3 s
+  gap        83.8    0.830        18.3       -0.135 mJy/beam    -56.3%   -26.1 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: R 33 au  ->  G 42 au  ->  R 65 au  ->  G 84 au  ->  R 100 au
+  5 of 5 features are at least 3 sigma (5 of them also with modulation >= 10%); weaker ones are tentative.
+  Ring spacing: 32 au (x1.97), 34 au (x1.53)
+  Gap spacing : 41 au (x1.97)
+
+6. COMPARISON WITH PUBLISHED FEATURES (radii rescaled to the adopted distance)
+----------------------------------------------------------------------------------------
+  Tolerance = 1 beam = 4.6 au; a feature counts as recovered if either the baseline-subtracted or the raw profile has one within it.
+  gap (lit.)                10.0 au : inside the excluded beam/CLEAN zone; cannot be tested
+  ring (lit.)               14.0 au : not detected (residual -0.0354 mJy/beam = -2.9 sigma at r = 14.9 au)
+  gap (lit.)                48.0 au : RECOVERED, gap at 47.1 au (-0.9 au, -0.21 beams; raw profile)
+  ring (lit.)               67.0 au : RECOVERED, ring at 65.4 au (-1.6 au, -0.35 beams; baseline-subtracted)
+  gap (lit.)                86.4 au : RECOVERED, gap at 86.1 au (-0.3 au, -0.07 beams; raw profile)
+  ring (lit.)               99.7 au : RECOVERED, ring at 99.9 au (+0.2 au, +0.04 beams; baseline-subtracted)
+  gap (lit.)               145.0 au : not detected (residual +0.00273 mJy/beam = +0.7 sigma at r = 145.8 au)
+  ring (lit.)              155.0 au : not detected (residual +0.00409 mJy/beam = +1.1 sigma at r = 154.9 au)
+  Recovered 4 of 7 testable published features; 0 of 1 inside the excluded zone also match the raw profile.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Resolution: the disk (90% of the flux within 102 au) spans 22.3 beams of 4.6 au, well resolved; features down to ~9 au (2 beams) can be recovered.
+  (2) Excluded zone: detections inside 11 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (3 au) and a large part of the disk (90% of the flux lies within 102 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (3) Shape: the emission is centrally peaked (the maximum lies at 3 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (4) Substructure: 3 ring(s) and 2 gap(s) after baseline subtraction, with 5 of 5 at >= 3 sigma (5 also with modulation >= 10%). Detected radii: 33 au, 42 au, 65 au, 84 au, 100 au.
+  (5) 2 of the 5 baseline-subtracted features have no peak or dip within 1 beam in the raw profile: they are shoulders or inflections that only appear after the smooth baseline is removed, not isolated rings or gaps. Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (6) Published features: 4 of 7 testable published rings/gaps were recovered within 1 beam (baseline-subtracted or raw profile). Misses usually mean the published feature is narrower or shallower than this beam and sensitivity can show.
+  (7) Class-specific note: Large disks need long baselines and short spacings; the largest scales may be partly filtered out.
+  (8) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  HD_163296_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+  HD_163296_radial_profile.png : azimuthal mean flux versus deprojected radius, with the raw peak-finder detections
+  HD_163296_substructure.png : baseline-subtracted profile: detected rings (yellow) and gaps (blue), literature features
+  HD_163296_substructure_retuned.png : the same with the re-tuned detection settings
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.
