@@ -1,6 +1,0 @@
-n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
-1,26,AB Aur,Herbig,OK,2,2015.1.00889.S,6,16.12941196560595,15.146715483807279,0.3,"",./alma_plots/AB_Aur_console.txt
-2,119,CQ Tau,Herbig,OK,6,2013.1.00498.S,6,41.68046915531193,240.24370306473364,1.5,"",./alma_plots/CQ_Tau_console.txt
-3,286,HD 34282,Herbig,OK,6,2013.1.00658.S,7,59.281205400821776,70.99610543069323,20.4,"",./alma_plots/HD_34282_console.txt
-4,321,HD 97048,Herbig,OK,8,2015.1.00192.S,6,72.80341044067261,100.0149573991561,1.5,"",./alma_plots/HD_97048_console.txt
-5,324,HD 100453,Herbig,OK,4,2015.1.00192.S,6,22.66194951534384,154.71740674761168,0.4,"",./alma_plots/HD_100453_console.txt

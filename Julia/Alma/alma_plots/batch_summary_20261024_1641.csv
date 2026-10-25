@@ -1,6 +1,0 @@
-n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
-1,431,HD 142666,Herbig,OK,1,2016.1.00484.L,6,4.732275351882153,142.81890280393029,3.1,"",./alma_plots/HD_142666_console.txt
-2,450,HD 145718,Herbig,OK,1,2015.1.01600.S,6,131.5906682014656,286.8668799455098,5.1,"",./alma_plots/HD_145718_console.txt
-3,500,HD 163296,Herbig,OK,1,2016.1.00484.L,6,4.583567377178388,156.5388683058594,0.8,"",./alma_plots/HD_163296_console.txt
-4,503,HD 169142,Herbig,OK,2,2015.1.00806.S,7,6.4321503415722,45.93442287276878,3.4,"",./alma_plots/HD_169142_console.txt
-5,1760,MWC 480,Herbig,OK,1,2016.1.01042.S,3,24.168438613413507,79.1713716301102,0.1,"",./alma_plots/MWC_480_console.txt

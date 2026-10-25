@@ -1,5 +1,0 @@
-n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
-1,238,GY 91,Young/embedded,OK,1,2015.1.00761.S,3,13.46668422222312,11.362031055950702,0.8,"",./alma_plots/GY_91_console.txt
-2,703,HL Tau,Young/embedded,OK,3,2019.1.01051.S,7,NaN,NaN,0.7,"",./alma_plots/HL_Tau_console.txt
-3,754,IRAS 04302+2247,Young/embedded,OK,2,2016.1.00460.S,4,13.97574424743552,18.708031168153084,13.3,"",./alma_plots/IRAS_04302_2247_console.txt
-4,152,Elias 29,Young/embedded,NO IMAGE,0,"","",NaN,NaN,0.1,no public science observation matching this target (see the DIAGNOSIS lines in the console text),./alma_plots/Elias_29_console.txt

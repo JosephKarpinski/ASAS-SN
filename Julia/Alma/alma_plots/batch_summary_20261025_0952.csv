@@ -1,9 +1,0 @@
-n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
-1,152,Elias 29,Young/embedded,NO IMAGE,0,"","",NaN,NaN,0.3,no archive data for this position,./alma_plots/Elias_29_console.txt
-2,238,GY 91,Young/embedded,ERROR,0,"","",NaN,NaN,0.5,"datalink returned HTTP 500: <?xml version=""1.0"" encoding=""UTF-8""?>
-<VOTABLE xmlns=""http://www.ivoa.net/xml/VOTable/v1.3"" xmlns:xsi=""http://",./alma_plots/GY_91_console.txt
-3,703,HL Tau,Young/embedded,ERROR,0,"","",NaN,NaN,0.5,"datalink returned HTTP 500: <?xml version=""1.0"" encoding=""UTF-8""?>
-<VOTABLE xmlns=""http://www.ivoa.net/xml/VOTable/v1.3"" xmlns:xsi=""http://",./alma_plots/HL_Tau_console.txt
-4,754,IRAS 04302+2247,Young/embedded,ERROR,0,"","",NaN,NaN,0.2,"datalink returned HTTP 500: <?xml version=""1.0"" encoding=""UTF-8""?>
-<VOTABLE xmlns=""http://www.ivoa.net/xml/VOTable/v1.3"" xmlns:xsi=""http://",./alma_plots/IRAS_04302_2247_console.txt
-5,762,IRAS 16253-2429,Young/embedded,OK,4,2015.1.01525.S,9,363.75578880308643,0.2977030021775586,10.9,"",./alma_plots/IRAS_16253_2429_console.txt

@@ -1,7 +1,0 @@
-========================================================================================
-PHYSICAL ANALYSIS: 1RXS 1609 B
-========================================================================================
-Generated 2026-10-24 12:21 by alma_target_explorer_julia (v7)
-Image: member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.12m.cont.I.pbcor.fits
-
-NOT DETECTED: the strongest bin of the azimuthal mean is 0.8 sigma (< 5.0; the peak is 0.3 x the per-beam image noise). Nothing below is meaningful, so the physical analysis was skipped. Upper limit: 3 sigma = 0.112 mJy/beam (one beam; image rms 0.0372 mJy/beam). Try a deeper or different observation, or set min_detect_snr = 0 to force the analysis.
