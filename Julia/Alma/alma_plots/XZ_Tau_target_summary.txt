@@ -1,0 +1,97 @@
+========================================================================================
+TARGET SUMMARY: XZ Tau
+========================================================================================
+Generated 2026-10-25 15:46 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+WARNING: AZIMUTHAL SCATTER: in the bins that hold signal the scatter around the azimuthal mean is 1.5 times the mean itself (ordinary discs: 0.15-0.4). The emission is strongly non-axisymmetric (a horseshoe, arc or companion) or the inclination / PA is wrong, so the azimuthal mean is not a representative radial profile: the rings, gaps, fits and Fourier amplitudes derived from it are not reliable and their formal significances are not valid. Check the image and give incl_deg / pa_deg from the literature.
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=XZ%20Tau&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : XZ Tau
+  Coordinates    : 04:31:40.09  +18:13:56.6  (RA 67.91703, Dec +18.23240 deg, J2000)
+  Distance       : 140.0 pc
+  Class          : Multiple system
+  Versus TW Hya  : Binary with interacting disks
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    A multiple-star system: the field holds several stars and disks (circumstellar and/or circumbinary), so the fitted centre may sit on only one component.
+    Analysis caveat for this class: Check the image for several sources; the radial profile describes only the component at the fitted centre.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2016.1.01488.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0334 arcsec (4.7 au; the beam of the image used is given below)
+  Exposure time  : 2939 s (0.82 h)
+  Public release : 2018-10-17
+  Member OUS     : uid://A001/X879/X525
+  Largest recoverable angular scale : 0.65 arcsec (91 au); structure larger than this is filtered out
+  Observations in the archive query: 6; the finest has 0.0290 arcsec. Used: #2 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #2 because the finer packages exceeded the size limit.
+  Product package: 2016.1.01488.S_uid___A001_X879_X525_001_of_001.tar (0.01 GB)
+  FITS image used: member.uid___A001_X879_X525.XZ_Tau_B_sci.spw0_1_2.cont.I.manual.pbcor.fits
+  Pixel scale    : 0.0060 arcsec
+  Synthesised beam: 0.0580 x 0.0306 arcsec = 8.1 x 4.3 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 71.2 deg, position angle 127.5 deg (east of north)
+  Source: FITTED FROM THE IMAGE, but the disk is barely resolved (90% of its flux within 4 beams), so the fitted inclination and PA are UNRELIABLE (the +-5 deg accuracy holds only for resolved disks). Give incl_deg / pa_deg from the literature.
+  Fit quality: a purely radial profile explains 42% of the pixel variance (face-on: 20%). LOW: probably non-axisymmetric or faint; the fitted geometry is unreliable.
+  Profile centre (pixel): (251, 248); profile out to 1.43 arcsec = 200 au in 49 bins of 4.07 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 1.34 mJy/beam at r = 18.3 au (2.3 beams)
+  Innermost bin              : 0.0415 mJy/beam (3% of the peak)
+  Radius holding 50% / 90% of the flux : 22 au / 26 au (2.8 / 3.3 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 39 au (4.8 beams)
+  Radius where the mean falls below 10% of the peak: 31 au
+  Integrated flux out to the profile edge: ~20.6 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.16 mJy/beam
+  Profile dynamic range (peak / residual sigma): 8
+  Image noise (robust rms): 0.0215 mJy/beam; the peak of the azimuthal mean is 62.6 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 1 ring(s), 0 gap(s).
+  Raw rings at 18 au; raw gaps at none au.
+  After subtracting a smooth baseline: 0 ring(s), 1 gap(s).
+  Detections inside 20 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.016 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  gap        30.5    0.218         3.8        -0.32 mJy/beam    -69.3%   -45.2 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma; for a gap it is the depth below the shallower neighbouring maximum (the peak prominence), shown negative.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: G 31 au
+  1 of 1 features are at least 3 sigma (1 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Resolution: the disk (90% of the flux within 26 au) spans only 3.3 beams of 8.1 au. It is barely resolved: only the overall size and brightness trend can be trusted; rings or gaps narrower than ~16 au would not be seen.
+  (2) Excluded zone: detections inside 20 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (18 au) and a large part of the disk (90% of the flux lies within 26 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (3) Data choice: a package with finer resolution (0.0290 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (4) Geometry: the image fit gave i = 71 deg, PA = 128 deg, but the disk spans fewer than 4 beams, so these values are UNRELIABLE (a small, barely resolved disk has almost no measurable ellipticity; a compact core or a one-sided crescent can fake any inclination). Give incl_deg / pa_deg from the literature; the ring-by-ring results below depend on them.
+  (5) Geometry quality: a purely radial profile explains only 42% of the pixel variance at the fitted geometry, so the disk is probably non-axisymmetric (spirals, arcs, a dust trap) or faint and the fitted i and PA are unreliable. Give incl_deg / pa_deg from the literature if known.
+  (6) Shape: the azimuthal mean peaks at 18 au (2.3 beams) and the innermost bin holds 3% of the peak. A peak this close to the centre, with a dip of this size, is at the resolution limit: it is consistent with a centrally peaked disk smoothed by the 8 au beam, and a cavity smaller than ~16 au cannot be established.
+  (7) Substructure: 0 ring(s) and 1 gap(s) after baseline subtraction, with 1 of 1 at >= 3 sigma (1 also with modulation >= 10%). Detected radii: 31 au.
+  (8) 1 of the 1 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (9) Class-specific note: Check the image for several sources; the radial profile describes only the component at the fitted centre.
+  (10) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  XZ_Tau_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

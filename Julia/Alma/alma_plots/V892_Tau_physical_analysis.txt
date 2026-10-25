@@ -1,0 +1,54 @@
+========================================================================================
+PHYSICAL ANALYSIS: V892 Tau
+========================================================================================
+Generated 2026-10-25 14:28 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X13a_Xe1.ari_l.V892_Tau_sci.spw0_1_2_3_4_5_6_7_224668MHz.12m.cont.I.pbcor.fits
+Distance 134.0 pc; inclination 50.0 deg, PA 48.8 deg; beam 0.2311 x 0.1604 arcsec = 31.0 x 21.5 au (radial beam sigma 11.0 au)
+Observing frequency 224.7 GHz (1.33 mm)
+Bosschaart+26 (V892Tau): class TD (transition disc); R68 41 au; F(1.33 mm) 287 mJy; M_dust 41 Earth masses; M* 2.00 Msun; distance 117 pc; this image: 68%-flux radius 44 au
+Flux check: the image integrates to 282 mJy inside the profile radius; the catalogue flux (287 mJy at 1.33 mm) scales to 284 mJy at 225 GHz (spectral index 2-3), so the image holds 99% of it: consistent.
+Stellar parameters (Bosschaart+26 catalogue stellar mass; verify): L* = ? Lsun, M* = 2.00 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 0 Gaussian ring(s); chi2_red = 2.34 (dof 37). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 71.4 mJy/beam, characteristic radius 43 au, power-law index -0.50
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 11.0 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+
+  Fit decisions (in order):
+    - starting seeds: none
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Not tested: 90% of the flux lies within 2.2 beams (57 au of a 26 au beam); an asymmetry measured on a disc this small is dominated by the beam wings of the central core and by small centre / inclination / PA errors (needs at least 4 beams).
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 224.7 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  No rings or gaps were fitted or detected, so there are no radii to evaluate.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

@@ -1,0 +1,95 @@
+========================================================================================
+TARGET SUMMARY: HD 34282
+========================================================================================
+Generated 2026-10-25 14:18 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HD%2034282&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : HD 34282
+  Coordinates    : 05:16:00.48  -09:48:35.4  (RA 79.00199, Dec -9.80983 deg, J2000)
+  Distance       : 309.0 pc
+  Class          : Herbig
+  Versus TW Hya  : Herbig; more distant, large cavity
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    An intermediate-mass (A/B/F) Herbig star. Its disk is warmer and usually larger than a T Tauri disk, often with a large cavity and rings, spirals or shadows.
+    Analysis caveat for this class: Large disks need long baselines and short spacings; the largest scales may be partly filtered out.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2013.1.00658.S
+  Band           : 7
+  Archive-reported resolution of the observation : 0.1446 arcsec (44.7 au; the beam of the image used is given below)
+  Exposure time  : 665 s (0.18 h)
+  Public release : 2016-11-03
+  Member OUS     : uid://A001/X13c/X38
+  Largest recoverable angular scale : 1.52 arcsec (470 au); structure larger than this is filtered out
+  Observations in the archive query: 26; the finest has 0.0432 arcsec. Used: #6 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #6 because the finer packages exceeded the size limit.
+  Product package: 2013.1.00658.S_uid___A001_X13c_X38_001_of_001.tar (6.75 GB)
+  FITS image used: member.uid___A001_X13c_X38.ari_l.HD_34282_sci.spw0_1_2_3_351265MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0260 arcsec
+  Synthesised beam: 0.1911 x 0.1297 arcsec = 59.0 x 40.1 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 57.5 deg, position angle 116.2 deg (east of north)
+  Source: FITTED FROM THE IMAGE, but the disk is barely resolved (90% of its flux within 4 beams), so the fitted inclination and PA are UNRELIABLE (the +-5 deg accuracy holds only for resolved disks). Give incl_deg / pa_deg from the literature.
+  Fit quality: a purely radial profile explains 94% of the pixel variance (face-on: 67%).
+  Profile centre (pixel): (544, 543); profile out to 2.00 arcsec = 618 au in 40 bins of 15.45 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 18.3 mJy/beam at r = 131.3 au (2.2 beams)
+  Innermost bin              : 2.61 mJy/beam (14% of the peak)
+  Radius holding 50% / 90% of the flux : 147 au / 224 au (2.5 / 3.8 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 301 au (5.1 beams)
+  Radius where the mean falls below 10% of the peak: 239 au
+  Integrated flux out to the profile edge: ~401.4 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.183 mJy/beam
+  Profile dynamic range (peak / residual sigma): 100
+  Image noise (robust rms): 0.4 mJy/beam; the peak of the azimuthal mean is 45.7 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 1 ring(s), 0 gap(s).
+  Raw rings at 131 au; raw gaps at none au.
+  After subtracting a smooth baseline: 0 ring(s), 1 gap(s).
+  Detections inside 148 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.0183 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  gap       193.1    0.625         3.3        -0.31 mJy/beam     -3.3%    -1.8 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma; for a gap it is the depth below the shallower neighbouring maximum (the peak prominence), shown negative.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: G 193 au
+  0 of 1 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Resolution: the disk (90% of the flux within 224 au) spans only 3.8 beams of 59.0 au. It is barely resolved: only the overall size and brightness trend can be trusted; rings or gaps narrower than ~118 au would not be seen.
+  (2) Excluded zone: detections inside 148 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (131 au) and a large part of the disk (90% of the flux lies within 224 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (3) Data choice: a package with finer resolution (0.0432 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (4) Geometry: the image fit gave i = 58 deg, PA = 116 deg, but the disk spans fewer than 4 beams, so these values are UNRELIABLE (a small, barely resolved disk has almost no measurable ellipticity; a compact core or a one-sided crescent can fake any inclination). Give incl_deg / pa_deg from the literature; the ring-by-ring results below depend on them.
+  (5) Shape: the azimuthal mean peaks at 131 au (2.2 beams) and the innermost bin holds 14% of the peak. A peak this close to the centre, with a dip of this size, is at the resolution limit: it is consistent with a centrally peaked disk smoothed by the 59 au beam, and a cavity smaller than ~118 au cannot be established.
+  (6) Substructure: 1 candidate ring(s)/gap(s) were found after baseline subtraction, but none reaches 3 sigma (the strongest is 1.8 sigma), so they are consistent with noise and are not established. Candidate radii: 193 au.
+  (7) 1 of the 1 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (8) Class-specific note: Large disks need long baselines and short spacings; the largest scales may be partly filtered out.
+  (9) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  HD_34282_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

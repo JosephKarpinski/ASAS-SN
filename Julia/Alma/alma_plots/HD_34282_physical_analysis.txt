@@ -1,0 +1,78 @@
+========================================================================================
+PHYSICAL ANALYSIS: HD 34282
+========================================================================================
+Generated 2026-10-25 14:18 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X13c_X38.ari_l.HD_34282_sci.spw0_1_2_3_351265MHz.12m.cont.I.pbcor.fits
+Distance 309.0 pc; inclination 57.5 deg, PA 116.2 deg; beam 0.1911 x 0.1297 arcsec = 59.0 x 40.1 au (radial beam sigma 20.7 au)
+RESOLUTION WARNING: the beam is 59 x 40 au (> 40 au). A typical disk (rings at tens of au) is not resolved, so the rings, asymmetries, temperatures and masses below are not meaningful. A finer observation is needed.
+Observing frequency 351.3 GHz (0.85 mm)
+Stellar parameters: none stored for this target (pass lstar= / mstar=).
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 1 Gaussian ring(s); chi2_red = 0.45 (dof 34). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 6.31 mJy/beam, characteristic radius 200 au, power-law index -0.50
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+   1  136.2 +/- 1.2   14.5 +/- 1.4       10.2  98.2 +/- 6.3         0.72                80%  detected   [CORE: inside the exclusion zone, not a ring]
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 20.7 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+  CORE: the component lies inside the 148 au exclusion zone (2.5 beams), where beam and CLEAN effects dominate; it describes the unresolved core, not a ring, so it is left out of the ratios, widths, trapping limits, ridge geometry and asymmetry windows below.
+
+  Fit decisions (in order):
+    - starting seeds: 131.3 au (detected)
+    - inner cavity term tested (hole radius 114.7 au) but not kept: chi2 improves by only -4.3 in error units
+  NOTE: chi2_red is 0.45: the data scatter about the model by only 1.5x less than the per-bin errors say. The errors are overestimated (the image rms may include structure or sidelobes, or the pixels are more correlated than the beam count assumes), so the S/N values and error bars here are conservative.
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Residual = pixel value minus the azimuthal mean at the same deprojected radius. Noise: image rms 0.4 mJy/beam per beam.
+  Fourier amplitudes around each ring (window = +/- one observed sigma, at least half the minor axis), relative to the fitted ring amplitude (the table after this one gives them as a fraction of the local flux).
+  FAP = false-alarm probability exp(-S/N^2/2) for one ring (floored at 1e-6), for pure noise only; with N rings expect N x FAP chance detections. Geometry errors are NOT in the noise.
+
+    r [au]  bins | m=1 [%]          S/N     FAP  max @PA | m=2 [%]          S/N     FAP | peak +/- [%] (S/N)
+
+
+  Coherence across rings (a vortex sits at one radius; a centre / inclination / PA error shows at every ring with the same orientation):
+    fewer than 2 rings with a significant amplitude: no coherence test.
+
+  Candidate arcs / clumps (beam-smoothed residual above 4.0 sigma of the smoothed residual, >= 1 beam of area, outside the 148 au exclusion zone):
+    #  sign   r [au]  az [deg] span[deg]   sky PA      S/N contrast area[beams]  note
+    1     +    149.2        18       104     126°     18.0    +33%         5.4  ; a centre error would need 112.8 au
+    2     -    149.2       122        92     254°     10.2    -19%         4.9  ; a centre error would need 63.9 au
+    2 region(s) are neither part of a comparable +/- pair nor full-azimuth.
+    'a centre error would need X au': the centre shift whose dipole (shift x local profile slope) equals this residual; compare with the fitted centre uncertainty (~1 au or less).
+    az: disk-plane azimuth from the major axis; span: full azimuthal extent; contrast: peak smoothed residual / local azimuthal mean.
+
+  How to read this: a single significant positive arc covering a limited azimuth range at a ring radius (span of tens of degrees,
+  contrast tens of percent) is the signature of a dust trap such as a vortex. A +/- pair 180 deg apart (in the residual image, not the ring-averaged amplitudes)
+  is what a small centre or inclination error produces.
+  The noise estimate for the arcs is the robust scatter of the smoothed residual itself, so real structure inflates it: the threshold is conservative.
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 351.3 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  No rings or gaps were fitted or detected, so there are no radii to evaluate.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

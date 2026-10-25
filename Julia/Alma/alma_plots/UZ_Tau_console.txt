@@ -1,0 +1,283 @@
+Resolved UZ Tau (as "UZ Tau") -> RA = 68.17926 deg, Dec = +25.87525 deg (CDS Sesame)
+================================================================================
+Target: UZ Tau   (RA 68.1793, Dec +25.8753; )
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=UZ%20Tau&skyViewHeight=48.99&skyViewWidth=50.95
+Querying ALMA archive for UZ Tau ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 68.17925717, 25.87525106, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 23279 | mirror = https://almascience.nrao.edu
+Found 37 rows in the cone.
+Filtered to 37 rows matching UZ Tau.
+
+Observations (member OUS), finest spatial resolution first:
+7×9 DataFrame
+ Row │ member_ous_uid          proposal_id     band    best_res_arcsec  t_exp_s   release     n_rows  las_arcsec  freq_ghz
+     │ String                  String          String  Float64          Float64   String      Int64   Float64     Float64
+─────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X1288/Xb6c   2017.1.00388.S  4             0.0484894   381.024  2019-04-27       4    0.802782  147.811
+   2 │ uid://A001/X885/X1f6    2016.1.01164.S  6             0.110944    544.32   2019-02-02       5    1.65004   220.376
+   3 │ uid://A001/X1288/Xb68   2017.1.00388.S  3             0.130598    254.016  2019-02-14       4    2.77448    87.8615
+   4 │ uid://A001/X133d/X15df  2018.1.00771.S  6             0.145714   2358.72   2021-02-15       7    3.56714   220.4
+   5 │ uid://A001/X1296/X877   2017.1.01031.S  6             0.355418    483.84   2019-10-10       5    5.72114   220.399
+   6 │ uid://A001/X2d8/Xef     2015.1.00690.S  6             0.553005   1391.04   2017-09-01       4    7.80115   220.406
+   7 │ uid://A001/X37bf/X634   2024.1.01605.S  9             1.25248     122.88   2026-09-26       8   10.1252    650.137
+
+Using observation #1: uid://A001/X1288/Xb6c (proposal 2017.1.00388.S, band 4, best resolution 0.0485")
+
+Fetching file listing for uid://A001/X1288/Xb6c ...
+  fetching data info for uid://A001/X1288/Xb6c ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 6 | mirror = https://almascience.nrao.edu
+4×3 DataFrame
+ Row │ access_url                                                                                    content_type       size_GB
+     │ String                                                                                        String             Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X1288_Xb6c.README.txt               text/plain           0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001.tar   application/x-tar    0.187
+   3 │ https://almascience.nrao.edu/dataPortal/2017.1.00388.S_uid___A001_X1288_Xb6c_auxiliary.tar    application/x-tar    0.097
+   4 │ https://almascience.nrao.edu/dataPortal/2017.1.00388.S_uid___A002_Xc66ce1_X2156.asdm.sdm.tar  application/x-tar  103.659
+Already have 10 extracted FITS file(s), skipping download.
+
+Extracted 10 FITS file(s), best candidate first:
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.UZ_Tau_E_sci.spw31.cont.I.manual.repr.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.UZ_Tau_E_sci.spw25_27_29_31.mfs.I.manual.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.L1551_IRS_5_sci.spw31.cont.I.manual.repr.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.VY_Tau_sci.spw31.cont.I.manual.repr.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.XZ_Tau_sci.spw31.cont.I.manual.repr.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.J0435p2532_ch_src.spw31.mfs.I.manual.repr.tt0.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.J0438p2153_ch_src.spw31.mfs.I.manual.repr.tt0.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.L1551_IRS_5_sci.spw25_27_29_31.mfs.I.manual.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.VY_Tau_sci.spw25_27_29_31.mfs.I.manual.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.XZ_Tau_sci.spw25_27_29_31.mfs.I.manual.pbcor.fits
+
+Using: ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.UZ_Tau_E_sci.spw31.cont.I.manual.repr.pbcor.fits
+[DEBUG] extract_radial_profile: image ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb6c_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb6a/group.uid___A001_X1288_Xb6b/member.uid___A001_X1288_Xb6c/product/member.uid___A001_X1288_Xb6c.UZ_Tau_E_sci.spw31.cont.I.manual.repr.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (2048, 2048) eltype Float32 nan count 0 finite count 4194304
+Synthesized beam: 0.0622" x 0.0387" (PA=-33.23644638062) = 8.15 au x 5.07 au at 131.0 pc
+Emission centroid (start of the centre fit): pixel (1007, 951), dRA = +0.1116", dDec = -0.4588" from the image centre
+[DEBUG] fit_center: start = (1007, 951) walk steps = 1 coarse = (1007, 951) fine = (1006, 952)
+Centre pixel (1-based): (1006, 952); offset from image centre: dRA = +0.1178", dDec = -0.4526"
+Radial profile: 64 bins of 0.0312" (4.09 au) out to 2.00" (262 au)
+[DEBUG] extract_radial_profile: empty bins = 0 valid mean_flux entries = 64
+WARNING: Negative bowl: the azimuthal mean is significantly negative over r = 121-125 au (2 bins, down to -3.3 sigma, -0.035 mJy/beam = -4.1% of the peak, at 121 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+Saved the radial profile: ./alma_plots/UZ_Tau_profile.csv
+Disk extent (90% of the flux): ~76 au = 9.3 beams of 8.1 au.
+Saved figure: ./alma_plots/UZ_Tau_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 64 / 64
+[DEBUG] find_rings_and_gaps: ring_prominence = 0.0001783987470594871 gap_prominence = 0.0001783987470594871
+[DEBUG] find_rings_and_gaps: raw ring_idx = [3] raw gap_idx = Int64[]
+
+[raw profile] Detected 1 ring(s), 0 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 1 rings and 0 gaps
+[DEBUG] find_rings_and_gaps_residual: n_valid = 64 savgol window = 15 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 3.368785068830099e-5 residual min/max = -0.00010856811717714545 0.0001787905977166859
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 2.358149548181069e-5 gap_prominence = 2.358149548181069e-5
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [3, 10, 21] raw gap_idx = [6, 17, 24]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 8.146621588619483 min_radius_beams = 2.5 -> min_radius_au = 20.366553971548708
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 1.0106355206490296e-5
+Excluded 1 detection(s) within 20.37 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 10.2 au, residual = 1.7879e-04 Jy/beam (+5.31 sigma)
+
+[baseline-subtracted] Detected 2 ring(s):
+  r = 38.9 au, residual = 2.3132e-05 Jy/beam, prominence = 3.38e-05
+  r = 79.8 au, residual = 2.6668e-05 Jy/beam, prominence = 4.85e-05
+
+[baseline-subtracted] Detected 3 gap(s):
+  r = 22.5 au, residual = -8.0871e-05 Jy/beam, prominence = 1.08e-04
+  r = 74.5 au, residual = -1.0704e-05 Jy/beam, prominence = 3.38e-05
+  r = 101.2 au, residual = -2.1787e-05 Jy/beam, prominence = 3.21e-05
+
+Literature comparison (radii rescaled to the adopted distance; tolerance = 1 beam = 8.15 au):
+  feature               lit [au]   nearest detected feature delta [au] (beams)
+  ring (lit.)               11.0   -                      inside the excluded beam/CLEAN zone
+  ring (lit.)               17.4   -                      inside the excluded beam/CLEAN zone
+  gap (lit.)                69.0   74.5                   +5.5 (+0.67)
+  ring (lit.)               77.0   79.8                   +2.8 (+0.34)
+[DEBUG] plot_residual_profile: called with 2 rings and 3 gaps
+Saved target summary: ./alma_plots/UZ_Tau_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 64 savgol window = 15 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 3.368785068830099e-5 residual min/max = -0.00010856811717714545 0.0001787905977166859
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 2.021271041298059e-5 gap_prominence = 2.021271041298059e-5
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [3, 10, 21, 45] raw gap_idx = [6, 17, 24, 47]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 8.146621588619483 min_radius_beams = 2.5 -> min_radius_au = 20.366553971548708
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 3.368785068830099e-6
+Excluded 1 detection(s) within 20.37 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 10.2 au, residual = 1.7879e-04 Jy/beam (+5.31 sigma)
+
+Literature comparison (radii rescaled to the adopted distance; tolerance = 1 beam = 8.15 au):
+  feature               lit [au]   nearest detected feature delta [au] (beams)
+  ring (lit.)               11.0   -                      inside the excluded beam/CLEAN zone
+  ring (lit.)               17.4   -                      inside the excluded beam/CLEAN zone
+  gap (lit.)                69.0   74.5                   +5.5 (+0.67)
+  ring (lit.)               77.0   79.8                   +2.8 (+0.34)
+[DEBUG] plot_residual_profile: called with 3 rings and 4 gaps
+Saved target summary: ./alma_plots/UZ_Tau_target_summary.txt
+================================================================================
+Physical analysis: UZ Tau
+================================================================================
+
+[1/3] Gaussian ring fits (9 candidate ring position(s) before merging)
+  ring fit: restricted to r < 121 au (negative bowl beyond it: spatial filtering, not emission)
+  ring fit: dropping the component at r = 30.7 au (amplitude S/N 0.0; chi2 rises by only -0.0 in error units) and refitting
+  2 ring component(s), chi2_red = 1.34 (dof 20)
+
+[1b] Geometry check from the ring ridges
+WARNING: the geometry check failed (catalogue geometry is used): no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)
+
+[2/3] Azimuthal asymmetry (1 ring(s); geometry as assumed)
+  0 candidate arc/clump region(s) above 4.0 sigma; mean residual -5.25e-06 mJy/beam
+
+[3/3] Brightness temperature and optical depth
+  frequency 159.9 GHz; peak T_b = 20.4 K
+
+[3b] Gap-opening planet masses (1 gap(s))
+  0 of 1 gap(s) usable
+
+[3c] Ring widths and dust trapping
+  1 ring(s) with amplitude S/N >= 3; 1 give a limit on alpha/St
+WARNING: Negative bowl: the azimuthal mean is significantly negative over r = 121-125 au (2 bins, down to -3.3 sigma, -0.035 mJy/beam = -4.1% of the peak, at 121 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+NOTE: Observation advisor: the disc's 68%-flux diameter is 0.84 arcsec (111 au) but the observation used recovers only 0.80 arcsec. Observations whose recoverable scale covers the disc, finest resolution first: obs_choice = 2 (resolution 0.111", recoverable scale 1.65", band 6, proposal 2016.1.01164.S, 544 s); obs_choice = 4 (resolution 0.146", recoverable scale 3.57", band 6, proposal 2018.1.00771.S, 2359 s); obs_choice = 5 (resolution 0.355", recoverable scale 5.72", band 6, proposal 2017.1.01031.S, 484 s). They are coarser, so check the beam against the structure you want; the package size is checked only at download (a package above the 15 GB limit is skipped; raise MAX_TAR_GB[] or use force_download = true).
+
+========================================================================================
+PHYSICAL ANALYSIS: UZ Tau
+========================================================================================
+Generated 2026-10-25 15:45 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X1288_Xb6c.UZ_Tau_E_sci.spw31.cont.I.manual.repr.pbcor.fits
+Distance 131.0 pc; inclination 56.1 deg, PA 90.4 deg; beam 0.0622 x 0.0387 arcsec = 8.1 x 5.1 au (radial beam sigma 2.7 au)
+Observing frequency 159.9 GHz (1.87 mm)
+Negative bowl: the azimuthal mean is significantly negative over r = 121-125 au (2 bins, down to -3.3 sigma, -0.035 mJy/beam = -4.1% of the peak, at 121 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+Observation advisor: the disc's 68%-flux diameter is 0.84 arcsec (111 au) but the observation used recovers only 0.80 arcsec. Observations whose recoverable scale covers the disc, finest resolution first: obs_choice = 2 (resolution 0.111", recoverable scale 1.65", band 6, proposal 2016.1.01164.S, 544 s); obs_choice = 4 (resolution 0.146", recoverable scale 3.57", band 6, proposal 2018.1.00771.S, 2359 s); obs_choice = 5 (resolution 0.355", recoverable scale 5.72", band 6, proposal 2017.1.01031.S, 484 s). They are coarser, so check the beam against the structure you want; the package size is checked only at download (a package above the 15 GB limit is skipped; raise MAX_TAR_GB[] or use force_download = true).
+Stellar parameters (Long+18 Table 2 (disk E component); verify): L* = 0.35 Lsun, M* = 0.39 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 2 Gaussian ring(s); chi2_red = 1.34 (dof 20). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Fit range: r < 121 au only. Beyond it the profile is significantly negative (negative bowl: spatial filtering removes extended emission), which no disc model describes; including it would inflate chi2 and the errors. Rings or gaps beyond that radius are not fitted.
+  Smooth disk: amplitude 0.529 mJy/beam, characteristic radius 48 au, power-law index -0.33
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r   FWHM/H     share  seed      
+   1  8.7 +/- 1.3     0.516 +/- 0.16      3.3  15.1 +/- 3.9         1.73                63%  detected   [CORE: inside the exclusion zone, not a ring]
+   2  80.1 +/- 1.5    0.0601 +/- 0.015    3.9  13.2 +/- 5.0         0.17     1.75       73%  detected  
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 2.7 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+  CORE: the component lies inside the 20 au exclusion zone (2.5 beams), where beam and CLEAN effects dominate; it describes the unresolved core, not a ring, so it is left out of the ratios, widths, trapping limits, ridge geometry and asymmetry windows below.
+
+  Fit decisions (in order):
+    - restricted to r < 121 au (negative bowl beyond it: spatial filtering, not emission)
+    - starting seeds: 10.2 au (detected), 38.9 au (detected), 79.8 au (detected)
+    - seed at r = 11.0 au (literature) discarded: within 1.5 beam of the seed at 10.2 au (detected)
+    - seed at r = 17.4 au (literature) discarded: within 1.5 beam of the seed at 10.2 au (detected)
+    - seed at r = 77.0 au (literature) discarded: within 1.5 beam of the seed at 79.8 au (detected)
+    - dropping the component at r = 30.7 au (amplitude S/N 0.0; chi2 rises by only -0.0 in error units) and refitting
+  FWHM/H: width over the gas pressure scale height H = (c_s/v_K) r from the passive-disk T_d. A ring narrower than H cannot be a gas density bump alone: it needs dust trapping in a pressure maximum (a gap-opening planet or similar).
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Residual = pixel value minus the azimuthal mean at the same deprojected radius. Noise: image rms 0.0652 mJy/beam per beam.
+  Fourier amplitudes around each ring (window = +/- one observed sigma, at least half the minor axis), relative to the fitted ring amplitude (the table after this one gives them as a fraction of the local flux).
+  FAP = false-alarm probability exp(-S/N^2/2) for one ring (floored at 1e-6), for pure noise only; with N rings expect N x FAP chance detections. Geometry errors are NOT in the noise.
+
+    r [au]  bins | m=1 [%]          S/N     FAP  max @PA | m=2 [%]          S/N     FAP | peak +/- [%] (S/N)
+      80.1    36 | 26.8 +/- 17.7    1.5 3.2e-01     291° | 22.5 +/- 17.7    1.3 4.5e-01 | +112 / -99 (1.5)
+
+  r =   80.1 au: none (m=1 and m=2 both < 3 sigma)   [low surface brightness: unconfirmed, see the note below]
+
+  The same amplitudes as a fraction of the local azimuthal-mean flux (comparable between rings and between targets):
+    r [au] | local mean [mJy/beam] | m=1 [% of flux] | m=2 [% of flux]
+      80.1 | 0.0795             | 20.3 +/- 13.4  | 17.0 +/- 13.4 
+  NOTE: at 80 au the local azimuthal-mean flux is below 2x the image rms per beam (0.0652 mJy/beam): the ring is detected only by averaging over many beams, and the S/N and false-alarm values above assume white noise at the beam scale. Correlated residuals (sidelobes, large-scale noise, weak background sources) are not in that noise and can make a dipole or m=2 pattern of this size, so these asymmetries are unconfirmed; an 'arc' or 'horseshoe' reading is not supported at this brightness.
+  NOTE: the feature(s) at 80 au are shoulders (the raw-profile peak finder finds no peak or dip within 1 beam): an amplitude measured against a shoulder baseline can be large without a real azimuthal structure; the percentages of the local flux are the safer numbers.
+
+  Elliptical-beam check for m=2: an axisymmetric ring convolved with a beam that is not round has a higher peak where the ring runs along the
+  beam's short axis, i.e. a pure m=2 pattern with no real structure. Expectation for each ring (fitted intrinsic width) versus what is measured;
+  excess = size of the vector difference between the measured and the expected m=2 term (formal S/N, noise only):
+    r [au] | beam alone: % @ az | measured: % @ az   | excess [%] (S/N)
+      80.1 | 10.6 @ 167 deg     | 22.5 @ 38 deg      | 27.0 (1.5 s)
+  Azimuths are disk-plane angles from the major axis (mod 180). The expectation uses the same window-mean estimator as the measurement (the m=2 of the ring PEAK is ~1.65x larger).
+
+  Geometry sensitivity of m=2 (first-order estimate, not a correction): an inclination error of 3 deg alone moves the deprojected radius by (cos i / cos(i + 3 deg) - 1)/2 x cos(2 phi), which on a profile with logarithmic slope S gives an m=2 of |S| times that:
+           |          |  m=2 from a 3 deg error [%] |            measured m=2 [%]
+    r [au] |        S |  of ring amp.       of flux |  of ring amp.       of flux
+      80.1 |    -2.94 |          16.8          12.7 |          22.5          17.0
+  Each quantity is given relative to the ring amplitude used in the table above and as a fraction of the local azimuthal-mean flux ('n/a': the ring amplitude is below 10% of the local flux). A measured m=2 of the same size as the estimate is not distinguishable from a small inclination error unless the ridge geometry fit (section 1b) or a second ring settles it.
+
+  The same for a position-angle error of 3 deg: the deprojected radius moves by (eps/2) sin^2(i)/cos(i) x sin(2 phi) (eps in rad), an m=2 pattern with its maximum 45 deg from the major axis (the inclination pattern above peaks ON the axes):
+           |          |     m=2 from a PA error [%]
+    r [au] |        S |  of ring amp.       of flux
+      80.1 |    -2.94 |          12.6           9.5
+  Not included: ring curvature at small r, non-Gaussian ring profiles, CLEAN / uv-coverage effects (the vertical-thickness scan is opt-in: do_thickness = true).
+
+  Round-beam test: switched off (do_roundbeam = false).
+
+  Coherence across rings (a vortex sits at one radius; a centre / inclination / PA error shows at every ring with the same orientation):
+    fewer than 2 rings with a significant amplitude: no coherence test.
+
+  Candidate arcs / clumps (beam-smoothed residual above 4.0 sigma of the smoothed residual, >= 1 beam of area, outside the 20 au exclusion zone):
+    none
+
+  How to read this: a single significant positive arc covering a limited azimuth range at a ring radius (span of tens of degrees,
+  contrast tens of percent) is the signature of a dust trap such as a vortex. A +/- pair 180 deg apart (in the residual image, not the ring-averaged amplitudes)
+  is what a small centre or inclination error produces.
+  The noise estimate for the arcs is the robust scatter of the smoothed residual itself, so real structure inflates it: the threshold is conservative.
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 159.9 GHz from the azimuthal mean; T_d = (phi L* / 8 pi r^2 sigma_SB)^(1/4) with phi = 0.020, L* = 0.35 Lsun, floor 10 K.
+  tau = -ln(1 - T_b/T_d), absorption only. T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  type     r [au] | T_b [K]           T_d [K] T_b/T_d     tau      H/r
+  gap        22.5 | 12.0 +/- 0.5         20.1    0.59    0.90    0.069
+  ring       80.1 | 4.4 +/- 0.3          10.7    0.41    0.52    0.094
+
+  Interpretation: tau well below 1 means the emission is optically thin and the flux traces the dust surface density directly;
+  tau of order 1 or more means a column that is partly or fully optically thick. Scattering lowers T_b below the
+  absorption-only value, so the true optical depth of strongly scattering grains is higher than tau here.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Gap depth and width are measured on the azimuthal-mean profile (Zhang et al. 2018 definitions: next ring peak outside the gap, edge level = (peak + minimum)/2).
+  Width estimate: Kanagawa et al. (2016) Delta_gap/Rp = 0.41 (Mp/M*)^(1/2) (h/r)^(-3/4) alpha^(-1/4), i.e. Mp/M* = 2.1e-3 (Delta_gap/Rp)^2 (h/r / 0.05)^(3/2) (alpha/1e-3)^(1/2).
+  Depth estimate: Kanagawa et al. (2015) Sigma_min/Sigma_0 = 1/(1 + 0.04 K), K = (Mp/M*)^2 (h/r)^(-5) alpha^(-1), with Sigma_0/Sigma_min taken as the dust-intensity contrast.
+  (Zhang et al. 2018 give dust-specific calibrations that also depend on grain size; they are not applied here, so the dust gaps are read with the gas relations.)
+  M* = 0.39 Msun; h/r from the passive-disk T_d at each gap (H = c_s/v_K r). Both alpha values are shown because the mass scales roughly as alpha^(1/2) (width) and alpha^(1/2) (depth).
+
+     gap    r_c    h/r  depth | W_obs W_int    W/r | width a=1e-3       width a=1e-4       | depth a=1e-3       depth a=1e-4        notes
+
+  Not evaluated: 23 au: no local maximum outward of the gap minimum at 22.5 au (the profile does not rise there)
+
+  Columns: gap = radius you asked for, r_c = centre of the measured gap; depth = I(ring peak outside) / I(gap minimum); W_obs / W_int = gap width at the edge level, observed and with the beam (the beam) removed in quadrature; W/r = observed width over the gap centre.
+  The width range runs from the deconvolved to the observed width. Treat the numbers as order-of-magnitude: alpha is unknown (the two values bracket the usual range),
+  h/r comes from an assumed passive-disk temperature, the width relation was calibrated for gas gaps (dust gaps from large grains are wider, so masses are upper estimates),
+  the depth is diluted by the beam (lower bound on the contrast) but dust gaps are deeper than gas gaps (upper bound on the mass), and several gaps may be carved by one planet or by other mechanisms.
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  A dust ring in a Gaussian gas pressure bump of width w has width w_d = w sqrt(alpha / (alpha + St)), i.e. alpha / St = 1 / ((w / w_d)^2 - 1) (Dullemond et al. 2018, DSHARP VI).
+  w_d = Gaussian sigma of the fitted ring with the beam removed. A long-lived bump cannot be narrower than about one gas scale height H (passive-disk temperature, M* = 0.39 Msun), so w = H gives the LARGEST alpha / St the ring allows;
+  a bump as wide as the distance to the nearest gap gives the smallest. A ring wider than H gives no limit: the bump could be as wide as the ring.
+
+    r [au]   sigma_d  H [au]   sd/H | alpha/St max (w=H)   min (w=w_max) | St (alpha=1e-3)     St (alpha=1e-4)      notes
+      80.1 5.6+/-2.1     7.5   0.75 | 1.25 (>0.27)         0.010        | 8.0e-04-1.0e-01     8.0e-05-1.0e-02      
+
+  alpha/St: ratio of the turbulent diffusion parameter to the Stokes number of the trapped grains (smaller = stronger trapping). The range in the 'St' columns is alpha divided by the two limits,
+  for the two alpha values of section 4; '>=' means no upper limit (the nearest gap is not wider than H). The ring width is the intensity width: for optically thick rings it overestimates the dust-density width,
+  so the true rings are, if anything, narrower (stronger trapping). Blended components (see the warning in section 1) and rings with large errors are unreliable; trust the isolated rings.
+
+  Spacing of the gaps (planets sit in the gaps): radius ratio, orbital period ratio (r2/r1)^(3/2) and the nearest low-order commensurability (measured gaps only, at their measured centres r_c):
+  fewer than two gaps: nothing to compare.
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.
+
+Saved: ./alma_plots/UZ_Tau_physical_analysis.txt

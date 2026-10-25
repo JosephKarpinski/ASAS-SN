@@ -1,0 +1,107 @@
+========================================================================================
+TARGET SUMMARY: PDS 70
+========================================================================================
+Generated 2026-10-25 16:17 by alma_target_explorer_julia (v7, build 106)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=PDS%2070&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : PDS 70
+  Coordinates    : 14:08:10.15  -41:23:52.4  (RA 212.04230, Dec -41.39790 deg, J2000)
+  Distance       : 112.0 pc
+  Class          : T Tauri + cavity
+  Catalogue note : Cavity with two embedded protoplanets
+  Versus TW Hya  : Ring, not centrally peaked; gaps = cavity physics; Bosschaart+26: TD, R68 91 au
+  Published      : Bosschaart+26 (PDS70): class TD (transition disc); R68 91 au; F(1.33 mm) 230 mJy; M_dust 12 Earth masses; M* 0.76 Msun; distance 113 pc; this image: 68%-flux radius 78 au
+  Catalogue geometry: inclination 49.7 deg, PA 158.6 deg east of north
+
+  What kind of object this is:
+    A T Tauri star whose disk has a large central cavity (a transition disk): the dust emission is a ring rather than a central peak. The inner hole is usually attributed to one or more companions or planets, or to photoevaporation.
+    Analysis caveat for this class: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2022.1.01477.S
+  Band           : 7
+  Archive-reported resolution of the observation : 0.0674 arcsec (7.5 au; the beam of the image used is given below)
+  Exposure time  : 21392 s (5.94 h)
+  Public release : 2025-08-20
+  Member OUS     : uid://A001/X2d1f/X187
+  Largest recoverable angular scale : 1.20 arcsec (134 au); structure larger than this is filtered out
+  Observations in the archive query: 34; the finest has 0.0219 arcsec. Used: #8 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #8 because the finer packages exceeded the size limit.
+  Product package: 2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001.tar (0.11 GB)
+  FITS image used: member.uid___A001_X2d1f_X187.PDS70pol_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits
+  Pixel scale    : 0.0160 arcsec
+  Synthesised beam: 0.0769 x 0.0670 arcsec = 8.6 x 7.5 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 49.7 deg, position angle 158.6 deg (east of north)
+  Source: catalogue (literature) values.
+  Profile centre (pixel): (821, 806); profile out to 1.50 arcsec = 168 au in 40 bins of 4.20 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 1.5, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 1.38 mJy/beam at r = 73.5 au (8.5 beams)
+  Innermost bin              : 0.123 mJy/beam (9% of the peak)
+  Radius holding 50% / 90% of the flux : 74 au / 86 au (8.5 / 10.0 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 103 au (11.9 beams)
+  Radius where the mean falls below 10% of the peak: 94 au
+  Integrated flux out to the profile edge: ~150.6 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.03 mJy/beam
+  Profile dynamic range (peak / residual sigma): 46
+  Image noise (robust rms): 0.0146 mJy/beam; the peak of the azimuthal mean is 94.5 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 1 ring(s), 1 gap(s).
+  Raw rings at 74 au; raw gaps at 23 au.
+  Raw-only (no baseline-subtracted counterpart within 1 beam): rings at none au, gaps at 23 au. They are peaks / dips of the unsubtracted profile that the smooth baseline absorbed; they are real features of the profile (section 6 tests published radii against it), and the ring fit is seeded with the rings.
+  After subtracting a smooth baseline: 3 ring(s), 3 gap(s).
+  Detections inside 22 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.003 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       31.5    0.281         3.7       0.0162 mJy/beam       n/a    +3.0 s
+  ring       52.5    0.469         6.1       0.0404 mJy/beam     +8.0%    +9.9 s
+  ring       73.0    0.651         8.5        0.098 mJy/beam     +7.6%   +27.6 s
+  gap        44.1    0.394         5.1      -0.0476 mJy/beam    -33.0%   -14.0 s
+  gap        65.1    0.581         7.6      -0.0623 mJy/beam     -5.4%   -27.4 s
+  gap        90.3    0.806        10.5      -0.0623 mJy/beam    -16.5%   -22.9 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma; for a gap it is the depth below the shallower neighbouring maximum (the peak prominence), shown negative.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: R 32 au  ->  G 44 au  ->  R 52 au  ->  G 65 au  ->  R 73 au  ->  G 90 au
+  5 of 6 features are at least 3 sigma (2 of them also with modulation >= 10%); weaker ones are tentative.
+  NOTE: gap at 44 au and ring at 52 au are 8.4 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: gap at 65 au and ring at 73 au are 7.9 au apart (< 1 beam): probably one blended feature or noise.
+  Ring spacing: 21 au (x1.67) [tentative], 20 au (x1.39)
+  Gap spacing : 21 au (x1.48), 25 au (x1.39)
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Flux check: the image integrates to 151 mJy inside the profile radius; the catalogue flux (230 mJy at 1.33 mm) scales to 534-814 mJy at 344 GHz (spectral index 2-3), so the image holds 19-28% of it. FILTERED: the extended emission is resolved out by missing short spacings, so the radii enclosing 50-90% of the flux, R68, the contrast of arcs and asymmetries, the brightness temperatures and the ring amplitudes describe only what survived, not the disc. Use an observation with a larger recoverable angular scale (obs_choice = N).
+  (2) Negative bowl: the azimuthal mean is significantly negative over r = 111-166 au (14 bins, down to -9.2 sigma, -0.0251 mJy/beam = -1.8% of the peak, at 124 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+  (3) Observation advisor: the disc's 68%-flux diameter is 1.62 arcsec (182 au) but the observation used recovers only 1.20 arcsec. Observations whose recoverable scale covers the disc, finest resolution first: obs_choice = 14 (resolution 0.104", recoverable scale 3.25", band 6, proposal 2019.1.01619.S, 12998 s); obs_choice = 15 (resolution 0.113", recoverable scale 2.33", band 6, proposal 2019.1.01619.S, 9580 s); obs_choice = 17 (resolution 0.149", recoverable scale 2.03", band 8, proposal 2022.1.00592.S, 2177 s). They are coarser, so check the beam against the structure you want; the package size is checked only at download (a package above the 15 GB limit is skipped; raise MAX_TAR_GB[] or use force_download = true).
+  (4) Resolution: the disk (90% of the flux within 86 au) spans 10.0 beams of 8.6 au. It is moderately resolved: only features wider than about 17 au (2 beams) are reliable.
+  (5) Data choice: a package with finer resolution (0.0219 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (6) Shape: the profile is ring-like, not centrally peaked. The maximum is at 74 au and the innermost bin has only 9% of it, which points to a central cavity: the mean rises to half its peak at ~57 au.
+  (7) Substructure: 3 ring(s) and 3 gap(s) after baseline subtraction, with 5 of 6 at >= 3 sigma (2 also with modulation >= 10%). Detected radii: 32 au, 44 au, 52 au, 65 au, 73 au, 90 au.
+  (8) 3 of the 6 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (9) Class-specific note: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+  (10) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  PDS_70_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

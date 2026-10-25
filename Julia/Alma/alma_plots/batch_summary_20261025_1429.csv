@@ -1,0 +1,19 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,26,AB Aur,Herbig,OK,2,2015.1.00889.S,6,16.12941196560595,15.146715483807279,0.2,"",./alma_plots/AB_Aur_console.txt
+2,119,CQ Tau,Herbig,OK,6,2013.1.00498.S,6,44.33454287051947,109.33607795221451,0.3,"",./alma_plots/CQ_Tau_console.txt
+3,286,HD 34282,Herbig,OK,6,2013.1.00658.S,7,59.03953117132449,73.60087396466092,1.5,"",./alma_plots/HD_34282_console.txt
+4,321,HD 97048,Herbig,OK,8,2015.1.00192.S,6,72.80341044067261,100.0149573991561,0.3,"",./alma_plots/HD_97048_console.txt
+5,324,HD 100453,Herbig,OK,4,2015.1.00192.S,6,22.66194951534384,154.71740674761168,0.1,"",./alma_plots/HD_100453_console.txt
+6,325,HD 100546,Herbig,OK,1,2015.1.00806.S,7,4.98807433247688,157.6120525200648,2.0,"",./alma_plots/HD_100546_console.txt
+7,327,HD 104237,Herbig,NO IMAGE,0,"","",NaN,NaN,0.3,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)",./alma_plots/HD_104237_console.txt
+8,399,HD 135344B,Herbig,OK,4,2016.1.00340.S,4,10.49581311643224,32.15271296095421,1.1,"",./alma_plots/HD_135344B_console.txt
+9,416,HD 139614,Herbig,NO IMAGE,0,"","",NaN,NaN,0.1,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)",./alma_plots/HD_139614_console.txt
+10,424,HD 141569,Herbig,PARTIAL,4,2012.1.00698.S,7,46.777452170832724,18.046192748947668,0.1,source unresolved: 90% of the flux lies within 1.0 beams (a point source or a filtered image; no ring analysis possible),./alma_plots/HD_141569_console.txt
+11,431,HD 142666,Herbig,OK,1,2016.1.00484.L,6,4.732275351882153,142.81890280393029,0.7,"",./alma_plots/HD_142666_console.txt
+12,450,HD 145718,Herbig,PARTIAL,1,2015.1.01600.S,6,131.72732782365313,270.7941209425412,1.2,source unresolved: 90% of the flux lies within 1.0 beams (a point source or a filtered image; no ring analysis possible),./alma_plots/HD_145718_console.txt
+13,500,HD 163296,Herbig,OK,1,2016.1.00484.L,6,6.163280922919643,180.42898114351348,0.9,"",./alma_plots/HD_163296_console.txt
+14,503,HD 169142,Herbig,OK,2,2015.1.00806.S,7,4.156266421078776,53.380344925798006,0.9,"",./alma_plots/HD_169142_console.txt
+15,1760,MWC 480,Herbig,OK,1,2016.1.01042.S,3,24.168438613413507,79.1713716301102,0.5,"",./alma_plots/MWC_480_console.txt
+16,1761,MWC 758,Herbig,OK,6,2012.1.00725.S,7,37.47198104858305,31.27086571558413,0.9,"",./alma_plots/MWC_758_console.txt
+17,1998,V892 Tau,Herbig,OK,5,2013.1.00498.S,6,30.970977246759027,111.62812339472427,0.4,"",./alma_plots/V892_Tau_console.txt
+18,2007,V1247 Ori,Herbig,OK,1,2015.1.00986.S,7,18.7292695045536,80.61661038567146,0.9,"",./alma_plots/V1247_Ori_console.txt

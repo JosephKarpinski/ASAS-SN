@@ -1,0 +1,88 @@
+========================================================================================
+TARGET SUMMARY: Oph IRS 48
+========================================================================================
+Generated 2026-10-25 15:48 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=Oph%20IRS%2048&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : Oph IRS 48
+  Coordinates    : 16:27:37.18  -24:30:34.9  (RA 246.90490, Dec -24.50970 deg, J2000)
+  Distance       : 134.0 pc
+  Class          : Non-axisymmetric
+  Catalogue note : Strongly asymmetric dust trap (crescent seen at band 7 / 9; a 3 mm image is mostly the compact core). i ~ 50 deg, PA ~ 100 deg entered from memory of the literature (verify)
+  Versus TW Hya  : Azimuthal average misleading (horseshoe/arc)
+  Catalogue geometry: inclination 50.0 deg, PA 100.0 deg east of north
+
+  What kind of object this is:
+    A disk with strongly non-axisymmetric dust emission (a horseshoe, vortex or arc). The azimuthal average used here mixes the bright and faint sides.
+    Analysis caveat for this class: The azimuthal mean of a non-axisymmetric disk can produce rings and gaps that are not real; check the image.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2015.1.00761.S
+  Band           : 3
+  Archive-reported resolution of the observation : 0.0493 arcsec (6.6 au; the beam of the image used is given below)
+  Exposure time  : 363 s (0.10 h)
+  Public release : 2017-01-12
+  Member OUS     : uid://A001/X2d2/Xd6
+  Largest recoverable angular scale : 1.15 arcsec (154 au); structure larger than this is filtered out
+  Observations in the archive query: 14; the finest has 0.0493 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2015.1.00761.S_uid___A001_X2d2_Xd6_001_of_001.tar (0.35 GB)
+  FITS image used: member.uid___A001_X2d2_Xd6.calibrated_final_cont_IRS_48.pbcor.fits
+  Pixel scale    : 0.0160 arcsec
+  Synthesised beam: 0.0970 x 0.0829 arcsec = 13.0 x 11.1 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 50.0 deg, position angle 100.0 deg (east of north)
+  Source: catalogue (literature) values.
+  Profile centre (pixel): (1909, 1850); profile out to 1.20 arcsec = 161 au in 40 bins of 4.02 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 1.2, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.727 mJy/beam at r = 2.0 au (0.2 beams)
+  Innermost bin              : 0.727 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 14 au / 26 au (1.1 / 2.0 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 30 au (2.3 beams)
+  Radius where the mean falls below 10% of the peak: 30 au
+  Integrated flux out to the profile edge: ~3.5 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.00597 mJy/beam
+  Profile dynamic range (peak / residual sigma): 122
+  Image noise (robust rms): 0.0402 mJy/beam; the peak of the azimuthal mean is 18.1 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 6 ring(s), 6 gap(s).
+  Detections inside 33 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.000597 mJy/beam are ignored.
+
+  12 candidate features were found after baseline subtraction, but none reaches 3 sigma (the strongest is 0.8 sigma): they are consistent with noise.
+  The feature table, the sequence, the blend notes and the spacings are not listed (set COLLAPSE_NOISE_FEATURES[] = false to list them); the candidate radii are given in section 7.
+  0 of 12 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Resolution: the disk (90% of the flux within 26 au) spans only 2.0 beams of 13.0 au. It is barely resolved: only the overall size and brightness trend can be trusted; rings or gaps narrower than ~26 au would not be seen.
+  (2) Excluded zone: detections inside 33 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (2 au) and a large part of the disk (90% of the flux lies within 26 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (3) Shape: the emission is centrally peaked (the maximum lies at 2 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (4) Substructure: 12 candidate ring(s)/gap(s) were found after baseline subtraction, but none reaches 3 sigma (the strongest is 0.8 sigma), so they are consistent with noise and are not established. Candidate radii: 44 au, 51 au, 51 au, 66 au, 78 au, 86 au, 107 au, 114 au, 130 au, 137 au, 143 au, 154 au.
+  (5) 12 of the 12 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (6) Class-specific note: The azimuthal mean of a non-axisymmetric disk can produce rings and gaps that are not real; check the image.
+  (7) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  Oph_IRS_48_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

@@ -1,0 +1,5 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,169,EX Lup,Outbursting,OK,2,2017.1.00388.S,4,9.125408772379261,5.789087297589161,1.8,"",./alma_plots/EX_Lup_console.txt
+2,184,FU Ori,Outbursting,PARTIAL,2,2017.1.00388.S,4,19.270220607523004,3.028069483638307,0.7,physical analysis skipped: not detected: the strongest bin of the azimuthal mean is below the detection threshold (see the NOT DETECTED text),./alma_plots/FU_Ori_console.txt
+3,1997,V883 Ori,Outbursting,OK,1,2015.1.00350.S,6,11.718312919139722,227.61767932045376,3.5,"",./alma_plots/V883_Ori_console.txt
+4,2003,V960 Mon,Outbursting,NO IMAGE,0,"","",NaN,NaN,0.1,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)",./alma_plots/V960_Mon_console.txt

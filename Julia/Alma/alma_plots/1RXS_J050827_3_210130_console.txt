@@ -1,0 +1,140 @@
+================================================================================
+Target: 1RXS J050827.3-210130   (RA 77.1142, Dec -21.0250; ALMA archive: 4 rows)
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=1RXS%20J050827.3-210130&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for 1RXS J050827.3-210130 ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 77.1141666666801, -21.025000000000254, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 6077 | mirror = https://almascience.nrao.edu
+Found 4 rows in the cone.
+Filtered to 4 rows matching 1RXS J050827.3-210130.
+
+Observations (member OUS), finest spatial resolution first:
+1×9 DataFrame
+ Row │ member_ous_uid         proposal_id     band    best_res_arcsec  t_exp_s  release     n_rows  las_arcsec  freq_ghz
+     │ String                 String          String  Float64          Float64  String      Int64   Float64     Float64
+─────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X1289/X3f1  2017.1.01583.S  7              0.721428   846.72  2019-07-16       4     6.63215   335.899
+
+Using observation #1: uid://A001/X1289/X3f1 (proposal 2017.1.01583.S, band 7, best resolution 0.7214")
+
+Fetching file listing for uid://A001/X1289/X3f1 ...
+  fetching data info for uid://A001/X1289/X3f1 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 6 | mirror = https://almascience.nrao.edu
+4×3 DataFrame
+ Row │ access_url                                                                                    content_type       size_GB
+     │ String                                                                                        String             Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X1289_X3f1.README.txt               text/plain           0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001.tar   application/x-tar    2.174
+   3 │ https://almascience.nrao.edu/dataPortal/2017.1.01583.S_uid___A001_X1289_X3f1_auxiliary.tar    application/x-tar    0.275
+   4 │ https://almascience.nrao.edu/dataPortal/2017.1.01583.S_uid___A002_Xcf749a_X4871.asdm.sdm.tar  application/x-tar   29.183
+Already have 26 extracted FITS file(s), skipping download.
+Ignoring 8 line / cube product(s) in this package: member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw19.cube.I.pbcor.fits, member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw21.cube.I.pbcor.fits, member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw23.cube.I.pbcor.fits, member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw25.cube.I.pbcor.fits, member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw19.cube.I.pbcor.fits, member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw21.cube.I.pbcor.fits, member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw23.cube.I.pbcor.fits, member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw25.cube.I.pbcor.fits
+
+Extracted 18 FITS file(s), best candidate first:
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw19_21_23_25.cont.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw25.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw19_21_23_25.cont.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.2MASS_J05241914-1601153_sci.spw25.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0522-3627_bp.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0522-3627_bp.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0522-3627_bp.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0522-3627_bp.spw25.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0542-0913_ph.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0542-0913_ph.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0542-0913_ph.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1.J0542-0913_ph.spw25.mfs.I.pbcor.fits
+
+Using: ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw19_21_23_25.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: image ./alma_cache/2017.1.01583.S_uid___A001_X1289_X3f1_001_of_001_extracted/2017.1.01583.S/science_goal.uid___A001_X1289_X3cb/group.uid___A001_X1289_X3f0/member.uid___A001_X1289_X3f1/product/member.uid___A001_X1289_X3f1._1RXS_J050827.3-210130__sci.spw19_21_23_25.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (224, 224) eltype Float32 nan count 19827 finite count 30349
+Synthesized beam: 0.7578" x 0.6204" (PA=-82.53485870361) = 36.60 au x 29.97 au at 48.3 pc
+No significant emission for a centroid start; the centre fit starts at the image centre.
+Disk too small relative to the beam (fit radius 1.00" < 2.5 beams) to fit its geometry; keeping i = 0.0, PA = 0.0 deg.
+WARNING: centre fit still at the edge of its search window after 8 steps; check the image, or pass center = (i, j).
+[DEBUG] fit_center: start = (113, 113) walk steps = 8 coarse = (109, 115) fine = (109, 115)
+Centre pixel (1-based): (109, 115); offset from image centre: dRA = +0.5200", dDec = +0.2600"
+Radial profile: 40 bins of 0.0500" (2.42 au) out to 2.00" (97 au)
+[DEBUG] extract_radial_profile: empty bins = 3 valid mean_flux entries = 37
+Saved the radial profile: ./alma_plots/1RXS_J050827_3_210130_profile.csv
+Saved figure: ./alma_plots/1RXS_J050827_3_210130_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 37 / 40
+[DEBUG] find_rings_and_gaps: ring_prominence = 0.0001260314942214835 gap_prominence = 0.0001260314942214835
+[DEBUG] find_rings_and_gaps: raw ring_idx = Int64[] raw gap_idx = Int64[]
+
+[raw profile] Detected 0 ring(s), 0 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 0 rings and 0 gaps
+[DEBUG] find_rings_and_gaps_residual: n_valid = 37 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 5.827166372382631e-6 residual min/max = -1.5796380845704873e-5 1.0853355817868343e-5
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 4.079016460667842e-6 gap_prominence = 4.079016460667842e-6
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [3, 7, 9, 12, 14, 25, 28, 30, 33, 35] raw gap_idx = [5, 8, 11, 13, 17, 26, 29, 31, 34, 36]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 36.603664169943045 min_radius_beams = 2.5 -> min_radius_au = 91.50916042485761
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 1.7481499117147892e-6
+Excluded 19 detection(s) within 91.51 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 8.5 au, residual = 4.3004e-06 Jy/beam (+0.74 sigma)
+    r = 22.9 au, residual = 9.9253e-06 Jy/beam (+1.70 sigma)
+    r = 27.8 au, residual = 1.0853e-05 Jy/beam (+1.86 sigma)
+    r = 35.0 au, residual = 6.9078e-06 Jy/beam (+1.19 sigma)
+    r = 39.8 au, residual = 6.1959e-06 Jy/beam (+1.06 sigma)
+    r = 66.4 au, residual = 2.5877e-06 Jy/beam (+0.44 sigma)
+    r = 73.7 au, residual = 3.4105e-06 Jy/beam (+0.59 sigma)
+    r = 78.5 au, residual = 8.9013e-06 Jy/beam (+1.53 sigma)
+    r = 85.7 au, residual = 2.6999e-06 Jy/beam (+0.46 sigma)
+    r = 90.6 au, residual = 8.5825e-06 Jy/beam (+1.47 sigma)
+    r = 18.1 au, residual = -5.9421e-06 Jy/beam (-1.02 sigma)
+    r = 25.4 au, residual = -1.4906e-05 Jy/beam (-2.56 sigma)
+    r = 32.6 au, residual = -1.5796e-05 Jy/beam (-2.71 sigma)
+    r = 37.4 au, residual = -4.5611e-06 Jy/beam (-0.78 sigma)
+    r = 47.1 au, residual = -2.9190e-06 Jy/beam (-0.50 sigma)
+    r = 68.8 au, residual = -3.7808e-06 Jy/beam (-0.65 sigma)
+    r = 76.1 au, residual = -7.0456e-06 Jy/beam (-1.21 sigma)
+    r = 80.9 au, residual = -5.4544e-06 Jy/beam (-0.94 sigma)
+    r = 88.2 au, residual = -5.3372e-06 Jy/beam (-0.92 sigma)
+
+[baseline-subtracted] Detected 0 ring(s):
+
+[baseline-subtracted] Detected 1 gap(s):
+  r = 92.8 au, residual = -4.7487e-06 Jy/beam, prominence = 5.43e-06
+[DEBUG] plot_residual_profile: called with 0 rings and 1 gaps
+Saved target summary: ./alma_plots/1RXS_J050827_3_210130_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 37 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 5.827166372382631e-6 residual min/max = -1.5796380845704873e-5 1.0853355817868343e-5
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 3.4962998234295785e-6 gap_prominence = 3.4962998234295785e-6
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [3, 7, 9, 12, 14, 25, 28, 30, 33, 35] raw gap_idx = [5, 8, 11, 13, 17, 26, 29, 31, 34, 36]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 36.603664169943045 min_radius_beams = 2.5 -> min_radius_au = 91.50916042485761
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 5.827166372382632e-7
+Excluded 19 detection(s) within 91.51 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 8.5 au, residual = 4.3004e-06 Jy/beam (+0.74 sigma)
+    r = 22.9 au, residual = 9.9253e-06 Jy/beam (+1.70 sigma)
+    r = 27.8 au, residual = 1.0853e-05 Jy/beam (+1.86 sigma)
+    r = 35.0 au, residual = 6.9078e-06 Jy/beam (+1.19 sigma)
+    r = 39.8 au, residual = 6.1959e-06 Jy/beam (+1.06 sigma)
+    r = 66.4 au, residual = 2.5877e-06 Jy/beam (+0.44 sigma)
+    r = 73.7 au, residual = 3.4105e-06 Jy/beam (+0.59 sigma)
+    r = 78.5 au, residual = 8.9013e-06 Jy/beam (+1.53 sigma)
+    r = 85.7 au, residual = 2.6999e-06 Jy/beam (+0.46 sigma)
+    r = 90.6 au, residual = 8.5825e-06 Jy/beam (+1.47 sigma)
+    r = 18.1 au, residual = -5.9421e-06 Jy/beam (-1.02 sigma)
+    r = 25.4 au, residual = -1.4906e-05 Jy/beam (-2.56 sigma)
+    r = 32.6 au, residual = -1.5796e-05 Jy/beam (-2.71 sigma)
+    r = 37.4 au, residual = -4.5611e-06 Jy/beam (-0.78 sigma)
+    r = 47.1 au, residual = -2.9190e-06 Jy/beam (-0.50 sigma)
+    r = 68.8 au, residual = -3.7808e-06 Jy/beam (-0.65 sigma)
+    r = 76.1 au, residual = -7.0456e-06 Jy/beam (-1.21 sigma)
+    r = 80.9 au, residual = -5.4544e-06 Jy/beam (-0.94 sigma)
+    r = 88.2 au, residual = -5.3372e-06 Jy/beam (-0.92 sigma)
+Saved target summary: ./alma_plots/1RXS_J050827_3_210130_target_summary.txt
+================================================================================
+Physical analysis: 1RXS J050827.3-210130
+================================================================================
+
+NOT DETECTED: the strongest bin of the azimuthal mean is 1.5 sigma (< 5.0; the peak is 1.5 x the per-beam image noise). Nothing below is meaningful, so the physical analysis was skipped. Upper limit: 3 sigma = 0.171 mJy/beam (one beam; image rms 0.057 mJy/beam). Try a deeper or different observation, or set min_detect_snr = 0 to force the analysis.

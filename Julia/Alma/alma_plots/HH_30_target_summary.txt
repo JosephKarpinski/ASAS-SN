@@ -1,0 +1,84 @@
+========================================================================================
+TARGET SUMMARY: HH 30
+========================================================================================
+Generated 2026-10-25 15:34 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HH%2030&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : HH 30
+  Coordinates    : 04:31:37.51  +18:12:24.4  (RA 67.90627, Dec +18.20677 deg, J2000)
+  Distance       : 140.0 pc
+  Class          : Edge-on
+  Versus TW Hya  : Edge-on; jet-driving
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    An edge-on disk seen as a dark lane against its scattered light. Deprojection into face-on rings is not possible; radial structure is hidden by projection.
+    Analysis caveat for this class: The radial profile is not meaningful for an edge-on disk; use the image alone.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2017.1.01701.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0202 arcsec (2.8 au; the beam of the image used is given below)
+  Exposure time  : 5407 s (1.50 h)
+  Public release : 2018-11-23
+  Member OUS     : uid://A001/X1284/X545
+  Largest recoverable angular scale : 0.46 arcsec (64 au); structure larger than this is filtered out
+  Observations in the archive query: 16; the finest has 0.0202 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2017.1.01701.S_uid___A001_X1284_X545_001_of_001.tar (1.06 GB)
+  FITS image used: member.uid___A001_X1284_X545.HH_30_sci.spw17_19_21.mfs.I.manual.cont.image.tt0.pbcor.fits
+  Pixel scale    : 0.0040 arcsec
+  Synthesised beam: 0.0247 x 0.0183 arcsec = 3.5 x 2.6 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 81.2 deg, position angle 120.0 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 2% of the pixel variance (face-on: 14%). LOW: probably non-axisymmetric or faint; the fitted geometry is unreliable.
+  Profile centre (pixel): (642, 465); profile out to 2.00 arcsec = 280 au in 162 bins of 1.73 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.00635 mJy/beam at r = 25.1 au (7.3 beams)
+  Innermost bin              : -0.00375 mJy/beam (-59% of the peak)
+  Radius holding 50% / 90% of the flux : NaN au / NaN au (NaN / NaN beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 25 au (7.3 beams)
+  Radius where the mean falls below 10% of the peak: 279 au
+  Integrated flux out to the profile edge: ~7.8 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.00111 mJy/beam
+  Profile dynamic range (peak / residual sigma): 6
+  Image noise (robust rms): 0.0105 mJy/beam; the peak of the azimuthal mean is 0.6 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 14 ring(s), 14 gap(s).
+  Detections inside 9 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.000111 mJy/beam are ignored.
+
+  28 candidate features were found after baseline subtraction, but none reaches 3 sigma (the strongest is 1.4 sigma): they are consistent with noise.
+  The feature table, the sequence, the blend notes and the spacings are not listed (set COLLAPSE_NOISE_FEATURES[] = false to list them); the candidate radii are given in section 7.
+  0 of 28 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Detection: the azimuthal mean is only 1.8 sigma in its strongest bin, but the disc IS detected in aperture flux: 7.78 mJy inside r = 279 au, 12.1 sigma. For an edge-on or highly inclined disc the azimuthal mean spreads a thin ridge over all azimuths and dilutes it into the noise, so the rings and gaps listed above are noise and the radial analysis does not apply; see the edge-on section of the physical analysis (flux, extent).
+  (2) Class-specific note: The radial profile is not meaningful for an edge-on disk; use the image alone.
+  (3) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  HH_30_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

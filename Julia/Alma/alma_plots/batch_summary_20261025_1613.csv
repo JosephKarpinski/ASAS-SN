@@ -1,0 +1,12 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,152,Elias 29,Young/embedded,PARTIAL,5,2015.1.00761.S,7,15.034347876905821,50.144316042026404,0.7,source unresolved: 90% of the flux lies within 1.1 beams (a point source or a filtered image; no ring analysis possible),./alma_plots/Elias_29_console.txt
+2,238,GY 91,Young/embedded,OK,1,2015.1.00761.S,3,13.46668422222312,11.362031055950702,0.5,"",./alma_plots/GY_91_console.txt
+3,703,HL Tau,Young/embedded,OK,3,2019.1.01051.S,7,4.500212520360947,294.1027509651702,0.4,"",./alma_plots/HL_Tau_console.txt
+4,754,IRAS 04302+2247,Young/embedded,OK,2,2016.1.00460.S,4,13.97574424743552,18.708031168153084,0.1,"",./alma_plots/IRAS_04302_2247_console.txt
+5,762,IRAS 16253-2429,Young/embedded,NO IMAGE,0,"","",NaN,NaN,0.0,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)",./alma_plots/IRAS_16253_2429_console.txt
+6,780,IRS 63,Young/embedded,OK,1,2015.1.01512.S,6,6.01186949014464,233.57926276800717,5.4,"",./alma_plots/IRS_63_console.txt
+7,806,L1489 IRS,Young/embedded,OK,4,2013.1.01086.S,6,33.157745301723835,43.59751208788716,0.1,"",./alma_plots/L1489_IRS_console.txt
+8,807,L1527 IRS,Young/embedded,OK,2,2019.1.01695.S,4,16.970574706792558,226.77888877259167,0.0,"",./alma_plots/L1527_IRS_console.txt
+9,808,L1551 IRS 5,Young/embedded,OK,2,2017.1.00388.S,4,7.801239863037599,69.14932997368217,0.1,"",./alma_plots/L1551_IRS_5_console.txt
+10,1951,TMC1A,Young/embedded,OK,2,2015.1.01415.S,6,5.09785011410472,184.07932798610707,0.1,"",./alma_plots/TMC1A_console.txt
+11,2033,WL 17,Young/embedded,OK,3,2015.1.00761.S,7,14.890699587763656,52.6751245872349,1.1,"",./alma_plots/WL_17_console.txt

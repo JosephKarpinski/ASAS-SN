@@ -1,0 +1,101 @@
+slug,name,status,build,time,note
+Elias_29,Elias 29,OK,105,2026-10-25 12:23,""
+GY_91,GY 91,OK,105,2026-10-25 12:24,""
+HL_Tau,HL Tau,OK,105,2026-10-25 12:29,""
+IRAS_04302_2247,IRAS 04302+2247,OK,105,2026-10-25 12:29,""
+IRAS_16253_2429,IRAS 16253-2429,NO IMAGE,105,2026-10-25 12:30,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+IRS_63,IRS 63,OK,105,2026-10-25 12:31,""
+L1489_IRS,L1489 IRS,OK,105,2026-10-25 12:31,""
+L1527_IRS,L1527 IRS,OK,105,2026-10-25 12:31,""
+L1551_IRS_5,L1551 IRS 5,OK,105,2026-10-25 12:31,""
+TMC1A,TMC1A,OK,105,2026-10-25 12:31,""
+WL_17,WL 17,NO IMAGE,105,2026-10-25 12:31,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+1RXS_1609_B,1RXS 1609 B,PARTIAL,105,2026-10-25 12:31,physical analysis skipped: it returned no result (for example no beam in the FITS header; see the console text)
+1RXS_J050827_3_210130,1RXS J050827.3-210130,PARTIAL,105,2026-10-25 12:31,physical analysis skipped: it returned no result (for example no beam in the FITS header; see the console text)
+1RXS_J172919_1_501454,1RXS J172919.1-501454,OK,105,2026-10-25 12:31,""
+1swasp_j140747_93_394542_6,1swasp j140747.93-394542.6,PARTIAL,105,2026-10-25 12:32,physical analysis skipped: it returned no result (for example no beam in the FITS header; see the console text)
+2M1207,2M1207,OK,105,2026-10-25 12:32,""
+Elias_29,Elias 29,PARTIAL,105,2026-10-25 13:06,source unresolved: 90% of the flux lies within 1.1 beams (a point source or a filtered image; no ring analysis possible)
+L1489_IRS,L1489 IRS,OK,105,2026-10-25 13:06,""
+2M1207,2M1207,PARTIAL,105,2026-10-25 13:07,source unresolved: 90% of the flux lies within 0.8 beams (a point source or a filtered image; no ring analysis possible)
+HL_Tau,HL Tau,OK,105,2026-10-25 13:28,""
+GY_91,GY 91,OK,105,2026-10-25 13:29,""
+TMC1A,TMC1A,OK,105,2026-10-25 13:30,""
+HL_Tau,HL Tau,OK,105,2026-10-25 14:09,""
+GY_91,GY 91,OK,105,2026-10-25 14:10,""
+TMC1A,TMC1A,OK,105,2026-10-25 14:11,""
+AB_Aur,AB Aur,OK,105,2026-10-25 14:17,""
+CQ_Tau,CQ Tau,OK,105,2026-10-25 14:17,""
+HD_34282,HD 34282,OK,105,2026-10-25 14:18,""
+HD_97048,HD 97048,OK,105,2026-10-25 14:19,""
+HD_100453,HD 100453,OK,105,2026-10-25 14:19,""
+HD_100546,HD 100546,OK,105,2026-10-25 14:21,""
+HD_104237,HD 104237,NO IMAGE,105,2026-10-25 14:21,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+HD_135344B,HD 135344B,OK,105,2026-10-25 14:22,""
+HD_139614,HD 139614,NO IMAGE,105,2026-10-25 14:22,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+HD_141569,HD 141569,PARTIAL,105,2026-10-25 14:23,source unresolved: 90% of the flux lies within 1.0 beams (a point source or a filtered image; no ring analysis possible)
+HD_142666,HD 142666,OK,105,2026-10-25 14:23,""
+HD_145718,HD 145718,PARTIAL,105,2026-10-25 14:25,source unresolved: 90% of the flux lies within 1.0 beams (a point source or a filtered image; no ring analysis possible)
+HD_163296,HD 163296,OK,105,2026-10-25 14:25,""
+HD_169142,HD 169142,OK,105,2026-10-25 14:26,""
+MWC_480,MWC 480,OK,105,2026-10-25 14:27,""
+MWC_758,MWC 758,OK,105,2026-10-25 14:28,""
+V892_Tau,V892 Tau,OK,105,2026-10-25 14:28,""
+V1247_Ori,V1247 Ori,OK,105,2026-10-25 14:29,""
+CS_Cha,CS Cha,NO IMAGE,105,2026-10-25 14:36,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+GG_Tau_A,GG Tau A,OK,105,2026-10-25 14:36,""
+GM_Aur,GM Aur,OK,105,2026-10-25 14:37,""
+LkCa_15,LkCa 15,OK,105,2026-10-25 14:38,""
+PDS_70,PDS 70,OK,105,2026-10-25 14:39,""
+RX_J1604_3_2130A,RX J1604.3-2130A,OK,105,2026-10-25 14:43,""
+RX_J1615_3_3255,RX J1615.3-3255,OK,105,2026-10-25 14:56,""
+RX_J1852_3_3700,RX J1852.3-3700,OK,105,2026-10-25 14:57,""
+SR_21,SR 21,OK,105,2026-10-25 14:58,""
+SR_24S,SR 24S,OK,105,2026-10-25 14:59,""
+Sz_91,Sz 91,OK,105,2026-10-25 15:10,""
+T_Cha,T Cha,OK,105,2026-10-25 15:15,""
+UX_Tau_A,UX Tau A,PARTIAL,105,2026-10-25 15:16,source unresolved: 90% of the flux lies within 1.4 beams (a point source or a filtered image; no ring analysis possible)
+WSB_60,WSB 60,NO IMAGE,105,2026-10-25 15:16,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+EX_Lup,EX Lup,OK,105,2026-10-25 15:26,""
+FU_Ori,FU Ori,PARTIAL,105,2026-10-25 15:26,physical analysis skipped: not detected: the strongest bin of the azimuthal mean is below the detection threshold (see the NOT DETECTED text)
+V883_Ori,V883 Ori,OK,105,2026-10-25 15:30,""
+V960_Mon,V960 Mon,NO IMAGE,105,2026-10-25 15:30,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+Flying_Saucer,Flying Saucer,PARTIAL,105,2026-10-25 15:34,source unresolved: 90% of the flux lies within 1.0 beams (a point source or a filtered image; no ring analysis possible); physical analysis skipped: edge-on disc: the aperture-flux / moment report was
+HH_30,HH 30,PARTIAL,105,2026-10-25 15:34,physical analysis skipped: edge-on disc: the aperture-flux / moment report was written instead of the ring analysis
+Oph_163131,Oph 163131,PARTIAL,105,2026-10-25 15:36,physical analysis skipped: not detected: the strongest bin of the azimuthal mean is below the detection threshold (see the NOT DETECTED text)
+Sz_133,Sz 133,PARTIAL,105,2026-10-25 15:36,source unresolved: 90% of the flux lies within 1.4 beams (a point source or a filtered image; no ring analysis possible); physical analysis skipped: edge-on disc: the aperture-flux / moment report was
+AS_205,AS 205,OK,105,2026-10-25 15:40,""
+GW_Ori,GW Ori,OK,105,2026-10-25 15:40,""
+HK_Tau,HK Tau,OK,105,2026-10-25 15:44,""
+IRS_43,IRS 43,OK,105,2026-10-25 15:44,""
+T_Tau,T Tau,NO IMAGE,105,2026-10-25 15:45,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+UZ_Tau,UZ Tau,OK,105,2026-10-25 15:45,""
+XZ_Tau,XZ Tau,OK,105,2026-10-25 15:46,""
+HD_142527,HD 142527,OK,105,2026-10-25 15:48,""
+HD_143006,HD 143006,PARTIAL,105,2026-10-25 15:48,source unresolved: 90% of the flux lies within 1.3 beams (a point source or a filtered image; no ring analysis possible)
+Oph_IRS_48,Oph IRS 48,OK,105,2026-10-25 15:48,""
+Elias_29,Elias 29,PARTIAL,106,2026-10-25 16:05,source unresolved: 90% of the flux lies within 1.1 beams (a point source or a filtered image; no ring analysis possible)
+GY_91,GY 91,OK,106,2026-10-25 16:06,""
+HL_Tau,HL Tau,OK,106,2026-10-25 16:06,""
+IRAS_04302_2247,IRAS 04302+2247,OK,106,2026-10-25 16:06,""
+IRAS_16253_2429,IRAS 16253-2429,NO IMAGE,106,2026-10-25 16:06,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+IRS_63,IRS 63,OK,106,2026-10-25 16:12,""
+L1489_IRS,L1489 IRS,OK,106,2026-10-25 16:12,""
+L1527_IRS,L1527 IRS,OK,106,2026-10-25 16:12,""
+L1551_IRS_5,L1551 IRS 5,OK,106,2026-10-25 16:12,""
+TMC1A,TMC1A,OK,106,2026-10-25 16:12,""
+WL_17,WL 17,OK,106,2026-10-25 16:13,""
+CS_Cha,CS Cha,NO IMAGE,106,2026-10-25 16:16,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"
+GG_Tau_A,GG Tau A,OK,106,2026-10-25 16:16,""
+GM_Aur,GM Aur,PARTIAL,106,2026-10-25 16:16,coarse beam: 48 au (> 40 au): structure narrower than ~95 au (2 beams) is not resolved
+LkCa_15,LkCa 15,PARTIAL,106,2026-10-25 16:17,coarse beam: 45 au (> 40 au): structure narrower than ~89 au (2 beams) is not resolved
+PDS_70,PDS 70,OK,106,2026-10-25 16:17,""
+RX_J1604_3_2130A,RX J1604.3-2130A,OK,106,2026-10-25 16:17,""
+RX_J1615_3_3255,RX J1615.3-3255,PARTIAL,106,2026-10-25 16:17,coarse beam: 43 au (> 40 au): structure narrower than ~87 au (2 beams) is not resolved
+RX_J1852_3_3700,RX J1852.3-3700,OK,106,2026-10-25 16:17,""
+SR_21,SR 21,OK,106,2026-10-25 16:17,""
+SR_24S,SR 24S,OK,106,2026-10-25 16:18,""
+Sz_91,Sz 91,OK,106,2026-10-25 16:18,""
+T_Cha,T Cha,OK,106,2026-10-25 16:19,""
+UX_Tau_A,UX Tau A,PARTIAL,106,2026-10-25 16:19,source unresolved: 90% of the flux lies within 1.4 beams (a point source or a filtered image; no ring analysis possible)
+WSB_60,WSB 60,NO IMAGE,106,2026-10-25 16:19,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)"

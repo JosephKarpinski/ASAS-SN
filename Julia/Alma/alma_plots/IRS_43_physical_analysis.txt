@@ -1,0 +1,56 @@
+========================================================================================
+PHYSICAL ANALYSIS: IRS 43
+========================================================================================
+Generated 2026-10-25 15:44 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X197_X1c6.ari_l.IRS_43_sci.spw0_1_2_3_259474MHz.12m.cont.I.pbcor.fits
+Distance 137.3 pc; inclination 42.5 deg, PA 97.5 deg; beam 0.2497 x 0.1722 arcsec = 34.3 x 23.6 au (radial beam sigma 12.1 au)
+Observing frequency 259.5 GHz (1.16 mm)
+Stellar parameters: none stored for this target (pass lstar= / mstar=).
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 1 Gaussian ring(s); chi2_red = 0.43 (dof 34). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 20.1 mJy/beam, characteristic radius 22 au, power-law index 0.08
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+   1  85.8 +/- 10.4   0.129 +/- 0.015     8.6  95.2 +/- 21.7        1.11               100%  detected   [parameter at its bound] [carries >= 90% of the local flux: a shoulder of the smooth disc, not an isolated ring] [EXTENDED COMPONENT: broad and below 2x the image rms per beam; a low-brightness plateau, not a ring]
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 12.1 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+
+  Fit decisions (in order):
+    - starting seeds: 51.5 au (detected)
+  WARNING: the smooth disk collapsed to the unresolved core (characteristic radius 22 au < 3 beams): the extended emission is shared among the ring components, so overlapping neighbours (shoulders) have degenerate widths and amplitudes; trust the isolated rings, not the blended ones.
+  NOTE: chi2_red is 0.43: the data scatter about the model by only 1.5x less than the per-bin errors say. The errors are overestimated (the image rms may include structure or sidelobes, or the pixels are more correlated than the beam count assumes), so the S/N values and error bars here are conservative.
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Not tested: 90% of the flux lies within 3.3 beams (93 au of a 28 au beam); an asymmetry measured on a disc this small is dominated by the beam wings of the central core and by small centre / inclination / PA errors (needs at least 4 beams).
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 259.5 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  type     r [au] | T_b [K]         
+  ring       85.8 | 2.2 +/- 0.2     
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

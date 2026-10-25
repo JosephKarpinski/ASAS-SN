@@ -1,0 +1,103 @@
+========================================================================================
+TARGET SUMMARY: SR 21
+========================================================================================
+Generated 2026-10-25 16:17 by alma_target_explorer_julia (v7, build 106)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=SR%2021&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : SR 21
+  Coordinates    : 16:27:10.28  -24:19:12.6  (RA 246.79282, Dec -24.32017 deg, J2000)
+  Distance       : 138.0 pc
+  Class          : T Tauri + cavity
+  Versus TW Hya  : Ring, not centrally peaked; gaps = cavity physics; Bosschaart+26: TD, R68 63 au
+  Published      : Bosschaart+26 (SR21): class TD (transition disc); R68 63 au; F(1.33 mm) 95 mJy; M_dust 19 Earth masses; M* 1.95 Msun; distance 138 pc; this image: 68%-flux radius 59 au
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    A T Tauri star whose disk has a large central cavity (a transition disk): the dust emission is a ring rather than a central peak. The inner hole is usually attributed to one or more companions or planets, or to photoevaporation.
+    Analysis caveat for this class: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2018.1.00689.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0205 arcsec (2.8 au; the beam of the image used is given below)
+  Exposure time  : 2903 s (0.81 h)
+  Public release : 2020-11-11
+  Member OUS     : uid://A001/X133d/X140d
+  Largest recoverable angular scale : 0.40 arcsec (55 au); structure larger than this is filtered out
+  Observations in the archive query: 6; the finest has 0.0205 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2018.1.00689.S_uid___A001_X133d_X140d_001_of_001.tar (0.18 GB)
+  FITS image used: member.uid___A001_X133d_X140d.EM_star_SR_21_sci.spw19_23_25_27_29.cont.I.pbcor.fits
+  Pixel scale    : 0.0086 arcsec
+  Synthesised beam: 0.0349 x 0.0268 arcsec = 4.8 x 3.7 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 18.8 deg, position angle 13.1 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 79% of the pixel variance (face-on: 60%).
+  Profile centre (pixel): (1230, 1148); profile out to 2.00 arcsec = 276 au in 115 bins of 2.40 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.286 mJy/beam at r = 58.8 au (12.2 beams)
+  Innermost bin              : -0.0746 mJy/beam (-26% of the peak)
+  Radius holding 50% / 90% of the flux : 56 au / 64 au (11.7 / 13.2 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 71 au (14.7 beams)
+  Radius where the mean falls below 10% of the peak: 68 au
+  Integrated flux out to the profile edge: ~24.9 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.0286 mJy/beam
+  Profile dynamic range (peak / residual sigma): 10
+  Image noise (robust rms): 0.02 mJy/beam; the peak of the azimuthal mean is 14.3 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 1 ring(s), 0 gap(s).
+  Raw rings at 59 au; raw gaps at none au.
+  After subtracting a smooth baseline: 2 ring(s), 3 gap(s).
+  Detections inside 12 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.00286 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       35.0    0.254         7.3       0.0509 mJy/beam    +72.8%   +12.6 s
+  ring       57.9    0.420        12.0        0.136 mJy/beam    +90.6%   +43.7 s
+  gap         8.0    0.058         1.7      -0.0379 mJy/beam       n/a   -10.6 s
+  gap        42.8    0.310         8.9      -0.0787 mJy/beam    -58.3%   -35.5 s
+  gap        73.2    0.530        15.2      -0.0548 mJy/beam    -95.3%   -24.0 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma; for a gap it is the depth below the shallower neighbouring maximum (the peak prominence), shown negative.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: G 8 au  ->  R 35 au  ->  G 43 au  ->  R 58 au  ->  G 73 au
+  5 of 5 features are at least 3 sigma (5 of them also with modulation >= 10%); weaker ones are tentative.
+  Ring spacing: 23 au (x1.65)
+  Gap spacing : 35 au (x5.38), 30 au (x1.71)
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Flux check: the image integrates to 24.9 mJy inside the profile radius; the catalogue flux (95 mJy at 1.33 mm) scales to 94.5 mJy at 225 GHz (spectral index 2-3), so the image holds 26% of it. FILTERED: the extended emission is resolved out by missing short spacings, so the radii enclosing 50-90% of the flux, R68, the contrast of arcs and asymmetries, the brightness temperatures and the ring amplitudes describe only what survived, not the disc. Use an observation with a larger recoverable angular scale (obs_choice = N). Note: the net total includes the negative bowl and everything beyond it. Inside the bowl onset (r < 179 au) the profile integrates to 70.6 mJy (75% of the expected flux); the bowl itself (r = 179-275 au) contributes -45.7 mJy.
+  (2) Negative bowl: the azimuthal mean is significantly negative over r = 179-275 au (41 bins, down to -6.5 sigma, -0.0108 mJy/beam = -3.8% of the peak, at 210 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+  (3) Spatial filtering: this observation recovers angular scales up to 0.40 arcsec (55 au), less than half of the disc's 68%-flux diameter (0.91 arcsec = 126 au). The extended emission is partly or wholly resolved out; choose an observation with a larger recoverable scale (obs_choice = N, a coarser configuration) before trusting sizes, contrasts or asymmetries.
+  (4) Observation advisor: the disc's 68%-flux diameter is 0.91 arcsec (126 au) but the observation used recovers only 0.40 arcsec. Observations whose recoverable scale covers the disc, finest resolution first: obs_choice = 3 (resolution 0.104", recoverable scale 1.72", band 6, proposal 2018.1.00689.S, 635 s); obs_choice = 5 (resolution 0.230", recoverable scale 1.98", band 7, proposal 2012.1.00158.S, 2177 s); obs_choice = 6 (resolution 4.642", recoverable scale 34.27", band 6, proposal 2023.1.00937.S, 363 s). They are coarser, so check the beam against the structure you want; the package size is checked only at download (a package above the 15 GB limit is skipped; raise MAX_TAR_GB[] or use force_download = true).
+  (5) Resolution: the disk (90% of the flux within 64 au) spans 13.2 beams of 4.8 au, well resolved; features down to ~10 au (2 beams) can be recovered.
+  (6) Geometry: the image gives i = 19 deg, PA = 13 deg (uncertain by ~5 deg, a little more for disks that are barely resolved or near face-on). A wrong geometry would blur rings; check the deprojected profile for sharpness.
+  (7) Shape: the profile is ring-like, not centrally peaked. The maximum is at 59 au and the innermost bin has only -26% of it, which points to a central cavity: the mean rises to half its peak at ~52 au. Negative central values are an artifact of missing short baselines (spatial filtering), not a real flux deficit.
+  (8) Substructure: 2 ring(s) and 3 gap(s) after baseline subtraction, with 5 of 5 at >= 3 sigma (5 also with modulation >= 10%). Detected radii: 8 au, 35 au, 43 au, 58 au, 73 au.
+  (9) 4 of the 5 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (10) Class-specific note: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+  (11) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  SR_21_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

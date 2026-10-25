@@ -1,0 +1,95 @@
+========================================================================================
+TARGET SUMMARY: V883 Ori
+========================================================================================
+Generated 2026-10-25 15:30 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=V883%20Ori&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : V883 Ori
+  Coordinates    : 05:38:18.10  -07:02:26.0  (RA 84.57542, Dec -7.04056 deg, J2000)
+  Distance       : 388.0 pc
+  Class          : Outbursting
+  Versus TW Hya  : FU Ori-type; water snowline resolved
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    An FU Ori or EXor-type outbursting star: a young, hot, very bright accretion-burst disk, often with an envelope; usually farther away than the nearby T Tauri stars.
+    Analysis caveat for this class: Very bright and often partly resolved by the envelope; dynamic range and CLEAN artifacts may dominate the weak features.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2015.1.00350.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0257 arcsec (10.0 au; the beam of the image used is given below)
+  Exposure time  : 1397 s (0.39 h)
+  Public release : 2016-12-01
+  Member OUS     : uid://A001/X2d6/X2c8
+  Largest recoverable angular scale : 0.43 arcsec (166 au); structure larger than this is filtered out
+  Observations in the archive query: 47; the finest has 0.0257 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2015.1.00350.S_uid___A001_X2d6_X2c8_001_of_001.tar (0.30 GB)
+  FITS image used: member.uid___A001_X2d6_X2c8.ari_l.V883_Ori_sci.spw0_1_2_3_4_225286MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0051 arcsec
+  Synthesised beam: 0.0302 x 0.0262 arcsec = 11.7 x 10.2 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 40.0 deg, position angle 33.8 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 96% of the pixel variance (face-on: 94%).
+  Profile centre (pixel): (3128, 3130); profile out to 2.00 arcsec = 776 au in 132 bins of 5.88 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 12.6 mJy/beam at r = 2.9 au (0.3 beams)
+  Innermost bin              : 12.6 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 68 au / 655 au (5.8 / 55.9 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 144 au (12.3 beams)
+  Radius where the mean falls below 10% of the peak: 56 au
+  Integrated flux out to the profile edge: ~377.7 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.231 mJy/beam
+  Profile dynamic range (peak / residual sigma): 55
+  Image noise (robust rms): 0.0589 mJy/beam; the peak of the azimuthal mean is 213.9 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 1 ring(s), 0 gap(s).
+  Detections inside 29 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.0231 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       73.5    0.189         6.3        0.698 mJy/beam   +188.8%   +46.1 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma; for a gap it is the depth below the shallower neighbouring maximum (the peak prominence), shown negative.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: R 73 au
+  1 of 1 features are at least 3 sigma (1 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Negative bowl: the azimuthal mean is significantly negative over r = 385-461 au (14 bins, down to -4.3 sigma, -0.0262 mJy/beam = -0.2% of the peak, at 438 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+  (2) Observation advisor: the disc's 68%-flux diameter is 0.53 arcsec (206 au) but the observation used recovers only 0.43 arcsec. Observations whose recoverable scale covers the disc, finest resolution first: obs_choice = 2 (resolution 0.029", recoverable scale 0.78", band 7, proposal 2016.1.00728.S, 980 s); obs_choice = 3 (resolution 0.040", recoverable scale 0.77", band 4, proposal 2017.1.00388.S, 290 s); obs_choice = 4 (resolution 0.051", recoverable scale 1.09", band 5, proposal 2021.1.00319.S, 1506 s). They are coarser, so check the beam against the structure you want; the package size is checked only at download (a package above the 15 GB limit is skipped; raise MAX_TAR_GB[] or use force_download = true).
+  (3) Resolution: the disk (90% of the flux within 655 au) spans 55.9 beams of 11.7 au, well resolved; features down to ~23 au (2 beams) can be recovered.
+  (4) Excluded zone: detections inside 29 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (3 au) and a large part of the disk (90% of the flux lies within 655 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (5) Geometry: the image gives i = 40 deg, PA = 34 deg (uncertain by ~5 deg, a little more for disks that are barely resolved or near face-on). A wrong geometry would blur rings; check the deprojected profile for sharpness.
+  (6) Shape: the emission is centrally peaked (the maximum lies at 3 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (7) Substructure: 1 ring(s) and 0 gap(s) after baseline subtraction, with 1 of 1 at >= 3 sigma (1 also with modulation >= 10%). Detected radii: 73 au.
+  (8) 1 of the 1 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (9) Class-specific note: Very bright and often partly resolved by the envelope; dynamic range and CLEAN artifacts may dominate the weak features.
+  (10) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  V883_Ori_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

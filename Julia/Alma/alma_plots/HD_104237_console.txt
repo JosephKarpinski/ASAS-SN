@@ -1,0 +1,102 @@
+Resolved HD 104237 (as "HD 104237") -> RA = 180.02120 deg, Dec = -78.19293 deg (CDS Sesame)
+================================================================================
+Target: HD 104237   (RA 180.0212, Dec -78.1929; )
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HD%20104237&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for HD 104237 ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 180.02119525, -78.19293492, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 52917 | mirror = https://almascience.nrao.edu
+Found 92 rows in the cone.
+Filtered to 82 rows matching HD 104237.
+
+Observations (member OUS), finest spatial resolution first:
+11×9 DataFrame
+ Row │ member_ous_uid          proposal_id     band    best_res_arcsec  t_exp_s   release     n_rows  las_arcsec  freq_ghz
+     │ String                  String          String  Float64          Float64   String      Int64   Float64     Float64
+─────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X362b/X467   2023.1.01276.S  7             0.0596116   653.184  2024-11-24       5    0.973943   345.785
+   2 │ uid://A001/X1590/Xee1   2021.1.01137.S  6             0.124014    308.448  2022-11-26       4    2.11684    220.0
+   3 │ uid://A001/X1284/X1ef7  2017.1.01419.S  6             0.170957   1270.08   2019-01-31       5    3.36307    230.612
+   4 │ uid://A001/X37b0/X95    2024.1.01001.L  7             0.208327   3869.8    2026-04-22      13    3.79482    357.452
+   5 │ uid://A001/X37b5/X4d    2024.1.01001.L  7             0.266526   2993.71   2026-04-09      12    4.7012     281.531
+   6 │ uid://A001/X21f/X88     2013.1.00592.S  6             0.281721    362.88   2017-02-05       5    3.56496    220.399
+   7 │ uid://A001/X1590/Xee3   2021.1.01137.S  6             0.534307    302.4    2023-08-17       4    8.04848    220.0
+   8 │ uid://A001/X37b5/X4f    2024.1.01001.L  7             0.771014    876.96   2025-10-23      12    9.34481    281.533
+   9 │ uid://A001/X2fe/Xb73    2015.1.01600.S  6             0.901913    120.96   2017-06-28       4    9.42683    220.406
+  10 │ uid://A001/X1284/X1ef9  2017.1.01419.S  6             0.908567    241.92   2019-11-22       5   11.6413     230.614
+  11 │ uid://A001/X37b0/X97    2024.1.01001.L  7             0.918547   1451.42   2025-11-21      13    9.45863    357.455
+
+Using observation #1: uid://A001/X362b/X467 (proposal 2023.1.01276.S, band 7, best resolution 0.0596")
+
+Fetching file listing for uid://A001/X362b/X467 ...
+  fetching data info for uid://A001/X362b/X467 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 9 | mirror = https://almascience.nrao.edu
+7×3 DataFrame
+ Row │ access_url                                                                                      content_type       size_GB
+     │ String                                                                                          String             Float64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X362b_X467.README.txt                 text/plain           0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2023.1.01276.S_uid___A001_X362b_X467_001_of_001.tar     application/x-tar  206.936
+   3 │ https://almascience.nrao.edu/dataPortal/2023.1.01276.S_uid___A001_X362b_X467_auxiliary.tar      application/x-tar    0.402
+   4 │ https://almascience.nrao.edu/dataPortal/2023.1.01276.S_uid___A002_X10f13dc_X94be.asdm.sdm.tar   application/x-tar   76.074
+   5 │ https://almascience.nrao.edu/dataPortal/2023.1.01276.S_uid___A002_X10ed869_X13bb0.asdm.sdm.tar  application/x-tar  114.799
+   6 │ https://almascience.nrao.edu/dataPortal/2023.1.01276.S_uid___A002_X10ed869_Xa13a.asdm.sdm.tar   application/x-tar  109.614
+   7 │ https://almascience.nrao.edu/dataPortal/2023.1.01276.S_uid___A002_X10f13dc_X1a7.asdm.sdm.tar    application/x-tar  104.561
+
+SKIP: 2023.1.01276.S_uid___A001_X362b_X467_001_of_001.tar is 206.9 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #2: uid://A001/X1590/Xee1 (proposal 2021.1.01137.S, band 6, best resolution 0.1240")
+
+Fetching file listing for uid://A001/X1590/Xee1 ...
+  fetching data info for uid://A001/X1590/Xee1 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 7 | mirror = https://almascience.nrao.edu
+
+SKIP: 2021.1.01137.S_uid___A001_X1590_Xee1_001_of_001.tar is 54.1 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #3: uid://A001/X1284/X1ef7 (proposal 2017.1.01419.S, band 6, best resolution 0.1710")
+
+Fetching file listing for uid://A001/X1284/X1ef7 ...
+  fetching data info for uid://A001/X1284/X1ef7 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 8 | mirror = https://almascience.nrao.edu
+
+SKIP: 2017.1.01419.S_uid___A001_X1284_X1ef7_001_of_001.tar is 431.7 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #4: uid://A001/X37b0/X95 (proposal 2024.1.01001.L, band 7, best resolution 0.2083")
+
+Fetching file listing for uid://A001/X37b0/X95 ...
+  fetching data info for uid://A001/X37b0/X95 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 10 | mirror = https://almascience.nrao.edu
+
+SKIP: 2024.1.01001.L_uid___A001_X37b0_X95_001_of_001.tar is 94.0 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #5: uid://A001/X37b5/X4d (proposal 2024.1.01001.L, band 7, best resolution 0.2665")
+
+Fetching file listing for uid://A001/X37b5/X4d ...
+  fetching data info for uid://A001/X37b5/X4d ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 8 | mirror = https://almascience.nrao.edu
+
+SKIP: 2024.1.01001.L_uid___A001_X37b5_X4d_001_of_001.tar is 89.7 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #6: uid://A001/X21f/X88 (proposal 2013.1.00592.S, band 6, best resolution 0.2817")
+
+Fetching file listing for uid://A001/X21f/X88 ...
+  fetching data info for uid://A001/X21f/X88 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 3 | mirror = https://almascience.nrao.edu
+No suitable product tarball found -- only auxiliary/raw ASDM tars are available for this UID.
+No product tarball for this observation; trying the next one.
+
+Using observation #7: uid://A001/X1590/Xee3 (proposal 2021.1.01137.S, band 6, best resolution 0.5343")
+STOP: the next observation (#7) has a best resolution of 0.53 arcsec, coarser than the fallback limit of 0.50 arcsec (max_fallback_res_arcsec); it is not downloaded because it cannot show ring structure. Raise the limit, or pick one with obs_choice = N.

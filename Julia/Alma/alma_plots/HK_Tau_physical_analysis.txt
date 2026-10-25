@@ -1,0 +1,73 @@
+========================================================================================
+PHYSICAL ANALYSIS: HK Tau
+========================================================================================
+Generated 2026-10-25 15:44 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X126d_X104.ari_l.HK_Tau_B_sci.spw1_139924MHz.12m.mfs.I.pbcor.fits
+Distance 133.0 pc; inclination 61.2 deg, PA 16.9 deg; beam 0.1168 x 0.0395 arcsec = 15.5 x 5.3 au (radial beam sigma 3.8 au)
+Observing frequency 139.9 GHz (2.14 mm)
+Bosschaart+26 (HKTauA): class CD (compact disc); R68 20 au; F(1.33 mm) 33 mJy; M_dust 6.1 Earth masses; M* 0.45 Msun; distance 132 pc; this image: 68%-flux radius 23 au
+Flux check: the image integrates to 10.6 mJy inside the profile radius; the catalogue flux (33 mJy at 1.33 mm) scales to 7.89-12.7 mJy at 140 GHz (spectral index 2-3), so the image holds 83-134% of it: consistent.
+Stellar parameters (Bosschaart+26 catalogue stellar mass; verify): L* = ? Lsun, M* = 0.45 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 0 Gaussian ring(s); chi2_red = 0.70 (dof 37). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 1.38 mJy/beam, characteristic radius 23 au, power-law index 0.38
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 3.8 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+
+  Detected ring positions not used as seeds (weak or on a negative mean): 56.5 au (residual 0.6 sigma, mean 0.2 sigma), 86.2 au (residual 0.7 sigma, mean 0.5 sigma), 103.1 au (residual 0.5 sigma, mean 1.4 sigma), 135.3 au (residual 0.3 sigma, mean -0.4 sigma), 174.5 au (residual 0.4 sigma, mean 0.9 sigma), 194.3 au (residual 0.5 sigma, mean 0.4 sigma), 224.2 au (residual 0.4 sigma, mean -1.0 sigma)
+
+  Fit decisions (in order):
+    - starting seeds: 36.6 au (detected)
+    - dropping the component at r = 30.8 au (amplitude S/N 0.9; chi2 rises by only 5.1 in error units) and refitting
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Residual = pixel value minus the azimuthal mean at the same deprojected radius. Noise: image rms 0.0769 mJy/beam per beam.
+  Fourier amplitudes around each ring (window = +/- one observed sigma, at least half the minor axis), relative to the fitted ring amplitude (the table after this one gives them as a fraction of the local flux).
+  FAP = false-alarm probability exp(-S/N^2/2) for one ring (floored at 1e-6), for pure noise only; with N rings expect N x FAP chance detections. Geometry errors are NOT in the noise.
+
+    r [au]  bins | m=1 [%]          S/N     FAP  max @PA | m=2 [%]          S/N     FAP | peak +/- [%] (S/N)
+
+
+  Coherence across rings (a vortex sits at one radius; a centre / inclination / PA error shows at every ring with the same orientation):
+    fewer than 2 rings with a significant amplitude: no coherence test.
+
+  Candidate arcs / clumps (beam-smoothed residual above 4.0 sigma of the smoothed residual, >= 1 beam of area, outside the 39 au exclusion zone):
+    none
+
+  How to read this: a single significant positive arc covering a limited azimuth range at a ring radius (span of tens of degrees,
+  contrast tens of percent) is the signature of a dust trap such as a vortex. A +/- pair 180 deg apart (in the residual image, not the ring-averaged amplitudes)
+  is what a small centre or inclination error produces.
+  The noise estimate for the arcs is the robust scatter of the smoothed residual itself, so real structure inflates it: the threshold is conservative.
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 139.9 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  No rings or gaps were fitted or detected, so there are no radii to evaluate.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

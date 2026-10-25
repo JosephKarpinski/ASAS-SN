@@ -1,0 +1,111 @@
+========================================================================================
+PHYSICAL ANALYSIS: LkCa 15
+========================================================================================
+Generated 2026-10-25 16:17 by alma_target_explorer_julia (v7, build 106)
+Image: member.uid___A001_X2fb_X4d1.LkCA_15_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits
+Distance 157.0 pc; inclination 50.0 deg, PA 60.0 deg; beam 0.2847 x 0.1914 arcsec = 44.7 x 30.0 au (radial beam sigma 15.6 au)
+RESOLUTION WARNING: the beam is 45 x 30 au (> 40 au). A typical disk (rings at tens of au) is not resolved, so the rings, asymmetries, temperatures and masses below are not meaningful. A finer observation is needed.
+Observing frequency 233.0 GHz (1.29 mm)
+Bosschaart+26 (J04391779+2221034): class TD (transition disc); R68 124 au; F(1.33 mm) 127 mJy; M_dust 33 Earth masses; M* 0.78 Msun; distance 158 pc; this image: 68%-flux radius 117 au
+Flux check: the image integrates to 136 mJy inside the profile radius; the catalogue flux (127 mJy at 1.33 mm) scales to 136-140 mJy at 233 GHz (spectral index 2-3), so the image holds 97-101% of it: consistent.
+Stellar parameters (Bosschaart+26 catalogue stellar mass; verify): L* = ? Lsun, M* = 0.78 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 2 Gaussian ring(s); chi2_red = 0.54 (dof 31). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 1.73 mJy/beam, characteristic radius 19 au, power-law index -0.28
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+   1  74.3 +/- 0.9    6.36 +/- 0.092     68.8  76.3 +/- 2.3         1.03                99%  detected   [CORE: inside the exclusion zone, not a ring]
+   2  152.9 +/- 11.9  0.555 +/- 0.11      5.2  87.7 +/- 12.1        0.57                49%  detected  
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 15.6 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+  CORE: the component lies inside the 112 au exclusion zone (2.5 beams), where beam and CLEAN effects dominate; it describes the unresolved core, not a ring, so it is left out of the ratios, widths, trapping limits, ridge geometry and asymmetry windows below.
+
+  Detected ring positions not used as seeds (weak or on a negative mean): 72.3 au (residual 0.5 sigma, mean 206.7 sigma)
+
+  Fit decisions (in order):
+    - starting seeds: 72.3 au (detected), 144.8 au (detected)
+  WARNING: the smooth disk collapsed to the unresolved core (characteristic radius 19 au < 3 beams): the extended emission is shared among the ring components, so overlapping neighbours (shoulders) have degenerate widths and amplitudes; trust the isolated rings, not the blended ones.
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Residual = pixel value minus the azimuthal mean at the same deprojected radius. Noise: image rms 0.0412 mJy/beam per beam.
+  Fourier amplitudes around each ring (window = +/- one observed sigma, at least half the minor axis), relative to the fitted ring amplitude (the table after this one gives them as a fraction of the local flux).
+  FAP = false-alarm probability exp(-S/N^2/2) for one ring (floored at 1e-6), for pure noise only; with N rings expect N x FAP chance detections. Geometry errors are NOT in the noise.
+
+    r [au]  bins | m=1 [%]          S/N     FAP  max @PA | m=2 [%]          S/N     FAP | peak +/- [%] (S/N)
+     152.9    21 | 62.1 +/- 1.8    33.8 1.0e-06     240° | 24.0 +/- 1.8    13.1 1.0e-06 | +51 / -85 (14.3)
+
+  r =  152.9 au: m=1 at 33.8 sigma, m=2 at 13.1 sigma
+
+  The same amplitudes as a fraction of the local azimuthal-mean flux (comparable between rings and between targets):
+    r [au] | local mean [mJy/beam] | m=1 [% of flux] | m=2 [% of flux]
+     152.9 | 1.11               | 31.1 +/- 0.9   | 12.0 +/- 0.9  
+  NOTE: the feature(s) at 153 au are shoulders (the raw-profile peak finder finds no peak or dip within 1 beam): an amplitude measured against a shoulder baseline can be large without a real azimuthal structure; the percentages of the local flux are the safer numbers.
+
+  Elliptical-beam check for m=2: an axisymmetric ring convolved with a beam that is not round has a higher peak where the ring runs along the
+  beam's short axis, i.e. a pure m=2 pattern with no real structure. Expectation for each ring (fitted intrinsic width) versus what is measured;
+  excess = size of the vector difference between the measured and the expected m=2 term (formal S/N, noise only):
+    r [au] | beam alone: % @ az | measured: % @ az   | excess [%] (S/N)
+     152.9 | 6.4 @ 174 deg      | 24.0 @ 95 deg      | 30.0 (16.4 s)
+  Azimuths are disk-plane angles from the major axis (mod 180). The expectation uses the same window-mean estimator as the measurement (the m=2 of the ring PEAK is ~1.65x larger).
+
+  Geometry sensitivity of m=2 (first-order estimate, not a correction): an inclination error of 3 deg alone moves the deprojected radius by (cos i / cos(i + 3 deg) - 1)/2 x cos(2 phi), which on a profile with logarithmic slope S gives an m=2 of |S| times that:
+           |          |  m=2 from a 3 deg error [%] |            measured m=2 [%]
+    r [au] |        S |  of ring amp.       of flux |  of ring amp.       of flux
+     152.9 |    -4.67 |          31.8          15.9 |          24.0          12.0
+  Each quantity is given relative to the ring amplitude used in the table above and as a fraction of the local azimuthal-mean flux ('n/a': the ring amplitude is below 10% of the local flux). A measured m=2 of the same size as the estimate is not distinguishable from a small inclination error unless the ridge geometry fit (section 1b) or a second ring settles it.
+
+  The same for a position-angle error of 3 deg: the deprojected radius moves by (eps/2) sin^2(i)/cos(i) x sin(2 phi) (eps in rad), an m=2 pattern with its maximum 45 deg from the major axis (the inclination pattern above peaks ON the axes):
+           |          |     m=2 from a PA error [%]
+    r [au] |        S |  of ring amp.       of flux
+     152.9 |    -4.67 |          22.3          11.2
+  Not included: ring curvature at small r, non-Gaussian ring profiles, CLEAN / uv-coverage effects (the vertical-thickness scan is opt-in: do_thickness = true).
+
+  Round-beam test: switched off (do_roundbeam = false).
+
+  Coherence across rings (a vortex sits at one radius; a centre / inclination / PA error shows at every ring with the same orientation):
+    fewer than 2 rings with a significant amplitude: no coherence test.
+
+  Candidate arcs / clumps (beam-smoothed residual above 4.0 sigma of the smoothed residual, >= 1 beam of area, outside the 112 au exclusion zone):
+    #  sign   r [au]  az [deg] span[deg]   sky PA      S/N contrast area[beams]  note
+    1     -    122.5        -0        71      60°      6.6    -28%         2.9  nearest ring 153 au (-30.4 au); a centre error would need 13.4 au
+    1 region(s) are neither part of a comparable +/- pair nor full-azimuth.
+    'a centre error would need X au': the centre shift whose dipole (shift x local profile slope) equals this residual; compare with the fitted centre uncertainty (~1 au or less).
+    az: disk-plane azimuth from the major axis; span: full azimuthal extent; contrast: peak smoothed residual / local azimuthal mean.
+    2 further region(s) lie inside the 112 au exclusion zone, where ring detection is also disabled (beam / CLEAN / centre effects): + at 101 au, S/N 6.5, span 77 deg; - at 49 au, S/N 5.2, span 125 deg. They are not tabulated.
+
+  How to read this: a single significant positive arc covering a limited azimuth range at a ring radius (span of tens of degrees,
+  contrast tens of percent) is the signature of a dust trap such as a vortex. A +/- pair 180 deg apart (in the residual image, not the ring-averaged amplitudes)
+  is what a small centre or inclination error produces.
+  The noise estimate for the arcs is the robust scatter of the smoothed residual itself, so real structure inflates it: the threshold is conservative.
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 233.0 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  type     r [au] | T_b [K]         
+  ring      152.9 | 3.5 +/- 0.0     
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

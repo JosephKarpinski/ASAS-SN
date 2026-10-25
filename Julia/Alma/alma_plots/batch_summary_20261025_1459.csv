@@ -1,0 +1,6 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,1822,RX J1604.3-2130A,T Tauri + cavity,OK,3,2013.1.01020.S,6,35.5612568557284,42.38543202521086,0.2,"",./alma_plots/RX_J1604_3_2130A_console.txt
+2,1823,RX J1615.3-3255,T Tauri + cavity,OK,4,2011.0.00724.S,9,43.375070929525926,27.197260837983595,13.6,"",./alma_plots/RX_J1615_3_3255_console.txt
+3,1825,RX J1852.3-3700,T Tauri + cavity,OK,5,2015.1.01083.S,7,26.79078125953836,103.13406340509766,0.6,"",./alma_plots/RX_J1852_3_3700_console.txt
+4,1849,SR 21,T Tauri + cavity,OK,1,2018.1.00689.S,6,4.818914182484374,92.0087361668486,0.6,"",./alma_plots/SR_21_console.txt
+5,1850,SR 24S,T Tauri + cavity,OK,4,2017.1.00884.S,3,10.387333989145295,32.018372691519076,1.1,"",./alma_plots/SR_24S_console.txt

@@ -1,0 +1,4 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,152,Elias 29,Young/embedded,PARTIAL,5,2015.1.00761.S,7,15.034347876905821,50.144316042026404,0.9,source unresolved: 90% of the flux lies within 1.1 beams (a point source or a filtered image; no ring analysis possible),./alma_plots/Elias_29_console.txt
+2,806,L1489 IRS,Young/embedded,OK,4,2013.1.01086.S,6,33.157745301723835,43.59751208788716,0.6,"",./alma_plots/L1489_IRS_console.txt
+3,5,2M1207,Archive disk,PARTIAL,2,2013.1.01016.S,7,22.233756987847947,16.104256458690013,0.7,source unresolved: 90% of the flux lies within 0.8 beams (a point source or a filtered image; no ring analysis possible),./alma_plots/2M1207_console.txt

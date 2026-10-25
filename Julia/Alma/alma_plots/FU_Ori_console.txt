@@ -1,0 +1,193 @@
+Resolved FU Ori (as "FU Ori") -> RA = 86.34319 deg, Dec = +9.07008 deg (CDS Sesame)
+================================================================================
+Target: FU Ori   (RA 86.3432, Dec +9.0701; )
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=FU%20Ori&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for FU Ori ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 86.3431866, 9.07008092, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+  Transient error (HTTP.ConnectError); retrying in 5s ...
+  [mirror=https://almascience.nrao.edu, attempt 2/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 57264 | mirror = https://almascience.nrao.edu
+Found 100 rows in the cone.
+Filtered to 100 rows matching FU Ori.
+
+Observations (member OUS), finest spatial resolution first:
+14×9 DataFrame
+ Row │ member_ous_uid          proposal_id     band    best_res_arcsec  t_exp_s    release     n_rows  las_arcsec  freq_ghz
+     │ String                  String          String  Float64          Float64    String      Int64   Float64     Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X1469/X2b1   2019.1.01707.S  6             0.0215627   7674.87   2022-10-26       4    0.488059  220.399
+   2 │ uid://A001/X1288/Xb64   2017.1.00388.S  4             0.0412003    308.448  2018-12-15       4    0.808975  147.862
+   3 │ uid://A001/X88f/X2ce    2016.1.01228.S  6             0.0580558   2485.73   2018-10-09       5    1.26681   220.39
+   4 │ uid://A001/X1288/Xb60   2017.1.00388.S  3             0.0720763    308.448  2018-12-11       4    1.5472     87.8616
+   5 │ uid://A001/X1284/X15e3  2017.1.00015.S  6             0.169111     118.958  2019-02-21      11    3.09117   219.553
+   6 │ uid://A001/X88f/X2d0    2016.1.01228.S  6             0.272622     967.68   2018-10-03       5    2.55595   220.39
+   7 │ uid://A001/X1465/X7     2019.1.01848.S  7             0.322632    1753.92   2022-10-28       8    4.39116   334.413
+   8 │ uid://A002/X55a0dc/X18  2011.0.00548.S  7             0.495959     907.2    2014-02-25       4    4.84436   345.792
+   9 │ uid://A001/X1465/X9     2019.1.01848.S  7             0.947573    1179.36   2021-03-23       8    9.20737   334.413
+  10 │ uid://A001/X1465/Xb     2019.1.01848.S  7             3.75462     5624.42   2021-03-30       8   26.4467    334.413
+  11 │ uid://A001/X133d/X3b5a  2018.1.01131.S  6             4.65636      302.4    2020-08-24       3   26.5558    265.887
+  12 │ uid://A001/X1284/X15e7  2017.1.00015.S  6             5.20815     1391.84   2019-07-25      11   32.115     219.553
+  13 │ uid://A001/X133d/X3b5d  2018.1.01131.S  6            20.2577      2365.44   2020-09-26       3  359.077     265.887
+  14 │ uid://A001/X1284/X15eb  2017.1.00015.S  6            23.3316     15206.4    2019-09-05      22  413.563     219.553
+
+Using observation #1: uid://A001/X1469/X2b1 (proposal 2019.1.01707.S, band 6, best resolution 0.0216")
+
+Fetching file listing for uid://A001/X1469/X2b1 ...
+  fetching data info for uid://A001/X1469/X2b1 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 8 | mirror = https://almascience.nrao.edu
+6×3 DataFrame
+ Row │ access_url                                                                                    content_type       size_GB
+     │ String                                                                                        String             Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X1469_X2b1.README.txt               text/plain           0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2019.1.01707.S_uid___A001_X1469_X2b1_001_of_001.tar   application/x-tar   59.493
+   3 │ https://almascience.nrao.edu/dataPortal/2019.1.01707.S_uid___A001_X1469_X2b1_auxiliary.tar    application/x-tar    0.693
+   4 │ https://almascience.nrao.edu/dataPortal/2019.1.01707.S_uid___A002_Xf096a9_X2a81.asdm.sdm.tar  application/x-tar   46.589
+   5 │ https://almascience.nrao.edu/dataPortal/2019.1.01707.S_uid___A002_Xf0b191_X2191.asdm.sdm.tar  application/x-tar   26.298
+   6 │ https://almascience.nrao.edu/dataPortal/2019.1.01707.S_uid___A002_Xf0b969_Xde09.asdm.sdm.tar  application/x-tar   39.796
+
+SKIP: 2019.1.01707.S_uid___A001_X1469_X2b1_001_of_001.tar is 59.5 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #2: uid://A001/X1288/Xb64 (proposal 2017.1.00388.S, band 4, best resolution 0.0412")
+
+Fetching file listing for uid://A001/X1288/Xb64 ...
+  fetching data info for uid://A001/X1288/Xb64 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 6 | mirror = https://almascience.nrao.edu
+
+Downloading https://almascience.nrao.edu/dataPortal/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001.tar ...
+    0%  (0.00 / 0.12 GB)
+   10%  (0.01 / 0.12 GB)
+   20%  (0.02 / 0.12 GB)
+   30%  (0.04 / 0.12 GB)
+   40%  (0.05 / 0.12 GB)
+   50%  (0.06 / 0.12 GB)
+   60%  (0.07 / 0.12 GB)
+   70%  (0.09 / 0.12 GB)
+   80%  (0.10 / 0.12 GB)
+   90%  (0.11 / 0.12 GB)
+  100%  (0.12 / 0.12 GB)
+Download complete.
+Extracting FITS members ...
+Deleted 2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001.tar after extraction to save space.
+NOTE: fell back to observation #2 (0.041") because finer ones exceeded the size limit; that is 1.9x coarser than #1 (0.022"). Raise MAX_TAR_GB[] or use force_download = true for the finer one.
+
+Extracted 26 FITS file(s), best candidate first:
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.FU_Ori_sci.spw25.mfs.I.manual.image.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.FU_Ori_sci.spw27.mfs.I.manual.image.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.FU_Ori_sci.spw29.mfs.I.manual.image.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.FU_Ori_sci.spw31.mfs.I.manual.image.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0536p0944_chk.spw25.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0536p0944_chk.spw27.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0536p0944_chk.spw29.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0536p0944_chk.spw31.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0536p0944_chk.spw27.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0536p0944_chk.spw29.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw25.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw27.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw29.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw31.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw25.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw27.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw29.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw31.mfs.I.pbcor.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw25.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw27.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw29.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0510p1800_bp.spw31.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw25.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw27.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw29.mfs.I.mask.fits
+  ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.J0532p0732_ph.spw31.mfs.I.mask.fits
+
+Using: ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.FU_Ori_sci.spw25.mfs.I.manual.image.pbcor.fits
+[DEBUG] extract_radial_profile: image ./alma_cache/2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001_extracted/2017.1.00388.S/science_goal.uid___A001_X1288_Xb62/group.uid___A001_X1288_Xb63/member.uid___A001_X1288_Xb64/product/member.uid___A001_X1288_Xb64.FU_Ori_sci.spw25.mfs.I.manual.image.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (2500, 2500) eltype Float32 nan count 0 finite count 6250000
+Synthesized beam: 0.0472" x 0.0422" (PA=41.8606262207) = 19.27 au x 17.23 au at 408.0 pc
+Emission centroid (start of the centre fit): pixel (1231, 1220), dRA = +0.2000", dDec = -0.3100" from the image centre
+[DEBUG] fit_geometry: score = 0.7981322113386659 incl = 81.25 pa = 163.125 face-on score = 0.9432562259297766
+Fitted disk geometry from the image: i = 81.2 deg, PA = 163.1 deg east of north (+-~5 deg).
+[DEBUG] fit_center: start = (1231, 1220) walk steps = 4 coarse = (1265, 1206) fine = (1265, 1206)
+[DEBUG] fit_geometry: score = 0.9641077719307596 incl = 73.75 pa = 153.75 face-on score = 0.9629649219053261
+Refined disk geometry about the fitted centre: i = 73.8 deg, PA = 153.8 deg.
+Geometry fit quality: a purely radial profile explains 4% of the pixel variance (face-on: 6%). LOW: the disk is probably non-axisymmetric or faint, so the fitted geometry is unreliable.
+Centre pixel (1-based): (1265, 1206); offset from image centre: dRA = -0.1400", dDec = -0.4500"
+Radial profile: 85 bins of 0.0235" (9.60 au) out to 2.00" (816 au)
+[DEBUG] extract_radial_profile: empty bins = 0 valid mean_flux entries = 85
+Saved the radial profile: ./alma_plots/FU_Ori_profile.csv
+Disk extent (90% of the flux): ~571 au = 29.6 beams of 19.3 au.
+Saved figure: ./alma_plots/FU_Ori_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 85 / 85
+[DEBUG] find_rings_and_gaps: ring_prominence = 0.0001499344720071335 gap_prominence = 0.0001499344720071335
+[DEBUG] find_rings_and_gaps: raw ring_idx = Int64[] raw gap_idx = Int64[]
+
+[raw profile] Detected 0 ring(s), 0 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 0 rings and 0 gaps
+[DEBUG] find_rings_and_gaps_residual: n_valid = 85 savgol window = 19 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 5.970212748206328e-6 residual min/max = -2.090717017025581e-5 1.8631526579838644e-5
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 4.179148923744429e-6 gap_prominence = 4.179148923744429e-6
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [2, 9, 16, 23, 26, 32, 41, 50, 56, 58, 60, 62, 67, 71, 82] raw gap_idx = [7, 13, 19, 24, 30, 34, 44, 53, 57, 59, 61, 63, 68, 77]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 19.270220607523004 min_radius_beams = 2.5 -> min_radius_au = 48.17555151880751
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 1.7910638244618982e-6
+Excluded 1 detection(s) within 48.18 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 14.4 au, residual = 1.8632e-05 Jy/beam (+3.12 sigma)
+Excluded 5 detection(s) with |residual| below 1.79e-06 Jy/beam (0.3x residual std) as likely noise/boundary artifacts, despite passing the prominence test:
+    r = 81.6 au, residual = 1.2908e-06 Jy/beam (+0.22 sigma)
+    r = 638.4 au, residual = 5.1956e-07 Jy/beam (+0.09 sigma)
+    r = 225.6 au, residual = -3.4620e-07 Jy/beam (-0.06 sigma)
+    r = 542.4 au, residual = -1.3471e-06 Jy/beam (-0.23 sigma)
+    r = 580.8 au, residual = 1.7140e-06 Jy/beam (+0.29 sigma)
+
+[baseline-subtracted] Detected 12 ring(s):
+  r = 150.6 au, residual = 7.2046e-06 Jy/beam, prominence = 1.99e-05
+  r = 210.8 au, residual = 7.7519e-06 Jy/beam, prominence = 1.34e-05
+  r = 244.6 au, residual = 4.3550e-06 Jy/beam, prominence = 4.70e-06
+  r = 301.6 au, residual = 7.9611e-06 Jy/beam, prominence = 1.76e-05
+  r = 389.4 au, residual = 5.3989e-06 Jy/beam, prominence = 1.39e-05
+  r = 478.2 au, residual = 7.8155e-06 Jy/beam, prominence = 1.63e-05
+  r = 534.6 au, residual = 5.5117e-06 Jy/beam, prominence = 9.32e-06
+  r = 551.4 au, residual = 4.1870e-06 Jy/beam, prominence = 5.53e-06
+  r = 572.4 au, residual = 1.0226e-05 Jy/beam, prominence = 1.89e-05
+  r = 587.9 au, residual = 8.3494e-06 Jy/beam, prominence = 6.64e-06
+  r = 669.4 au, residual = 2.7143e-06 Jy/beam, prominence = 5.87e-06
+  r = 781.3 au, residual = 4.1000e-06 Jy/beam, prominence = 7.56e-06
+
+[baseline-subtracted] Detected 11 gap(s):
+  r = 62.5 au, residual = -1.5230e-05 Jy/beam, prominence = 2.55e-05
+  r = 120.3 au, residual = -9.2022e-06 Jy/beam, prominence = 1.05e-05
+  r = 178.9 au, residual = -1.2691e-05 Jy/beam, prominence = 1.99e-05
+  r = 284.3 au, residual = -5.6294e-06 Jy/beam, prominence = 1.34e-05
+  r = 324.7 au, residual = -9.6163e-06 Jy/beam, prominence = 1.76e-05
+  r = 411.0 au, residual = -8.5487e-06 Jy/beam, prominence = 1.39e-05
+  r = 505.7 au, residual = -8.4621e-06 Jy/beam, prominence = 1.63e-05
+  r = 560.1 au, residual = -3.8045e-06 Jy/beam, prominence = 9.32e-06
+  r = 603.0 au, residual = -8.6805e-06 Jy/beam, prominence = 1.28e-05
+  r = 649.9 au, residual = -7.0613e-06 Jy/beam, prominence = 7.58e-06
+  r = 742.4 au, residual = -3.1517e-06 Jy/beam, prominence = 5.87e-06
+[DEBUG] plot_residual_profile: called with 12 rings and 11 gaps
+Saved target summary: ./alma_plots/FU_Ori_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 85 savgol window = 19 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 5.970212748206328e-6 residual min/max = -2.090717017025581e-5 1.8631526579838644e-5
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 3.5821276489237965e-6 gap_prominence = 3.5821276489237965e-6
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [2, 5, 9, 16, 23, 26, 32, 41, 50, 56, 58, 60, 62, 67, 71, 82] raw gap_idx = [3, 7, 13, 19, 24, 30, 34, 44, 53, 57, 59, 61, 63, 68, 77, 84]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 19.270220607523004 min_radius_beams = 2.5 -> min_radius_au = 48.17555151880751
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 5.970212748206329e-7
+Excluded 3 detection(s) within 48.18 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 14.4 au, residual = 1.8632e-05 Jy/beam (+3.12 sigma)
+    r = 43.2 au, residual = 8.2909e-06 Jy/beam (+1.39 sigma)
+    r = 24.0 au, residual = 4.2260e-06 Jy/beam (+0.71 sigma)
+Excluded 2 detection(s) with |residual| below 5.97e-07 Jy/beam (0.1x residual std) as likely noise/boundary artifacts, despite passing the prominence test:
+    r = 638.4 au, residual = 5.1956e-07 Jy/beam (+0.09 sigma)
+    r = 225.6 au, residual = -3.4620e-07 Jy/beam (-0.06 sigma)
+[DEBUG] plot_residual_profile: called with 13 rings and 14 gaps
+Saved target summary: ./alma_plots/FU_Ori_target_summary.txt
+================================================================================
+Physical analysis: FU Ori
+================================================================================
+
+NOT DETECTED: the strongest bin of the azimuthal mean is 3.0 sigma (< 5.0; the peak is 0.6 x the per-beam image noise). Nothing below is meaningful, so the physical analysis was skipped. Upper limit: 3 sigma = 0.153 mJy/beam (one beam; image rms 0.0509 mJy/beam). Try a deeper or different observation, or set min_detect_snr = 0 to force the analysis.

@@ -1,0 +1,86 @@
+========================================================================================
+TARGET SUMMARY: FU Ori
+========================================================================================
+Generated 2026-10-25 15:26 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=FU%20Ori&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : FU Ori
+  Coordinates    : 05:45:22.36  +09:04:12.3  (RA 86.34319, Dec +9.07008 deg, J2000)
+  Distance       : 408.0 pc
+  Class          : Outbursting
+  Versus TW Hya  : FU Ori prototype; distant, bright
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    An FU Ori or EXor-type outbursting star: a young, hot, very bright accretion-burst disk, often with an envelope; usually farther away than the nearby T Tauri stars.
+    Analysis caveat for this class: Very bright and often partly resolved by the envelope; dynamic range and CLEAN artifacts may dominate the weak features.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2017.1.00388.S
+  Band           : 4
+  Archive-reported resolution of the observation : 0.0412 arcsec (16.8 au; the beam of the image used is given below)
+  Exposure time  : 308 s (0.09 h)
+  Public release : 2018-12-15
+  Member OUS     : uid://A001/X1288/Xb64
+  Largest recoverable angular scale : 0.81 arcsec (330 au); structure larger than this is filtered out
+  Observations in the archive query: 14; the finest has 0.0216 arcsec. Used: #2 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #2 because the finer packages exceeded the size limit.
+  Product package: 2017.1.00388.S_uid___A001_X1288_Xb64_001_of_001.tar (0.12 GB)
+  FITS image used: member.uid___A001_X1288_Xb64.FU_Ori_sci.spw25.mfs.I.manual.image.pbcor.fits
+  Pixel scale    : 0.0100 arcsec
+  Synthesised beam: 0.0472 x 0.0422 arcsec = 19.3 x 17.2 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 73.8 deg, position angle 153.8 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 4% of the pixel variance (face-on: 6%). LOW: probably non-axisymmetric or faint; the fitted geometry is unreliable.
+  Profile centre (pixel): (1265, 1206); profile out to 2.00 arcsec = 816 au in 85 bins of 9.60 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.0302 mJy/beam at r = 571.2 au (29.6 beams)
+  Innermost bin              : -0.066 mJy/beam (-219% of the peak)
+  Radius holding 50% / 90% of the flux : 494 au / 571 au (25.7 / 29.6 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 571 au (29.6 beams)
+  Radius where the mean falls below 10% of the peak: 696 au
+  Integrated flux out to the profile edge: ~8.8 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.00597 mJy/beam
+  Profile dynamic range (peak / residual sigma): 5
+  Image noise (robust rms): 0.0509 mJy/beam; the peak of the azimuthal mean is 0.6 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 13 ring(s), 14 gap(s).
+  Detections inside 48 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.000597 mJy/beam are ignored.
+
+  27 candidate features were found after baseline subtraction, but none reaches 3 sigma (the strongest is 1.5 sigma): they are consistent with noise.
+  The feature table, the sequence, the blend notes and the spacings are not listed (set COLLAPSE_NOISE_FEATURES[] = false to list them); the candidate radii are given in section 7.
+  0 of 27 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Detection: the strongest bin of the azimuthal mean is only 3.0 sigma (peak 0.6 x the per-beam image noise), so this target is not detected in this image (or is far fainter than the noise). The profile and any rings or gaps listed above are noise; try a deeper or different observation.
+  (2) Spatial filtering: this observation recovers angular scales up to 0.81 arcsec (330 au), less than half of the disc's 68%-flux diameter (2.61 arcsec = 1066 au). The extended emission is partly or wholly resolved out; choose an observation with a larger recoverable scale (obs_choice = N, a coarser configuration) before trusting sizes, contrasts or asymmetries.
+  (3) Class-specific note: Very bright and often partly resolved by the envelope; dynamic range and CLEAN artifacts may dominate the weak features.
+  (4) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  FU_Ori_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

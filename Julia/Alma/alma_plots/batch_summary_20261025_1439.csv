@@ -1,0 +1,6 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,122,CS Cha,T Tauri + cavity,NO IMAGE,0,"","",NaN,NaN,0.1,"no usable continuum image (packages too large, line cubes or no FITS, or the next observation was too coarse; see the console text)",./alma_plots/CS_Cha_console.txt
+2,203,GG Tau A,T Tauri + cavity,OK,2,2015.1.00224.S,7,22.197170555589597,17.516316022875362,0.4,"",./alma_plots/GG_Tau_A_console.txt
+3,221,GM Aur,T Tauri + cavity,OK,9,2015.1.00678.S,7,47.515505701305386,176.2456387044471,0.5,"",./alma_plots/GM_Aur_console.txt
+4,812,LkCa 15,T Tauri + cavity,OK,9,2015.1.00118.S,6,44.70089551806593,206.69220824922786,1.5,"",./alma_plots/LkCa_15_console.txt
+5,1792,PDS 70,T Tauri + cavity,OK,8,2022.1.01477.S,7,8.615243077277759,389.51401844632346,0.6,"",./alma_plots/PDS_70_console.txt

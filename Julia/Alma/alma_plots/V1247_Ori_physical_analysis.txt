@@ -1,0 +1,150 @@
+========================================================================================
+PHYSICAL ANALYSIS: V1247 Ori
+========================================================================================
+Generated 2026-10-25 14:29 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X2de_Xfd.target_spw0_mfsb7.cl01.pbcor.fits
+Distance 400.0 pc; inclination 22.5 deg, PA 69.4 deg; beam 0.0468 x 0.0293 arcsec = 18.7 x 11.7 au (radial beam sigma 6.3 au)
+Observing frequency 344.6 GHz (0.87 mm)
+Negative bowl: the azimuthal mean is significantly negative over r = 504-795 au (32 bins, down to -8.1 sigma, -0.0871 mJy/beam = -3.2% of the peak, at 711 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+Stellar parameters: none stored for this target (pass lstar= / mstar=).
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 2 Gaussian ring(s); chi2_red = 2.80 (dof 44). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Fit range: r < 504 au only. Beyond it the profile is significantly negative (negative bowl: spatial filtering removes extended emission), which no disc model describes; including it would inflate chi2 and the errors. Rings or gaps beyond that radius are not fitted.
+  Smooth disk: amplitude 1.44 mJy/beam, characteristic radius 253 au, power-law index -0.23
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+   1  64.8 +/- 0.9    1.83 +/- 0.091     20.2  44.3 +/- 3.0         0.68                65%  detected  
+   2  152.7 +/- 2.6   0.301 +/- 0.047     6.4  40.2 +/- 8.2         0.26                25%  detected  
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 6.3 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+
+  Fit decisions (in order):
+    - restricted to r < 504 au (negative bowl beyond it: spatial filtering, not emission)
+    - starting seeds: 66.7 au (detected), 146.3 au (detected)
+
+  Radius ratios of neighbouring rings (3 sigma and above): 65->153 au: 2.36
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  1 narrow, isolated ring(s) with amplitude S/N >= 10, 24 ridge points (azimuth wedges ~1 beam wide), chi2_red = 3.42. Errors are formal.
+  One shared geometry is fitted to all ridges; each ring has its own free radius.
+
+  parameter                 assumed     fitted +/- err      shift
+  centre dE [mas]                 0       -3.9 +/- 1.2           
+  centre dN [mas]                 0       -0.9 +/- 1.0           
+  inclination [deg]            22.5       28.1 +/- 1.4      +5.6
+  position angle [deg]         69.4       99.4 +/- 2.9     +30.0
+
+  Centre shift 4.0 mas = 0.6 pixels (14% of the beam minor axis).
+
+    R [au] R err [au]  points rms [mas] ellipticity e      ridge radius max at [deg]
+      72.5       0.54      24       3.5 0.000 +/- 0.006 (0.0 s) 341
+
+  rms: scatter of the ridge radius about the fitted circle (the ridge position is good to a few mas where it is bright). ellipticity: residual m=1 wobble of the radius, amplitude / R;
+  a significant e after the shared geometry is removed means that ring is eccentric on its own (or the geometry differs between rings, e.g. a warp).
+  Caveats: a flared, optically thick ring appears shifted along the minor axis (near side vs far side), which mimics a centre offset along that axis (section 1c tests it);
+  formal errors exclude this. The asymmetry step applies the full (sub-pixel) centre shift to the residual image; the radial profile is recomputed about the nearest pixel (3.5 mas rounding).
+  To adopt these values: physical_analysis(out; use_fitted_geometry = true), or pass incl_deg / pa_deg to run_alma_pipeline.
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Residual = pixel value minus the azimuthal mean at the same deprojected radius. Noise: image rms 0.135 mJy/beam per beam.
+  Fourier amplitudes around each ring (window = +/- one observed sigma, at least half the minor axis), relative to the fitted ring amplitude (the table after this one gives them as a fraction of the local flux).
+  FAP = false-alarm probability exp(-S/N^2/2) for one ring (floored at 1e-6), for pure noise only; with N rings expect N x FAP chance detections. Geometry errors are NOT in the noise.
+
+    r [au]  bins | m=1 [%]          S/N     FAP  max @PA | m=2 [%]          S/N     FAP | peak +/- [%] (S/N)
+      64.8    21 | 11.4 +/- 1.3     8.5 1.0e-06     170° | 13.6 +/- 1.3    10.1 1.0e-06 | +32 / -18 (7.5)
+     152.7    36 | 144.6 +/- 5.6   25.9 1.0e-06      40° | 61.4 +/- 5.6    11.0 1.0e-06 | +228 / -171 (9.7)
+
+  r =   64.8 au: m=1 at 8.5 sigma, m=2 at 10.1 sigma; maximum within 25 deg of the minor axis (near/far-side brightness asymmetry?)
+  r =  152.7 au: m=1 at 25.9 sigma, m=2 at 11.0 sigma
+
+  The same amplitudes as a fraction of the local azimuthal-mean flux (comparable between rings and between targets):
+    r [au] | local mean [mJy/beam] | m=1 [% of flux] | m=2 [% of flux]
+      64.8 | 2.73               | 7.7 +/- 0.9    | 9.1 +/- 0.9   
+     152.7 | 1.22               | 35.6 +/- 1.4   | 15.1 +/- 1.4  
+  NOTE: the feature(s) at 153 au are shoulders (the raw-profile peak finder finds no peak or dip within 1 beam): an amplitude measured against a shoulder baseline can be large without a real azimuthal structure; the percentages of the local flux are the safer numbers.
+
+  Elliptical-beam check for m=2: an axisymmetric ring convolved with a beam that is not round has a higher peak where the ring runs along the
+  beam's short axis, i.e. a pure m=2 pattern with no real structure. Expectation for each ring (fitted intrinsic width) versus what is measured;
+  excess = size of the vector difference between the measured and the expected m=2 term (formal S/N, noise only):
+    r [au] | beam alone: % @ az | measured: % @ az   | excess [%] (S/N)
+      64.8 | 1.3 @ 82 deg       | 13.6 @ 73 deg      | 12.4 (9.2 s)
+     152.7 | 1.6 @ 82 deg       | 61.4 @ 137 deg     | 61.9 (11.1 s)
+  Azimuths are disk-plane angles from the major axis (mod 180). The expectation uses the same window-mean estimator as the measurement (the m=2 of the ring PEAK is ~1.65x larger).
+
+  Geometry sensitivity of m=2 (first-order estimate, not a correction): an inclination error of 3 deg alone moves the deprojected radius by (cos i / cos(i + 3 deg) - 1)/2 x cos(2 phi), which on a profile with logarithmic slope S gives an m=2 of |S| times that:
+           |          |  m=2 from a 3 deg error [%] |            measured m=2 [%]
+    r [au] |        S |  of ring amp.       of flux |  of ring amp.       of flux
+      64.8 |     0.12 |           0.2           0.1 |          13.6           9.1
+     152.7 |    -0.62 |           2.9           0.7 |          61.4          15.1
+  Each quantity is given relative to the ring amplitude used in the table above and as a fraction of the local azimuthal-mean flux ('n/a': the ring amplitude is below 10% of the local flux). A measured m=2 of the same size as the estimate is not distinguishable from a small inclination error unless the ridge geometry fit (section 1b) or a second ring settles it.
+
+  The same for a position-angle error of 3 deg: the deprojected radius moves by (eps/2) sin^2(i)/cos(i) x sin(2 phi) (eps in rad), an m=2 pattern with its maximum 45 deg from the major axis (the inclination pattern above peaks ON the axes):
+           |          |     m=2 from a PA error [%]
+    r [au] |        S |  of ring amp.       of flux
+      64.8 |     0.12 |           0.1           0.1
+     152.7 |    -0.62 |           1.0           0.3
+  Not included: ring curvature at small r, non-Gaussian ring profiles, CLEAN / uv-coverage effects (the vertical-thickness scan is opt-in: do_thickness = true).
+
+  Round-beam test: switched off (do_roundbeam = false).
+
+  Before / after the geometry correction (m=1 and m=2 amplitude [%] and S/N; first = assumed geometry as in the table above, second = fitted):
+    r [au] | m=1: this -> other     | m=2: this -> other    
+      64.8 | 11.4 (8.5 s) -> 10.3 (7.9 s) | 13.6 (10.1 s) -> 15.5 (11.9 s)   (ring at 72.5 au in the other geometry)
+     152.7 | 144.6 (25.9 s) -> 151.8 (26.6 s) | 61.4 (11.0 s) -> 70.2 (12.3 s)
+  Note: for a narrow ring at its peak this window-mean estimator is blind to small geometry errors at first order (they move the ridge, not the ring's brightness), so amplitudes survive; for a broad ring on a steep profile they do not (see the geometry sensitivity table above);
+  the ridge-based geometry fit (section 1b) is the sensitive test of centre, inclination and PA.
+
+  Coherence across rings (a vortex sits at one radius; a centre / inclination / PA error shows at every ring with the same orientation):
+    m=1 maxima (sky PA, deg) by ring radius: 65 au: 170;  153 au: 40
+    m=1: 2 rings above 3 sigma, maxima at sky PA 105 deg, resultant length R = 0.43 (random orientations give ~0.71)
+    m=2 orientation (disk azimuth of a maximum, deg from the major axis, mod 180) by ring radius: 65 au: 73;  153 au: 137
+    m=2: 2 rings above 3 sigma, orientation 105 deg from the major axis (mod 180), R = 0.44 (random ~0.71)
+    1 of 2 of these orientations lie within ~20 deg of the one the beam alone predicts (modulo the excess in the beam table).
+
+  Candidate arcs / clumps (beam-smoothed residual above 4.0 sigma of the smoothed residual, >= 1 beam of area, outside the 47 au exclusion zone):
+    #  sign   r [au]  az [deg] span[deg]   sky PA      S/N contrast area[beams]  note
+    1     +    145.6       -41       101      31°      9.4    +70%        34.1  nearest ring 153 au (-7.1 au); on a ring crest, so a centre error has no first-order effect (slope ~0): not informative
+    2     +     76.7        74        62     142°      8.8    +33%         9.4  nearest ring 65 au (+11.9 au); a centre error would need 30.3 au
+    3     -    150.9      -172        55     257°      6.9    -52%        12.7  nearest ring 153 au (-1.8 au); on a ring crest, so a centre error has no first-order effect (slope ~0): not informative
+    4     -     81.6       -29        60      42°      5.2    -21%         2.8  nearest ring 65 au (+16.8 au); a centre error would need 13.9 au
+    5     -    187.9        94         5     164°      5.2    -55%         1.2  nearest ring 153 au (+35.2 au); a centre error would need 66.3 au
+    6     +    212.2       136        15     208°      4.8    +60%         3.7  nearest ring 153 au (+59.5 au); a centre error would need 74.0 au
+    6 region(s) are neither part of a comparable +/- pair nor full-azimuth.
+    'a centre error would need X au': the centre shift whose dipole (shift x local profile slope) equals this residual; compare with the fitted centre uncertainty (~1 au or less).
+    az: disk-plane azimuth from the major axis; span: full azimuthal extent; contrast: peak smoothed residual / local azimuthal mean.
+
+  How to read this: a single significant positive arc covering a limited azimuth range at a ring radius (span of tens of degrees,
+  contrast tens of percent) is the signature of a dust trap such as a vortex. A +/- pair 180 deg apart (in the residual image, not the ring-averaged amplitudes)
+  is what a small centre or inclination error produces.
+  The noise estimate for the arcs is the robust scatter of the smoothed residual itself, so real structure inflates it: the threshold is conservative.
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 344.6 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  type     r [au] | T_b [K]         
+  ring       64.8 | 27.8 +/- 0.3    
+  gap       124.3 | 14.9 +/- 0.2    
+  ring      152.7 | 16.0 +/- 0.2    
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

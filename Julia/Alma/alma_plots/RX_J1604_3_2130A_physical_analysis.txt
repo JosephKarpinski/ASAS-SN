@@ -1,0 +1,58 @@
+========================================================================================
+PHYSICAL ANALYSIS: RX J1604.3-2130A
+========================================================================================
+Generated 2026-10-25 16:17 by alma_target_explorer_julia (v7, build 106)
+Image: member.uid___A001_X147_Xc4.ari_l._rx_j1604.3-2130__sci.spw0_1_2_3_227063MHz.12m.cont.I.pbcor.fits
+Distance 150.0 pc; inclination 12.5 deg, PA 108.8 deg; beam 0.2371 x 0.2032 arcsec = 35.6 x 30.5 au (radial beam sigma 14.0 au)
+Observing frequency 227.1 GHz (1.32 mm)
+Stellar parameters: none stored for this target (pass lstar= / mstar=).
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law (inner hole at 81.9 +/- 3.6 au) + 1 Gaussian ring(s); chi2_red = 0.32 (dof 33). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 16.8 mJy/beam, characteristic radius 78 au, power-law index -0.39
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+   1  94.9 +/- 3.3    0.395 +/- 0.35      1.1  < 21.8 (unresolved)  < 0.23                14%  detected   [parameter at its bound] [amplitude < 3 sigma]
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 14.0 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+
+  Fit decisions (in order):
+    - starting seeds: 88.1 au (detected)
+    - inner cavity in the smooth disk (profile peaks at 86 au with an almost empty centre): hole radius 81.9 +/- 3.6 au, chi2 improves by 12 in error units for one extra parameter; ring errors include the hole-radius uncertainty
+    - keeping the component at r = 94.9 au (amplitude S/N 1.2, but removing it raises chi2 by 10 in error units)
+  WARNING: the smooth disk collapsed to the unresolved core (characteristic radius 78 au < 3 beams): the extended emission is shared among the ring components, so overlapping neighbours (shoulders) have degenerate widths and amplitudes; trust the isolated rings, not the blended ones.
+  1 component(s) have amplitude below 3 sigma: treat them as unconfirmed (blended components have inflated errors: one is kept only if removing it makes the fit much worse).
+  NOTE: chi2_red is 0.32: the data scatter about the model by only 1.8x less than the per-bin errors say. The errors are overestimated (the image rms may include structure or sidelobes, or the pixels are more correlated than the beam count assumes), so the S/N values and error bars here are conservative.
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Not tested: 90% of the flux lies within 3.8 beams (124 au of a 33 au beam); an asymmetry measured on a disc this small is dominated by the beam wings of the central core and by small centre / inclination / PA errors (needs at least 4 beams).
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 227.1 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  No rings or gaps were fitted or detected, so there are no radii to evaluate.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.

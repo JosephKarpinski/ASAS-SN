@@ -1,0 +1,6 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,1,1RXS 1609 B,Archive disk,PARTIAL,1,2015.1.00773.S,6,24.002907334362646,0.793451176799537,0.0,physical analysis skipped: it returned no result (for example no beam in the FITS header; see the console text),./alma_plots/1RXS_1609_B_console.txt
+2,2,1RXS J050827.3-210130,Archive disk,PARTIAL,1,2017.1.01583.S,7,36.603664169943045,1.463956295336548,0.0,physical analysis skipped: it returned no result (for example no beam in the FITS header; see the console text),./alma_plots/1RXS_J050827_3_210130_console.txt
+3,3,1RXS J172919.1-501454,Archive disk,OK,1,2017.1.01583.S,7,50.24575712766255,31.10662501824267,0.0,"",./alma_plots/1RXS_J172919_1_501454_console.txt
+4,4,1swasp j140747.93-394542.6,Archive disk,PARTIAL,2,2023.1.01488.S,7,15.89225391783166,0.9641898111120776,0.1,physical analysis skipped: it returned no result (for example no beam in the FITS header; see the console text),./alma_plots/1swasp_j140747_93_394542_6_console.txt
+5,5,2M1207,Archive disk,OK,2,2013.1.01016.S,7,22.233756987847947,16.104256458690013,0.2,"",./alma_plots/2M1207_console.txt

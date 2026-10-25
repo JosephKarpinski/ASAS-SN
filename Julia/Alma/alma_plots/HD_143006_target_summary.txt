@@ -1,0 +1,95 @@
+========================================================================================
+TARGET SUMMARY: HD 143006
+========================================================================================
+Generated 2026-10-25 15:48 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HD%20143006&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : HD 143006
+  Coordinates    : 15:58:36.91  -22:57:15.1  (RA 239.65380, Dec -22.95420 deg, J2000)
+  Distance       : 165.0 pc
+  Class          : Non-axisymmetric
+  Catalogue note : Rings, asymmetries, shadows (DSHARP)
+  Versus TW Hya  : Partly asymmetric (rings + shadows); Bosschaart+26: RD, R68 82 au
+  Published      : Bosschaart+26 (HD143006): class RD (ring disc); R68 82 au; F(1.33 mm) 176 mJy; M_dust 49.6 Earth masses; M* 1.63 Msun; distance 166 pc; this image: 68%-flux radius 84 au
+  Catalogue geometry: inclination 18.6 deg, PA 169.0 deg east of north
+
+  What kind of object this is:
+    A disk with strongly non-axisymmetric dust emission (a horseshoe, vortex or arc). The azimuthal average used here mixes the bright and faint sides.
+    Analysis caveat for this class: The azimuthal mean of a non-axisymmetric disk can produce rings and gaps that are not real; check the image.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2015.1.00964.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.4082 arcsec (67.4 au; the beam of the image used is given below)
+  Exposure time  : 1361 s (0.38 h)
+  Public release : 2017-08-16
+  Member OUS     : uid://A001/X2f6/X300
+  Largest recoverable angular scale : 4.76 arcsec (785 au); structure larger than this is filtered out
+  Observations in the archive query: 18; the finest has 0.0257 arcsec. Used: #11 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #11 because the finer packages exceeded the size limit.
+  Product package: 2015.1.00964.S_uid___A001_X2f6_X300_001_of_001.tar (0.58 GB)
+  FITS image used: member.uid___A001_X2f6_X300.ari_l.HD143006_sci.spw4_5_6_7_8_257408MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0780 arcsec
+  Synthesised beam: 0.4869 x 0.3893 arcsec = 80.3 x 64.2 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 18.6 deg, position angle 169.0 deg (east of north)
+  Source: catalogue (literature) values.
+  Profile centre (pixel): (250, 251); profile out to 1.50 arcsec = 248 au in 40 bins of 6.19 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 1.5, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 20.6 mJy/beam at r = 3.1 au (0.0 beams)
+  Innermost bin              : 20.6 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 65 au / 108 au (0.8 / 1.3 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 139 au (1.7 beams)
+  Radius where the mean falls below 10% of the peak: 121 au
+  Integrated flux out to the profile edge: ~79.3 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.125 mJy/beam
+  Profile dynamic range (peak / residual sigma): 165
+  Image noise (robust rms): 0.209 mJy/beam; the peak of the azimuthal mean is 98.6 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 0 ring(s), 0 gap(s).
+  Detections inside 201 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.0125 mJy/beam are ignored.
+
+  No significant rings or gaps were detected.
+
+6. COMPARISON WITH PUBLISHED FEATURES (radii rescaled to the adopted distance)
+----------------------------------------------------------------------------------------
+  Tolerance = 1 beam = 80.3 au; a feature counts as recovered if either the baseline-subtracted or the raw profile has one within it; a match below 3 sigma is re-tested directly against the raw profile at the published radius (targeted test).
+  ring (lit.)                6.0 au : inside the excluded beam/CLEAN zone; cannot be tested
+  gap (lit.)                22.0 au : inside the excluded beam/CLEAN zone; cannot be tested
+  ring (lit.)               40.8 au : inside the excluded beam/CLEAN zone; cannot be tested
+  gap (lit.)                51.0 au : inside the excluded beam/CLEAN zone; cannot be tested
+  ring (lit.)               64.9 au : inside the excluded beam/CLEAN zone; cannot be tested
+  Recovered 0 of 0 testable published features; 0 of 5 inside the excluded zone also match the raw profile.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Flux check: the image integrates to 79.3 mJy inside the profile radius; the catalogue flux (176 mJy at 1.33 mm) scales to 229-261 mJy at 257 GHz (spectral index 2-3), so the image holds 30-35% of it. FILTERED: the extended emission is resolved out by missing short spacings, so the radii enclosing 50-90% of the flux, R68, the contrast of arcs and asymmetries, the brightness temperatures and the ring amplitudes describe only what survived, not the disc. Use an observation with a larger recoverable angular scale (obs_choice = N).
+  (2) Resolution: 90% of the flux lies within 1.3 beams (108.3 au), so the source is unresolved (a point source). If the target is a protoplanetary disk this is probably not an image of it: it may be a calibrator or an unresolved companion. Check the FITS file name and header OBJECT; no ring or gap analysis is meaningful.
+  (3) Excluded zone: detections inside 201 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (3 au) and a large part of the disk (90% of the flux lies within 108 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (4) Data choice: a package with finer resolution (0.0257 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (5) Shape: the emission is centrally peaked (the maximum lies at 3 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (6) Substructure: none was detected above the threshold even with the re-tuned settings. This says the profile is smooth at this resolution and sensitivity, not that the disk is smooth (rings narrower than the beam are averaged away).
+  (7) Class-specific note: The azimuthal mean of a non-axisymmetric disk can produce rings and gaps that are not real; check the image.
+  (8) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  HD_143006_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

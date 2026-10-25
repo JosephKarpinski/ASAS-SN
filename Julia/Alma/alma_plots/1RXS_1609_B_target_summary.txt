@@ -1,0 +1,84 @@
+========================================================================================
+TARGET SUMMARY: 1RXS 1609 B
+========================================================================================
+Generated 2026-10-25 12:31 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=1RXS%201609%20B&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : 1RXS 1609 B
+  Coordinates    : 16:09:30.30  -21:04:58.9  (RA 242.37625, Dec -21.08303 deg, J2000)
+  Distance       : 137.8 pc
+  Class          : Archive disk
+  Catalogue note : ALMA archive: 4 rows
+  Versus TW Hya  : Not curated; 4 archive rows, finest 0.158"; i/PA fitted, d from Gaia
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    A disk target picked from the ALMA archive (science category "Disks and planet formation"). It is not individually curated, so the type of star and of disk is not recorded here: it may be a T Tauri or Herbig disk, an embedded protostar, a multiple system or a debris disk.
+    Analysis caveat for this class: Not curated: the distance is a Gaia distance (Bailer-Jones+21 or the SIMBAD parallax; or an assumed 100 pc), the geometry is fitted from the image, and the target may be embedded, multiple or only marginally resolved.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2015.1.00773.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.1579 arcsec (21.8 au; the beam of the image used is given below)
+  Exposure time  : 726 s (0.20 h)
+  Public release : 2018-01-30
+  Member OUS     : uid://A001/X2d2/X98
+  Largest recoverable angular scale : 3.41 arcsec (470 au); structure larger than this is filtered out
+  Observations in the archive query: 1; the finest has 0.1579 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2015.1.00773.S_uid___A001_X2d2_X98_001_of_001.tar (254.92 GB)
+  FITS image used: member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0280 arcsec
+  Synthesised beam: 0.1742 x 0.1523 arcsec = 24.0 x 21.0 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 0.0 deg, position angle 0.0 deg (east of north)
+  Source: the image fit gave i = 83.8 deg, PA = 101.2 deg but explains only 32% of the pixel variance (not credible), so the disk was treated as FACE-ON (geometry guard).
+  Profile centre (pixel): (751, 756); profile out to 2.00 arcsec = 276 au in 40 bins of 6.89 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.0128 mJy/beam at r = 72.3 au (3.0 beams)
+  Innermost bin              : -0.0391 mJy/beam (-305% of the peak)
+  Radius holding 50% / 90% of the flux : NaN au / NaN au (NaN / NaN beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 72 au (3.0 beams)
+  Radius where the mean falls below 10% of the peak: 258 au
+  Integrated flux out to the profile edge: ~-0.5 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.00307 mJy/beam
+  Profile dynamic range (peak / residual sigma): 4
+  Image noise (robust rms): 0.0372 mJy/beam; the peak of the azimuthal mean is 0.3 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 5 ring(s), 5 gap(s).
+  Detections inside 60 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.000307 mJy/beam are ignored.
+
+  10 candidate features were found after baseline subtraction, but none reaches 3 sigma (the strongest is 1.1 sigma): they are consistent with noise.
+  The feature table, the sequence, the blend notes and the spacings are not listed (set COLLAPSE_NOISE_FEATURES[] = false to list them); the candidate radii are given in section 7.
+  0 of 10 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Detection: the strongest bin of the azimuthal mean is only 0.8 sigma (peak 0.3 x the per-beam image noise), so this target is not detected in this image (or is far fainter than the noise). The profile and any rings or gaps listed above are noise; try a deeper or different observation.
+  (2) Class-specific note: Not curated: the distance is a Gaia distance (Bailer-Jones+21 or the SIMBAD parallax; or an assumed 100 pc), the geometry is fitted from the image, and the target may be embedded, multiple or only marginally resolved.
+  (3) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  1RXS_1609_B_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

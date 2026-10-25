@@ -1,0 +1,90 @@
+========================================================================================
+TARGET SUMMARY: Flying Saucer
+========================================================================================
+Generated 2026-10-25 15:34 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=Flying%20Saucer&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : Flying Saucer
+  Coordinates    : 16:28:13.70  -24:31:39.8  (RA 247.05707, Dec -24.52773 deg, J2000)
+  Distance       : 138.0 pc
+  Class          : Edge-on
+  Versus TW Hya  : Edge-on: cannot deproject; no ring/gap profile
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    An edge-on disk seen as a dark lane against its scattered light. Deprojection into face-on rings is not possible; radial structure is hidden by projection.
+    Analysis caveat for this class: The radial profile is not meaningful for an edge-on disk; use the image alone.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2024.1.00928.S
+  Band           : 9
+  Archive-reported resolution of the observation : 0.3748 arcsec (51.7 au; the beam of the image used is given below)
+  Exposure time  : 154 s (0.04 h)
+  Public release : 2025-12-18
+  Member OUS     : uid://A001/X3788/Xb60c
+  Largest recoverable angular scale : 3.49 arcsec (482 au); structure larger than this is filtered out
+  Observations in the archive query: 10; the finest has 0.0758 arcsec. Used: #6 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #6 because the finer packages exceeded the size limit.
+  Product package: 2024.1.00928.S_uid___A001_X3788_Xb60c_001_of_001.tar (0.71 GB)
+  FITS image used: member.uid___A001_X3788_Xb60c.Flying_saucer_sci.spw17_19_21_23_25_27_29_31.cont.I.pbcor.fits
+  Pixel scale    : 0.0690 arcsec
+  Synthesised beam: 0.4339 x 0.3408 arcsec = 59.9 x 47.0 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 0.0 deg, position angle 0.0 deg (east of north)
+  Source: UNKNOWN; the disk was treated as face-on, so an inclined disk is smeared in the profile.
+  Profile centre (pixel): (112, 118); profile out to 2.00 arcsec = 276 au in 40 bins of 6.90 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 13.8 mJy/beam at r = 3.5 au (0.1 beams)
+  Innermost bin              : 13.8 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 38 au / 59 au (0.6 / 1.0 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 59 au (1.0 beams)
+  Radius where the mean falls below 10% of the peak: 162 au
+  Integrated flux out to the profile edge: ~89.3 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.291 mJy/beam
+  Profile dynamic range (peak / residual sigma): 48
+  Image noise (robust rms): 1.41 mJy/beam; the peak of the azimuthal mean is 9.8 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 3 ring(s), 3 gap(s).
+  Detections inside 150 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.0291 mJy/beam are ignored.
+
+  6 candidate features were found after baseline subtraction, but none reaches 3 sigma (the strongest is 0.8 sigma): they are consistent with noise.
+  The feature table, the sequence, the blend notes and the spacings are not listed (set COLLAPSE_NOISE_FEATURES[] = false to list them); the candidate radii are given in section 7.
+  0 of 6 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Resolution: 90% of the flux lies within 1.0 beams (58.7 au), so the source is unresolved (a point source). If the target is a protoplanetary disk this is probably not an image of it: it may be a calibrator or an unresolved companion. Check the FITS file name and header OBJECT; no ring or gap analysis is meaningful.
+  (2) Excluded zone: detections inside 150 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (3 au) and a large part of the disk (90% of the flux lies within 59 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (3) Data choice: a package with finer resolution (0.0758 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (4) Geometry: the disk is too small compared with the beam for the image fit to measure its inclination and PA, so it was treated as face-on. If it is inclined, the azimuthal average mixes different radii and washes out rings; give incl_deg / pa_deg if you know them.
+  (5) Shape: the emission is centrally peaked (the maximum lies at 3 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (6) Substructure: 6 candidate ring(s)/gap(s) were found after baseline subtraction, but none reaches 3 sigma (the strongest is 0.8 sigma), so they are consistent with noise and are not established. Candidate radii: 160 au, 176 au, 183 au, 198 au, 206 au, 224 au.
+  (7) 6 of the 6 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (8) Class-specific note: The radial profile is not meaningful for an edge-on disk; use the image alone.
+  (9) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  Flying_Saucer_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

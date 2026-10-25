@@ -1,0 +1,265 @@
+================================================================================
+Target: 1RXS 1609 B   (RA 242.3763, Dec -21.0830; ALMA archive: 4 rows)
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=1RXS%201609%20B&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for 1RXS 1609 B ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 242.3762500000482, -21.08302777778643, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 8059 | mirror = https://almascience.nrao.edu
+Found 8 rows in the cone.
+Filtered to 4 rows matching 1RXS 1609 B.
+
+Observations (member OUS), finest spatial resolution first:
+1×9 DataFrame
+ Row │ member_ous_uid       proposal_id     band    best_res_arcsec  t_exp_s  release     n_rows  las_arcsec  freq_ghz
+     │ String               String          String  Float64          Float64  String      Int64   Float64     Float64
+─────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X2d2/X98  2015.1.00773.S  6              0.157897   725.76  2018-01-30       4     3.41129     233.0
+
+Using observation #1: uid://A001/X2d2/X98 (proposal 2015.1.00773.S, band 6, best resolution 0.1579")
+
+Fetching file listing for uid://A001/X2d2/X98 ...
+  fetching data info for uid://A001/X2d2/X98 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 157 | mirror = https://almascience.nrao.edu
+155×3 DataFrame
+ Row │ access_url                                                                                                       content_type              size_GB
+     │ String                                                                                                           String                    Float64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.README.txt                                    text/plain                  0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2015.1.00773.S_uid___A001_X2d2_X98_001_of_001.tar                        application/x-tar         254.918
+   3 │ https://almascience.nrao.edu/dataPortal/2015.1.00773.S_uid___A001_X2d2_X98_auxiliary.tar                         application/x-tar           0.235
+   4 │ https://almascience.nrao.edu/dataPortal/2015.1.00773.S_uid___A002_Xb83979_Xa29.asdm.sdm.tar                      application/x-tar          27.273
+   5 │ https://almascience.nrao.edu/dataPortal/2015.1.00773.S_uid___A001_X2d2_X98_external_ari_l_001_of_001.tar         application/x-tar         112.742
+   6 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.…  application/gzip            0.0
+   7 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.…  application/gzip            0.002
+   8 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.…  application/octet-stream    0.009
+   9 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.cu…  application/gzip            0.001
+  10 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.cu…  application/gzip            0.258
+  11 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.cu…  application/octet-stream    0.981
+  12 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.mf…  application/gzip            0.0
+  13 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.mf…  application/gzip            0.002
+  14 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.mf…  application/octet-stream    0.009
+  15 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.cu…  application/gzip            0.001
+  16 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.cu…  application/gzip            0.243
+  17 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.cu…  application/octet-stream    0.981
+  18 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.mf…  application/gzip            0.0
+  19 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.mf…  application/gzip            0.002
+  20 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.mf…  application/octet-stream    0.009
+  21 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw2_248008MHz.12m.cu…  application/gzip            0.239
+  22 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw2_248008MHz.12m.cu…  application/octet-stream    0.981
+  23 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw2_248008MHz.12m.mf…  application/gzip            0.0
+  24 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw2_248008MHz.12m.mf…  application/gzip            0.002
+  25 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw2_248008MHz.12m.mf…  application/octet-stream    0.009
+  26 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw3_230477MHz.12m.cu…  application/gzip            6.783
+  27 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw3_230477MHz.12m.cu…  application/octet-stream   25.533
+  28 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw3_230477MHz.12m.mf…  application/gzip            0.0
+  29 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw3_230477MHz.12m.mf…  application/gzip            0.002
+  30 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw3_230477MHz.12m.mf…  application/octet-stream    0.009
+  31 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_1_2_3_2395…  application/gzip            0.0
+  32 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_1_2_3_2395…  application/gzip            0.002
+  33 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_1_2_3_2395…  application/octet-stream    0.009
+  34 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_232992MHz.…  application/gzip            0.259
+  35 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_232992MHz.…  application/octet-stream    0.981
+  36 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_232992MHz.…  application/gzip            0.0
+  37 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_232992MHz.…  application/gzip            0.002
+  38 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw0_232992MHz.…  application/octet-stream    0.009
+  39 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw1_246008MHz.…  application/gzip            0.001
+  40 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw1_246008MHz.…  application/gzip            0.244
+  41 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw1_246008MHz.…  application/octet-stream    0.981
+  42 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw1_246031MHz.…  application/gzip            0.0
+  43 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw1_246031MHz.…  application/gzip            0.002
+  44 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw1_246031MHz.…  application/octet-stream    0.009
+  45 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw2_248008MHz.…  application/gzip            0.001
+  46 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw2_248008MHz.…  application/gzip            0.241
+  47 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw2_248008MHz.…  application/octet-stream    0.981
+  48 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw2_248008MHz.…  application/gzip            0.0
+  49 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw2_248008MHz.…  application/gzip            0.002
+  50 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw2_248008MHz.…  application/octet-stream    0.009
+  51 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw3_230477MHz.…  application/gzip            0.025
+  52 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw3_230477MHz.…  application/gzip            6.81
+  53 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw3_230477MHz.…  application/octet-stream   25.533
+  54 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw3_230477MHz.…  application/gzip            0.0
+  55 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw3_230477MHz.…  application/gzip            0.002
+  56 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.GSC_06214-00210_B_sci.spw3_230477MHz.…  application/octet-stream    0.009
+  57 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_1_2_3_239566MHz.12…  application/gzip            0.0
+  58 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_1_2_3_239566MHz.12…  application/gzip            0.0
+  59 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_1_2_3_239566MHz.12…  application/octet-stream    0.0
+  60 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_232992MHz.12m.cube…  application/gzip            0.012
+  61 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_232992MHz.12m.cube…  application/octet-stream    0.039
+  62 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_232992MHz.12m.mfs.…  application/gzip            0.0
+  63 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_232992MHz.12m.mfs.…  application/gzip            0.0
+  64 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw0_232992MHz.12m.mfs.…  application/octet-stream    0.0
+  65 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw1_246008MHz.12m.cube…  application/gzip            0.012
+  66 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw1_246008MHz.12m.cube…  application/octet-stream    0.039
+  67 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw1_246008MHz.12m.mfs.…  application/gzip            0.0
+  68 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw1_246008MHz.12m.mfs.…  application/gzip            0.0
+  69 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw1_246008MHz.12m.mfs.…  application/octet-stream    0.0
+  70 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw2_248008MHz.12m.cube…  application/gzip            0.012
+  71 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw2_248008MHz.12m.cube…  application/octet-stream    0.039
+  72 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw2_248008MHz.12m.mfs.…  application/gzip            0.0
+  73 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw2_248008MHz.12m.mfs.…  application/gzip            0.0
+  74 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw2_248008MHz.12m.mfs.…  application/octet-stream    0.0
+  75 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw3_230477MHz.12m.cube…  application/gzip            0.302
+  76 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw3_230477MHz.12m.cube…  application/octet-stream    1.021
+  77 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw3_230477MHz.12m.mfs.…  application/gzip            0.0
+  78 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw3_230477MHz.12m.mfs.…  application/gzip            0.0
+  79 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1517-2422_bp.spw3_230477MHz.12m.mfs.…  application/octet-stream    0.0
+  80 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_1_2_3_239567MHz.1…  application/gzip            0.0
+  81 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_1_2_3_239567MHz.1…  application/gzip            0.0
+  82 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_1_2_3_239567MHz.1…  application/octet-stream    0.0
+  83 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_232992MHz.12m.cub…  application/gzip            0.012
+  84 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_232992MHz.12m.cub…  application/octet-stream    0.039
+  85 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_232992MHz.12m.mfs…  application/gzip            0.0
+  86 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_232992MHz.12m.mfs…  application/gzip            0.0
+  87 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw0_232992MHz.12m.mfs…  application/octet-stream    0.0
+  88 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw1_246008MHz.12m.cub…  application/gzip            0.012
+  89 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw1_246008MHz.12m.cub…  application/octet-stream    0.039
+  90 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw1_246008MHz.12m.mfs…  application/gzip            0.0
+  91 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw1_246008MHz.12m.mfs…  application/gzip            0.0
+  92 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw1_246008MHz.12m.mfs…  application/octet-stream    0.0
+  93 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw2_248008MHz.12m.cub…  application/gzip            0.012
+  94 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw2_248008MHz.12m.cub…  application/octet-stream    0.039
+  95 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw2_248008MHz.12m.mfs…  application/gzip            0.0
+  96 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw2_248008MHz.12m.mfs…  application/gzip            0.0
+  97 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw2_248008MHz.12m.mfs…  application/octet-stream    0.0
+  98 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw3_230477MHz.12m.cub…  application/gzip            0.001
+  99 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw3_230477MHz.12m.cub…  application/gzip            0.304
+ 100 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw3_230477MHz.12m.cub…  application/octet-stream    1.021
+ 101 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw3_230477MHz.12m.mfs…  application/gzip            0.0
+ 102 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw3_230477MHz.12m.mfs…  application/gzip            0.0
+ 103 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1609-2205_chk.spw3_230477MHz.12m.mfs…  application/octet-stream    0.0
+ 104 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_1_2_3_239567MHz.12…  application/gzip            0.0
+ 105 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_1_2_3_239567MHz.12…  application/gzip            0.0
+ 106 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_1_2_3_239567MHz.12…  application/octet-stream    0.0
+ 107 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_232992MHz.12m.cube…  application/gzip            0.011
+ 108 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_232992MHz.12m.cube…  application/octet-stream    0.039
+ 109 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_232992MHz.12m.mfs.…  application/gzip            0.0
+ 110 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_232992MHz.12m.mfs.…  application/gzip            0.0
+ 111 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw0_232992MHz.12m.mfs.…  application/octet-stream    0.0
+ 112 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw1_246008MHz.12m.cube…  application/gzip            0.012
+ 113 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw1_246008MHz.12m.cube…  application/octet-stream    0.039
+ 114 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw1_246008MHz.12m.mfs.…  application/gzip            0.0
+ 115 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw1_246008MHz.12m.mfs.…  application/gzip            0.0
+ 116 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw1_246008MHz.12m.mfs.…  application/octet-stream    0.0
+ 117 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw2_248008MHz.12m.cube…  application/gzip            0.012
+ 118 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw2_248008MHz.12m.cube…  application/octet-stream    0.039
+ 119 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw2_248008MHz.12m.mfs.…  application/gzip            0.0
+ 120 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw2_248008MHz.12m.mfs.…  application/gzip            0.0
+ 121 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw2_248008MHz.12m.mfs.…  application/octet-stream    0.0
+ 122 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw3_230477MHz.12m.cube…  application/gzip            0.287
+ 123 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw3_230477MHz.12m.cube…  application/octet-stream    1.021
+ 124 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw3_230477MHz.12m.mfs.…  application/gzip            0.0
+ 125 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw3_230477MHz.12m.mfs.…  application/gzip            0.0
+ 126 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.J1634-2058_ph.spw3_230477MHz.12m.mfs.…  application/octet-stream    0.0
+ 127 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.README.txt                              text/plain                  0.0
+ 128 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_1_2_3_239568MHz.12…  application/gzip            0.0
+ 129 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_1_2_3_239568MHz.12…  application/gzip            0.002
+ 130 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_1_2_3_239568MHz.12…  application/octet-stream    0.009
+ 131 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_232993MHz.12m.cube…  application/gzip            0.258
+ 132 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_232993MHz.12m.cube…  application/octet-stream    0.981
+ 133 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_232993MHz.12m.mfs.…  application/gzip            0.0
+ 134 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_232993MHz.12m.mfs.…  application/gzip            0.002
+ 135 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw0_232993MHz.12m.mfs.…  application/octet-stream    0.009
+ 136 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw1_246009MHz.12m.cube…  application/gzip            0.242
+ 137 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw1_246009MHz.12m.cube…  application/octet-stream    0.981
+ 138 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw1_246017MHz.12m.mfs.…  application/gzip            0.0
+ 139 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw1_246017MHz.12m.mfs.…  application/gzip            0.002
+ 140 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw1_246017MHz.12m.mfs.…  application/octet-stream    0.009
+ 141 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw2_248009MHz.12m.cube…  application/gzip            0.239
+ 142 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw2_248009MHz.12m.cube…  application/octet-stream    0.981
+ 143 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw2_248009MHz.12m.mfs.…  application/gzip            0.0
+ 144 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw2_248009MHz.12m.mfs.…  application/gzip            0.002
+ 145 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw2_248009MHz.12m.mfs.…  application/octet-stream    0.009
+ 146 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw3_230478MHz.12m.cube…  application/gzip            0.025
+ 147 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw3_230478MHz.12m.cube…  application/gzip            6.782
+ 148 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw3_230478MHz.12m.cube…  application/octet-stream   25.533
+ 149 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw3_230478MHz.12m.mfs.…  application/gzip            0.0
+ 150 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw3_230478MHz.12m.mfs.…  application/gzip            0.002
+ 151 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.ROXs_12_B_sci.spw3_230478MHz.12m.mfs.…  application/octet-stream    0.009
+ 152 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.hifa_image.pipeline_manifest.xml        application/xml             0.0
+ 153 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.hifa_image.weblog.tgz                   application/octet-stream    0.067
+ 154 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.ari_l.image.product_rename.txt                text/plain                  0.0
+ 155 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2d2_X98.external.ari_l.product_rename.txt             text/plain                  0.0
+
+The full package is 254.9 GB (above max_tar_gb = 15.0), but the archive lists 5 separate continuum image(s) for this target; downloading those.
+Already have member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.12m.cont.I.pbcor.fits
+Already have member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.mfs.I.pbcor.fits
+Already have member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.mfs.I.pbcor.fits
+Already have member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw2_248008MHz.12m.mfs.I.pbcor.fits
+Already have member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw3_230477MHz.12m.mfs.I.pbcor.fits
+
+Extracted 5 FITS file(s), best candidate first:
+  ./alma_cache/direct_fits/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.12m.cont.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_232992MHz.12m.mfs.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw1_246008MHz.12m.mfs.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw2_248008MHz.12m.mfs.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw3_230477MHz.12m.mfs.I.pbcor.fits
+
+Using: ./alma_cache/direct_fits/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.12m.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: image ./alma_cache/direct_fits/member.uid___A001_X2d2_X98.ari_l.1RXS_1609_B_sci.spw0_1_2_3_239567MHz.12m.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (1500, 1500) eltype Float32 nan count 924699 finite count 1325301
+Synthesized beam: 0.1742" x 0.1523" (PA=13.11969661713) = 24.00 au x 20.98 au at 137.8 pc
+No significant emission for a centroid start; the centre fit starts at the image centre.
+[DEBUG] fit_geometry: score = 0.7558641840128061 incl = 85.0 pa = 97.5 face-on score = 0.9702648607975769
+Fitted disk geometry from the image: i = 85.0 deg, PA = 97.5 deg east of north (+-~5 deg).
+[DEBUG] fit_center: start = (751, 751) walk steps = 2 coarse = (747, 751) fine = (747, 751)
+[DEBUG] fit_geometry: score = 0.6842714589316751 incl = 83.75 pa = 101.25 face-on score = 0.9491654440813178
+Refined disk geometry about the fitted centre: i = 83.8 deg, PA = 101.2 deg.
+Geometry fit quality: a purely radial profile explains 32% of the pixel variance (face-on: 3%). LOW: the disk is probably non-axisymmetric or faint, so the fitted geometry is unreliable.
+WARNING: the geometry fit gave i = 83.8 deg but explains only 32% of the pixel variance; a nearly edge-on solution from such a poor fit is not credible (typical of a non-axisymmetric disc). Using face-on (i = 0) instead. Pass incl_deg= / pa_deg= from the literature, or guard_geometry = false to keep the fit.
+[DEBUG] fit_center: start = (751, 751) walk steps = 2 coarse = (751, 756) fine = (751, 756)
+Centre pixel (1-based): (751, 756); offset from image centre: dRA = -0.0000", dDec = +0.1400"
+Radial profile: 40 bins of 0.0500" (6.89 au) out to 2.00" (276 au)
+[DEBUG] extract_radial_profile: empty bins = 0 valid mean_flux entries = 40
+Saved the radial profile: ./alma_plots/1RXS_1609_B_profile.csv
+Saved figure: ./alma_plots/1RXS_1609_B_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 40 / 40
+[DEBUG] find_rings_and_gaps: ring_prominence = 0.00010374270779098366 gap_prominence = 0.00010374270779098366
+[DEBUG] find_rings_and_gaps: raw ring_idx = Int64[] raw gap_idx = Int64[]
+
+[raw profile] Detected 0 ring(s), 0 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 0 rings and 0 gaps
+[DEBUG] find_rings_and_gaps_residual: n_valid = 40 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 3.071616094332894e-6 residual min/max = -1.0054082286667987e-5 7.630193015086945e-6
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 2.150131266033026e-6 gap_prominence = 2.150131266033026e-6
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [5, 10, 18, 22, 28, 37] raw gap_idx = [4, 7, 16, 20, 24, 33]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 24.002907334362646 min_radius_beams = 2.5 -> min_radius_au = 60.007268335906616
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 9.214848282998682e-7
+Excluded 3 detection(s) within 60.01 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 31.0 au, residual = 2.8245e-06 Jy/beam (+0.92 sigma)
+    r = 24.1 au, residual = -1.7880e-06 Jy/beam (-0.58 sigma)
+    r = 44.8 au, residual = -1.0054e-05 Jy/beam (-3.27 sigma)
+
+[baseline-subtracted] Detected 5 ring(s):
+  r = 70.2 au, residual = 5.5355e-06 Jy/beam, prominence = 1.36e-05
+  r = 122.5 au, residual = 7.6302e-06 Jy/beam, prominence = 1.11e-05
+  r = 137.8 au, residual = 1.1694e-06 Jy/beam, prominence = 3.48e-06
+  r = 189.7 au, residual = 2.3071e-06 Jy/beam, prominence = 3.70e-06
+  r = 249.6 au, residual = 1.6111e-06 Jy/beam, prominence = 2.67e-06
+
+[baseline-subtracted] Detected 4 gap(s):
+  r = 104.1 au, residual = -8.0550e-06 Jy/beam, prominence = 1.36e-05
+  r = 137.7 au, residual = -3.5177e-06 Jy/beam, prominence = 5.82e-06
+  r = 160.0 au, residual = -2.3140e-06 Jy/beam, prominence = 3.48e-06
+  r = 217.9 au, residual = -1.0571e-06 Jy/beam, prominence = 2.67e-06
+[DEBUG] plot_residual_profile: called with 5 rings and 4 gaps
+Saved target summary: ./alma_plots/1RXS_1609_B_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 40 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 3.071616094332894e-6 residual min/max = -1.0054082286667987e-5 7.630193015086945e-6
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 1.8429696565997364e-6 gap_prominence = 1.8429696565997364e-6
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [5, 10, 18, 22, 28, 37] raw gap_idx = [4, 7, 16, 20, 24, 33, 38]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 24.002907334362646 min_radius_beams = 2.5 -> min_radius_au = 60.007268335906616
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 3.0716160943328945e-7
+Excluded 3 detection(s) within 60.01 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 31.0 au, residual = 2.8245e-06 Jy/beam (+0.92 sigma)
+    r = 24.1 au, residual = -1.7880e-06 Jy/beam (-0.58 sigma)
+    r = 44.8 au, residual = -1.0054e-05 Jy/beam (-3.27 sigma)
+[DEBUG] plot_residual_profile: called with 5 rings and 5 gaps
+Saved target summary: ./alma_plots/1RXS_1609_B_target_summary.txt
+================================================================================
+Physical analysis: 1RXS 1609 B
+================================================================================
+
+NOT DETECTED: the strongest bin of the azimuthal mean is 0.8 sigma (< 5.0; the peak is 0.3 x the per-beam image noise). Nothing below is meaningful, so the physical analysis was skipped. Upper limit: 3 sigma = 0.112 mJy/beam (one beam; image rms 0.0372 mJy/beam). Try a deeper or different observation, or set min_detect_snr = 0 to force the analysis.

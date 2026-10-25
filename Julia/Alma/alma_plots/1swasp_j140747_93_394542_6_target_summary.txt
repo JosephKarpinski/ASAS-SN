@@ -1,0 +1,85 @@
+========================================================================================
+TARGET SUMMARY: 1swasp j140747.93-394542.6
+========================================================================================
+Generated 2026-10-25 12:32 by alma_target_explorer_julia (v7, build 105)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=1swasp%20j140747.93-394542.6&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : 1swasp j140747.93-394542.6
+  Coordinates    : 14:07:47.88  -39:45:43.3  (RA 211.94950, Dec -39.76202 deg, J2000)
+  Distance       : 137.9 pc
+  Class          : Archive disk
+  Catalogue note : ALMA archive: 8 rows
+  Versus TW Hya  : Not curated; 8 archive rows, finest 0.084"; i/PA fitted, d from Gaia
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    A disk target picked from the ALMA archive (science category "Disks and planet formation"). It is not individually curated, so the type of star and of disk is not recorded here: it may be a T Tauri or Herbig disk, an embedded protostar, a multiple system or a debris disk.
+    Analysis caveat for this class: Not curated: the distance is a Gaia distance (Bailer-Jones+21 or the SIMBAD parallax; or an assumed 100 pc), the geometry is fitted from the image, and the target may be embedded, multiple or only marginally resolved.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2023.1.01488.S
+  Band           : 7
+  Archive-reported resolution of the observation : 0.0964 arcsec (13.3 au; the beam of the image used is given below)
+  Exposure time  : 9216 s (2.56 h)
+  Public release : 2025-07-22
+  Member OUS     : uid://A001/X3628/X18e
+  Largest recoverable angular scale : 1.89 arcsec (261 au); structure larger than this is filtered out
+  Observations in the archive query: 2; the finest has 0.0838 arcsec. Used: #2 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #2 because the finer packages exceeded the size limit.
+  Product package: 2023.1.01488.S_uid___A001_X3628_X18e_001_of_001.tar (6.17 GB)
+  FITS image used: member.uid___A001_X3628_X18e._1swasp_j140747.93-394542.6__sci.spw5_7_9_11.cont.I.pbcor.fits
+  Pixel scale    : 0.0190 arcsec
+  Synthesised beam: 0.1152 x 0.0948 arcsec = 15.9 x 13.1 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 0.0 deg, position angle 0.0 deg (east of north)
+  Source: the image fit gave i = 85.0 deg, PA = 91.9 deg but explains only 23% of the pixel variance (not credible), so the disk was treated as FACE-ON (geometry guard).
+  Profile centre (pixel): (755, 753); profile out to 2.00 arcsec = 276 au in 40 bins of 6.90 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.00651 mJy/beam at r = 31.0 au (2.0 beams)
+  Innermost bin              : -0.0112 mJy/beam (-172% of the peak)
+  Radius holding 50% / 90% of the flux : NaN au / NaN au (NaN / NaN beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 31 au (2.0 beams)
+  Radius where the mean falls below 10% of the peak: 259 au
+  Integrated flux out to the profile edge: ~0.1 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.00157 mJy/beam
+  Profile dynamic range (peak / residual sigma): 4
+  Image noise (robust rms): 0.0169 mJy/beam; the peak of the azimuthal mean is 0.4 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 7 ring(s), 8 gap(s).
+  Detections inside 40 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.000157 mJy/beam are ignored.
+
+  15 candidate features were found after baseline subtraction, but none reaches 3 sigma (the strongest is 1.4 sigma): they are consistent with noise.
+  The feature table, the sequence, the blend notes and the spacings are not listed (set COLLAPSE_NOISE_FEATURES[] = false to list them); the candidate radii are given in section 7.
+  0 of 15 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Detection: the strongest bin of the azimuthal mean is only 1.0 sigma (peak 0.4 x the per-beam image noise), so this target is not detected in this image (or is far fainter than the noise). The profile and any rings or gaps listed above are noise; try a deeper or different observation.
+  (2) Class-specific note: Not curated: the distance is a Gaia distance (Bailer-Jones+21 or the SIMBAD parallax; or an assumed 100 pc), the geometry is fitted from the image, and the target may be embedded, multiple or only marginally resolved.
+  (3) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  1swasp_j140747_93_394542_6_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

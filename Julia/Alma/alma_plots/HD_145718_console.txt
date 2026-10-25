@@ -1,0 +1,282 @@
+Resolved HD 145718 (as "HD 145718") -> RA = 243.29830 deg, Dec = -22.48517 deg (CDS Sesame)
+================================================================================
+Target: HD 145718   (RA 243.2983, Dec -22.4852; )
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HD%20145718&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for HD 145718 ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 243.29829935, -22.48517277, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 37009 | mirror = https://almascience.nrao.edu
+Found 63 rows in the cone.
+Filtered to 13 rows matching HD 145718.
+Catalogue: Bosschaart+26 (J16131158-2229066): class ND (non-detection); R68 <62 au; F(1.33 mm) 49 mJy; M_dust 33.5 Earth masses; M* 1.60 Msun; distance 155 pc
+NOTE: the catalogue lists this disc as a NON-DETECTION; expect nothing in the image.
+Finest archive beam ~ 111 au; catalogue R68 = 62 au = 0.6 beams: UNRESOLVED at the finest resolution.
+
+Observations (member OUS), finest spatial resolution first:
+3×10 DataFrame
+ Row │ member_ous_uid         proposal_id     band    best_res_arcsec  t_exp_s  release     n_rows  las_arcsec  freq_ghz  las_over_diam
+     │ String                 String          String  Float64          Float64  String      Int64   Float64     Float64   Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X2fe/Xb93   2015.1.01600.S  6              0.728447   120.96  2017-06-24       4     6.61924   220.392           8.11
+   2 │ uid://A001/X1284/X484  2017.1.01545.S  6              1.08207   1300.32  2019-06-06       4    10.4536    228.991          12.81
+   3 │ uid://A001/X1284/X480  2017.1.01545.S  5              1.36618   1421.28  2019-07-20       5    12.5655    178.193          15.4
+
+Using observation #1: uid://A001/X2fe/Xb93 (proposal 2015.1.01600.S, band 6, best resolution 0.7284")
+
+Fetching file listing for uid://A001/X2fe/Xb93 ...
+  fetching data info for uid://A001/X2fe/Xb93 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 83 | mirror = https://almascience.nrao.edu
+81×3 DataFrame
+ Row │ access_url                                                                                                       content_type              size_GB
+     │ String                                                                                                           String                    Float64
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.README.txt                                   text/plain                  0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2015.1.01600.S_uid___A001_X2fe_Xb93_001_of_001.tar                       application/x-tar           1.856
+   3 │ https://almascience.nrao.edu/dataPortal/2015.1.01600.S_uid___A001_X2fe_Xb93_auxiliary.tar                        application/x-tar           0.15
+   4 │ https://almascience.nrao.edu/dataPortal/2015.1.01600.S_uid___A002_Xb1a414_X2aff.asdm.sdm.tar                     application/x-tar           7.624
+   5 │ https://almascience.nrao.edu/dataPortal/2015.1.01600.S_uid___A001_X2fe_Xb93_external_ari_l_001_of_001.tar        application/x-tar           8.58
+   6 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12…  application/gzip            0.0
+   7 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12…  application/gzip            0.0
+   8 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12…  application/octet-stream    0.0
+   9 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_232007MHz.12m.cube…  application/gzip            0.012
+  10 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_232007MHz.12m.cube…  application/octet-stream    0.038
+  11 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_232007MHz.12m.mfs.…  application/gzip            0.0
+  12 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_232007MHz.12m.mfs.…  application/gzip            0.0
+  13 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_232007MHz.12m.mfs.…  application/octet-stream    0.0
+  14 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw1_234007MHz.12m.cube…  application/gzip            0.012
+  15 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw1_234007MHz.12m.cube…  application/octet-stream    0.038
+  16 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw1_234007MHz.12m.mfs.…  application/gzip            0.0
+  17 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw1_234007MHz.12m.mfs.…  application/gzip            0.0
+  18 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw1_234007MHz.12m.mfs.…  application/octet-stream    0.0
+  19 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220391MHz.12m.mfs.…  application/gzip            0.0
+  20 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220391MHz.12m.mfs.…  application/gzip            0.0
+  21 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220391MHz.12m.mfs.…  application/octet-stream    0.0
+  22 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220392MHz.12m.cube…  application/gzip            0.001
+  23 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220392MHz.12m.cube…  application/gzip            0.234
+  24 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220392MHz.12m.cube…  application/octet-stream    0.663
+  25 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219553MHz.12m.cube…  application/gzip            0.001
+  26 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219553MHz.12m.cube…  application/gzip            0.471
+  27 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219553MHz.12m.cube…  application/octet-stream    1.327
+  28 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219557MHz.12m.mfs.…  application/gzip            0.0
+  29 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219557MHz.12m.mfs.…  application/gzip            0.0
+  30 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219557MHz.12m.mfs.…  application/octet-stream    0.0
+  31 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_1_2_3_227080MHz.1…  application/gzip            0.0
+  32 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_1_2_3_227080MHz.1…  application/gzip            0.0
+  33 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_1_2_3_227080MHz.1…  application/octet-stream    0.0
+  34 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_232013MHz.12m.cub…  application/gzip            0.012
+  35 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_232013MHz.12m.cub…  application/octet-stream    0.038
+  36 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_232013MHz.12m.mfs…  application/gzip            0.0
+  37 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_232013MHz.12m.mfs…  application/gzip            0.0
+  38 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw0_232013MHz.12m.mfs…  application/octet-stream    0.0
+  39 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw1_234013MHz.12m.cub…  application/gzip            0.012
+  40 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw1_234013MHz.12m.cub…  application/octet-stream    0.038
+  41 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw1_234013MHz.12m.mfs…  application/gzip            0.0
+  42 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw1_234013MHz.12m.mfs…  application/gzip            0.0
+  43 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw1_234013MHz.12m.mfs…  application/octet-stream    0.0
+  44 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw2_220397MHz.12m.cub…  application/gzip            0.229
+  45 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw2_220397MHz.12m.cub…  application/octet-stream    0.663
+  46 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw2_220397MHz.12m.mfs…  application/gzip            0.0
+  47 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw2_220397MHz.12m.mfs…  application/gzip            0.0
+  48 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw2_220397MHz.12m.mfs…  application/octet-stream    0.0
+  49 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw3_219559MHz.12m.cub…  application/gzip            0.461
+  50 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw3_219559MHz.12m.cub…  application/octet-stream    1.327
+  51 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw3_219559MHz.12m.mfs…  application/gzip            0.0
+  52 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw3_219559MHz.12m.mfs…  application/gzip            0.0
+  53 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1517-2422_bp.spw3_219559MHz.12m.mfs…  application/octet-stream    0.0
+  54 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_1_2_3_227073MHz.1…  application/gzip            0.0
+  55 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_1_2_3_227073MHz.1…  application/gzip            0.0
+  56 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_1_2_3_227073MHz.1…  application/octet-stream    0.0
+  57 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_232007MHz.12m.cub…  application/gzip            0.014
+  58 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_232007MHz.12m.cub…  application/octet-stream    0.039
+  59 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_232007MHz.12m.mfs…  application/gzip            0.0
+  60 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_232007MHz.12m.mfs…  application/gzip            0.0
+  61 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw0_232007MHz.12m.mfs…  application/octet-stream    0.0
+  62 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw1_234007MHz.12m.cub…  application/gzip            0.014
+  63 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw1_234007MHz.12m.cub…  application/octet-stream    0.039
+  64 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw1_234007MHz.12m.mfs…  application/gzip            0.0
+  65 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw1_234007MHz.12m.mfs…  application/gzip            0.0
+  66 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw1_234007MHz.12m.mfs…  application/octet-stream    0.0
+  67 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw2_220391MHz.12m.cub…  application/gzip            0.267
+  68 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw2_220391MHz.12m.cub…  application/octet-stream    0.69
+  69 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw2_220391MHz.12m.mfs…  application/gzip            0.0
+  70 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw2_220391MHz.12m.mfs…  application/gzip            0.0
+  71 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw2_220391MHz.12m.mfs…  application/octet-stream    0.0
+  72 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw3_219553MHz.12m.cub…  application/gzip            0.538
+  73 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw3_219553MHz.12m.cub…  application/octet-stream    1.382
+  74 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw3_219553MHz.12m.mfs…  application/gzip            0.0
+  75 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw3_219553MHz.12m.mfs…  application/gzip            0.0
+  76 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.J1625-2527_ph.spw3_219553MHz.12m.mfs…  application/octet-stream    0.0
+  77 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.README.txt                             text/plain                  0.0
+  78 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.hifa_image.pipeline_manifest.xml       application/xml             0.0
+  79 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.hifa_image.weblog.tgz                  application/octet-stream    0.015
+  80 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.ari_l.image.product_rename.txt               text/plain                  0.0
+  81 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X2fe_Xb93.external.product_rename.txt                  text/plain                  0.0
+
+The archive lists 5 separate continuum image(s) for this target (the full package is 1.9 GB); downloading those instead of the package.
+Downloading member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12m.cont.I.pbcor.fits ...
+  download failed (https://almascience.nrao.edu, attempt 1/2): RequestError: Failed to connect to almascience.nrao.edu port 443 after 17377 ms: Could not connect to server while requesting https://almascience.nrao.edu/dataP
+  download failed (https://almascience.nrao.edu, attempt 2/2): RequestError: Failed to connect to almascience.nrao.edu port 443 after 17374 ms: Could not connect to server while requesting https://almascience.nrao.edu/dataP
+Downloading member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_232007MHz.12m.mfs.I.pbcor.fits ...
+  download failed (https://almascience.nrao.edu, attempt 1/2): RequestError: Failed to connect to almascience.nrao.edu port 443 after 17382 ms: Could not connect to server while requesting https://almascience.nrao.edu/dataP
+Downloading member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw1_234007MHz.12m.mfs.I.pbcor.fits ...
+Downloading member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220391MHz.12m.mfs.I.pbcor.fits ...
+Downloading member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219557MHz.12m.mfs.I.pbcor.fits ...
+
+Extracted 5 FITS file(s), best candidate first:
+  ./alma_cache/direct_fits/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12m.cont.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_232007MHz.12m.mfs.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw1_234007MHz.12m.mfs.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw2_220391MHz.12m.mfs.I.pbcor.fits
+  ./alma_cache/direct_fits/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw3_219557MHz.12m.mfs.I.pbcor.fits
+
+Using: ./alma_cache/direct_fits/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12m.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: image ./alma_cache/direct_fits/member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12m.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (294, 294) eltype Float32 nan count 35066 finite count 51370
+Synthesized beam: 0.8666" x 0.7167" (PA=-64.17587280273) = 131.73 au x 108.94 au at 152.0 pc
+Emission centroid (start of the centre fit): pixel (148, 149), dRA = -0.0000", dDec = +0.1500" from the image centre
+Disk too small relative to the beam (fit radius 1.00" < 2.5 beams) to fit its geometry; keeping i = 0.0, PA = 0.0 deg.
+WARNING: centre fit still at the edge of its search window after 8 steps; check the image, or pass center = (i, j).
+[DEBUG] fit_center: start = (148, 149) walk steps = 8 coarse = (148, 149) fine = (148, 149)
+Centre pixel (1-based): (148, 149); offset from image centre: dRA = -0.0000", dDec = +0.1500"
+Radial profile: 40 bins of 0.0500" (7.60 au) out to 2.00" (304 au)
+[DEBUG] extract_radial_profile: empty bins = 6 valid mean_flux entries = 34
+WARNING: the beam is 132 au across (> 40 au): a typical disk (rings at tens of au) is NOT resolved in this image, so rings, gaps and asymmetries cannot be measured. Try a finer observation (obs_choice = N).
+Saved the radial profile: ./alma_plots/HD_145718_profile.csv
+Disk extent (90% of the flux): ~125 au = 1.0 beams of 131.7 au.
+WARNING: 90% of the flux lies within 1.0 beams: the source is unresolved (a point source). If the target is a disk this is probably the wrong image (a calibrator?); check the FITS name and header OBJECT above.
+NOTE: the disk spans only ~1.0 beams, so rings/gaps narrower than ~263 au (2 beams) are not resolved. A finer-resolution observation would help (obs_choice = N; force_download = true for large packages).
+WARNING: the beam-artifact exclusion zone (< 329 au) covers much of this disk (90% flux radius 125 au); detections inside it are dropped. Try min_radius_beams = 1.0.
+Saved figure: ./alma_plots/HD_145718_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 34 / 40
+[DEBUG] find_rings_and_gaps: ring_prominence = 0.0006666719482735825 gap_prominence = 0.0006666719482735825
+[DEBUG] find_rings_and_gaps: raw ring_idx = Int64[] raw gap_idx = Int64[]
+
+[raw profile] Detected 0 ring(s), 0 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 0 rings and 0 gaps
+[DEBUG] find_rings_and_gaps_residual: n_valid = 34 savgol window = 7 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 0.0004395551648895683 residual min/max = -0.0017384652026174972 0.00117701570926574
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 0.0003076886154226978 gap_prominence = 0.0003076886154226978
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [3, 6, 9] raw gap_idx = [2, 5, 8]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 131.72732782365313 min_radius_beams = 2.5 -> min_radius_au = 329.3183195591328
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 0.00013186654946687048
+Excluded 6 detection(s) within 329.32 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 34.2 au, residual = 1.1770e-03 Jy/beam (+2.68 sigma)
+    r = 72.2 au, residual = 9.5568e-04 Jy/beam (+2.17 sigma)
+    r = 102.6 au, residual = 4.3322e-04 Jy/beam (+0.99 sigma)
+    r = 26.6 au, residual = -7.0300e-04 Jy/beam (-1.60 sigma)
+    r = 64.6 au, residual = -1.7385e-03 Jy/beam (-3.96 sigma)
+    r = 95.0 au, residual = -5.9043e-04 Jy/beam (-1.34 sigma)
+
+[baseline-subtracted] Detected 0 ring(s):
+
+[baseline-subtracted] Detected 0 gap(s):
+[DEBUG] plot_residual_profile: called with 0 rings and 0 gaps
+Saved target summary: ./alma_plots/HD_145718_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 34 savgol window = 7 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 0.0004395551648895683 residual min/max = -0.0017384652026174972 0.00117701570926574
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 0.00026373309893374096 gap_prominence = 0.00026373309893374096
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [3, 6, 9] raw gap_idx = [2, 5, 8, 10]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 131.72732782365313 min_radius_beams = 2.5 -> min_radius_au = 329.3183195591328
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 4.3955516488956836e-5
+Excluded 7 detection(s) within 329.32 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 34.2 au, residual = 1.1770e-03 Jy/beam (+2.68 sigma)
+    r = 72.2 au, residual = 9.5568e-04 Jy/beam (+2.17 sigma)
+    r = 102.6 au, residual = 4.3322e-04 Jy/beam (+0.99 sigma)
+    r = 26.6 au, residual = -7.0300e-04 Jy/beam (-1.60 sigma)
+    r = 64.6 au, residual = -1.7385e-03 Jy/beam (-3.96 sigma)
+    r = 95.0 au, residual = -5.9043e-04 Jy/beam (-1.34 sigma)
+    r = 117.8 au, residual = -1.8788e-04 Jy/beam (-0.43 sigma)
+Saved target summary: ./alma_plots/HD_145718_target_summary.txt
+================================================================================
+Physical analysis: HD 145718
+================================================================================
+Excluded 7 detection(s) within 131.73 au (1.0x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 34.2 au, residual = 1.1770e-03 Jy/beam (+2.68 sigma)
+    r = 72.2 au, residual = 9.5568e-04 Jy/beam (+2.17 sigma)
+    r = 102.6 au, residual = 4.3322e-04 Jy/beam (+0.99 sigma)
+    r = 26.6 au, residual = -7.0300e-04 Jy/beam (-1.60 sigma)
+    r = 64.6 au, residual = -1.7385e-03 Jy/beam (-3.96 sigma)
+    r = 95.0 au, residual = -5.9043e-04 Jy/beam (-1.34 sigma)
+    r = 117.8 au, residual = -1.8788e-04 Jy/beam (-0.43 sigma)
+
+[1/3] Gaussian ring fits (0 candidate ring position(s) before merging)
+  0 ring component(s), chi2_red = 0.63 (dof 31)
+
+[1b] Geometry check from the ring ridges
+WARNING: the geometry check failed (catalogue geometry is used): no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)
+
+[2/3] Azimuthal asymmetry: not tested: 90% of the flux lies within 1.0 beams (125 au of a 120 au beam); an asymmetry measured on a disc this small is dominated by the beam wings of the central core and by small centre / inclination / PA errors (needs at least 4 beams)
+
+[3/3] Brightness temperature and optical depth
+  WARNING: no stellar luminosity for HD 145718: T_d assumes L* = 1 Lsun. Pass lstar= to physical_analysis.
+  frequency 227.1 GHz; peak T_b = 5.5 K
+  No figure: T_d (and with it T_b/T_d and tau) needs L*; pass lstar= to physical_analysis.
+
+[3b] Gap-opening planet masses: skipped (needs L* and M*, which are not stored for this target; pass lstar= and mstar=)
+
+[3c] Dust trapping: skipped (needs L* and M*, which are not stored for this target; pass lstar= and mstar=)
+RESOLUTION WARNING: the beam is 132 x 109 au (> 40 au). A typical disk (rings at tens of au) is not resolved, so the rings, asymmetries, temperatures and masses below are not meaningful. A finer observation is needed.
+UNRESOLVED: 90% of the flux lies within 125.4 au = 1.0 beams of 119.8 au, so this is a point source at this resolution. Ring and gap structure cannot be measured from this image, and the temperatures and optical depths describe the beam, not the disk.
+WARNING: Flux check: the image integrates to 33.2 mJy inside the profile radius; the catalogue flux (49 mJy at 1.33 mm) scales to 49.7 mJy at 227 GHz (spectral index 2-3), so the image holds 66-67% of it. PARTLY FILTERED: some extended emission is missing; sizes are biased low and the smooth baseline is underestimated.
+
+========================================================================================
+PHYSICAL ANALYSIS: HD 145718
+========================================================================================
+Generated 2026-10-25 14:25 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X2fe_Xb93.ari_l.HD145718_sci.spw0_1_2_3_227078MHz.12m.cont.I.pbcor.fits
+Distance 152.0 pc; inclination 0.0 deg, PA 0.0 deg; beam 0.8666 x 0.7167 arcsec = 131.7 x 108.9 au (radial beam sigma 50.9 au)
+RESOLUTION WARNING: the beam is 132 x 109 au (> 40 au). A typical disk (rings at tens of au) is not resolved, so the rings, asymmetries, temperatures and masses below are not meaningful. A finer observation is needed.
+UNRESOLVED: 90% of the flux lies within 125.4 au = 1.0 beams of 119.8 au, so this is a point source at this resolution. Ring and gap structure cannot be measured from this image, and the temperatures and optical depths describe the beam, not the disk.
+Observing frequency 227.1 GHz (1.32 mm)
+Bosschaart+26 (J16131158-2229066): class ND (non-detection); R68 <62 au; F(1.33 mm) 49 mJy; M_dust 33.5 Earth masses; M* 1.60 Msun; distance 155 pc; this image: 68%-flux radius 80 au
+Flux check: the image integrates to 33.2 mJy inside the profile radius; the catalogue flux (49 mJy at 1.33 mm) scales to 49.7 mJy at 227 GHz (spectral index 2-3), so the image holds 66-67% of it. PARTLY FILTERED: some extended emission is missing; sizes are biased low and the smooth baseline is underestimated.
+Stellar parameters (Bosschaart+26 catalogue stellar mass; verify): L* = ? Lsun, M* = 1.60 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 0 Gaussian ring(s); chi2_red = 0.63 (dof 31). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 71.4 mJy/beam, characteristic radius 75 au, power-law index 0.11
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 50.9 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+
+  Fit decisions (in order):
+    - starting seeds: none
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Not tested: 90% of the flux lies within 1.0 beams (125 au of a 120 au beam); an asymmetry measured on a disc this small is dominated by the beam wings of the central core and by small centre / inclination / PA errors (needs at least 4 beams).
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 227.1 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  No rings or gaps were fitted or detected, so there are no radii to evaluate.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.
+
+Saved: ./alma_plots/HD_145718_physical_analysis.txt

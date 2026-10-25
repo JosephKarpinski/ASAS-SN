@@ -1,0 +1,89 @@
+========================================================================================
+TARGET SUMMARY: GM Aur
+========================================================================================
+Generated 2026-10-25 16:16 by alma_target_explorer_julia (v7, build 106)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=GM%20Aur&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : GM Aur
+  Coordinates    : 04:55:10.99  +30:21:59.4  (RA 73.79580, Dec +30.36650 deg, J2000)
+  Distance       : 159.0 pc
+  Class          : T Tauri + cavity
+  Catalogue note : Large cavity (MAPS)
+  Versus TW Hya  : Ring, not centrally peaked; gaps = cavity physics; Bosschaart+26: TD, R68 76 au
+  Published      : Bosschaart+26 (GMAur): class TD (transition disc); R68 76 au; F(1.33 mm) 162 mJy; M_dust 43 Earth masses; M* 1.00 Msun; distance 160 pc; this image: 68%-flux radius 123 au
+  Catalogue geometry: inclination 53.2 deg, PA 57.2 deg east of north
+
+  What kind of object this is:
+    A T Tauri star whose disk has a large central cavity (a transition disk): the dust emission is a ring rather than a central peak. The inner hole is usually attributed to one or more companions or planets, or to photoevaporation.
+    Analysis caveat for this class: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2015.1.00678.S
+  Band           : 7
+  Archive-reported resolution of the observation : 0.2373 arcsec (37.7 au; the beam of the image used is given below)
+  Exposure time  : 3447 s (0.96 h)
+  Public release : 2018-01-10
+  Member OUS     : uid://A001/X2fa/X2ac
+  Largest recoverable angular scale : 4.41 arcsec (701 au); structure larger than this is filtered out
+  Observations in the archive query: 53; the finest has 0.0243 arcsec. Used: #9 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #9 because the finer packages exceeded the size limit.
+  Product package: 2015.1.00678.S_uid___A001_X2fa_X2ac_001_of_001.tar (88.83 GB)
+  FITS image used: member.uid___A001_X2fa_X2ac.ari_l.GM_Aur_sci.spw0_1_2_3_4_5_6_283851MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0390 arcsec
+  Synthesised beam: 0.2988 x 0.1942 arcsec = 47.5 x 30.9 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 53.2 deg, position angle 57.2 deg (east of north)
+  Source: catalogue (literature) values.
+  Profile centre (pixel): (448, 434); profile out to 2.00 arcsec = 318 au in 40 bins of 7.95 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 21.1 mJy/beam at r = 43.7 au (0.9 beams)
+  Innermost bin              : 16.1 mJy/beam (76% of the peak)
+  Radius holding 50% / 90% of the flux : 91 au / 195 au (1.9 / 4.1 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 274 au (5.8 beams)
+  Radius where the mean falls below 10% of the peak: 179 au
+  Integrated flux out to the profile edge: ~308.8 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.16 mJy/beam
+  Profile dynamic range (peak / residual sigma): 132
+  Image noise (robust rms): 0.12 mJy/beam; the peak of the azimuthal mean is 176.2 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 1 ring(s), 0 gap(s).
+  Raw rings at 44 au; raw gaps at none au.
+  After subtracting a smooth baseline: 0 ring(s), 0 gap(s).
+  Detections inside 119 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.016 mJy/beam are ignored.
+
+  No significant rings or gaps were detected.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Flux check: the image integrates to 309 mJy inside the profile radius; the catalogue flux (162 mJy at 1.33 mm) scales to 257-324 mJy at 284 GHz (spectral index 2-3), so the image holds 95-120% of it: consistent.
+  (2) Resolution: the disk (90% of the flux within 195 au) spans only 4.1 beams of 47.5 au. It is barely resolved: only the overall size and brightness trend can be trusted; rings or gaps narrower than ~95 au would not be seen.
+  (3) Excluded zone: detections inside 119 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (44 au) and a large part of the disk (90% of the flux lies within 195 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (4) Data choice: a package with finer resolution (0.0243 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (5) Shape: the emission is centrally peaked (the maximum lies at 44 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (6) Substructure: none was detected above the threshold even with the re-tuned settings. This says the profile is smooth at this resolution and sensitivity, not that the disk is smooth (rings narrower than the beam are averaged away).
+  (7) Class-specific note: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+  (8) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  GM_Aur_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

@@ -1,0 +1,4 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,703,HL Tau,Young/embedded,OK,3,2019.1.01051.S,7,4.500212520360947,294.1027509651702,0.9,"",./alma_plots/HL_Tau_console.txt
+2,238,GY 91,Young/embedded,OK,1,2015.1.00761.S,3,13.46668422222312,11.362031055950702,0.4,"",./alma_plots/GY_91_console.txt
+3,1951,TMC1A,Young/embedded,OK,2,2015.1.01415.S,6,5.09785011410472,184.07932798610707,1.0,"",./alma_plots/TMC1A_console.txt

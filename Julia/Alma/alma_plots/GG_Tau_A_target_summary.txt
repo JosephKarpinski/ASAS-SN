@@ -1,0 +1,91 @@
+========================================================================================
+TARGET SUMMARY: GG Tau A
+========================================================================================
+Generated 2026-10-25 16:16 by alma_target_explorer_julia (v7, build 106)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=GG%20Tau%20A&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : GG Tau A
+  Coordinates    : 04:32:30.35  +17:31:40.5  (RA 68.12646, Dec +17.52792 deg, J2000)
+  Distance       : 150.0 pc
+  Class          : T Tauri + cavity
+  Versus TW Hya  : Binary; circumbinary ring
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    A T Tauri star whose disk has a large central cavity (a transition disk): the dust emission is a ring rather than a central peak. The inner hole is usually attributed to one or more companions or planets, or to photoevaporation.
+    Analysis caveat for this class: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2015.1.00224.S
+  Band           : 7
+  Archive-reported resolution of the observation : 0.1161 arcsec (17.4 au; the beam of the image used is given below)
+  Exposure time  : 5080 s (1.41 h)
+  Public release : 2018-04-10
+  Member OUS     : uid://A001/X340/X205
+  Largest recoverable angular scale : 2.61 arcsec (391 au); structure larger than this is filtered out
+  Observations in the archive query: 12; the finest has 0.0365 arcsec. Used: #2 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #2 because the finer packages exceeded the size limit.
+  Product package: 2015.1.00224.S_uid___A001_X340_X205_001_of_001.tar (6.66 GB)
+  FITS image used: member.uid___A001_X340_X205.ari_l.GG_Tau_sci.spw0_1_2_3_4_5_6_7_8_336058MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0190 arcsec
+  Synthesised beam: 0.1480 x 0.1007 arcsec = 22.2 x 15.1 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 68.8 deg, position angle 0.0 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 80% of the pixel variance (face-on: 16%).
+  Profile centre (pixel): (840, 836); profile out to 2.00 arcsec = 300 au in 40 bins of 7.50 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 11.9 mJy/beam at r = 3.8 au (0.2 beams)
+  Innermost bin              : 11.9 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 229 au / 289 au (10.3 / 13.0 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 49 au (2.2 beams)
+  Radius where the mean falls below 10% of the peak: 259 au
+  Integrated flux out to the profile edge: ~280.9 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.112 mJy/beam
+  Profile dynamic range (peak / residual sigma): 107
+  Image noise (robust rms): 0.681 mJy/beam; the peak of the azimuthal mean is 17.5 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 3 ring(s), 3 gap(s).
+  Detections inside 55 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.0112 mJy/beam are ignored.
+
+  6 candidate features were found after baseline subtraction, but none reaches 3 sigma (the strongest is 0.4 sigma): they are consistent with noise.
+  The feature table, the sequence, the blend notes and the spacings are not listed (set COLLAPSE_NOISE_FEATURES[] = false to list them); the candidate radii are given in section 7.
+  0 of 6 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Resolution: the disk (90% of the flux within 289 au) spans 13.0 beams of 22.2 au, well resolved; features down to ~44 au (2 beams) can be recovered.
+  (2) Excluded zone: detections inside 55 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (4 au) and a large part of the disk (90% of the flux lies within 289 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (3) Data choice: a package with finer resolution (0.0365 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (4) Geometry: the image gives i = 69 deg, PA = 0 deg (uncertain by ~5 deg, a little more for disks that are barely resolved or near face-on). A wrong geometry would blur rings; check the deprojected profile for sharpness.
+  (5) Shape: the emission is centrally peaked (the maximum lies at 4 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (6) Substructure: 6 candidate ring(s)/gap(s) were found after baseline subtraction, but none reaches 3 sigma (the strongest is 0.4 sigma), so they are consistent with noise and are not established. Candidate radii: 86 au, 109 au, 184 au, 211 au, 239 au, 241 au.
+  (7) 6 of the 6 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (8) Class-specific note: A central hole is expected: a low central flux and a peak at larger radius are physical, not artifacts.
+  (9) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  GG_Tau_A_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

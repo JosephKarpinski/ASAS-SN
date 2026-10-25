@@ -1,0 +1,13 @@
+========================================================================================
+PHYSICAL ANALYSIS: Flying Saucer
+========================================================================================
+Generated 2026-10-25 15:34 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X3788_Xb60c.Flying_saucer_sci.spw17_19_21_23_25_27_29_31.cont.I.pbcor.fits
+
+EDGE-ON / HIGHLY INCLINED DISC (i = 0 deg): the azimuthal-mean analysis does not apply. A thin ridge is spread over all azimuths by the deprojection, so the radial profile is diluted toward the noise and any rings, gaps, Gaussian fits, temperatures and gap masses derived from it would be meaningless. The radial analysis was therefore skipped; the disc was tested on its aperture-integrated flux instead.
+
+Aperture detection: 71.2 mJy +/- 6.4 mJy inside r = 141 au (1.02 arcsec), 11.1 sigma (noise = image rms x sqrt(number of independent beams in the deprojected aperture)).
+Extent (pixels above 5 sigma inside the aperture, flux-weighted second moments, 2.355 sigma, NOT beam-deconvolved): 1.288 arcsec = 178 au along the major axis and 0.229 arcsec = 32 au along the minor axis (aspect ratio 5.6; beam 0.434 x 0.341 arcsec).
+The minor-axis width is within 1.5 beams of the beam size: the vertical structure of the disc is not resolved in this image.
+
+What this image can still give: the flux and the extent above, the image itself (dark lane, ridge asymmetries), and cuts along and across the midplane. Take radial structure from a cut along the major axis, not from the azimuthal mean.

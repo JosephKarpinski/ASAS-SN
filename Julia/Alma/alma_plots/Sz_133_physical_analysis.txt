@@ -1,0 +1,14 @@
+========================================================================================
+PHYSICAL ANALYSIS: Sz 133
+========================================================================================
+Generated 2026-10-25 15:36 by alma_target_explorer_julia (v7, build 105)
+Image: member.uid___A001_X87d_X5df.ari_l.Sz_133_sci.spw0_1_2_3_97548MHz.12m.cont.I.tt0.pbcor.fits
+
+EDGE-ON / HIGHLY INCLINED DISC (i = 58 deg): the azimuthal-mean analysis does not apply. A thin ridge is spread over all azimuths by the deprojection, so the radial profile is diluted toward the noise and any rings, gaps, Gaussian fits, temperatures and gap masses derived from it would be meaningless. The radial analysis was therefore skipped; the disc was tested on its aperture-integrated flux instead.
+
+Aperture detection: 2.68 mJy +/- 0.057 mJy inside r = 65 au (0.43 arcsec), 47.1 sigma (noise = image rms x sqrt(number of independent beams in the deprojected aperture)).
+Flux check: the image integrates to 2.68 mJy inside the profile radius; the catalogue flux (25.6 mJy at 1.33 mm) scales to 2.08-4.79 mJy at 98 GHz (spectral index 2-3), so the image holds 56-129% of it: consistent.
+Extent (pixels above 5 sigma inside the aperture, flux-weighted second moments, 2.355 sigma, NOT beam-deconvolved): 0.470 arcsec = 72 au along the major axis and 0.296 arcsec = 45 au along the minor axis (aspect ratio 1.6; beam 0.386 x 0.292 arcsec).
+The minor-axis width is within 1.5 beams of the beam size: the vertical structure of the disc is not resolved in this image.
+
+What this image can still give: the flux and the extent above, the image itself (dark lane, ridge asymmetries), and cuts along and across the midplane. Take radial structure from a cut along the major axis, not from the azimuthal mean.

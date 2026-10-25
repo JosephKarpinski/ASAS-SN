@@ -1,0 +1,399 @@
+================================================================================
+Target: PDS 70   (RA 212.0423, Dec -41.3979; Cavity with two embedded protoplanets)
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=PDS%2070&skyViewHeight=48.99&skyViewWidth=50.95
+Querying ALMA archive for PDS 70 ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 212.0423, -41.3979, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 99221 | mirror = https://almascience.nrao.edu
+Found 180 rows in the cone.
+Filtered to 180 rows matching PDS 70.
+Catalogue: Bosschaart+26 (PDS70): class TD (transition disc); R68 91 au; F(1.33 mm) 230 mJy; M_dust 12 Earth masses; M* 0.76 Msun; distance 113 pc
+Finest archive beam ~ 2 au; catalogue R68 = 91 au = 37.1 beams: resolved.
+
+Observations (member OUS), finest spatial resolution first:
+15×10 DataFrame
+ Row │ member_ous_uid          proposal_id     band    best_res_arcsec  t_exp_s    release     n_rows  las_arcsec  freq_ghz  las_over_diam
+     │ String                  String          String  Float64          Float64    String      Int64   Float64     Float64   Float64
+─────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X3577/X8f7   2022.1.00592.S  9             0.0218869   3391.13   2025-02-19       8    0.402538  665.888            0.25
+   2 │ uid://A001/X13b4/Xb1    2018.A.00030.S  7             0.0273202  10305.6    2020-12-31       4    0.576079  345.769            0.35
+   3 │ uid://A001/X1465/X1893  2019.1.01138.S  7             0.0348986   2884.9    2023-08-17       4    0.614107  345.792            0.38
+   4 │ uid://A001/X3577/X8fd   2022.1.00592.S  4             0.0354535  10305.7    2024-10-26       4    0.717358  139.927            0.44
+   5 │ uid://A001/X2d20/X1eeb  2022.1.00893.S  3             0.0461521   3193.34   2024-08-28       4    0.644007   92.4245           0.4
+   6 │ uid://A001/X2d20/X1ef1  2022.1.00893.S  5             0.0496907    344.736  2024-07-07       4    0.907852  197.931            0.56
+   7 │ uid://A001/X1296/Xeae   2017.A.00006.S  7             0.0587235   6785.86   2018-07-13       4    1.07313   345.77             0.66
+   8 │ uid://A001/X2d1f/X187   2022.1.01477.S  7             0.0673743  21391.8    2025-08-20       4    1.19713   338.446            0.74
+   9 │ uid://A001/X2d20/X33a   2022.1.01695.S  7             0.0674878   6368.16   2024-06-20       4    1.12118   345.33             0.69
+  10 │ uid://A001/X133d/X4117  2018.1.01774.S  7             0.0701859  17864.0    2022-09-14       5    1.39979   343.497            0.86
+  11 │ uid://A001/X2d1f/X193   2022.1.01477.S  4             0.086503    1977.7    2024-06-30       4    1.3577    139.925            0.84
+  12 │ uid://A001/X2d1f/X18d   2022.1.01477.S  3             0.0899044   5334.34   2024-07-12       4    1.82566    92.4231           1.12
+  13 │ uid://A001/X3577/X8f9   2022.1.00592.S  9             0.0972866   3194.88   2025-01-12       8    1.45746   665.936            0.9
+  14 │ uid://A001/X1465/X75e   2019.1.01619.S  6             0.103539   12997.9    2023-05-19       9    3.24538   258.253            2.0
+  15 │ uid://A001/X1465/X758   2019.1.01619.S  6             0.113406    9579.98   2023-05-15       7    2.33136   219.558            1.43
+
+Using observation #1: uid://A001/X3577/X8f7 (proposal 2022.1.00592.S, band 9, best resolution 0.0219")
+
+Fetching file listing for uid://A001/X3577/X8f7 ...
+  fetching data info for uid://A001/X3577/X8f7 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 6 | mirror = https://almascience.nrao.edu
+4×3 DataFrame
+ Row │ access_url                                                                                    content_type       size_GB
+     │ String                                                                                        String             Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X3577_X8f7.README.txt               text/plain           0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2022.1.00592.S_uid___A001_X3577_X8f7_001_of_001.tar   application/x-tar  128.339
+   3 │ https://almascience.nrao.edu/dataPortal/2022.1.00592.S_uid___A001_X3577_X8f7_auxiliary.tar    application/x-tar    0.712
+   4 │ https://almascience.nrao.edu/dataPortal/2022.1.00592.S_uid___A002_X1088045_X29a.asdm.sdm.tar  application/x-tar  152.795
+
+SKIP: 2022.1.00592.S_uid___A001_X3577_X8f7_001_of_001.tar is 128.3 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #2: uid://A001/X13b4/Xb1 (proposal 2018.A.00030.S, band 7, best resolution 0.0273")
+
+Fetching file listing for uid://A001/X13b4/Xb1 ...
+  fetching data info for uid://A001/X13b4/Xb1 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 9 | mirror = https://almascience.nrao.edu
+
+SKIP: 2018.A.00030.S_uid___A001_X13b4_Xb1_001_of_001.tar is 49.9 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #3: uid://A001/X1465/X1893 (proposal 2019.1.01138.S, band 7, best resolution 0.0349")
+
+Fetching file listing for uid://A001/X1465/X1893 ...
+  fetching data info for uid://A001/X1465/X1893 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 6 | mirror = https://almascience.nrao.edu
+
+SKIP: 2019.1.01138.S_uid___A001_X1465_X1893_001_of_001.tar is 50.8 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #4: uid://A001/X3577/X8fd (proposal 2022.1.00592.S, band 4, best resolution 0.0355")
+
+Fetching file listing for uid://A001/X3577/X8fd ...
+  fetching data info for uid://A001/X3577/X8fd ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 9 | mirror = https://almascience.nrao.edu
+
+SKIP: 2022.1.00592.S_uid___A001_X3577_X8fd_001_of_001.tar is 63.8 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #5: uid://A001/X2d20/X1eeb (proposal 2022.1.00893.S, band 3, best resolution 0.0462")
+
+Fetching file listing for uid://A001/X2d20/X1eeb ...
+  fetching data info for uid://A001/X2d20/X1eeb ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 7 | mirror = https://almascience.nrao.edu
+
+SKIP: 2022.1.00893.S_uid___A001_X2d20_X1eeb_001_of_001.tar is 197.6 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #6: uid://A001/X2d20/X1ef1 (proposal 2022.1.00893.S, band 5, best resolution 0.0497")
+
+Fetching file listing for uid://A001/X2d20/X1ef1 ...
+  fetching data info for uid://A001/X2d20/X1ef1 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 6 | mirror = https://almascience.nrao.edu
+
+SKIP: 2022.1.00893.S_uid___A001_X2d20_X1ef1_001_of_001.tar is 75.5 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #7: uid://A001/X1296/Xeae (proposal 2017.A.00006.S, band 7, best resolution 0.0587")
+
+Fetching file listing for uid://A001/X1296/Xeae ...
+  fetching data info for uid://A001/X1296/Xeae ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 8 | mirror = https://almascience.nrao.edu
+
+SKIP: 2017.A.00006.S_uid___A001_X1296_Xeae_001_of_001.tar is 80.0 GB, above max_fallback_tar_gb = 5.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #8: uid://A001/X2d1f/X187 (proposal 2022.1.01477.S, band 7, best resolution 0.0674")
+
+Fetching file listing for uid://A001/X2d1f/X187 ...
+  fetching data info for uid://A001/X2d1f/X187 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 14 | mirror = https://almascience.nrao.edu
+Already have 76 extracted FITS file(s), skipping download.
+Ignoring 31 polarisation product(s) (polarised intensity / angle, Stokes Q U V, leakage).
+NOTE: fell back to observation #8 (0.067") because finer ones exceeded the size limit; that is 3.1x coarser than #1 (0.022"). Raise MAX_TAR_GB[] or use force_download = true for the finer one.
+
+Extracted 45 FITS file(s), best candidate first:
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.PDS70pol_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1352-4412_ph.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1352-4412_ph.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1352-4412_ph.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1352-4412_ph.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1427-4206_bp.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1427-4206_bp.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1427-4206_bp.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.J1427-4206_bp.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10793f5_Xe50.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10793f5_Xe50.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10793f5_Xe50.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10793f5_Xe50.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X18bef.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X18bef.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X18bef.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X18bef.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X19d16.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X19d16.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X19d16.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_X19d16.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc09e.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc09e.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc09e.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc09e.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc8ef.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc8ef.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc8ef.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X107fa96_Xc8ef.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10854a6_X175.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10854a6_X175.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10854a6_X175.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X10854a6_X175.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1086384_Xec3.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1086384_Xec3.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1086384_Xec3.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1086384_Xec3.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_X4d2f.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_X4d2f.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_X4d2f.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_X4d2f.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_Xa6eb.J1407-4302_chk.spw17.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_Xa6eb.J1407-4302_chk.spw19.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_Xa6eb.J1407-4302_chk.spw21.mfs.I.pbcor.fits
+  ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/uid___A002_X1100c1a_Xa6eb.J1407-4302_chk.spw23.mfs.I.pbcor.fits
+
+Using: ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.PDS70pol_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits
+NOTE: member.uid___A001_X2d1f_X187.PDS70pol_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits is a multi-Stokes (IQUV) image, shape (1620, 1620, 1, 4); using the first plane, Stokes I.
+[DEBUG] extract_radial_profile: image ./alma_cache/2022.1.01477.S_uid___A001_X2d1f_X187_001_of_001_extracted/2022.1.01477.S/science_goal.uid___A001_X2d1f_X185/group.uid___A001_X2d1f_X186/member.uid___A001_X2d1f_X187/product/member.uid___A001_X2d1f_X187.PDS70pol_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (1620, 1620) eltype Float32 nan count 650279 finite count 1974121
+Synthesized beam: 0.0769" x 0.0670" (PA=-73.23492431641) = 8.62 au x 7.51 au at 112.0 pc
+Emission centroid (start of the centre fit): pixel (823, 806), dRA = -0.1920", dDec = -0.0800" from the image centre
+[DEBUG] fit_center: start = (823, 806) walk steps = 1 coarse = (821, 806) fine = (821, 806)
+Centre pixel (1-based): (821, 806); offset from image centre: dRA = -0.1600", dDec = -0.0800"
+Radial profile: 40 bins of 0.0375" (4.20 au) out to 1.50" (168 au)
+[DEBUG] extract_radial_profile: empty bins = 0 valid mean_flux entries = 40
+WARNING: Negative bowl: the azimuthal mean is significantly negative over r = 111-166 au (14 bins, down to -9.2 sigma, -0.0251 mJy/beam = -1.8% of the peak, at 124 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+Saved the radial profile: ./alma_plots/PDS_70_profile.csv
+Disk extent (90% of the flux): ~86 au = 10.0 beams of 8.6 au.
+Saved figure: ./alma_plots/PDS_70_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 40 / 40
+[DEBUG] find_rings_and_gaps: ring_prominence = 6.983562363819326e-5 gap_prominence = 6.983562363819326e-5
+[DEBUG] find_rings_and_gaps: raw ring_idx = [18] raw gap_idx = [6]
+
+[raw profile] Detected 1 ring(s), 1 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 1 rings and 1 gaps
+[DEBUG] find_rings_and_gaps_residual: n_valid = 40 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 3.0020255195145276e-5 residual min/max = -6.231202754464356e-5 9.798251822252363e-5
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 2.1014178636601692e-5 gap_prominence = 2.1014178636601692e-5
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [8, 13, 18] raw gap_idx = [11, 16, 22]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 8.615243077277759 min_radius_beams = 2.5 -> min_radius_au = 21.538107693194398
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 9.006076558543582e-6
+
+[baseline-subtracted] Detected 3 ring(s):
+  r = 31.5 au, residual = 1.6152e-05 Jy/beam, prominence = 2.56e-05
+  r = 52.5 au, residual = 4.0389e-05 Jy/beam, prominence = 8.80e-05
+  r = 73.0 au, residual = 9.7983e-05 Jy/beam, prominence = 1.60e-04
+
+[baseline-subtracted] Detected 3 gap(s):
+  r = 44.1 au, residual = -4.7605e-05 Jy/beam, prominence = 6.38e-05
+  r = 65.1 au, residual = -6.2289e-05 Jy/beam, prominence = 1.03e-04
+  r = 90.3 au, residual = -6.2312e-05 Jy/beam, prominence = 7.25e-05
+[DEBUG] plot_residual_profile: called with 3 rings and 3 gaps
+Saved target summary: ./alma_plots/PDS_70_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 40 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 3.0020255195145276e-5 residual min/max = -6.231202754464356e-5 9.798251822252363e-5
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 1.8012153117087165e-5 gap_prominence = 1.8012153117087165e-5
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [2, 8, 13, 18] raw gap_idx = [5, 11, 16, 22]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 8.615243077277759 min_radius_beams = 2.5 -> min_radius_au = 21.538107693194398
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 3.0020255195145278e-6
+Excluded 2 detection(s) within 21.54 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 6.3 au, residual = 1.1215e-05 Jy/beam (+0.37 sigma)
+    r = 18.9 au, residual = -9.4509e-06 Jy/beam (-0.31 sigma)
+Saved target summary: ./alma_plots/PDS_70_target_summary.txt
+================================================================================
+Physical analysis: PDS 70
+================================================================================
+NOTE: member.uid___A001_X2d1f_X187.PDS70pol_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits is a multi-Stokes (IQUV) image, shape (1620, 1620, 1, 4); using the first plane, Stokes I.
+Excluded 1 detection(s) within 8.62 au (1.0x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 6.3 au, residual = 1.1215e-05 Jy/beam (+0.37 sigma)
+  detected ring at 31.5 au not seeded: residual 3.0 sigma, azimuthal mean -5.4 sigma
+
+[1/3] Gaussian ring fits (4 candidate ring position(s) before merging)
+  ring fit: restricted to r < 111 au (negative bowl beyond it: spatial filtering, not emission)
+  ring fit: inner cavity term tested (hole radius 14.2 au) but not kept: chi2 improves by only 0.2 in error units
+  ring fit: unexplained residual (8.3 sigma) at r = 2.1 au -> extra ring component
+  3 ring component(s), chi2_red = 12.01 (dof 14)
+
+[1b] Geometry check from the ring ridges
+WARNING: the geometry check failed (catalogue geometry is used): no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)
+
+[2/3] Azimuthal asymmetry (2 ring(s); geometry as assumed)
+  6 candidate arc/clump region(s) above 4.0 sigma; mean residual -1.10e-04 mJy/beam
+
+[2c] Geometry scan: the ring m=2 maxima share an orientation of 152 deg (position-angle-error pattern) and the ridge fit is unavailable
+  scatter index 0.130 at the assumed geometry; minimum 0.124 at PA = 160.3 deg, i = 50.4 deg
+
+[3/3] Brightness temperature and optical depth
+  WARNING: no stellar luminosity for PDS 70: T_d assumes L* = 1 Lsun. Pass lstar= to physical_analysis.
+  frequency 343.5 GHz; peak T_b = 8.5 K
+  No figure: T_d (and with it T_b/T_d and tau) needs L*; pass lstar= to physical_analysis.
+
+[3b] Gap-opening planet masses: skipped (needs L* and M*, which are not stored for this target; pass lstar= and mstar=)
+
+[3c] Dust trapping: skipped (needs L* and M*, which are not stored for this target; pass lstar= and mstar=)
+WARNING: Flux check: the image integrates to 151 mJy inside the profile radius; the catalogue flux (230 mJy at 1.33 mm) scales to 534-814 mJy at 344 GHz (spectral index 2-3), so the image holds 19-28% of it. FILTERED: the extended emission is resolved out by missing short spacings, so the radii enclosing 50-90% of the flux, R68, the contrast of arcs and asymmetries, the brightness temperatures and the ring amplitudes describe only what survived, not the disc. Use an observation with a larger recoverable angular scale (obs_choice = N).
+WARNING: Negative bowl: the azimuthal mean is significantly negative over r = 111-166 au (14 bins, down to -9.2 sigma, -0.0251 mJy/beam = -1.8% of the peak, at 124 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+NOTE: Observation advisor: the disc's 68%-flux diameter is 1.62 arcsec (182 au) but the observation used recovers only 1.20 arcsec. Observations whose recoverable scale covers the disc, finest resolution first: obs_choice = 14 (resolution 0.104", recoverable scale 3.25", band 6, proposal 2019.1.01619.S, 12998 s); obs_choice = 15 (resolution 0.113", recoverable scale 2.33", band 6, proposal 2019.1.01619.S, 9580 s); obs_choice = 17 (resolution 0.149", recoverable scale 2.03", band 8, proposal 2022.1.00592.S, 2177 s). They are coarser, so check the beam against the structure you want; the package size is checked only at download (a package above the 15 GB limit is skipped; raise MAX_TAR_GB[] or use force_download = true).
+
+========================================================================================
+PHYSICAL ANALYSIS: PDS 70
+========================================================================================
+Generated 2026-10-25 16:17 by alma_target_explorer_julia (v7, build 106)
+Image: member.uid___A001_X2d1f_X187.PDS70pol_sci.spw17_19_21_23.mfs.IQUV.manual.pbcor.fits
+Distance 112.0 pc; inclination 49.7 deg, PA 158.6 deg; beam 0.0769 x 0.0670 arcsec = 8.6 x 7.5 au (radial beam sigma 3.4 au)
+Observing frequency 343.5 GHz (0.87 mm)
+Bosschaart+26 (PDS70): class TD (transition disc); R68 91 au; F(1.33 mm) 230 mJy; M_dust 12 Earth masses; M* 0.76 Msun; distance 113 pc; this image: 68%-flux radius 78 au
+Flux check: the image integrates to 151 mJy inside the profile radius; the catalogue flux (230 mJy at 1.33 mm) scales to 534-814 mJy at 344 GHz (spectral index 2-3), so the image holds 19-28% of it. FILTERED: the extended emission is resolved out by missing short spacings, so the radii enclosing 50-90% of the flux, R68, the contrast of arcs and asymmetries, the brightness temperatures and the ring amplitudes describe only what survived, not the disc. Use an observation with a larger recoverable angular scale (obs_choice = N).
+Negative bowl: the azimuthal mean is significantly negative over r = 111-166 au (14 bins, down to -9.2 sigma, -0.0251 mJy/beam = -1.8% of the peak, at 124 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+Observation advisor: the disc's 68%-flux diameter is 1.62 arcsec (182 au) but the observation used recovers only 1.20 arcsec. Observations whose recoverable scale covers the disc, finest resolution first: obs_choice = 14 (resolution 0.104", recoverable scale 3.25", band 6, proposal 2019.1.01619.S, 12998 s); obs_choice = 15 (resolution 0.113", recoverable scale 2.33", band 6, proposal 2019.1.01619.S, 9580 s); obs_choice = 17 (resolution 0.149", recoverable scale 2.03", band 8, proposal 2022.1.00592.S, 2177 s). They are coarser, so check the beam against the structure you want; the package size is checked only at download (a package above the 15 GB limit is skipped; raise MAX_TAR_GB[] or use force_download = true).
+Stellar parameters (Bosschaart+26 catalogue stellar mass; verify): L* = ? Lsun, M* = 0.76 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 3 Gaussian ring(s); chi2_red = 12.01 (dof 14). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Fit range: r < 111 au only. Beyond it the profile is significantly negative (negative bowl: spatial filtering removes extended emission), which no disc model describes; including it would inflate chi2 and the errors. Rings or gaps beyond that radius are not fitted.
+  Smooth disk: amplitude 0 mJy/beam, characteristic radius 71 au, power-law index -0.12
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+   1  2.8 +/- 5.1     0.125 +/- 0.044     2.8  < 18.6 (unresolved)  < 6.71               100%  residual   [amplitude < 3 sigma] [CORE: inside the exclusion zone, not a ring]
+   2  54.8 +/- 1.2    0.39 +/- 0.091      4.3  10.5 +/- 2.5         0.19                57%  detected  
+   3  72.9 +/- 0.8    1.37 +/- 0.053     26.1  22.8 +/- 1.1         0.31               100%  detected   [carries >= 90% of the local flux: a shoulder of the smooth disc, not an isolated ring]
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 3.4 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+  CORE: the component lies inside the 22 au exclusion zone (2.5 beams), where beam and CLEAN effects dominate; it describes the unresolved core, not a ring, so it is left out of the ratios, widths, trapping limits, ridge geometry and asymmetry windows below.
+
+  Detected ring positions not used as seeds (weak or on a negative mean): 31.5 au (residual 3.0 sigma, mean -5.4 sigma)
+
+  Fit decisions (in order):
+    - restricted to r < 111 au (negative bowl beyond it: spatial filtering, not emission)
+    - starting seeds: 52.5 au (detected), 73.0 au (detected)
+    - inner cavity term tested (hole radius 14.2 au) but not kept: chi2 improves by only 0.2 in error units
+    - unexplained residual (8.3 sigma) at r = 2.1 au -> extra ring component
+
+  Radius ratios of neighbouring rings (3 sigma and above): 55->73 au: 1.33
+  1 component(s) have amplitude below 3 sigma: treat them as unconfirmed (blended components have inflated errors: one is kept only if removing it makes the fit much worse).
+  NOTE: chi2_red is 12.0: the Gaussians do not capture all the structure (unseeded rings, asymmetric ring profiles or an unresolved core). Radii are reliable to about a bin; widths and amplitudes less so. Try extra_seeds_au = [...].
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Residual = pixel value minus the azimuthal mean at the same deprojected radius. Noise: image rms 0.0146 mJy/beam per beam.
+  Fourier amplitudes around each ring (window = +/- one observed sigma, at least half the minor axis), relative to the fitted ring amplitude (the table after this one gives them as a fraction of the local flux).
+  FAP = false-alarm probability exp(-S/N^2/2) for one ring (floored at 1e-6), for pure noise only; with N rings expect N x FAP chance detections. Geometry errors are NOT in the noise.
+
+    r [au]  bins | m=1 [%]          S/N     FAP  max @PA | m=2 [%]          S/N     FAP | peak +/- [%] (S/N)
+      54.8    36 | 25.1 +/- 0.9    28.4 1.0e-06     306° | 15.0 +/- 0.9    17.0 1.0e-06 | +57 / -18 (15.3)
+      72.9    36 | 8.1 +/- 0.2     49.1 1.0e-06     300° | 5.6 +/- 0.2     33.9 1.0e-06 | +20 / -9 (28.8)
+
+  r =   54.8 au: m=1 at 28.4 sigma, m=2 at 17.0 sigma
+  r =   72.9 au: m=1 at 49.1 sigma, m=2 at 33.9 sigma
+
+  The same amplitudes as a fraction of the local azimuthal-mean flux (comparable between rings and between targets):
+    r [au] | local mean [mJy/beam] | m=1 [% of flux] | m=2 [% of flux]
+      54.8 | 0.666              | 14.7 +/- 0.5   | 8.8 +/- 0.5   
+      72.9 | 1.37               | 8.1 +/- 0.2    | 5.6 +/- 0.2   
+  NOTE: the feature(s) at 55 au are shoulders (the raw-profile peak finder finds no peak or dip within 1 beam): an amplitude measured against a shoulder baseline can be large without a real azimuthal structure; the percentages of the local flux are the safer numbers.
+  NOTE: the image is spatially filtered (flux check above): arc contrasts and asymmetry amplitudes describe only the emission that survived the missing short spacings.
+
+  Elliptical-beam check for m=2: an axisymmetric ring convolved with a beam that is not round has a higher peak where the ring runs along the
+  beam's short axis, i.e. a pure m=2 pattern with no real structure. Expectation for each ring (fitted intrinsic width) versus what is measured;
+  excess = size of the vector difference between the measured and the expected m=2 term (formal S/N, noise only):
+    r [au] | beam alone: % @ az | measured: % @ az   | excess [%] (S/N)
+      54.8 | 8.8 @ 8 deg        | 15.0 @ 140 deg     | 18.2 (20.6 s)
+      72.9 | 2.6 @ 8 deg        | 5.6 @ 164 deg      | 4.3 (25.8 s)
+  Azimuths are disk-plane angles from the major axis (mod 180). The expectation uses the same window-mean estimator as the measurement (the m=2 of the ring PEAK is ~1.65x larger).
+
+  Geometry sensitivity of m=2 (first-order estimate, not a correction): an inclination error of 3 deg alone moves the deprojected radius by (cos i / cos(i + 3 deg) - 1)/2 x cos(2 phi), which on a profile with logarithmic slope S gives an m=2 of |S| times that:
+           |          |  m=2 from a 3 deg error [%] |            measured m=2 [%]
+    r [au] |        S |  of ring amp.       of flux |  of ring amp.       of flux
+      54.8 |     4.79 |          27.6          16.1 |          15.0           8.8
+      72.9 |    -0.25 |           0.8           0.8 |           5.6           5.6
+  Each quantity is given relative to the ring amplitude used in the table above and as a fraction of the local azimuthal-mean flux ('n/a': the ring amplitude is below 10% of the local flux). A measured m=2 of the same size as the estimate is not distinguishable from a small inclination error unless the ridge geometry fit (section 1b) or a second ring settles it.
+
+  The same for a position-angle error of 3 deg: the deprojected radius moves by (eps/2) sin^2(i)/cos(i) x sin(2 phi) (eps in rad), an m=2 pattern with its maximum 45 deg from the major axis (the inclination pattern above peaks ON the axes):
+           |          |     m=2 from a PA error [%]
+    r [au] |        S |  of ring amp.       of flux
+      54.8 |     4.79 |          19.3          11.3
+      72.9 |    -0.25 |           0.6           0.6
+  Not included: ring curvature at small r, non-Gaussian ring profiles, CLEAN / uv-coverage effects (the vertical-thickness scan is opt-in: do_thickness = true).
+
+  Round-beam test: switched off (do_roundbeam = false).
+
+  Coherence across rings (a vortex sits at one radius; a centre / inclination / PA error shows at every ring with the same orientation):
+    m=1 maxima (sky PA, deg) by ring radius: 55 au: 306;  73 au: 300
+    m=1: 2 rings above 3 sigma, maxima at sky PA 303 deg, resultant length R = 1.00 (random orientations give ~0.71) -> a common direction: one-sided brightness (e.g. near/far-side flaring, a large-scale asymmetry) or a calibration/phase effect; a small centre offset gives almost no ring-averaged m=1
+    m=2 orientation (disk azimuth of a maximum, deg from the major axis, mod 180) by ring radius: 55 au: 140;  73 au: 164
+    m=2: 2 rings above 3 sigma, orientation 152 deg from the major axis (mod 180), R = 0.91 (random ~0.71) -> a common orientation: a brightness (peak / width) modulation tied to the disk axes or to the beam: the elliptical beam, CLEAN / uv-coverage effects, ring thickness (see the checks above) or real structure
+    The common m=2 orientation (152 deg) is 17 deg from the 45 / 135 deg direction: this is the pattern a POSITION-ANGLE error produces (an inclination error, the elliptical beam or a real ring thickness puts the maximum on the major or minor axis, 0 / 90 deg). The m=2 amplitudes alone would need a PA error of 15.5 deg (median; range 2.3-28.7 deg over 2 rings; an upper limit if part of the m=2 is real). The ridge geometry fit is unavailable here; see the geometry scan below.
+
+  Geometry scan (fix 46; ridge fit unavailable): azimuthal scatter around the rings, noise removed, relative to the ring mean, as a function of the geometry.
+    assumed PA 158.6 deg, i = 49.7 deg: scatter index 0.130; minimum at PA = 160.3 deg, i = 50.4 deg: 0.124 (5% lower)
+    PA scan [deg: index]: 143: 0.344;  145: 0.311;  147: 0.285;  149: 0.254;  151: 0.224;  153: 0.193;  155: 0.167;  157: 0.143;  159: 0.130;  161: 0.126;  163: 0.133;  165: 0.152;  167: 0.176;  169: 0.204;  171: 0.233;  173: 0.265;  175: 0.295
+    inclination scan at the best PA [deg: index]: 38: 0.348;  41: 0.281;  44: 0.215;  47: 0.157;  50: 0.125;  53: 0.136;  56: 0.178;  59: 0.238;  62: 0.327
+    The scatter includes real structure and the minimum has no formal error: take it as an indication of the direction and size of a geometry error, not as a measurement. To test it: run_alma_pipeline(...; pa_deg = 160, incl_deg = 50) and check that the common m=2 orientation disappears.
+
+  Candidate arcs / clumps (beam-smoothed residual above 4.0 sigma of the smoothed residual, >= 1 beam of area, outside the 22 au exclusion zone):
+    #  sign   r [au]  az [deg] span[deg]   sky PA      S/N contrast area[beams]  note
+    1     +     65.0       147       109     317°     18.5    +38%        22.2  nearest ring 73 au (-7.9 au); a centre error would need 11.4 au
+    2     +     85.5        42        75     189°      6.7    +23%        11.8  nearest ring 73 au (+12.6 au); a centre error would need 2.4 au
+    3     -     65.0        10        32     165°      6.1    -12%         2.1  nearest ring 73 au (-7.8 au); a centre error would need 3.8 au
+    4     -     73.2       -79        52      86°      5.8     -9%         7.7  nearest ring 73 au (+0.3 au); on a ring crest, so a centre error has no first-order effect (slope ~0): not informative
+    5     -     63.7      -145        18       3°      5.1    -11%         1.2  nearest ring 55 au (+8.9 au); a centre error would need 2.9 au
+    6     -     88.6       175        14     335°      4.7    -25%         1.1  nearest ring 73 au (+15.7 au); a centre error would need 1.9 au
+    6 region(s) are neither part of a comparable +/- pair nor full-azimuth.
+    'a centre error would need X au': the centre shift whose dipole (shift x local profile slope) equals this residual; compare with the fitted centre uncertainty (~1 au or less).
+    az: disk-plane azimuth from the major axis; span: full azimuthal extent; contrast: peak smoothed residual / local azimuthal mean.
+
+  How to read this: a single significant positive arc covering a limited azimuth range at a ring radius (span of tens of degrees,
+  contrast tens of percent) is the signature of a dust trap such as a vortex. A +/- pair 180 deg apart (in the residual image, not the ring-averaged amplitudes)
+  is what a small centre or inclination error produces.
+  The noise estimate for the arcs is the robust scatter of the smoothed residual itself, so real structure inflates it: the threshold is conservative.
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 343.5 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  type     r [au] | T_b [K]         
+  gap        44.1 | 3.7 +/- 0.0     
+  ring       54.8 | 6.7 +/- 0.0     
+  gap        65.1 | 7.7 +/- 0.0     
+  ring       72.9 | 8.5 +/- 0.0     
+  gap        90.3 | 5.0 +/- 0.0     
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.
+
+Saved: ./alma_plots/PDS_70_physical_analysis.txt

@@ -1,0 +1,98 @@
+========================================================================================
+TARGET SUMMARY: IRS 63
+========================================================================================
+Generated 2026-10-25 16:12 by alma_target_explorer_julia (v7, build 106)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=IRS%2063&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : IRS 63
+  Coordinates    : 16:31:35.65  -24:01:29.6  (RA 247.89854, Dec -24.02489 deg, J2000)
+  Distance       : 144.0 pc
+  Class          : Young/embedded
+  Catalogue note : Position 16:31:35.65 -24:01:29.6 entered by hand (Sesame resolved the alias [GY92] 197, a star near Elias 29): VERIFY
+  Versus TW Hya  : Class I; embedded, rings (eDisk); Bosschaart+26: RD, R68 32 au
+  Published      : Bosschaart+26 (ODISEA_C4_130): class RD (ring disc); R68 32 au; F(1.33 mm) 335 mJy; M_dust 64 Earth masses; distance 135 pc; this image: 68%-flux radius 50 au
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    A young (Class 0/I/II) star still embedded in, or just emerging from, its natal envelope. The disk is compact and often inclined, and envelope emission can contaminate the continuum image.
+    Analysis caveat for this class: Envelope emission and a high inclination can produce spurious radial structure; treat weak features with caution.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2015.1.01512.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0229 arcsec (3.3 au; the beam of the image used is given below)
+  Exposure time  : 6641 s (1.84 h)
+  Public release : 2018-10-19
+  Member OUS     : uid://A001/X2d1/X96
+  Largest recoverable angular scale : 0.76 arcsec (109 au); structure larger than this is filtered out
+  Observations in the archive query: 36; the finest has 0.0229 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2015.1.01512.S_uid___A001_X2d1_X96_001_of_001.tar (0.12 GB)
+  FITS image used: member.uid___A001_X2d1_X96.ari_l.IRS_63_sci.spw17_19_21_23_233009MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0048 arcsec
+  Synthesised beam: 0.0417 x 0.0249 arcsec = 6.0 x 3.6 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 38.8 deg, position angle 159.4 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 98% of the pixel variance (face-on: 96%).
+  Profile centre (pixel): (4460, 4404); profile out to 2.00 arcsec = 288 au in 96 bins of 3.00 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 3.33 mJy/beam at r = 1.5 au (0.2 beams)
+  Innermost bin              : 3.33 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 37 au / 79 au (6.2 / 13.2 beams)
+  Outer edge of the emission (last radius, from the peak outward, with the mean at 3 sigma or more): 86 au (14.2 beams)
+  Radius where the mean falls below 10% of the peak: 50 au
+  Integrated flux out to the profile edge: ~250.5 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.031 mJy/beam
+  Profile dynamic range (peak / residual sigma): 107
+  Image noise (robust rms): 0.022 mJy/beam; the peak of the azimuthal mean is 151.2 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  Raw rings at none au; raw gaps at none au.
+  After subtracting a smooth baseline: 1 ring(s), 1 gap(s).
+  Detections inside 15 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.0031 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       28.5    0.198         4.7       0.0867 mJy/beam    +13.0%   +16.4 s
+  gap        79.5    0.552        13.2      -0.0132 mJy/beam    -28.9%    -6.3 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma; for a gap it is the depth below the shallower neighbouring maximum (the peak prominence), shown negative.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: R 29 au  ->  G 79 au
+  2 of 2 features are at least 3 sigma (2 of them also with modulation >= 10%); weaker ones are tentative.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Flux check: the image integrates to 251 mJy inside the profile radius; the catalogue flux (335 mJy at 1.33 mm) scales to 358-370 mJy at 233 GHz (spectral index 2-3), so the image holds 68-70% of it. PARTLY FILTERED: some extended emission is missing; sizes are biased low and the smooth baseline is underestimated.
+  (2) Negative bowl: the azimuthal mean is significantly negative over r = 97-134 au (13 bins, down to -9.4 sigma, -0.0247 mJy/beam = -0.7% of the peak, at 115 au), which real emission cannot produce. It is the signature of missing short spacings (spatial filtering): the extended emission is partly resolved out, so sizes, contrasts, asymmetries and brightness temperatures are biased and the smooth baseline is underestimated.
+  (3) Resolution: the disk (90% of the flux within 79 au) spans 13.2 beams of 6.0 au, well resolved; features down to ~12 au (2 beams) can be recovered.
+  (4) Excluded zone: detections inside 15 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (2 au) and a large part of the disk (90% of the flux lies within 79 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (5) Geometry: the image gives i = 39 deg, PA = 159 deg (uncertain by ~5 deg, a little more for disks that are barely resolved or near face-on). A wrong geometry would blur rings; check the deprojected profile for sharpness.
+  (6) Shape: the emission is centrally peaked (the maximum lies at 2 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (7) Substructure: 1 ring(s) and 1 gap(s) after baseline subtraction, with 2 of 2 at >= 3 sigma (2 also with modulation >= 10%). Detected radii: 29 au, 79 au.
+  (8) 2 of the 2 baseline-subtracted features have no peak or dip within 1 beam in the raw-profile peak finder: they are shoulders, inflections or weak bumps that only appear after the smooth baseline is removed, not isolated rings or gaps (section 6 tests published radii directly against the raw profile). Their modulation (residual / baseline) can be huge when the baseline is near zero.
+  (9) Class-specific note: Envelope emission and a high inclination can produce spurious radial structure; treat weak features with caution.
+  (10) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  IRS_63_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.
