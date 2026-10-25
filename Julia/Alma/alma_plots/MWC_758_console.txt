@@ -1,0 +1,279 @@
+================================================================================
+Target: MWC 758   (RA 82.6147, Dec +25.3325; Cavity + spirals)
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=MWC%20758&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for MWC 758 ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 82.6147, 25.3325, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 84940 | mirror = https://almascience.nrao.edu
+Found 153 rows in the cone.
+Filtered to 72 rows matching MWC 758.
+Catalogue: Bosschaart+26 (MWC758): class TD (transition disc); R68 83 au; F(1.33 mm) 217 mJy; M_dust 23 Earth masses; M* 1.60 Msun; distance 160 pc
+Finest archive beam ~ 4 au; catalogue R68 = 83 au = 23.1 beams: resolved.
+
+Observations (member OUS), finest spatial resolution first:
+14×10 DataFrame
+ Row │ member_ous_uid           proposal_id     band    best_res_arcsec  t_exp_s    release     n_rows  las_arcsec  freq_ghz  las_over_diam
+     │ String                   String          String  Float64          Float64    String      Int64   Float64     Float64   Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X1273/X414    2017.1.00940.S  6             0.0224298  13244.8    2018-11-29       4    0.471842   219.466           0.45
+   2 │ uid://A001/X1284/X2109   2017.1.00492.S  7             0.0255038   7510.73   2018-12-13       4    0.848993   338.43            0.82
+   3 │ uid://A001/X1590/X968    2021.1.01356.S  6             0.0557249  17091.2    2022-12-02       4    1.32048    220.394           1.27
+   4 │ uid://A001/X15a1/X1bfe   2021.1.01123.L  7             0.0975097  12095.2    2022-12-12       4    2.55674    331.563           2.46
+   5 │ uid://A001/X362b/Xacd    2023.1.00766.S  7             0.114699   11953.9    2025-11-18       8    2.31978    314.844           2.24
+   6 │ uid://A002/X5d7935/X306  2012.1.00725.S  7             0.117912    3325.99   2016-11-15       4    2.06274    330.581           1.99
+   7 │ uid://A001/X1273/X418    2017.1.00940.S  6             0.127568    9192.2    2019-02-14       4    3.28502    219.466           3.17
+   8 │ uid://A001/X1284/X210b   2017.1.00492.S  7             0.20425     5201.25   2019-10-12       4    3.40209    338.411           3.28
+   9 │ uid://A001/X3621/X346e   2023.1.00334.S  7             0.252321    1499.9    2025-08-14       6    4.13982    288.133           3.99
+  10 │ uid://A001/X879/X3a6     2016.1.00262.S  8             0.253219    2419.2    2018-10-03       4    2.81828    454.928           2.72
+  11 │ uid://A001/X15a1/X1c00   2021.1.01123.L  7             0.395479    4711.71   2023-12-27       4    6.53586    331.563           6.3
+  12 │ uid://A001/X3645/X255    2023.1.00252.S  7             0.53464     1391.04   2025-10-28      12    7.19195    302.755           6.93
+  13 │ uid://A002/X391d0b/X151  2011.0.00320.S  7             0.545305     725.492  2014-05-10       4    5.9221     332.489           5.71
+  14 │ uid://A001/X3621/X3470   2023.1.00334.S  7             0.700695     514.08   2025-09-24       6    8.4629     288.133           8.16
+
+Using observation #1: uid://A001/X1273/X414 (proposal 2017.1.00940.S, band 6, best resolution 0.0224")
+
+Fetching file listing for uid://A001/X1273/X414 ...
+  fetching data info for uid://A001/X1273/X414 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 10 | mirror = https://almascience.nrao.edu
+8×3 DataFrame
+ Row │ access_url                                                                                    content_type       size_GB
+     │ String                                                                                        String             Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X1273_X414.README.txt               text/plain           0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2017.1.00940.S_uid___A001_X1273_X414_001_of_001.tar   application/x-tar   42.235
+   3 │ https://almascience.nrao.edu/dataPortal/2017.1.00940.S_uid___A001_X1273_X414_auxiliary.tar    application/x-tar    1.448
+   4 │ https://almascience.nrao.edu/dataPortal/2017.1.00940.S_uid___A002_Xc59134_X24e9.asdm.sdm.tar  application/x-tar  145.917
+   5 │ https://almascience.nrao.edu/dataPortal/2017.1.00940.S_uid___A002_Xc59134_X2987.asdm.sdm.tar  application/x-tar  145.906
+   6 │ https://almascience.nrao.edu/dataPortal/2017.1.00940.S_uid___A002_Xc59134_X642c.asdm.sdm.tar  application/x-tar  146.565
+   7 │ https://almascience.nrao.edu/dataPortal/2017.1.00940.S_uid___A002_Xc5b7d7_X2014.asdm.sdm.tar  application/x-tar  178.449
+   8 │ https://almascience.nrao.edu/dataPortal/2017.1.00940.S_uid___A002_Xc5b7d7_X63c7.asdm.sdm.tar  application/x-tar  179.248
+
+SKIP: 2017.1.00940.S_uid___A001_X1273_X414_001_of_001.tar is 42.2 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #2: uid://A001/X1284/X2109 (proposal 2017.1.00492.S, band 7, best resolution 0.0255")
+
+Fetching file listing for uid://A001/X1284/X2109 ...
+  fetching data info for uid://A001/X1284/X2109 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 8 | mirror = https://almascience.nrao.edu
+
+SKIP: 2017.1.00492.S_uid___A001_X1284_X2109_001_of_001.tar is 87.4 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #3: uid://A001/X1590/X968 (proposal 2021.1.01356.S, band 6, best resolution 0.0557")
+
+Fetching file listing for uid://A001/X1590/X968 ...
+  fetching data info for uid://A001/X1590/X968 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 11 | mirror = https://almascience.nrao.edu
+
+SKIP: 2021.1.01356.S_uid___A001_X1590_X968_001_of_001.tar is 57.6 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #4: uid://A001/X15a1/X1bfe (proposal 2021.1.01123.L, band 7, best resolution 0.0975")
+
+Fetching file listing for uid://A001/X15a1/X1bfe ...
+  fetching data info for uid://A001/X15a1/X1bfe ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 10 | mirror = https://almascience.nrao.edu
+
+SKIP: 2021.1.01123.L_uid___A001_X15a1_X1bfe_001_of_001.tar is 51.3 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #5: uid://A001/X362b/Xacd (proposal 2023.1.00766.S, band 7, best resolution 0.1147")
+
+Fetching file listing for uid://A001/X362b/Xacd ...
+  fetching data info for uid://A001/X362b/Xacd ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 9 | mirror = https://almascience.nrao.edu
+
+SKIP: 2023.1.00766.S_uid___A001_X362b_Xacd_001_of_001.tar is 185.3 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #6: uid://A002/X5d7935/X306 (proposal 2012.1.00725.S, band 7, best resolution 0.1179")
+
+Fetching file listing for uid://A002/X5d7935/X306 ...
+  fetching data info for uid://A002/X5d7935/X306 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 6 | mirror = https://almascience.nrao.edu
+
+Downloading https://almascience.nrao.edu/dataPortal/2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001.tar ...
+    0%  (0.00 / 1.85 GB)
+   10%  (0.19 / 1.85 GB)
+   20%  (0.37 / 1.85 GB)
+   30%  (0.56 / 1.85 GB)
+   40%  (0.74 / 1.85 GB)
+   50%  (0.93 / 1.85 GB)
+   60%  (1.11 / 1.85 GB)
+   70%  (1.30 / 1.85 GB)
+   80%  (1.48 / 1.85 GB)
+   90%  (1.67 / 1.85 GB)
+  100%  (1.85 / 1.85 GB)
+Download complete.
+Extracting FITS members ...
+Deleted 2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001.tar after extraction to save space.
+Ignoring 2 line / cube product(s) in this package: member.uid___A002_X5d7935_X306.MWC_758_13CO.pbcor.fits, member.uid___A002_X5d7935_X306.MWC_758_C18O.pbcor.fits
+NOTE: fell back to observation #6 (0.118") because finer ones exceeded the size limit; that is 5.3x coarser than #1 (0.022"). Raise MAX_TAR_GB[] or use force_download = true for the finer one.
+
+Extracted 4 FITS file(s), best candidate first:
+  ./alma_cache/2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001_extracted/2012.1.00725.S/science_goal.uid___A002_X5d7935_X304/group.uid___A002_X5d7935_X305/member.uid___A002_X5d7935_X306/product/member.uid___A002_X5d7935_X306.calibrated_final_cont.pbcor.fits
+  ./alma_cache/2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001_extracted/2012.1.00725.S/science_goal.uid___A002_X5d7935_X304/group.uid___A002_X5d7935_X305/member.uid___A002_X5d7935_X306/product/member.uid___A002_X5d7935_X306.calibrated_final_cont_p0.pbcor.fits
+  ./alma_cache/2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001_extracted/2012.1.00725.S/science_goal.uid___A002_X5d7935_X304/group.uid___A002_X5d7935_X305/member.uid___A002_X5d7935_X306/product/member.uid___A002_X5d7935_X306.calibrated_final_cont_p1.pbcor.fits
+  ./alma_cache/2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001_extracted/2012.1.00725.S/science_goal.uid___A002_X5d7935_X304/group.uid___A002_X5d7935_X305/member.uid___A002_X5d7935_X306/product/member.uid___A002_X5d7935_X306.calibrated_final_cont_p2.pbcor.fits
+
+Using: ./alma_cache/2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001_extracted/2012.1.00725.S/science_goal.uid___A002_X5d7935_X304/group.uid___A002_X5d7935_X305/member.uid___A002_X5d7935_X306/product/member.uid___A002_X5d7935_X306.calibrated_final_cont.pbcor.fits
+[DEBUG] extract_radial_profile: image ./alma_cache/2012.1.00725.S_uid___A002_X5d7935_X306_001_of_001_extracted/2012.1.00725.S/science_goal.uid___A002_X5d7935_X304/group.uid___A002_X5d7935_X305/member.uid___A002_X5d7935_X306/product/member.uid___A002_X5d7935_X306.calibrated_final_cont.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (2048, 2048) eltype Float32 nan count 2025719 finite count 2168585
+Synthesized beam: 0.2342" x 0.1539" (PA=31.66084671021) = 37.47 au x 24.62 au at 160.0 pc
+Emission centroid (start of the centre fit): pixel (1028, 1033), dRA = -0.0540", dDec = +0.1440" from the image centre
+[DEBUG] fit_geometry: score = 0.18581757158454412 incl = 22.5 pa = 168.75 face-on score = 0.19174317642626001
+Fitted disk geometry from the image: i = 22.5 deg, PA = 168.8 deg east of north (+-~5 deg).
+[DEBUG] fit_center: start = (1028, 1033) walk steps = 1 coarse = (1025, 1031) fine = (1025, 1031)
+[DEBUG] fit_geometry: score = 0.12890651059343605 incl = 26.25 pa = 166.875 face-on score = 0.14015213803300022
+Refined disk geometry about the fitted centre: i = 26.2 deg, PA = 166.9 deg.
+Geometry fit quality: a purely radial profile explains 87% of the pixel variance (face-on: 81%).
+Centre pixel (1-based): (1025, 1031); offset from image centre: dRA = -0.0000", dDec = +0.1080"
+Radial profile: 40 bins of 0.0500" (8.00 au) out to 2.00" (320 au)
+[DEBUG] extract_radial_profile: empty bins = 0 valid mean_flux entries = 40
+NOTE: the delivered image has a 0.234" beam major axis (37.5 au), 2.0x coarser than the 0.118" the archive lists for this observation and 10.4x coarser than the finest in the query (0.022"). The archive figure is a best case; the image was made with a different weighting or taper, and a finer image may need another observation or package.
+Saved the radial profile: ./alma_plots/MWC_758_profile.csv
+Disk extent (90% of the flux): ~108 au = 2.9 beams of 37.5 au.
+NOTE: the disk spans only ~2.9 beams, so rings/gaps narrower than ~75 au (2 beams) are not resolved. A finer-resolution observation would help (obs_choice = N; force_download = true for large packages).
+WARNING: the beam-artifact exclusion zone (< 94 au) covers much of this disk (90% flux radius 108 au); detections inside it are dropped. Try min_radius_beams = 1.0.
+Saved figure: ./alma_plots/MWC_758_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 40 / 40
+[DEBUG] find_rings_and_gaps: ring_prominence = 0.0013824356065174055 gap_prominence = 0.0013824356065174055
+[DEBUG] find_rings_and_gaps: raw ring_idx = [9] raw gap_idx = Int64[]
+
+[raw profile] Detected 1 ring(s), 0 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 1 rings and 0 gaps
+Saved figure: ./alma_plots/MWC_758_radial_profile.png
+[DEBUG] find_rings_and_gaps_residual: n_valid = 40 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 7.392481811603467e-5 residual min/max = -0.0001340838711516995 0.00023278915217405695
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 5.1747372681224264e-5 gap_prominence = 5.1747372681224264e-5
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [2, 8] raw gap_idx = [5, 13]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 37.47198104858305 min_radius_beams = 2.5 -> min_radius_au = 93.67995262145762
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 2.21774454348104e-5
+Excluded 3 detection(s) within 93.68 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 12.0 au, residual = 1.0136e-04 Jy/beam (+1.37 sigma)
+    r = 60.0 au, residual = 2.3279e-04 Jy/beam (+3.15 sigma)
+    r = 36.0 au, residual = -1.2371e-04 Jy/beam (-1.67 sigma)
+
+[baseline-subtracted] Detected 0 ring(s):
+
+[baseline-subtracted] Detected 1 gap(s):
+  r = 100.0 au, residual = -1.3408e-04 Jy/beam, prominence = 1.59e-04
+[DEBUG] plot_residual_profile: called with 0 rings and 1 gaps
+Saved figure: ./alma_plots/MWC_758_substructure.png
+Saved target summary: ./alma_plots/MWC_758_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 40 savgol window = 9 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 7.392481811603467e-5 residual min/max = -0.0001340838711516995 0.00023278915217405695
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 4.43548908696208e-5 gap_prominence = 4.43548908696208e-5
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [2, 8] raw gap_idx = [5, 13]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 37.47198104858305 min_radius_beams = 2.5 -> min_radius_au = 93.67995262145762
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 7.392481811603467e-6
+Excluded 3 detection(s) within 93.68 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 12.0 au, residual = 1.0136e-04 Jy/beam (+1.37 sigma)
+    r = 60.0 au, residual = 2.3279e-04 Jy/beam (+3.15 sigma)
+    r = 36.0 au, residual = -1.2371e-04 Jy/beam (-1.67 sigma)
+[DEBUG] plot_residual_profile: called with 0 rings and 1 gaps
+Saved figure: ./alma_plots/MWC_758_substructure_retuned.png
+Saved target summary: ./alma_plots/MWC_758_target_summary.txt
+================================================================================
+Physical analysis: MWC 758
+================================================================================
+Excluded 2 detection(s) within 37.47 au (1.0x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 12.0 au, residual = 1.0136e-04 Jy/beam (+1.37 sigma)
+    r = 36.0 au, residual = -1.2371e-04 Jy/beam (-1.67 sigma)
+  detected ring at 60.0 au not seeded: residual 0.7 sigma, azimuthal mean 29.6 sigma
+
+[1/3] Gaussian ring fits (0 candidate ring position(s) before merging)
+  ring fit: unexplained residual (6.7 sigma) at r = 76.0 au -> extra ring component
+  ring fit: keeping the component at r = 67.2 au (amplitude S/N 1.1, but removing it raises chi2 by 365 in error units)
+  1 ring component(s), chi2_red = 0.18 (dof 34)
+Saved figure: ./alma_plots/MWC_758_ring_fits.png
+
+[1b] Geometry check from the ring ridges
+WARNING: the geometry check failed (catalogue geometry is used): no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)
+
+[2/3] Azimuthal asymmetry: not tested: 90% of the flux lies within 3.6 beams (108 au of a 30 au beam); an asymmetry measured on a disc this small is dominated by the beam wings of the central core and by small centre / inclination / PA errors (needs at least 4 beams)
+
+[3/3] Brightness temperature and optical depth
+  WARNING: no stellar luminosity for MWC 758: T_d assumes L* = 1 Lsun. Pass lstar= to physical_analysis.
+  frequency 336.6 GHz; peak T_b = 8.6 K
+  No figure: T_d (and with it T_b/T_d and tau) needs L*; pass lstar= to physical_analysis.
+
+[3b] Gap-opening planet masses: skipped (needs L* and M*, which are not stored for this target; pass lstar= and mstar=)
+
+[3c] Dust trapping: skipped (needs L* and M*, which are not stored for this target; pass lstar= and mstar=)
+WARNING: Flux check: the image integrates to 230 mJy inside the profile radius; the catalogue flux (217 mJy at 1.33 mm) scales to 484-723 mJy at 337 GHz (spectral index 2-3), so the image holds 32-47% of it. FILTERED: the extended emission is resolved out by missing short spacings, so the radii enclosing 50-90% of the flux, R68, the contrast of arcs and asymmetries, the brightness temperatures and the ring amplitudes describe only what survived, not the disc. Use an observation with a larger recoverable angular scale (obs_choice = N).
+
+========================================================================================
+PHYSICAL ANALYSIS: MWC 758
+========================================================================================
+Generated 2026-10-24 16:55 by alma_target_explorer_julia (v7, build 100)
+Image: member.uid___A002_X5d7935_X306.calibrated_final_cont.pbcor.fits
+Distance 160.0 pc; inclination 26.2 deg, PA 166.9 deg; beam 0.2342 x 0.1539 arcsec = 37.5 x 24.6 au (radial beam sigma 12.9 au)
+Observing frequency 336.6 GHz (0.89 mm)
+Bosschaart+26 (MWC758): class TD (transition disc); R68 83 au; F(1.33 mm) 217 mJy; M_dust 23 Earth masses; M* 1.60 Msun; distance 160 pc; this image: 68%-flux radius 84 au
+Flux check: the image integrates to 230 mJy inside the profile radius; the catalogue flux (217 mJy at 1.33 mm) scales to 484-723 mJy at 337 GHz (spectral index 2-3), so the image holds 32-47% of it. FILTERED: the extended emission is resolved out by missing short spacings, so the radii enclosing 50-90% of the flux, R68, the contrast of arcs and asymmetries, the brightness temperatures and the ring amplitudes describe only what survived, not the disc. Use an observation with a larger recoverable angular scale (obs_choice = N).
+Stellar parameters (Bosschaart+26 catalogue stellar mass; verify): L* = ? Lsun, M* = 1.60 Msun
+
+1. GAUSSIAN RING FITS
+----------------------------------------------------------------------------------------
+  Model: tapered power law + 1 Gaussian ring(s); chi2_red = 0.18 (dof 34). Errors are 1 sigma, scaled by sqrt(chi2_red) when > 1.
+  Per-bin errors: image noise / sqrt(independent beams) plus 2% of the local flux.
+  Smooth disk: amplitude 4.84 mJy/beam, characteristic radius 89 au, power-law index -0.50
+
+   #  r [au]          amp [mJy/beam]      S/N  FWHM_int [au]      FWHM/r              share  seed      
+   1  67.2 +/- 4.6    7.17 +/- 6.2        1.1  50.5 +/- 18.5        0.75                74%  residual   [amplitude < 3 sigma] [CORE: inside the exclusion zone, not a ring]
+
+  FWHM_int: observed Gaussian FWHM with the radial beam (sigma 12.9 au) subtracted in quadrature; '<' marks widths consistent with the beam (upper limit at +1 sigma).
+  share: fraction of the local azimuthal-mean flux (at the ring radius) that this ring component supplies.
+  CORE: the component lies inside the 94 au exclusion zone (2.5 beams), where beam and CLEAN effects dominate; it describes the unresolved core, not a ring, so it is left out of the ratios, widths, trapping limits, ridge geometry and asymmetry windows below.
+
+  Detected ring positions not used as seeds (weak or on a negative mean): 60.0 au (residual 0.7 sigma, mean 29.6 sigma)
+
+  Fit decisions (in order):
+    - starting seeds: none
+    - unexplained residual (6.7 sigma) at r = 76.0 au -> extra ring component
+    - keeping the component at r = 67.2 au (amplitude S/N 1.1, but removing it raises chi2 by 365 in error units)
+  WARNING: the smooth disk collapsed to the unresolved core (characteristic radius 89 au < 3 beams): the extended emission is shared among the ring components, so overlapping neighbours (shoulders) have degenerate widths and amplitudes; trust the isolated rings, not the blended ones.
+  1 component(s) have amplitude below 3 sigma: treat them as unconfirmed (blended components have inflated errors: one is kept only if removing it makes the fit much worse).
+  NOTE: chi2_red is 0.18: the data scatter about the model by only 2.4x less than the per-bin errors say. The errors are overestimated (the image rms may include structure or sidelobes, or the pixels are more correlated than the beam count assumes), so the S/N values and error bars here are conservative.
+
+1b. GEOMETRY CHECK FROM THE RING RIDGES
+----------------------------------------------------------------------------------------
+  Not available (no narrow, isolated ring with amplitude S/N >= 10.0 (narrow: observed FWHM <= max(2.5 beams, 0.25 r); isolated: no other ring within 2.5 beams)).
+
+1c. FLARING TEST: ARE THE RING CENTRES LIFTED OFF THE STAR?
+----------------------------------------------------------------------------------------
+  Switched off (do_flare = false).
+
+2. AZIMUTHAL ASYMMETRY (non-axisymmetric structure)
+----------------------------------------------------------------------------------------
+  Not tested: 90% of the flux lies within 3.6 beams (108 au of a 30 au beam); an asymmetry measured on a disc this small is dominated by the beam wings of the central core and by small centre / inclination / PA errors (needs at least 4 beams).
+
+3. BRIGHTNESS TEMPERATURE AND OPTICAL DEPTH
+----------------------------------------------------------------------------------------
+  Planck brightness temperature at 336.6 GHz from the azimuthal mean. T_d, T_b/T_d and tau are NOT given: no stellar luminosity is known for this target, and a placeholder L* would make them misleading (pass lstar= to physical_analysis).
+  T_b is beam-averaged, so it is a lower bound for features narrower than the beam.
+
+  No rings or gaps were fitted or detected, so there are no radii to evaluate.
+
+4. GAP-OPENING PLANET MASSES
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+5. RING WIDTHS, DUST TRAPPING AND RING SPACING
+----------------------------------------------------------------------------------------
+  Not available (needs L* and M*, which are not stored for this target; pass lstar= and mstar=).
+
+CAVEATS: L*, M* are approximate and the passive-disk T_d ignores accretion heating and the surface-layer/midplane difference; 
+the ring fits depend on the seed positions (see the 'seed' column); all errors are statistical only.
+
+Saved: ./alma_plots/MWC_758_physical_analysis.txt

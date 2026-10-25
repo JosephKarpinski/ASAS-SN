@@ -1,0 +1,22 @@
+slug,name,status,build,time,note
+HD_142666,HD 142666,OK,100,2026-10-24 16:31,""
+HD_145718,HD 145718,OK,100,2026-10-24 16:37,""
+HD_163296,HD 163296,OK,100,2026-10-24 16:37,""
+HD_169142,HD 169142,OK,100,2026-10-24 16:41,""
+MWC_480,MWC 480,OK,100,2026-10-24 16:41,""
+MWC_758,MWC 758,OK,100,2026-10-24 16:55,""
+V892_Tau,V892 Tau,OK,100,2026-10-24 16:56,""
+V1247_Ori,V1247 Ori,OK,100,2026-10-24 16:56,""
+Elias_29,Elias 29,NO IMAGE,102,2026-10-25 09:40,no archive data for this position
+GY_91,GY 91,ERROR,102,2026-10-25 09:40,"datalink returned HTTP 500: <?xml version=""1.0"" encoding=""UTF-8""?>
+<VOTABLE xmlns=""http://www.ivoa.net/xml/VOTable/v1.3"" xmlns:xsi=""http://"
+HL_Tau,HL Tau,ERROR,102,2026-10-25 09:41,"datalink returned HTTP 500: <?xml version=""1.0"" encoding=""UTF-8""?>
+<VOTABLE xmlns=""http://www.ivoa.net/xml/VOTable/v1.3"" xmlns:xsi=""http://"
+IRAS_04302_2247,IRAS 04302+2247,ERROR,102,2026-10-25 09:41,"datalink returned HTTP 500: <?xml version=""1.0"" encoding=""UTF-8""?>
+<VOTABLE xmlns=""http://www.ivoa.net/xml/VOTable/v1.3"" xmlns:xsi=""http://"
+IRAS_16253_2429,IRAS 16253-2429,OK,102,2026-10-25 09:52,""
+GY_91,GY 91,OK,102,2026-10-25 09:59,""
+HL_Tau,HL Tau,OK,102,2026-10-25 10:00,""
+IRAS_04302_2247,IRAS 04302+2247,OK,102,2026-10-25 10:13,""
+Elias_29,Elias 29,NO IMAGE,102,2026-10-25 10:13,no public science observation matching this target (see the DIAGNOSIS lines in the console text)
+HL_Tau,HL Tau,OK,102,2026-10-25 10:34,""

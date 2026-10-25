@@ -1,0 +1,205 @@
+Resolved IRAS 16253-2429 (as "IRAS 16253-2429") -> RA = 247.09259 deg, Dec = -24.60869 deg (CDS Sesame)
+================================================================================
+Target: IRAS 16253-2429   (RA 247.0926, Dec -24.6087; )
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=IRAS%2016253-2429&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for IRAS 16253-2429 ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 247.092586, -24.60868646, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 178206 | mirror = https://almascience.nrao.edu
+Found 321 rows in the cone.
+Filtered to 94 rows matching IRAS 16253-2429.
+
+Observations (member OUS), finest spatial resolution first:
+9×9 DataFrame
+ Row │ member_ous_uid          proposal_id     band    best_res_arcsec  t_exp_s    release     n_rows  las_arcsec  freq_ghz
+     │ String                  String          String  Float64          Float64    String      Int64   Float64     Float64
+─────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ uid://A001/X146c/X285   2019.1.00261.L  6             0.0349725   4917.02   2023-01-07       7     1.01836   219.947
+   2 │ uid://A001/X87a/X92f    2016.1.00598.S  6             0.105948    1179.36   2018-09-09       4     1.63999   219.557
+   3 │ uid://A001/X1527/X3e3   2019.A.00034.S  6             0.330037    1814.4    2023-01-08       7     4.5583    219.946
+   4 │ uid://A001/X2fb/Xccf    2015.1.01525.S  9             1.65279      391.613  2017-09-06      12    12.2391    685.43
+   5 │ uid://A001/X3577/X80    2022.1.00131.S  6             5.13204      522.736  2024-08-07      13    32.7901    220.396
+   6 │ uid://A001/X2d1f/Xaff   2022.1.00131.S  3            10.8988       890.004  2024-11-02      15    70.9689    111.744
+   7 │ uid://A001/X3577/X82    2022.1.00131.S  6            23.2667     18720.0    2024-04-27      13   412.414     220.396
+   8 │ uid://A001/X1590/X1b95  2021.1.00802.S  6            23.3059     17141.5    2023-07-25       8   413.109     219.557
+   9 │ uid://A001/X2d1f/Xb01   2022.1.00131.S  3            48.7677      2354.02   2024-10-24      15   864.432     111.764
+
+Using observation #1: uid://A001/X146c/X285 (proposal 2019.1.00261.L, band 6, best resolution 0.0350")
+
+Fetching file listing for uid://A001/X146c/X285 ...
+  fetching data info for uid://A001/X146c/X285 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 9 | mirror = https://almascience.nrao.edu
+7×3 DataFrame
+ Row │ access_url                                                                                     content_type       size_GB
+     │ String                                                                                         String             Float64
+─────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ https://almascience.nrao.edu/dataPortal/member.uid___A001_X146c_X285.README.txt                text/plain           0.0
+   2 │ https://almascience.nrao.edu/dataPortal/2019.1.00261.L_uid___A001_X146c_X285_001_of_001.tar    application/x-tar  196.483
+   3 │ https://almascience.nrao.edu/dataPortal/2019.1.00261.L_uid___A001_X146c_X285_auxiliary.tar     application/x-tar    1.478
+   4 │ https://almascience.nrao.edu/dataPortal/2019.1.00261.L_uid___A002_Xf160b6_Xb810.asdm.sdm.tar   application/x-tar  172.543
+   5 │ https://almascience.nrao.edu/dataPortal/2019.1.00261.L_uid___A002_Xf20692_X11748.asdm.sdm.tar  application/x-tar  173.725
+   6 │ https://almascience.nrao.edu/dataPortal/2019.1.00261.L_uid___A002_Xf20692_X157a0.asdm.sdm.tar  application/x-tar  151.281
+   7 │ https://almascience.nrao.edu/dataPortal/2019.1.00261.L_uid___A002_Xf20692_Xd11e.asdm.sdm.tar   application/x-tar  142.915
+
+SKIP: 2019.1.00261.L_uid___A001_X146c_X285_001_of_001.tar is 196.5 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #2: uid://A001/X87a/X92f (proposal 2016.1.00598.S, band 6, best resolution 0.1059")
+
+Fetching file listing for uid://A001/X87a/X92f ...
+  fetching data info for uid://A001/X87a/X92f ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 5 | mirror = https://almascience.nrao.edu
+
+SKIP: 2016.1.00598.S_uid___A001_X87a_X92f_001_of_001.tar is 102.0 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #3: uid://A001/X1527/X3e3 (proposal 2019.A.00034.S, band 6, best resolution 0.3300")
+
+Fetching file listing for uid://A001/X1527/X3e3 ...
+  fetching data info for uid://A001/X1527/X3e3 ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 7 | mirror = https://almascience.nrao.edu
+
+SKIP: 2019.A.00034.S_uid___A001_X1527_X3e3_001_of_001.tar is 152.0 GB, above max_tar_gb = 15.0.
+Trying the next observation (auto_fallback = true) ...
+
+Using observation #4: uid://A001/X2fb/Xccf (proposal 2015.1.01525.S, band 9, best resolution 1.6528")
+
+Fetching file listing for uid://A001/X2fb/Xccf ...
+  fetching data info for uid://A001/X2fb/Xccf ...
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /datalink/sync ...
+  Transient error (HTTP 502); retrying in 5s ...
+  [mirror=https://almascience.nrao.edu, attempt 2/3] GET /datalink/sync ...
+  Transient error (HTTP.TimeoutError); retrying in 10s ...
+  [mirror=https://almascience.nrao.edu, attempt 3/3] GET /datalink/sync ...
+[DEBUG] robust_get_data_info: columns = ["ID", "access_url", "service_def", "error_message", "semantics", "local_semantics", "description", "content_type", "content_length", "content_qualifier", "link_auth", "link_authorized"] | rows = 8 | mirror = https://almascience.nrao.edu
+
+Downloading https://almascience.nrao.edu/dataPortal/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001.tar ...
+    0%  (0.00 / 3.08 GB)
+   10%  (0.31 / 3.08 GB)
+   20%  (0.62 / 3.08 GB)
+   30%  (0.92 / 3.08 GB)
+   40%  (1.23 / 3.08 GB)
+   50%  (1.54 / 3.08 GB)
+   60%  (1.85 / 3.08 GB)
+   70%  (2.15 / 3.08 GB)
+   80%  (2.46 / 3.08 GB)
+   90%  (2.77 / 3.08 GB)
+  100%  (3.08 / 3.08 GB)
+Download complete.
+Extracting FITS members ...
+Deleted 2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001.tar after extraction to save space.
+Ignoring 16 line / cube product(s) in this package: member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw0_691464MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw1_685427MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw2_691396MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw3_685438MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw0_691464MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw1_685427MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw2_691396MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw3_685438MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw0_691464MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw1_685427MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw2_691396MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw3_685438MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw0_691465MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw1_685428MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw2_691389MHz.mos.7m.cube.I.pbcor.fits, member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw3_685431MHz.mos.7m.cube.I.pbcor.fits
+NOTE: fell back to observation #4 (1.653") because finer ones exceeded the size limit; that is 47.3x coarser than #1 (0.035"). Raise MAX_TAR_GB[] or use force_download = true for the finer one.
+
+Extracted 32 FITS file(s), best candidate first:
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw0_1_2_3_688417MHz.mos.7m.cont.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw0_1_2_3_688417MHz.mos.7m.cont.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw0_1_2_3_688417MHz.mos.7m.cont.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw0_691464MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw1_685427MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw2_691396MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw3_685438MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw0_691464MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw1_685427MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw2_691451MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429B_sci.spw3_685438MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw0_691464MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw1_685427MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw2_691396MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429C_sci.spw3_685438MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw0_1_2_3_688410MHz.mos.7m.cont.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1517-2422_bp.spw0_691472MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1517-2422_bp.spw1_685434MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1517-2422_bp.spw2_691395MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1517-2422_bp.spw3_685437MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw0_691464MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw1_685429MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw2_691389MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1625-2527_chk.spw3_685431MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1626-2951_ph.spw0_691467MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1626-2951_ph.spw1_685430MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1626-2951_ph.spw2_691391MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1626-2951_ph.spw3_685433MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1924-2914_bp.spw0_691442MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1924-2914_bp.spw1_685405MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1924-2914_bp.spw2_691366MHz.mos.7m.mfs.I.pbcor.fits
+  ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.J1924-2914_bp.spw3_685407MHz.mos.7m.mfs.I.pbcor.fits
+
+Using: ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw0_1_2_3_688417MHz.mos.7m.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: image ./alma_cache/2015.1.01525.S_uid___A001_X2fb_Xccf_001_of_001_extracted/2015.1.01525.S/science_goal.uid___A001_X2fb_Xccb/group.uid___A001_X2fb_Xccc/member.uid___A001_X2fb_Xccf/product/member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw0_1_2_3_688417MHz.mos.7m.cont.I.pbcor.fits
+[DEBUG] extract_radial_profile: data shape (160, 168) eltype Float32 nan count 14761 finite count 12119
+Synthesized beam: 2.5983" x 1.3599" (PA=-79.86660766602) = 363.76 au x 190.39 au at 140.0 pc
+No significant emission for a centroid start; the centre fit starts at the image centre.
+Disk too small relative to the beam (fit radius 1.00" < 2.5 beams) to fit its geometry; keeping i = 0.0, PA = 0.0 deg.
+WARNING: centre fit still at the edge of its search window after 8 steps; check the image, or pass center = (i, j).
+[DEBUG] fit_center: start = (81, 85) walk steps = 8 coarse = (81, 81) fine = (81, 81)
+Centre pixel (1-based): (81, 81); offset from image centre: dRA = -0.0000", dDec = -1.1200"
+Radial profile: 40 bins of 0.0500" (7.00 au) out to 2.00" (280 au)
+[DEBUG] extract_radial_profile: empty bins = 19 valid mean_flux entries = 21
+WARNING: the beam is 364 au across (> 40 au): a typical disk (rings at tens of au) is NOT resolved in this image, so rings, gaps and asymmetries cannot be measured. Try a finer observation (obs_choice = N).
+NOTE: the delivered image has a 2.598" beam major axis (363.8 au), 1.6x coarser than the 1.653" the archive lists for this observation and 74.3x coarser than the finest in the query (0.035"). The archive figure is a best case; the image was made with a different weighting or taper, and a finer image may need another observation or package.
+Saved the radial profile: ./alma_plots/IRAS_16253_2429_profile.csv
+Saved figure: ./alma_plots/IRAS_16253_2429_image.png
+[DEBUG] find_rings_and_gaps: valid profile points = 21 / 40
+[DEBUG] find_rings_and_gaps: ring_prominence = 0.024140808915007885 gap_prominence = 0.024140808915007885
+[DEBUG] find_rings_and_gaps: raw ring_idx = Int64[] raw gap_idx = Int64[]
+
+[raw profile] Detected 0 ring(s), 0 gap(s) with plain find_peaks.
+[DEBUG] plot_radial_profile: called with 0 rings and 0 gaps
+Saved figure: ./alma_plots/IRAS_16253_2429_radial_profile.png
+[DEBUG] find_rings_and_gaps_residual: n_valid = 21 savgol window = 5 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 0.001037460286316755 residual min/max = -0.002148722352077518 0.0018189551793121993
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 0.0007262222004217285 gap_prominence = 0.0007262222004217285
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [6, 9, 11, 16, 19] raw gap_idx = [4, 7, 10, 14, 17, 20]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 363.75578880308643 min_radius_beams = 2.5 -> min_radius_au = 909.3894720077161
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.3 -> min_abs_residual = 0.00031123808589502653
+Excluded 11 detection(s) within 909.39 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 108.5 au, residual = 5.4130e-04 Jy/beam (+0.52 sigma)
+    r = 143.5 au, residual = 1.8190e-03 Jy/beam (+1.75 sigma)
+    r = 164.5 au, residual = 7.8148e-04 Jy/beam (+0.75 sigma)
+    r = 227.5 au, residual = 1.3739e-03 Jy/beam (+1.32 sigma)
+    r = 248.5 au, residual = 1.2887e-03 Jy/beam (+1.24 sigma)
+    r = 80.5 au, residual = -4.3246e-04 Jy/beam (-0.42 sigma)
+    r = 115.5 au, residual = -6.8688e-04 Jy/beam (-0.66 sigma)
+    r = 157.5 au, residual = -2.1487e-03 Jy/beam (-2.07 sigma)
+    r = 213.5 au, residual = -1.4213e-03 Jy/beam (-1.37 sigma)
+    r = 234.5 au, residual = -1.9681e-03 Jy/beam (-1.90 sigma)
+    r = 262.5 au, residual = -8.5913e-04 Jy/beam (-0.83 sigma)
+
+[baseline-subtracted] Detected 0 ring(s):
+
+[baseline-subtracted] Detected 0 gap(s):
+[DEBUG] plot_residual_profile: called with 0 rings and 0 gaps
+Saved figure: ./alma_plots/IRAS_16253_2429_substructure.png
+Saved target summary: ./alma_plots/IRAS_16253_2429_target_summary.txt
+[DEBUG] find_rings_and_gaps_residual: n_valid = 21 savgol window = 5 polyorder = 3
+[DEBUG] find_rings_and_gaps_residual: residual std = 0.001037460286316755 residual min/max = -0.002148722352077518 0.0018189551793121993
+[DEBUG] find_rings_and_gaps_residual: ring_prominence = 0.0006224761717900531 gap_prominence = 0.0006224761717900531
+[DEBUG] find_rings_and_gaps_residual: raw ring_idx = [6, 9, 11, 16, 19] raw gap_idx = [4, 7, 10, 14, 17, 20]
+[DEBUG] find_rings_and_gaps_residual: bmaj_au = 363.75578880308643 min_radius_beams = 2.5 -> min_radius_au = 909.3894720077161
+[DEBUG] find_rings_and_gaps_residual: min_abs_residual_frac = 0.1 -> min_abs_residual = 0.00010374602863167551
+Excluded 11 detection(s) within 909.39 au (2.5x beam FWHM) of center as likely beam/CLEAN artifacts:
+    r = 108.5 au, residual = 5.4130e-04 Jy/beam (+0.52 sigma)
+    r = 143.5 au, residual = 1.8190e-03 Jy/beam (+1.75 sigma)
+    r = 164.5 au, residual = 7.8148e-04 Jy/beam (+0.75 sigma)
+    r = 227.5 au, residual = 1.3739e-03 Jy/beam (+1.32 sigma)
+    r = 248.5 au, residual = 1.2887e-03 Jy/beam (+1.24 sigma)
+    r = 80.5 au, residual = -4.3246e-04 Jy/beam (-0.42 sigma)
+    r = 115.5 au, residual = -6.8688e-04 Jy/beam (-0.66 sigma)
+    r = 157.5 au, residual = -2.1487e-03 Jy/beam (-2.07 sigma)
+    r = 213.5 au, residual = -1.4213e-03 Jy/beam (-1.37 sigma)
+    r = 234.5 au, residual = -1.9681e-03 Jy/beam (-1.90 sigma)
+    r = 262.5 au, residual = -8.5913e-04 Jy/beam (-0.83 sigma)
+[DEBUG] plot_residual_profile: called with 0 rings and 0 gaps
+Saved figure: ./alma_plots/IRAS_16253_2429_substructure_retuned.png
+Saved target summary: ./alma_plots/IRAS_16253_2429_target_summary.txt
+================================================================================
+Physical analysis: IRAS 16253-2429
+================================================================================
+
+NOT DETECTED: the strongest bin of the azimuthal mean is 0.3 sigma (< 5.0; the peak is 0.3 x the per-beam image noise). Nothing below is meaningful, so the physical analysis was skipped. Upper limit: 3 sigma = 42.1 mJy/beam (one beam; image rms 14 mJy/beam). Try a deeper or different observation, or set min_detect_snr = 0 to force the analysis.

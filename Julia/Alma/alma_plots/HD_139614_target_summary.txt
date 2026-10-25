@@ -1,0 +1,90 @@
+========================================================================================
+TARGET SUMMARY: HD 139614
+========================================================================================
+Generated 2026-10-24 15:32 by alma_target_explorer_julia (v7)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HD%20139614&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : HD 139614
+  Coordinates    : 15:40:46.38  -42:29:53.5  (RA 235.19326, Dec -42.49821 deg, J2000)
+  Distance       : 135.0 pc
+  Class          : Herbig
+  Versus TW Hya  : Herbig; ring and gap; Bosschaart+26: TD, R68 44 au
+  Published      : Bosschaart+26 (HD139614): class TD (transition disc); R68 44 au; F(1.33 mm) 167 mJy; M_dust 46 Earth masses; M* 1.60 Msun; distance 134 pc; this image: 68%-flux radius 71 au
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    An intermediate-mass (A/B/F) Herbig star. Its disk is warmer and usually larger than a T Tauri disk, often with a large cavity and rings, spirals or shadows.
+    Analysis caveat for this class: Large disks need long baselines and short spacings; the largest scales may be partly filtered out.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2022.1.01302.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.5452 arcsec (73.6 au; the beam of the image used is given below)
+  Exposure time  : 181 s (0.05 h)
+  Public release : 2024-01-19
+  Member OUS     : uid://A001/X2d20/X1294
+  Largest recoverable angular scale : 5.88 arcsec (793 au); structure larger than this is filtered out
+  Observations in the archive query: 10; the finest has 0.1234 arcsec. Used: #5 of the resolution-sorted table.
+  NOTE: the notebook fell back from observation #1 to #5 because the finer packages exceeded the size limit.
+  Product package: 2022.1.01302.S_uid___A001_X2d20_X1294_001_of_001.tar (7.46 GB)
+  FITS image used: member.uid___A001_X2d20_X1294.hd139614_sci.spw25_27_29_31.cont.I.pbcor.fits
+  Pixel scale    : 0.1100 arcsec
+  Synthesised beam: 0.6711 x 0.5555 arcsec = 90.6 x 75.0 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 0.0 deg, position angle 0.0 deg (east of north)
+  Source: UNKNOWN; the disk was treated as face-on, so an inclined disk is smeared in the profile.
+  Profile centre (pixel): (217, 217); profile out to 2.00 arcsec = 270 au in 40 bins of 6.75 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 94.6 mJy/beam at r = 3.4 au (0.0 beams)
+  Innermost bin              : 94.6 mJy/beam (100% of the peak)
+  Radius holding 50% / 90% of the flux : 57 au / 98 au (0.6 / 1.1 beams)
+  Outer edge (last radius with the mean above 10% of the peak): 98 au
+  Integrated flux out to the profile edge: ~138.0 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 1.01 mJy/beam
+  Profile dynamic range (peak / residual sigma): 94
+  Image noise (robust rms): 0.491 mJy/beam; the peak of the azimuthal mean is 192.6 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  After subtracting a smooth baseline: 0 ring(s), 0 gap(s).
+  Detections inside 226 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.101 mJy/beam are ignored.
+
+  No significant rings or gaps were detected.
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Flux check: the image integrates to 138 mJy inside the profile radius; the catalogue flux (167 mJy at 1.33 mm) scales to 167 mJy at 225 GHz (spectral index 2-3), so the image holds 82% of it: consistent.
+  (2) Resolution: 90% of the flux lies within 1.1 beams (97.9 au), so the source is unresolved (a point source). If the target is a protoplanetary disk this is probably not an image of it: it may be a calibrator or an unresolved companion. Check the FITS file name and header OBJECT; no ring or gap analysis is meaningful.
+  (3) Excluded zone: detections inside 226 au (2.5 beams) are dropped as beam/CLEAN artifacts. That zone holds the flux peak (3 au) and a large part of the disk (90% of the flux lies within 98 au), so structure there is not reported. Run with min_radius_beams = 1.0 to list candidates in that zone; treat them as tentative.
+  (4) Data choice: a package with finer resolution (0.1234 arcsec) exists but exceeded the 15 GB download limit, so a coarser observation was used. Finer substructure may exist.
+  (5) Geometry: the disk is too small compared with the beam for the image fit to measure its inclination and PA, so it was treated as face-on. If it is inclined, the azimuthal average mixes different radii and washes out rings; give incl_deg / pa_deg if you know them.
+  (6) Shape: the emission is centrally peaked (the maximum lies at 3 au, within ~1.5 beams of the star), like TW Hya: a smooth, steeply falling profile on which any rings are shoulders and dips.
+  (7) Substructure: none was detected above the threshold even with the re-tuned settings. This says the profile is smooth at this resolution and sensitivity, not that the disk is smooth (rings narrower than the beam are averaged away).
+  (8) Class-specific note: Large disks need long baselines and short spacings; the largest scales may be partly filtered out.
+  (9) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  HD_139614_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+  HD_139614_radial_profile.png : azimuthal mean flux versus deprojected radius, with the raw peak-finder detections
+  HD_139614_substructure.png : baseline-subtracted profile: detected rings (yellow) and gaps (blue), literature features
+  HD_139614_substructure_retuned.png : the same with the re-tuned detection settings
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

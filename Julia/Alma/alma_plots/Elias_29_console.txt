@@ -1,0 +1,19 @@
+Resolved Elias 29 (as "[EC92] 29") -> RA = 277.44792 deg, Dec = +1.23417 deg (CDS Sesame)
+================================================================================
+Target: Elias 29   (RA 277.4479, Dec +1.2342; )
+================================================================================
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=Elias%2029&skyViewHeight=48.99&skyViewWidth=50.95
+Inclination/PA are not in the catalogue: they will be fitted from the image (geometry_mode = :auto).
+Querying ALMA archive for Elias 29 ...
+[DEBUG] query_target: ADQL = SELECT obs_id, target_name, member_ous_uid, band_list, frequency, spatial_resolution, velocity_resolution, t_exptime, proposal_id, obs_release_date, science_keyword FROM ivoa.obscore WHERE INTERSECTS(CIRCLE('ICRS', 277.44791667, 1.23416667, 0.05), s_region) = 1 AND data_rights = 'Public' AND science_observation = 'T'
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 678629 | mirror = https://almascience.nrao.edu
+Found 1250 rows in the cone.
+No target_name matched ["elias29", "elias229"]. Distinct names in the cone: Serpens_Main, 211, Serpens_Emb6, Serpens_Emb8, Serpens_Emb8N, serp_smm4, serp_smm9d, serp_smm9, Ser-emb_8, Serpens_emb_6, ...
+Re-run with name_filter=false to keep all rows in the cone.
+Filtered to 0 rows matching Elias 29.
+No rows. Try public_only=false (proprietary data shows up but can't be downloaded), a larger radius_deg, or proposal_id=nothing.
+  [mirror=https://almascience.nrao.edu, attempt 1/3] GET /tap/sync ...
+[DEBUG] tap_query: format = votable | HTTP status = 200 | bytes = 154729 | mirror = https://almascience.nrao.edu
+DIAGNOSIS: 1273 rows cover this position: 1250 public, 23 proprietary; 1273 science (the rest are calibrators etc.); 0 carry this target's name, of which 0 are public science.
+DIAGNOSIS: target names in the cone: Serpens_Main, 211, Serpens_Emb6, Serpens_Emb8, Serpens_Emb8N, serp_smm4, serp_smm9d, serp_smm9, .... None matches elias29/elias229: try name_filter = false only if the position is right.

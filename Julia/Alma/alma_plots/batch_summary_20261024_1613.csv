@@ -1,0 +1,6 @@
+n,menu,name,group,status,obs_choice_used,proposal,band,beam_au,detection_sigma,minutes,note,console
+1,325,HD 100546,Herbig,SKIPPED,0,"","",NaN,NaN,0.0,output files already exist,""
+2,327,HD 104237,Herbig,OK,7,2021.1.01137.S,6,80.16212809085796,327.49134110880425,36.4,"",./alma_plots/HD_104237_console.txt
+3,399,HD 135344B,Herbig,OK,3,2024.1.00548.S,9,5.777210667727259,106.19689907052035,39.6,"",./alma_plots/HD_135344B_console.txt
+4,416,HD 139614,Herbig,OK,5,2022.1.01302.S,6,90.5995166301738,192.6200315095669,80.9,"",./alma_plots/HD_139614_console.txt
+5,424,HD 141569,Herbig,OK,3,2024.1.01001.L,7,27.630225151777186,22.883090789767333,41.1,"",./alma_plots/HD_141569_console.txt

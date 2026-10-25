@@ -1,0 +1,7 @@
+========================================================================================
+PHYSICAL ANALYSIS: IRAS 16253-2429
+========================================================================================
+Generated 2026-10-25 09:52 by alma_target_explorer_julia (v7, build 102)
+Image: member.uid___A001_X2fb_Xccf.IRAS_16253-2429A_sci.spw0_1_2_3_688417MHz.mos.7m.cont.I.pbcor.fits
+
+NOT DETECTED: the strongest bin of the azimuthal mean is 0.3 sigma (< 5.0; the peak is 0.3 x the per-beam image noise). Nothing below is meaningful, so the physical analysis was skipped. Upper limit: 3 sigma = 42.1 mJy/beam (one beam; image rms 14 mJy/beam). Try a deeper or different observation, or set min_detect_snr = 0 to force the analysis.

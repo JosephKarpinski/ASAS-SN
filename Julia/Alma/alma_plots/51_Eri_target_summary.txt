@@ -1,0 +1,119 @@
+========================================================================================
+TARGET SUMMARY: 51 Eri
+========================================================================================
+Generated 2026-10-20 15:25 by alma_target_explorer_julia (v7)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=51%20Eri&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : 51 Eri
+  Coordinates    : 04:37:36.18  -02:28:25.9  (RA 69.40077, Dec -2.47385 deg, J2000)
+  Distance       : 29.9 pc
+  Class          : Archive disk
+  Catalogue note : ALMA archive: 4 rows
+  Versus TW Hya  : Not curated; 4 archive rows, finest 0.155"; i/PA fitted, d from Gaia
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    A disk target picked from the ALMA archive (science category "Disks and planet formation"). It is not individually curated, so the type of star and of disk is not recorded here: it may be a T Tauri or Herbig disk, an embedded protostar, a multiple system or a debris disk.
+    Analysis caveat for this class: Not curated: the distance is a Gaia distance (Bailer-Jones+21 or the SIMBAD parallax; or an assumed 100 pc), the geometry is fitted from the image, and the target may be embedded, multiple or only marginally resolved.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2016.1.00358.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.1551 arcsec (4.6 au; the beam of the image used is given below)
+  Exposure time  : 1028 s (0.29 h)
+  Public release : 2018-04-12
+  Member OUS     : uid://A001/X886/X194
+  Observations in the archive query: 1; the finest has 0.1551 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2016.1.00358.S_uid___A001_X886_X194_001_of_001.tar (36.55 GB)
+  FITS image used: member.uid___A001_X886_X194.ari_l.51_Eri_sci.spw0_1_2_3_223915MHz.12m.cont.I.pbcor.fits
+  Pixel scale    : 0.0290 arcsec
+  Synthesised beam: 0.1773 x 0.1484 arcsec = 5.3 x 4.4 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 76.2 deg, position angle 170.6 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 31% of the pixel variance (face-on: 7%). LOW: probably non-axisymmetric or faint; the fitted geometry is unreliable.
+  Profile centre (pixel): (783, 787); profile out to 2.00 arcsec = 60 au in 40 bins of 1.49 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.0757 mJy/beam at r = 2.2 au (0.4 beams)
+  Innermost bin              : 0.0495 mJy/beam (65% of the peak)
+  Radius holding 50% / 90% of the flux : NaN au / NaN au (NaN / NaN beams)
+  Outer edge (last radius with the mean above 10% of the peak): 40 au
+  Integrated flux out to the profile edge: ~0.2 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.00406 mJy/beam
+  Profile dynamic range (peak / residual sigma): 19
+  Image noise (robust rms): 0.035 mJy/beam; the peak of the azimuthal mean is 2.2 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  After subtracting a smooth baseline: 8 ring(s), 8 gap(s).
+  Detections inside 13 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.000406 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       15.7    0.525         3.0       0.0047 mJy/beam   +212.9%    +0.2 s
+  ring       18.7    0.625         3.5      0.00481 mJy/beam       n/a    +0.2 s
+  ring       26.1    0.875         4.9      0.00734 mJy/beam   +307.0%    +0.3 s
+  ring       29.1    0.975         5.5      0.00437 mJy/beam    +66.5%    +0.2 s
+  ring       36.6    1.225         6.9      0.00561 mJy/beam    +90.1%    +0.3 s
+  ring       39.6    1.325         7.5      0.00401 mJy/beam    +61.7%    +0.2 s
+  ring       45.6    1.525         8.6      0.00182 mJy/beam    +65.4%    +0.1 s
+  ring       50.0    1.675         9.4      0.00204 mJy/beam       n/a    +0.1 s
+  gap        17.2    0.575         3.2    -0.000881 mJy/beam       n/a    -0.0 s
+  gap        20.2    0.675         3.8     -0.00799 mJy/beam       n/a    -0.3 s
+  gap        27.6    0.925         5.2    -0.000568 mJy/beam     -9.6%    -0.0 s
+  gap        30.6    1.025         5.8     -0.00449 mJy/beam   -103.2%    -0.2 s
+  gap        38.1    1.275         7.2     -0.00423 mJy/beam    -61.1%    -0.2 s
+  gap        41.1    1.375         7.8     -0.00471 mJy/beam    -74.7%    -0.2 s
+  gap        48.5    1.625         9.2     -0.00181 mJy/beam  -1685.6%    -0.1 s
+  gap        51.5    1.725         9.7     -0.00204 mJy/beam  -4331.7%    -0.1 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: R 16 au  ->  G 17 au  ->  R 19 au  ->  G 20 au  ->  R 26 au  ->  G 28 au  ->  R 29 au  ->  G 31 au  ->  R 37 au  ->  G 38 au  ->  R 40 au  ->  G 41 au  ->  R 46 au  ->  G 49 au  ->  R 50 au  ->  G 52 au
+  0 of 16 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+  NOTE: ring at 16 au and gap at 17 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: gap at 17 au and ring at 19 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: ring at 19 au and gap at 20 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: ring at 26 au and gap at 28 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: gap at 28 au and ring at 29 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: ring at 29 au and gap at 31 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: ring at 37 au and gap at 38 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: gap at 38 au and ring at 40 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: ring at 40 au and gap at 41 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: gap at 41 au and ring at 46 au are 4.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: ring at 46 au and gap at 49 au are 3.0 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: gap at 49 au and ring at 50 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  NOTE: ring at 50 au and gap at 52 au are 1.5 au apart (< 1 beam): probably one blended feature or noise.
+  Ring spacing: 3 au (x1.19), 7 au (x1.40), 3 au (x1.11), 7 au (x1.26), 3 au (x1.08), 6 au (x1.15), 4 au (x1.10)
+  Gap spacing : 3 au (x1.17), 7 au (x1.37), 3 au (x1.11), 7 au (x1.24), 3 au (x1.08), 7 au (x1.18), 3 au (x1.06)
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Detection: the strongest bin of the azimuthal mean is only 2.2 sigma (peak 2.2 x the per-beam image noise), so this target is not detected in this image (or is far fainter than the noise). The profile and any rings or gaps listed above are noise; try a deeper or different observation.
+  (2) Class-specific note: Not curated: the distance is a Gaia distance (Bailer-Jones+21 or the SIMBAD parallax; or an assumed 100 pc), the geometry is fitted from the image, and the target may be embedded, multiple or only marginally resolved.
+  (3) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  51_Eri_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+  51_Eri_radial_profile.png : azimuthal mean flux versus deprojected radius, with the raw peak-finder detections
+  51_Eri_substructure.png : baseline-subtracted profile: detected rings (yellow) and gaps (blue), literature features
+  51_Eri_substructure_retuned.png : the same with the re-tuned detection settings
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.

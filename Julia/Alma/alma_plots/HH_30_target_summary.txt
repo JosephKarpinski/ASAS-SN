@@ -1,0 +1,118 @@
+========================================================================================
+TARGET SUMMARY: HH 30
+========================================================================================
+Generated 2026-10-23 12:22 by alma_target_explorer_julia (v7)
+Note: re-tuned detection (prominence_sigma = 0.6, min_abs_residual_frac = 0.1)
+
+ALMA archive web portal: https://almascience.nrao.edu/aq/?observationsSortProp=sourceName&observationsSortDir=asc&sourceNameResolver=HH%2030&skyViewHeight=48.99&skyViewWidth=50.95
+
+1. THE TARGET
+----------------------------------------------------------------------------------------
+  Name           : HH 30
+  Coordinates    : 04:31:37.51  +18:12:24.4  (RA 67.90627, Dec +18.20677 deg, J2000)
+  Distance       : 140.0 pc
+  Class          : Edge-on
+  Versus TW Hya  : Edge-on; jet-driving
+  Catalogue geometry: inclination / PA not in the catalogue
+
+  What kind of object this is:
+    An edge-on disk seen as a dark lane against its scattered light. Deprojection into face-on rings is not possible; radial structure is hidden by projection.
+    Analysis caveat for this class: The radial profile is not meaningful for an edge-on disk; use the image alone.
+
+2. ALMA DATA USED
+----------------------------------------------------------------------------------------
+  Project        : 2017.1.01701.S
+  Band           : 6
+  Archive-reported resolution of the observation : 0.0202 arcsec (2.8 au; the beam of the image used is given below)
+  Exposure time  : 5407 s (1.50 h)
+  Public release : 2018-11-23
+  Member OUS     : uid://A001/X1284/X545
+  Largest recoverable angular scale : 0.46 arcsec (64 au); structure larger than this is filtered out
+  Observations in the archive query: 16; the finest has 0.0202 arcsec. Used: #1 of the resolution-sorted table.
+  Product package: 2017.1.01701.S_uid___A001_X1284_X545_001_of_001.tar (1.06 GB)
+  FITS image used: member.uid___A001_X1284_X545.HH_30_sci.spw17_19_21.mfs.I.manual.cont.image.tt0.pbcor.fits
+  Pixel scale    : 0.0040 arcsec
+  Synthesised beam: 0.0247 x 0.0183 arcsec = 3.5 x 2.6 au
+  Flux unit      : Jy/beam
+
+3. DISK GEOMETRY AND PROFILE SETUP
+----------------------------------------------------------------------------------------
+  Inclination 81.2 deg, position angle 120.0 deg (east of north)
+  Source: FITTED FROM THE IMAGE (radial-symmetry criterion), accuracy about +-5 deg.
+  Fit quality: a purely radial profile explains 2% of the pixel variance (face-on: 14%). LOW: probably non-axisymmetric or faint; the fitted geometry is unreliable.
+  Profile centre (pixel): (642, 465); profile out to 2.00 arcsec = 280 au in 162 bins of 1.73 au
+  Run settings   : geometry_mode = auto, min_radius_beams = 2.5, prominence_sigma = 0.7, band = nothing, obs_choice = 1, center_mode = optimize, max_radius_arcsec = 2.0, n_bins = nothing, public_only = true
+
+4. RADIAL PROFILE (azimuthal mean of the continuum)
+----------------------------------------------------------------------------------------
+  Peak of the azimuthal mean : 0.00635 mJy/beam at r = 25.1 au (7.3 beams)
+  Innermost bin              : -0.00375 mJy/beam (-59% of the peak)
+  Radius holding 50% / 90% of the flux : NaN au / NaN au (NaN / NaN beams)
+  Outer edge (last radius with the mean above 10% of the peak): 279 au
+  Integrated flux out to the profile edge: ~7.8 mJy
+  Residual scatter (1 sigma of the baseline-subtracted profile): 0.00111 mJy/beam
+  Profile dynamic range (peak / residual sigma): 6
+  Image noise (robust rms): 0.0105 mJy/beam; the peak of the azimuthal mean is 0.6 x the noise
+
+5. SUBSTRUCTURE (baseline-subtracted profile)
+----------------------------------------------------------------------------------------
+  Raw peak finder on the unsubtracted profile: 0 ring(s), 0 gap(s).
+  After subtracting a smooth baseline: 14 ring(s), 14 gap(s).
+  Detections inside 9 au (the beam/CLEAN-artifact zone) are discarded; residuals below 0.000111 mJy/beam are ignored.
+
+  type     r [au]    r ["]   r [beams]         residual    modul.   signif.
+  ring       25.1    0.179         7.3      0.00266 mJy/beam    +72.2%    +0.5 s
+  ring       33.7    0.241         9.8      0.00182 mJy/beam    +45.2%    +0.4 s
+  ring       56.2    0.401        16.3      0.00122 mJy/beam    +35.2%    +0.4 s
+  ring       75.2    0.537        21.8     0.000798 mJy/beam    +24.8%    +0.3 s
+  ring       87.3    0.623        25.3      0.00192 mJy/beam    +60.3%    +0.7 s
+  ring      109.8    0.784        31.8      0.00171 mJy/beam    +85.1%    +0.7 s
+  ring      130.5    0.932        37.8     0.000387 mJy/beam    +34.0%    +0.2 s
+  ring      142.6    1.019        41.3      0.00177 mJy/beam   +127.1%    +0.8 s
+  ring      158.1    1.130        45.8     0.000698 mJy/beam    +32.9%    +0.3 s
+  ring      180.6    1.290        52.3      0.00115 mJy/beam    +64.8%    +0.6 s
+  ring      203.1    1.451        58.8      0.00109 mJy/beam    +75.7%    +0.6 s
+  ring      230.7    1.648        66.8     0.000818 mJy/beam    +43.1%    +0.5 s
+  ring      249.8    1.784        72.4     0.000376 mJy/beam    +18.3%    +0.2 s
+  ring      258.4    1.846        74.9     0.000673 mJy/beam    +30.5%    +0.4 s
+  gap        14.7    0.105         4.3     -0.00518 mJy/beam   -199.5%    -1.1 s
+  gap        30.2    0.216         8.8     -0.00176 mJy/beam    -43.6%    -0.8 s
+  gap        42.3    0.302        12.3    -0.000981 mJy/beam    -21.2%    -0.5 s
+  gap        70.0    0.500        20.3     -0.00227 mJy/beam    -68.1%    -1.4 s
+  gap       104.6    0.747        30.3     -0.00079 mJy/beam    -30.5%    -1.0 s
+  gap       120.1    0.858        34.8     -0.00163 mJy/beam   -116.7%    -1.4 s
+  gap       134.0    0.957        38.8     -0.00152 mJy/beam   -137.6%    -0.9 s
+  gap       151.2    1.080        43.8     -0.00142 mJy/beam    -73.4%    -1.2 s
+  gap       175.4    1.253        50.8    -0.000632 mJy/beam    -34.5%    -0.7 s
+  gap       197.9    1.414        57.3     -0.00115 mJy/beam    -84.8%    -1.2 s
+  gap       220.4    1.574        63.8    -0.000656 mJy/beam    -33.9%    -0.9 s
+  gap       242.8    1.735        70.4    -0.000628 mJy/beam    -31.4%    -0.8 s
+  gap       253.2    1.809        73.4    -0.000441 mJy/beam    -20.9%    -0.5 s
+  gap       275.7    1.969        79.9    -0.000399 mJy/beam    -15.9%    -0.4 s
+  (modulation = residual / local baseline; significance = residual / (image noise / sqrt(beams in the annulus)), 's' = sigma; for a gap it is the depth below the shallower neighbouring maximum (the peak prominence), shown negative.
+   Statistical only: it ignores CLEAN artifacts, baseline-filter ripples and non-axisymmetric structure.)
+
+  Sequence from the centre: G 15 au  ->  R 25 au  ->  G 30 au  ->  R 34 au  ->  G 42 au  ->  R 56 au  ->  G 70 au  ->  R 75 au  ->  R 87 au  ->  G 105 au  ->  R 110 au  ->  G 120 au  ->  R 130 au  ->  G 134 au  ->  R 143 au  ->  G 151 au  ->  R 158 au  ->  G 175 au  ->  R 181 au  ->  G 198 au  ->  R 203 au  ->  G 220 au  ->  R 231 au  ->  G 243 au  ->  R 250 au  ->  G 253 au  ->  R 258 au  ->  G 276 au
+  0 of 28 features are at least 3 sigma (0 of them also with modulation >= 10%); weaker ones are tentative.
+  Ring spacing: 9 au (x1.34) [tentative], 22 au (x1.67) [tentative], 19 au (x1.34) [tentative], 12 au (x1.16) [tentative], 22 au (x1.26) [tentative], 21 au (x1.19) [tentative], 12 au (x1.09) [tentative], 16 au (x1.11) [tentative], 22 au (x1.14) [tentative], 22 au (x1.12) [tentative], 28 au (x1.14) [tentative], 19 au (x1.08) [tentative], 9 au (x1.03) [tentative]
+  Gap spacing : 16 au (x2.06) [tentative], 12 au (x1.40) [tentative], 28 au (x1.65) [tentative], 35 au (x1.49) [tentative], 16 au (x1.15) [tentative], 14 au (x1.12) [tentative], 17 au (x1.13) [tentative], 24 au (x1.16) [tentative], 22 au (x1.13) [tentative], 22 au (x1.11) [tentative], 22 au (x1.10) [tentative], 10 au (x1.04) [tentative], 22 au (x1.09) [tentative]
+
+6. COMPARISON WITH PUBLISHED FEATURES
+----------------------------------------------------------------------------------------
+  No published ring/gap radii are stored for this target in the catalogue.
+
+7. ANALYSIS
+----------------------------------------------------------------------------------------
+  (1) Detection: the azimuthal mean is only 1.8 sigma in its strongest bin, but the disc IS detected in aperture flux: 7.78 mJy inside r = 279 au, 12.1 sigma. For an edge-on or highly inclined disc the azimuthal mean spreads a thin ridge over all azimuths and dilutes it into the noise, so the rings and gaps listed above are noise and the radial analysis does not apply; see the edge-on section of the physical analysis (flux, extent).
+  (2) Class-specific note: The radial profile is not meaningful for an edge-on disk; use the image alone.
+  (3) Detection method: the profile is an azimuthal mean over the deprojected disk; features are local maxima and minima of the residual after a Savitzky-Golay baseline is subtracted. Any structure that is not axisymmetric (spirals, arcs, companions) is averaged out and does not appear here.
+
+8. FIGURES IN THIS FOLDER
+----------------------------------------------------------------------------------------
+  HH_30_image.png : continuum image (asinh stretch, sky offsets, beam on the image)
+  HH_30_radial_profile.png : azimuthal mean flux versus deprojected radius, with the raw peak-finder detections
+  HH_30_substructure.png : baseline-subtracted profile: detected rings (yellow) and gaps (blue), literature features
+  HH_30_substructure_retuned.png : the same with the re-tuned detection settings
+
+This summary is generated automatically from the measurements and the target catalogue; catalogue values
+(distance, inclination, PA, literature gap radii) are approximate and should be verified before publication.
