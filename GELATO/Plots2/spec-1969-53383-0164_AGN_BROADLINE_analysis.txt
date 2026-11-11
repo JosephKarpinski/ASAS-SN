@@ -1,0 +1,22 @@
+Analysis of spec-1969-53383-0164 (z = 0.0909):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (25), Hbeta (9), Halpha (28), [NII] (62), [SII] (37), [OI] (16)
+  Tallest line feature in the fit: 7185 A observed (6586 A rest, i.e. the Halpha + [NII] complex).
+  Broad Halpha component detected (65% of the narrow Halpha flux).
+  Balmer decrement Halpha/Hbeta = 6.60 (Case B: 2.86) -> E(B-V) ~ 0.71 (Calzetti)
+    Caution: a decrement this high is rarely physical for the narrow lines; narrow Hbeta is probably under-measured (low S/N, or confused with a broad component), so treat E(B-V) and [OIII]/Hbeta with care.
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 2.64 [2.52-2.78],  [OIII]/Hbeta = 3.22 [2.90-3.59]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: AGN 100%  (100/100 usable)
+  [SII]/Halpha = 1.51: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.34: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as AGN (LINER).
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 14% of the continuum overall (14% at the blue end, 22% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.20 (good).

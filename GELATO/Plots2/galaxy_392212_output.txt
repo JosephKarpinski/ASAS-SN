@@ -1,0 +1,2 @@
+=== Galaxy 392212: plate 548, MJD 51986, fiber 403, RA 125.57070, Dec 45.59330 ===
+Galaxy 392212 failed: InconsistentTableError: Number of header columns (1) inconsistent with data columns in data line 9

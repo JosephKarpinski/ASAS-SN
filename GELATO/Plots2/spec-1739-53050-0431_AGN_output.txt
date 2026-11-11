@@ -1,0 +1,53 @@
+=== Galaxy 367879: plate 1739, MJD 53050, fiber 431, RA 137.45250, Dec 10.94288 ===
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra      dec
+  1739 53050      431 0.164427 137.45253 10.94288
+
+z = 0.1644   RA = 137.45253   Dec = 10.94288
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=137.452530&dec=10.942880&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=137.452530&dec=10.942880&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=137.452530&dec=10.942880&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=137.452530&dec=10.942880&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=137.452530+10.942880&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-1739-53050-0431.fits
+Gathering ingredients: spec-1739-53050-0431.fits
+Ingredients gathered: spec-1739-53050-0431.fits
+Making the base: spec-1739-53050-0431.fits
+Base created: spec-1739-53050-0431.fits
+Adding flavor: spec-1739-53050-0431.fits
+Flavor added: spec-1739-53050-0431.fits
+Scooping portions (this may take a while): spec-1739-53050-0431.fits
+Portions scooped: spec-1739-53050-0431.fits
+Presenting GELATO: spec-1739-53050-0431.fits
+GELATO presented: spec-1739-53050-0431.fits
+Measuring texture: spec-1739-53050-0431.fits
+Measured texture: spec-1739-53050-0431.fits
+Freezing results: spec-1739-53050-0431.fits
+Results freezed: spec-1739-53050-0431.fits
+GELATO finished for spec-1739-53050-0431.fits
+
+Analysis of spec-1739-53050-0431 (z = 0.1644):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (3), Hbeta (8), Halpha (28), [NII] (19), [SII] (9), [OI] (5)
+  Tallest line feature in the fit: 5832 A observed (5008 A rest, i.e. [OIII] 5007).
+  Balmer decrement Halpha/Hbeta = 5.52 (Case B: 2.86) -> E(B-V) ~ 0.56 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 1.10 [1.03-1.18],  [OIII]/Hbeta = 5.80 [2.94-7.62]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: AGN 100%  (100/100 usable)
+  [SII]/Halpha = 0.51: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+  [OI]/Halpha = 0.13: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+
+Overall: the line ratios classify this object as AGN (Seyfert).
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 29% of the continuum overall (44% at the blue end, 31% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.14 (good).
+

@@ -1,0 +1,22 @@
+Analysis of spec-1738-53051-0462 (z = 0.0737):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (6), Hbeta (58), Halpha (130), [NII] (73), [SII] (73), [OI] (24)
+  Tallest line feature in the fit: 7049 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+  Balmer decrement Halpha/Hbeta = 4.39 (Case B: 2.86) -> E(B-V) ~ 0.37 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.28 [0.27-0.28],  [OIII]/Hbeta = 0.98 [0.79-1.13]
+  [NII] BPT: left of / below the Kauffmann+03 line -> star-forming.
+    -0.31 dex from the Kauffmann+03 line in log [OIII]/Hbeta (negative = below the line).
+    Bootstraps: star-forming 100%  (100/100 usable)
+  [SII]/Halpha = 0.35: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.05: star-forming side of the Kewley+01 line.
+
+Overall: the line ratios classify this object as star-forming.
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 53% of the continuum overall (45% at the blue end, 64% at the red end) and is flat toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 1.36 (acceptable).

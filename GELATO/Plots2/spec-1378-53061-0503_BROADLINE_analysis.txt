@@ -1,0 +1,18 @@
+Analysis of spec-1378-53061-0503 (z = 0.4353):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): none
+  Not detected / not fitted: [OIII], Hbeta, Halpha, [NII], [SII], [OI]  (no column at all: Halpha, [NII], [SII])
+  Tallest line feature in the fit: 9051 A observed (6306 A rest, i.e. [OI] 6300).
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII] diagram: not available (missing Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 16% of the continuum overall (26% at the blue end, 19% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.10 (good).

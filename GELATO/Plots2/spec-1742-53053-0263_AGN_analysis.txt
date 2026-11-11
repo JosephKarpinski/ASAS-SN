@@ -1,0 +1,22 @@
+Analysis of spec-1742-53053-0263 (z = 0.1977):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (7), Hbeta (6), Halpha (21), [NII] (23), [SII] (8)
+  Not detected / not fitted: [OI]
+  Tallest line feature in the fit: 7861 A observed (6564 A rest, i.e. the Halpha + [NII] complex).
+  Balmer decrement Halpha/Hbeta = 5.65 (Case B: 2.86) -> E(B-V) ~ 0.58 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.89 [0.84-0.94],  [OIII]/Hbeta = 1.42 [1.17-1.91]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: composite 9%, AGN 91%  (100/100 usable)
+  [SII]/Halpha = 0.58: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.06: star-forming side of the Kewley+01 line.
+    (this diagram does not support the AGN call from [NII])
+
+Overall: the line ratios classify this object as AGN (LINER).
+
+Continuum
+  Stellar (SSP) continuum only; no power-law component in this fit.
+
+Fit quality: reduced chi^2 = 1.25 (good).

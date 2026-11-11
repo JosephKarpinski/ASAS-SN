@@ -1,0 +1,22 @@
+Analysis of spec-6439-56358-0751 (z = 0.4324):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (39), Hbeta (16), Halpha (27), [NII] (7), [SII] (11), [OI] (6)
+  Tallest line feature in the fit: 7171 A observed (5007 A rest, i.e. [OIII] 5007).
+  [OIII] outflow component detected.
+  Balmer decrement Halpha/Hbeta = 4.01 (Case B: 2.86) -> E(B-V) ~ 0.29 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.35 [0.30-0.41],  [OIII]/Hbeta = 2.98 [2.82-3.26]
+  [NII] BPT: between the Kauffmann+03 and Kewley+01 lines -> composite.
+    Bootstraps: star-forming 1%, composite 80%, AGN 19%  (100/100 usable)
+  [SII]/Halpha = 0.38: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+  [OI]/Halpha = 0.11: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+
+Overall: the line ratios classify this object as composite (star formation + AGN).
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 39% of the continuum overall (68% at the blue end, 37% at the red end) and is rising toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 1.03 (good).

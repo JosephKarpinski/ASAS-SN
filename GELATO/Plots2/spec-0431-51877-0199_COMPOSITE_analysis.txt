@@ -1,0 +1,23 @@
+Analysis of spec-0431-51877-0199 (z = 0.1291):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (4), Hbeta (11), Halpha (30), [NII] (16), [SII] (7)
+  Not detected / not fitted: [OI]
+  Tallest line feature in the fit: 7411 A observed (6564 A rest, i.e. the Halpha + [NII] complex).
+  Broad Halpha component detected (64% of the narrow Halpha flux).
+  Balmer decrement Halpha/Hbeta = 3.99 (Case B: 2.86) -> E(B-V) ~ 0.28 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.55 [0.52-0.58],  [OIII]/Hbeta = 0.49 [0.34-0.61]
+  [NII] BPT: between the Kauffmann+03 and Kewley+01 lines -> composite.
+    Bootstraps: star-forming 8%, composite 92%  (100/100 usable)
+  [SII]/Halpha = 0.38: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.09: star-forming side of the Kewley+01 line.
+
+Overall: the line ratios classify this object as composite (star formation + AGN).
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 14% of the continuum overall (18% at the blue end, 18% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.00 (good).
+Portsmouth (Thomas+13) class: Composite -> consistent with this fit.

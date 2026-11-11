@@ -1,0 +1,53 @@
+=== Galaxy 351154: plate 1378, MJD 53061, fiber 503, RA 209.01950, Dec 40.21157 ===
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra       dec
+  1378 53061      503 0.435287 209.01951 40.211576
+
+z = 0.4353   RA = 209.01951   Dec = 40.21158
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=209.019510&dec=40.211576&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=209.019510&dec=40.211576&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=209.019510&dec=40.211576&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=209.019510&dec=40.211576&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=209.019510+40.211576&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-1378-53061-0503.fits
+Gathering ingredients: spec-1378-53061-0503.fits
+Ingredients gathered: spec-1378-53061-0503.fits
+Making the base: spec-1378-53061-0503.fits
+Base created: spec-1378-53061-0503.fits
+Adding flavor: spec-1378-53061-0503.fits
+Flavor added: spec-1378-53061-0503.fits
+Scooping portions (this may take a while): spec-1378-53061-0503.fits
+Portions scooped: spec-1378-53061-0503.fits
+Presenting GELATO: spec-1378-53061-0503.fits
+GELATO presented: spec-1378-53061-0503.fits
+Measuring texture: spec-1378-53061-0503.fits
+Measured texture: spec-1378-53061-0503.fits
+Freezing results: spec-1378-53061-0503.fits
+Results freezed: spec-1378-53061-0503.fits
+GELATO finished for spec-1378-53061-0503.fits
+  plot_bpt skipped for spec-1378-53061-0503: ValueError: no flux column in the GELATO output for [NII], Halpha (z = 0.4353: Halpha would be at 9422 A, [NII] at 9452 A)
+  plot_bpt_panels skipped for spec-1378-53061-0503: ValueError: none of the three panels could be drawn: Halpha: no GELATO flux column for Halpha; [NII]: no GELATO flux column for [NII]; [SII]: no GELATO flux column for [SII]
+
+Analysis of spec-1378-53061-0503 (z = 0.4353):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): none
+  Not detected / not fitted: [OIII], Hbeta, Halpha, [NII], [SII], [OI]  (no column at all: Halpha, [NII], [SII])
+  Tallest line feature in the fit: 9051 A observed (6306 A rest, i.e. [OI] 6300).
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII] diagram: not available (missing Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 16% of the continuum overall (26% at the blue end, 19% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.10 (good).
+

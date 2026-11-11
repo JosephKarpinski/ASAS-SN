@@ -1,0 +1,66 @@
+=== Galaxy 13: plate 268, MJD 51633, fiber 79, RA 150.33540, Dec -0.18288 ===
+Portsmouth emission-line record:  class: Composite,  bpt: Composite,  z: 0.08995679,  redshift: 0.09017528,  error_warning: 0
+  line                flux       aon
+  hb_4861              155      2.90
+  oiii_5006          54.23      2.15
+  oi_6300            11.46      0.86
+  ha_6562            315.2      8.31
+  nii_6583           210.9      6.88
+  sii_6716           70.78      2.02
+  sii_6730           37.52      2.94
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra       dec
+   268 51633       79 0.089957 150.33539 -0.182877
+
+z = 0.09   RA = 150.33539   Dec = -0.18288
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=150.335390&dec=-0.182877&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=150.335390&dec=-0.182877&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=150.335390&dec=-0.182877&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=150.335390&dec=-0.182877&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=150.335390+-0.182877&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-0268-51633-0079.fits
+Gathering ingredients: spec-0268-51633-0079.fits
+Ingredients gathered: spec-0268-51633-0079.fits
+Making the base: spec-0268-51633-0079.fits
+Base created: spec-0268-51633-0079.fits
+Adding flavor: spec-0268-51633-0079.fits
+Flavor added: spec-0268-51633-0079.fits
+Scooping portions (this may take a while): spec-0268-51633-0079.fits
+Portions scooped: spec-0268-51633-0079.fits
+Presenting GELATO: spec-0268-51633-0079.fits
+GELATO presented: spec-0268-51633-0079.fits
+Measuring texture: spec-0268-51633-0079.fits
+Measured texture: spec-0268-51633-0079.fits
+Freezing results: spec-0268-51633-0079.fits
+Results freezed: spec-0268-51633-0079.fits
+GELATO finished for spec-0268-51633-0079.fits
+
+Analysis of spec-0268-51633-0079 (z = 0.09):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (4), Hbeta (4), Halpha (28), [NII] (21), [SII] (12)
+  Not detected / not fitted: [OI]
+  Tallest line feature in the fit: 7158 A observed (6567 A rest, i.e. the Halpha + [NII] complex).
+  Broad Halpha component detected (78% of the narrow Halpha flux).
+  Balmer decrement Halpha/Hbeta = 9.75 (Case B: 2.86) -> E(B-V) ~ 1.05 (Calzetti)
+    Caution: a decrement this high is rarely physical for the narrow lines; narrow Hbeta is probably under-measured (low S/N, or confused with a broad component), so treat E(B-V) and [OIII]/Hbeta with care.
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.84 [0.78-0.89],  [OIII]/Hbeta = 1.06 [0.66-1.62]
+  [NII] BPT: between the Kauffmann+03 and Kewley+01 lines -> composite.
+    Bootstraps: composite 63%, AGN 37%  (100/100 usable)
+  [SII]/Halpha = 0.61: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.06: star-forming side of the Kewley+01 line.
+
+Overall: the line ratios classify this object as composite (star formation + AGN).
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 19% of the continuum overall (23% at the blue end, 25% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.20 (good).
+Portsmouth (Thomas+13) class: Composite -> consistent with this fit.
+

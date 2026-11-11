@@ -1,0 +1,67 @@
+=== Galaxy 351015: plate 1600, MJD 53090, fiber 61, RA 160.12150, Dec 10.88842 ===
+Portsmouth emission-line record:  class: LINER,  bpt: LINER,  z: 0.13634582,  redshift: 0.13664165,  error_warning: 0
+  line                flux       aon
+  hb_4861            560.2     14.86
+  oiii_5006          697.3     12.30
+  oi_6300            407.8      8.80
+  ha_6562             2918     74.58
+  nii_6583            3123     64.31
+  sii_6716            1067     20.15
+  sii_6730           593.9     17.64
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra       dec
+  1600 53090       61 0.136346 160.12154 10.888415
+
+z = 0.1363   RA = 160.12154   Dec = 10.88842
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=160.121540&dec=10.888415&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=160.121540&dec=10.888415&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=160.121540&dec=10.888415&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=160.121540&dec=10.888415&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=160.121540+10.888415&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-1600-53090-0061.fits
+Gathering ingredients: spec-1600-53090-0061.fits
+Ingredients gathered: spec-1600-53090-0061.fits
+Making the base: spec-1600-53090-0061.fits
+Base created: spec-1600-53090-0061.fits
+Adding flavor: spec-1600-53090-0061.fits
+Flavor added: spec-1600-53090-0061.fits
+Scooping portions (this may take a while): spec-1600-53090-0061.fits
+Portions scooped: spec-1600-53090-0061.fits
+Presenting GELATO: spec-1600-53090-0061.fits
+GELATO presented: spec-1600-53090-0061.fits
+Measuring texture: spec-1600-53090-0061.fits
+Measured texture: spec-1600-53090-0061.fits
+Freezing results: spec-1600-53090-0061.fits
+Results freezed: spec-1600-53090-0061.fits
+GELATO finished for spec-1600-53090-0061.fits
+
+Analysis of spec-1600-53090-0061 (z = 0.1363):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): Hbeta (27), Halpha (90), [NII] (118), [SII] (63), [OI] (39)
+  Not detected / not fitted: [OIII]
+  Tallest line feature in the fit: 7459 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+  Balmer decrement Halpha/Hbeta = 8.44 (Case B: 2.86) -> E(B-V) ~ 0.93 (Calzetti)
+    Caution: a decrement this high is rarely physical for the narrow lines; narrow Hbeta is probably under-measured (low S/N, or confused with a broad component), so treat E(B-V) and [OIII]/Hbeta with care.
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 1.11 [1.08-1.12],  [OIII]/Hbeta = 0.85 [0.39-1.08]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: composite 28%, AGN 72%  (100/100 usable)
+    Caution: [OIII] not securely detected, so this ratio is poorly constrained (bootstraps with flux > 0 only).
+  [SII]/Halpha = 0.61: star-forming side of the Kewley+01 line.
+    (this diagram does not support the AGN call from [NII])
+  [OI]/Halpha = 0.15: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as AGN (LINER). Tentative: [OIII] only weakly detected.
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 28% of the continuum overall (31% at the blue end, 36% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.64 (acceptable).
+Portsmouth (Thomas+13) class: LINER -> consistent with this fit.
+

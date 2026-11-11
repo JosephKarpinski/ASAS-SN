@@ -1,0 +1,2 @@
+=== Galaxy 260702: plate 1236, MJD 52751, fiber 54, RA 151.50890, Dec 7.19195 ===
+Galaxy 260702 failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

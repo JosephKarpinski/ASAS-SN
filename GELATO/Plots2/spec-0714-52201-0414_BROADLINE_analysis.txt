@@ -1,0 +1,19 @@
+Analysis of spec-0714-52201-0414 (z = 0.4133):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (18), Hbeta (14), [OI] (5)
+  Not detected / not fitted: Halpha, [NII], [SII]  (no column at all: Halpha, [NII], [SII])
+  Tallest line feature in the fit: 5270 A observed (3729 A rest, i.e. [OII] 3727).
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII] diagram: not available (missing Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 32% of the continuum overall (26% at the blue end, 46% at the red end) and is rising toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 1.08 (good).

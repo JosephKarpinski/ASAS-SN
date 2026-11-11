@@ -1,0 +1,65 @@
+=== Galaxy 351002: plate 7085, MJD 56625, fiber 749, RA 150.45890, Dec 58.35083 ===
+Portsmouth emission-line record:  class: Seyfert,  bpt: Seyfert,  z: 0.42497924,  redshift: 0.4248042,  error_warning: 0
+  line                flux       aon
+  hb_4861            85.28      7.82
+  oiii_5006            575     49.84
+  oi_6300            25.11      1.61
+  ha_6562              222     18.04
+  nii_6583            52.8      5.04
+  sii_6716           84.74      6.80
+  sii_6730           26.04      3.59
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra       dec
+  7085 56625      749 0.424935 150.45891 58.350835
+
+z = 0.4249   RA = 150.45891   Dec = 58.35083
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=150.458910&dec=58.350835&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=150.458910&dec=58.350835&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=150.458910&dec=58.350835&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=150.458910&dec=58.350835&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=150.458910+58.350835&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-7085-56625-0749.fits
+Gathering ingredients: spec-7085-56625-0749.fits
+Ingredients gathered: spec-7085-56625-0749.fits
+Making the base: spec-7085-56625-0749.fits
+Base created: spec-7085-56625-0749.fits
+Adding flavor: spec-7085-56625-0749.fits
+Flavor added: spec-7085-56625-0749.fits
+Scooping portions (this may take a while): spec-7085-56625-0749.fits
+Portions scooped: spec-7085-56625-0749.fits
+Presenting GELATO: spec-7085-56625-0749.fits
+GELATO presented: spec-7085-56625-0749.fits
+Measuring texture: spec-7085-56625-0749.fits
+Measured texture: spec-7085-56625-0749.fits
+Freezing results: spec-7085-56625-0749.fits
+Results freezed: spec-7085-56625-0749.fits
+GELATO finished for spec-7085-56625-0749.fits
+
+Analysis of spec-7085-56625-0749 (z = 0.4249):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (48), Hbeta (20), Halpha (21), [NII] (8), [SII] (8), [OI] (6)
+  Tallest line feature in the fit: 7140 A observed (5011 A rest, i.e. [OIII] 5007).
+  [OIII] outflow component detected.
+  Balmer decrement Halpha/Hbeta = 3.29 (Case B: 2.86) -> E(B-V) ~ 0.12 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.23 [0.20-0.27],  [OIII]/Hbeta = 5.61 [5.34-6.07]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: AGN 100%  (100/100 usable)
+  [SII]/Halpha = 0.37: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+  [OI]/Halpha = 0.10: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+
+Overall: the line ratios classify this object as AGN (Seyfert).
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 47% of the continuum overall (83% at the blue end, 46% at the red end) and is rising toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 1.05 (good).
+Portsmouth (Thomas+13) class: Seyfert -> consistent with this fit.
+

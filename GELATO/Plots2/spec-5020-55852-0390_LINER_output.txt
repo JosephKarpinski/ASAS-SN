@@ -1,0 +1,65 @@
+=== Galaxy 351022: plate 5020, MJD 55852, fiber 390, RA 328.40350, Dec 17.69548 ===
+Portsmouth emission-line record:  class: LINER,  bpt: LINER,  z: 0.23022057,  redshift: 0.23087408,  error_warning: 0
+  line                flux       aon
+  hb_4861            276.5     20.13
+  oiii_5006          322.1     23.93
+  oi_6300            223.7     15.58
+  ha_6562            951.5     61.34
+  nii_6583           908.1     63.79
+  sii_6716           492.1     29.22
+  sii_6730           247.3     21.66
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra       dec
+  5020 55852      390 0.230172 328.40346 17.695479
+
+z = 0.2302   RA = 328.40346   Dec = 17.69548
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=328.403460&dec=17.695479&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=328.403460&dec=17.695479&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=328.403460&dec=17.695479&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=328.403460&dec=17.695479&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=328.403460+17.695479&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-5020-55852-0390.fits
+Gathering ingredients: spec-5020-55852-0390.fits
+Ingredients gathered: spec-5020-55852-0390.fits
+Making the base: spec-5020-55852-0390.fits
+Base created: spec-5020-55852-0390.fits
+Adding flavor: spec-5020-55852-0390.fits
+Flavor added: spec-5020-55852-0390.fits
+Scooping portions (this may take a while): spec-5020-55852-0390.fits
+Portions scooped: spec-5020-55852-0390.fits
+Presenting GELATO: spec-5020-55852-0390.fits
+GELATO presented: spec-5020-55852-0390.fits
+Measuring texture: spec-5020-55852-0390.fits
+Measured texture: spec-5020-55852-0390.fits
+Freezing results: spec-5020-55852-0390.fits
+Results freezed: spec-5020-55852-0390.fits
+GELATO finished for spec-5020-55852-0390.fits
+
+Analysis of spec-5020-55852-0390 (z = 0.2302):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (6), Hbeta (42), Halpha (102), [NII] (115), [SII] (85), [OI] (44)
+  Tallest line feature in the fit: 4587 A observed (3728 A rest, i.e. [OII] 3727).
+  [OIII] outflow component detected.
+  Balmer decrement Halpha/Hbeta = 4.38 (Case B: 2.86) -> E(B-V) ~ 0.37 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 1.02 [1.00-1.03],  [OIII]/Hbeta = 0.49 [0.42-0.58]
+  [NII] BPT: between the Kauffmann+03 and Kewley+01 lines -> composite.
+    Bootstraps: composite 100%  (100/100 usable)
+  [SII]/Halpha = 0.85: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.25: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as composite (star formation + AGN).
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 38% of the continuum overall (56% at the blue end, 40% at the red end) and is rising toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 1.40 (acceptable).
+Portsmouth (Thomas+13) class: LINER -> differs from this fit.
+

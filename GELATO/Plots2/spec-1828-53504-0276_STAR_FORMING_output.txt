@@ -1,0 +1,66 @@
+=== Galaxy 350990: plate 1828, MJD 53504, fiber 276, RA 218.51820, Dec 5.80058 ===
+Portsmouth emission-line record:  class: Star Forming,  bpt: Star Forming,  z: 0.18811904,  redshift: 0.18818164,  error_warning: 0
+  line                flux       aon
+  hb_4861            205.3     18.02
+  oiii_5006          108.1     11.86
+  oi_6300            23.49      2.56
+  ha_6562            791.6     57.09
+  nii_6583           287.6     19.11
+  sii_6716           95.55      8.95
+  sii_6730           62.32      6.93
+
+SDSS query match:
+
+ plate   mjd  fiberID        z       ra      dec
+  1828 53504      276 0.188119 218.5182 5.800581
+
+z = 0.1881   RA = 218.51820   Dec = 5.80058
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=218.518200&dec=5.800581&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=218.518200&dec=5.800581&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=218.518200&dec=5.800581&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=218.518200&dec=5.800581&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=218.518200+5.800581&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-1828-53504-0276.fits
+Gathering ingredients: spec-1828-53504-0276.fits
+Ingredients gathered: spec-1828-53504-0276.fits
+Making the base: spec-1828-53504-0276.fits
+Base created: spec-1828-53504-0276.fits
+Adding flavor: spec-1828-53504-0276.fits
+Flavor added: spec-1828-53504-0276.fits
+Scooping portions (this may take a while): spec-1828-53504-0276.fits
+Portions scooped: spec-1828-53504-0276.fits
+Presenting GELATO: spec-1828-53504-0276.fits
+GELATO presented: spec-1828-53504-0276.fits
+Measuring texture: spec-1828-53504-0276.fits
+Measured texture: spec-1828-53504-0276.fits
+Freezing results: spec-1828-53504-0276.fits
+Results freezed: spec-1828-53504-0276.fits
+GELATO finished for spec-1828-53504-0276.fits
+
+Analysis of spec-1828-53504-0276 (z = 0.1881):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (24), Hbeta (19), Halpha (43), [NII] (22), [SII] (23), [OI] (6)
+  Tallest line feature in the fit: 7800 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+  Broad Halpha component detected (95% of the narrow Halpha flux).
+  Balmer decrement Halpha/Hbeta = 4.59 (Case B: 2.86) -> E(B-V) ~ 0.40 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.31 [0.30-0.33],  [OIII]/Hbeta = 0.88 [0.82-0.94]
+  [NII] BPT: left of / below the Kauffmann+03 line -> star-forming.
+    -0.26 dex from the Kauffmann+03 line in log [OIII]/Hbeta (negative = below the line).
+    Bootstraps: star-forming 100%  (100/100 usable)
+  [SII]/Halpha = 0.30: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.04: star-forming side of the Kewley+01 line.
+
+Overall: the line ratios classify this object as star-forming.
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 57% of the continuum overall (66% at the blue end, 57% at the red end) and is falling toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 1.19 (good).
+Portsmouth (Thomas+13) class: Star Forming -> consistent with this fit.
+

@@ -1,0 +1,21 @@
+Analysis of spec-0307-51663-0539 (z = 0.0826):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): Hbeta (4), Halpha (18), [NII] (23), [SII] (13), [OI] (4)
+  Not detected / not fitted: [OIII]
+  Tallest line feature in the fit: 7106 A observed (6563 A rest, i.e. the Halpha + [NII] complex).
+  [OIII] outflow component detected.
+  Balmer decrement Halpha/Hbeta = 9.44 (Case B: 2.86) -> E(B-V) ~ 1.02 (Calzetti)
+    Caution: a decrement this high is rarely physical for the narrow lines; narrow Hbeta is probably under-measured (low S/N, or confused with a broad component), so treat E(B-V) and [OIII]/Hbeta with care.
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII] diagram: not available (only 0/100 bootstraps have all four lines > 0; weak or zero: [OIII]).
+  [SII] diagram: not available (only 0/100 bootstraps with all lines > 0).
+  [OI] diagram: not available (only 0/100 bootstraps with all lines > 0).
+
+Overall: BPT classification not possible from this fit.
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 24% of the continuum overall (29% at the blue end, 32% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.56 (acceptable).

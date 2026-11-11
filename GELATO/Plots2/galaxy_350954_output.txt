@@ -1,0 +1,11 @@
+=== Galaxy 350954: plate 520, MJD 52288, fiber 231, RA 187.82420, Dec 1.90837 ===
+Portsmouth emission-line record:  class: Star Forming,  bpt: Star Forming,  z: 0.26890907,  redshift: 0.26933452,  error_warning: 0
+  line                flux       aon
+  hb_4861            253.9     12.31
+  oiii_5006              0      0.00
+  oi_6300            10.17      0.58
+  ha_6562            819.5     40.50
+  nii_6583           479.2     17.03
+  sii_6716           61.58      5.37
+  sii_6730           40.84      3.71
+Galaxy 350954 failed: ReadTimeout: HTTPSConnectionPool(host='skyserver.sdss.org', port=443): Read timed out. (read timeout=60)

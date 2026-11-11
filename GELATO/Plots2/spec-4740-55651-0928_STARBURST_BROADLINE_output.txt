@@ -1,0 +1,55 @@
+=== Galaxy 350957: plate 4740, MJD 55651, fiber 928, RA 174.95200, Dec 2.49332 ===
+
+SDSS query match:
+
+ plate   mjd  fiberID       z        ra      dec
+  4740 55651      928 0.42018 174.95196 2.493317
+
+z = 0.4202   RA = 174.95196   Dec = 2.49332
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=174.951960&dec=2.493317&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=174.951960&dec=2.493317&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=174.951960&dec=2.493317&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=174.951960&dec=2.493317&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=174.951960+2.493317&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-4740-55651-0928.fits
+Gathering ingredients: spec-4740-55651-0928.fits
+Ingredients gathered: spec-4740-55651-0928.fits
+Making the base: spec-4740-55651-0928.fits
+Base created: spec-4740-55651-0928.fits
+Adding flavor: spec-4740-55651-0928.fits
+Flavor added: spec-4740-55651-0928.fits
+Scooping portions (this may take a while): spec-4740-55651-0928.fits
+Portions scooped: spec-4740-55651-0928.fits
+Presenting GELATO: spec-4740-55651-0928.fits
+GELATO presented: spec-4740-55651-0928.fits
+Measuring texture: spec-4740-55651-0928.fits
+Measured texture: spec-4740-55651-0928.fits
+Freezing results: spec-4740-55651-0928.fits
+Results freezed: spec-4740-55651-0928.fits
+GELATO finished for spec-4740-55651-0928.fits
+
+Analysis of spec-4740-55651-0928 (z = 0.4202):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (25), Hbeta (5), Halpha (5), [NII] (9), [SII] (21), [OI] (17)
+  Tallest line feature in the fit: 5294 A observed (3728 A rest, i.e. [OII] 3727).
+  Broad Halpha component detected (86% of the narrow Halpha flux).
+  Balmer decrement Halpha/Hbeta = 4.52 (Case B: 2.86) -> E(B-V) ~ 0.39 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.56 [0.48-0.75],  [OIII]/Hbeta = 2.11 [1.73-2.77]
+  [NII] BPT: between the Kauffmann+03 and Kewley+01 lines -> composite.
+    Bootstraps: composite 53%, AGN 47%  (100/100 usable)
+  [SII]/Halpha = 0.90: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.40: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as composite (star formation + AGN).
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 44% of the continuum overall (72% at the blue end, 43% at the red end) and is rising toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 0.98 (good).
+

@@ -1,0 +1,23 @@
+Analysis of spec-0450-51908-0331 (z = 0.1799):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (9), Hbeta (45), Halpha (105), [NII] (110), [SII] (71), [OI] (23)
+  Tallest line feature in the fit: 7745 A observed (6564 A rest, i.e. the Halpha + [NII] complex).
+  [OIII] outflow component detected.
+  Balmer decrement Halpha/Hbeta = 5.42 (Case B: 2.86) -> E(B-V) ~ 0.55 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.89 [0.88-0.90],  [OIII]/Hbeta = 1.48 [1.36-1.66]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: composite 1%, AGN 99%  (100/100 usable)
+  [SII]/Halpha = 0.50: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.09: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+
+Overall: the line ratios classify this object as AGN (Seyfert/LINER; [SII] says LINER, [OI] says Seyfert).
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 31% of the continuum overall (46% at the blue end, 32% at the red end) and is falling toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 1.77 (acceptable).
+Portsmouth (Thomas+13) class: LINER -> differs from this fit.

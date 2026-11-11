@@ -1,0 +1,25 @@
+Analysis of spec-4862-55685-0482 (z = 0.5306):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): Hbeta (16), Halpha (22), [NII] (16), [SII] (3), [OI] (10)
+  Not detected / not fitted: [OIII]
+  Tallest line feature in the fit: 10046 A observed (6564 A rest, i.e. the Halpha + [NII] complex).
+  [OIII] outflow component detected.
+  Balmer decrement Halpha/Hbeta = 5.93 (Case B: 2.86) -> E(B-V) ~ 0.62 (Calzetti)
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 0.92 [0.85-1.00],  [OIII]/Hbeta = 0.25 [0.16-0.38]
+  [NII] BPT: between the Kauffmann+03 and Kewley+01 lines -> composite.
+    Bootstraps: composite 100%  (100/100 usable)
+    Caution: [OIII] not securely detected, so this ratio is poorly constrained (bootstraps with flux > 0 only).
+  [SII]/Halpha = 0.74: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.16: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as composite (star formation + AGN). Tentative: [OIII] only weakly detected.
+
+Continuum
+  Stellar (SSP) continuum plus a comparable power-law component: the power law is 36% of the continuum overall (34% at the blue end, 44% at the red end) and is rising toward longer wavelengths.
+  A power-law this strong can reflect AGN accretion-disk light (or a degeneracy with the stellar fit, e.g. very young stars).
+
+Fit quality: reduced chi^2 = 0.96 (good).
+Portsmouth (Thomas+13) class: LINER -> differs from this fit.

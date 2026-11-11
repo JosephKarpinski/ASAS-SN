@@ -1,0 +1,55 @@
+=== Galaxy 367868: plate 1735, MJD 53035, fiber 305, RA 113.05110, Dec 42.19250 ===
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra       dec
+  1735 53035      305 0.116951 113.05115 42.192504
+
+z = 0.117   RA = 113.05115   Dec = 42.19250
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=113.051150&dec=42.192504&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=113.051150&dec=42.192504&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=113.051150&dec=42.192504&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=113.051150&dec=42.192504&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=113.051150+42.192504&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-1735-53035-0305.fits
+Gathering ingredients: spec-1735-53035-0305.fits
+Ingredients gathered: spec-1735-53035-0305.fits
+Making the base: spec-1735-53035-0305.fits
+Base created: spec-1735-53035-0305.fits
+Adding flavor: spec-1735-53035-0305.fits
+Flavor added: spec-1735-53035-0305.fits
+Scooping portions (this may take a while): spec-1735-53035-0305.fits
+Portions scooped: spec-1735-53035-0305.fits
+Presenting GELATO: spec-1735-53035-0305.fits
+GELATO presented: spec-1735-53035-0305.fits
+Measuring texture: spec-1735-53035-0305.fits
+Measured texture: spec-1735-53035-0305.fits
+Freezing results: spec-1735-53035-0305.fits
+Results freezed: spec-1735-53035-0305.fits
+GELATO finished for spec-1735-53035-0305.fits
+
+Analysis of spec-1735-53035-0305 (z = 0.117):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): [OIII] (6), Hbeta (5), Halpha (11), [NII] (9), [SII] (7)
+  Not detected / not fitted: [OI]
+  Tallest line feature in the fit: 4165 A observed (3729 A rest, i.e. [OII] 3727).
+  Broad Halpha component detected (1231% of the narrow Halpha flux).
+  Balmer decrement Halpha/Hbeta = 2.89 (Case B: 2.86) -> little or no reddening
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 1.07 [0.93-1.20],  [OIII]/Hbeta = 2.76 [1.91-3.48]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: AGN 100%  (100/100 usable)
+  [SII]/Halpha = 0.76: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.19: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as AGN (LINER).
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 11% of the continuum overall (11% at the blue end, 20% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.53 (acceptable).
+

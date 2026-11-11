@@ -1,0 +1,23 @@
+Analysis of spec-1773-53112-0537 (z = 0.0763):
+
+Emission lines
+  Detected (median flux / bootstrap scatter >= 3): Hbeta (10), Halpha (43), [NII] (66), [SII] (47), [OI] (17)
+  Not detected / not fitted: [OIII]
+  Tallest line feature in the fit: 5390 A observed (5008 A rest, i.e. [OIII] 5007).
+  Balmer decrement Halpha/Hbeta = 9.01 (Case B: 2.86) -> E(B-V) ~ 0.98 (Calzetti)
+    Caution: a decrement this high is rarely physical for the narrow lines; narrow Hbeta is probably under-measured (low S/N, or confused with a broad component), so treat E(B-V) and [OIII]/Hbeta with care.
+
+BPT / VO87 diagnostics (median of the bootstraps; 16-84% in brackets)
+  [NII]/Halpha = 1.33 [1.30-1.38],  [OIII]/Hbeta = 5.88 [3.16-7.29]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Bootstraps: AGN 100%  (86/100 usable)
+    Caution: [OIII] not securely detected, so this ratio is poorly constrained (bootstraps with flux > 0 only).
+  [SII]/Halpha = 1.00: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+  [OI]/Halpha = 0.18: AGN side of Kewley+01, above the Kewley+06 line -> Seyfert-like.
+
+Overall: the line ratios classify this object as AGN (Seyfert). Tentative: [OIII] only weakly detected.
+
+Continuum
+  Stellar (SSP) continuum plus a weaker power-law component: the power law is 24% of the continuum overall (31% at the blue end, 30% at the red end) and is rising toward longer wavelengths.
+
+Fit quality: reduced chi^2 = 1.39 (acceptable).
