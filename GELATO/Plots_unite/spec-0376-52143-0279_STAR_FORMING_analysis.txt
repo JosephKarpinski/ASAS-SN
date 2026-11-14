@@ -1,0 +1,38 @@
+Analysis of spec-0376-52143-0279 (z = 0.0497):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): Halpha (43), [NII] (29), [SII] (29), [OI] (6)
+  Not detected / not fitted: [OIII], Hbeta  (no column at all: [OIII], Hbeta)
+  Tallest line feature in the fit: 6891 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing [OIII], Hbeta).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Halpha absorption: EW = 2.21 A [1.51-2.89], tau = 0.16
+  Narrow-line FWHM (instrument-corrected) = 114 km/s [109-120]
+  Velocity offset of the emission lines from the SDSS redshift = +14 km/s [+13 to +16]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 0.98 (good).
+
+Fit diagnostics
+  chi2_nu = 1.00  (349 pixels, 13 free parameters);  WAIC = -962.4  (effective parameters 11.8)
+  continuum-scaling chi2_nu per window: 1.01, 1.02  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -962.4, without = -953.2; dWAIC (without - with) = +9.3  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 1.00, without = 1.03
+  Halpha      flux with =    252.57, without =    240.14  (-5% when absorption is removed)

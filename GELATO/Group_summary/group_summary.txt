@@ -1,0 +1,1583 @@
+unite_group_summary.py  -  group-by-group summary of the analysis text files
+
+Folders: Plots_unite   |   files found: 569   |   objects used: 569   |   duplicates dropped: 0   |   grouped by: tag
+WARNING: 28 spectra appear under both a subClass/MISSING tag and an EM-class tag (same spectrum, two runs) and are counted in both groups: spec-0266-51630-0007: LINER + MISSING; spec-0266-51630-0013: MISSING + SEYFERT; spec-0266-51630-0016: LINER + MISSING; spec-0266-51630-0020: LINER + MISSING; spec-0266-51630-0022: COMPOSITE + MISSING; spec-0266-51630-0023: COMPOSITE + MISSING ....  Cross-group comparisons mix them; set PREFER_SYSTEM = 'em' or 'subclass' to keep one file per spectrum.
+
+Groups: STARFORMING (50), STARBURST (49), AGN (39), BROADLINE (40), STARFORMING BROADLINE (40), STARBURST BROADLINE (40), AGN BROADLINE (39), <missing> (50), Star Forming [EM] (39), Composite [EM] (40), Seyfert [EM] (40), LINER [EM] (40), Seyfert/LINER [EM] (40), QSO <missing> (23)
+
+Group comparison (median [16% – 84%], n in brackets)
+  metric                                STARFORMING               STARBURST                 AGN                       BROADLINE                 STARFORMING BROADLINE     STARBURST BROADLINE       AGN BROADLINE             <missing>                 Star Forming [EM]         Composite [EM]            Seyfert [EM]              LINER [EM]                Seyfert/LINER [EM]        QSO <missing>             
+  Redshift z                            0.069 [0.029,0.129] (50)  0.079 [0.049,0.135] (49)  0.136 [0.073,0.170] (39)  0.117 [0.050,0.418] (40)  0.100 [0.061,0.160] (40)  0.276 [0.163,0.474] (40)  0.103 [0.076,0.129] (39)  0.130 [0.089,0.331] (50)  0.082 [0.051,0.133] (39)  0.096 [0.062,0.152] (40)  0.146 [0.102,0.347] (40)  0.130 [0.084,0.289] (40)  0.313 [0.089,0.394] (40)  0.286 [0.178,0.395] (23)  
+  log [OIII]/Hβ                         -0.43 [-0.63,0.10] (37)   -0.04 [-0.51,0.33] (44)   0.46 [-0.04,0.79] (23)    0.29 [0.29,0.29] (2)      -0.18 [-0.34,0.05] (12)   -0.01 [-0.29,0.44] (38)   0.09 [-0.09,0.50] (11)    -0.06 [-0.06,-0.06] (1)   -0.38 [-0.61,-0.04] (14)  -0.10 [-0.21,0.04] (10)   -0.25 [-0.53,0.38] (9)    -0.06 [-0.33,0.30] (6)    0.06 [-0.26,0.41] (18)    0.35 [-0.09,0.68] (3)     
+  log [NII]/Hα                          -0.46 [-0.60,-0.30] (37)  -0.58 [-0.89,-0.40] (44)  -0.11 [-0.21,0.01] (23)   0.02 [-0.03,0.06] (2)     -0.20 [-0.27,-0.14] (12)  -0.28 [-0.51,-0.15] (37)  -0.02 [-0.10,0.06] (11)   -0.38 [-0.38,-0.38] (1)   -0.42 [-0.60,-0.35] (14)  -0.21 [-0.24,-0.18] (10)  -0.39 [-0.45,-0.26] (9)   -0.18 [-0.23,-0.02] (6)   -0.70 [-1.22,-0.40] (17)  -0.14 [-0.17,-0.01] (3)   
+  log [SII]/Hα                          -0.48 [-0.60,-0.38] (37)  -0.55 [-0.63,-0.47] (44)  -0.38 [-0.45,-0.23] (23)  -0.48 [-0.51,-0.46] (2)   -0.41 [-0.64,-0.15] (12)  -0.40 [-0.56,-0.24] (34)  -0.37 [-0.45,-0.19] (11)  -0.57 [-0.57,-0.57] (1)   -0.45 [-0.62,-0.36] (14)  -0.47 [-0.53,-0.34] (10)  -0.60 [-0.67,-0.37] (7)   -0.37 [-0.47,-0.28] (6)   -0.50 [-0.73,-0.36] (13)  —                         
+  log [OI]/Hα                           -1.40 [-1.63,-1.26] (21)  -1.52 [-1.70,-1.40] (41)  -0.98 [-1.24,-0.74] (16)  -0.93 [-0.98,-0.89] (2)   -1.10 [-1.48,-0.74] (11)  -1.05 [-1.29,-0.82] (35)  -1.00 [-1.05,-0.84] (9)   -1.51 [-1.51,-1.51] (1)   -1.49 [-1.70,-1.22] (9)   -1.25 [-1.32,-1.07] (4)   -1.44 [-1.56,-1.26] (4)   -1.01 [-1.14,-0.79] (5)   -1.41 [-1.78,-1.28] (3)   —                         
+  Offset from Kauffmann+03 [dex]        -0.45 [-0.68,-0.31] (33)  -0.38 [-0.51,-0.25] (42)  —                         —                         -0.01 [-0.01,-0.01] (1)   -0.14 [-0.35,-0.08] (8)   —                         —                         -0.37 [-0.60,-0.28] (12)  —                         -0.42 [-0.56,-0.39] (5)   —                         -0.38 [-0.61,-0.10] (15)  —                         
+  Balmer decrement Hα/Hβ                4.8 [3.9,5.7] (42)        4.1 [3.6,4.9] (42)        4.3 [3.4,5.4] (20)        5.1 [4.7,7.9] (3)         5.0 [3.7,5.7] (15)        4.5 [3.8,5.6] (38)        4.6 [3.0,5.6] (9)         5.7 [3.7,6.6] (7)         4.5 [3.9,5.7] (22)        4.7 [4.4,7.5] (12)        5.0 [4.3,5.9] (10)        4.2 [3.0,4.3] (6)         3.6 [3.3,4.5] (17)        4.2 [4.0,4.3] (2)         
+  E(B−V) [mag]                          0.43 [0.28,0.59] (42)     0.30 [0.20,0.45] (42)     0.34 [0.15,0.55] (20)     0.49 [0.42,0.84] (3)      0.48 [0.21,0.58] (15)     0.39 [0.25,0.57] (38)     0.41 [0.05,0.57] (9)      0.59 [0.23,0.71] (7)      0.39 [0.27,0.59] (22)     0.43 [0.37,0.82] (12)     0.47 [0.34,0.63] (10)     0.33 [0.05,0.35] (6)      0.19 [0.13,0.39] (17)     0.33 [0.29,0.36] (2)      
+  Narrow-line FWHM [km/s]               158 [101,316] (50)        158 [118,215] (49)        344 [260,452] (38)        527 [379,753] (31)        522 [436,624] (38)        534 [473,600] (40)        530 [495,645] (38)        328 [158,766] (30)        198 [128,318] (32)        282 [235,465] (34)        363 [231,564] (29)        476 [315,720] (28)        217 [121,336] (22)        610 [451,824] (14)        
+  Velocity offset [km/s]                2 [-10,14] (50)           0 [-9,13] (49)            4 [-13,28] (38)           -6 [-39,29] (31)          -2 [-17,36] (38)          -10 [-25,20] (40)         1 [-27,32] (38)           9 [-5,40] (30)            4 [-7,17] (32)            -2 [-15,19] (34)          3 [-10,30] (29)           12 [-21,40] (28)          -12 [-19,3] (22)          14 [-126,99] (14)         
+  Hα S/N                                38 [15,58] (49)           82 [61,99] (45)           12 [7,31] (36)            5 [3,8] (25)              12 [6,37] (34)            47 [21,73] (39)           8 [6,16] (32)             7 [4,18] (21)             22 [14,53] (28)           12 [6,34] (30)            9 [4,44] (24)             6 [3,19] (15)             17 [10,43] (19)           8 [4,10] (10)             
+  Hβ S/N                                10 [5,17] (44)            32 [22,50] (48)           4 [3,11] (23)             4 [3,5] (6)               7 [4,13] (19)             17 [10,27] (39)           6 [4,9] (14)              4 [4,7] (7)               6 [4,16] (26)             6 [4,9] (13)              8 [4,12] (12)             6 [5,7] (8)               8 [5,22] (19)             5 [3,7] (4)               
+  [OIII] S/N                            6 [4,19] (41)             35 [15,92] (48)           14 [5,41] (35)            12 [5,20] (12)            11 [5,23] (23)            29 [16,59] (39)           16 [8,39] (32)            5 [4,15] (4)              7 [5,19] (16)             6 [4,14] (18)             6 [5,23] (20)             10 [4,25] (13)            11 [5,44] (19)            10 [5,15] (12)            
+  Hβ absorption EW [Å]                  3.21 [2.39,3.77] (50)     4.12 [2.60,4.74] (48)     2.49 [1.80,3.84] (39)     3.04 [2.27,5.12] (39)     3.01 [2.00,4.70] (39)     5.01 [2.46,6.60] (39)     3.29 [2.44,4.88] (38)     3.24 [2.65,4.80] (49)     3.35 [2.56,4.50] (37)     2.91 [2.14,3.92] (39)     3.28 [2.53,4.70] (38)     3.18 [2.19,4.62] (39)     4.18 [2.01,5.18] (39)     2.65 [2.06,3.29] (20)     
+  Hα absorption EW [Å]                  2.67 [1.98,3.18] (49)     3.33 [2.20,3.85] (45)     2.10 [1.53,3.31] (38)     2.51 [1.77,4.50] (29)     2.46 [1.68,3.99] (34)     4.21 [2.02,5.62] (39)     2.67 [2.04,3.82] (35)     2.77 [2.16,4.19] (44)     2.81 [1.98,3.89] (35)     2.48 [1.76,3.21] (38)     2.79 [2.11,3.95] (30)     2.69 [1.91,3.95] (33)     3.55 [1.68,4.44] (39)     2.30 [1.84,3.10] (16)     
+  Reduced χ² (fitted windows)           1.3 [1.1,1.5] (50)        1.6 [1.3,2.6] (49)        1.4 [1.1,1.9] (39)        1.6 [1.1,2.8] (40)        1.8 [1.3,2.7] (40)        1.7 [1.2,4.0] (40)        1.8 [1.5,2.7] (39)        1.2 [1.0,1.4] (50)        1.2 [1.0,1.7] (39)        1.3 [1.1,1.5] (40)        1.2 [1.0,1.5] (40)        1.2 [1.1,1.8] (40)        1.1 [0.9,1.5] (40)        1.2 [1.0,1.6] (23)        
+  Hβ flux change without absorbers [%]  -32 [-66,-20] (44)        -15 [-22,-8] (48)         -61 [-93,-39] (23)        -98 [-99,-75] (6)         -70 [-96,-42] (19)        -29 [-45,-16] (39)        -80 [-95,-72] (14)        -64 [-86,-45] (7)         -42 [-67,-23] (26)        -67 [-85,-49] (13)        -46 [-81,-28] (12)        -66 [-90,-45] (8)         -21 [-40,-12] (19)        -38 [-52,-31] (4)         
+  ΔWAIC (without − with absorbers)      42 [25,90] (50)           81 [28,154] (49)          12 [2,60] (39)            45 [3,115] (40)           36 [2,67] (40)            19 [0,61] (40)            24 [3,59] (39)            19 [7,75] (50)            27 [9,94] (39)            23 [6,49] (40)            22 [10,55] (40)           22 [4,80] (40)            14 [1,49] (40)            -0 [-3,6] (23)            
+
+CAUTION - Hβ depends on the absorption model: median Hβ change when the Balmer absorbers are removed is -50% or worse for AGN (-61%, n=23); BROADLINE (-98%, n=6); STARFORMING BROADLINE (-70%, n=19); AGN BROADLINE (-80%, n=14); <missing> (-64%, n=7); Composite [EM] (-67%, n=13); LINER [EM] (-66%, n=8).  For these groups Hβ, [OIII]/Hβ, the Balmer decrement, E(B−V) and the BPT class are largely set by the absorber model rather than by the data.  Restrict to supported objects with METRIC_FILTERS = {'dwaic': (10, None), 'snr_Hb': (10, None)} or {'chg_Hb': (-50, None)}.
+
+CAUTION - Balmer absorbers at the prior ceiling (tau or EW at its maximum): STARFORMING BROADLINE (5 of 19); STARBURST BROADLINE (11 of 39).  For these objects the fit uses the absorber for something the model cannot otherwise describe (broad wings, continuum curvature), so their Hβ and everything built on it is not reliable.  Exclude them with METRIC_FILTERS = {'abs_cap': (None, 0.5)} (this also drops objects without a detected Hβ).
+
+GELATO vs unite  (objects with both fits: 465 of 569; unite value / GELATO value, medians of the posterior / bootstrap draws)
+
+  Line flux ratio unite/GELATO, median [16–84% across objects] (n); only lines that unite detects
+  group                       [OIII]                  Hβ                      Hα                      [NII]                   [SII]                   [OI]                    
+  STARFORMING                 1.01 [0.87,1.05] (35)   1.14 [1.01,1.59] (44)   1.02 [0.99,1.09] (49)   0.99 [0.95,1.04] (49)   0.93 [0.82,0.97] (48)   0.82 [0.76,1.14] (22)   
+  STARBURST                   1.02 [0.95,1.32] (46)   1.07 [1.05,1.15] (48)   1.01 [1.00,1.03] (45)   1.00 [0.98,1.02] (45)   0.98 [0.95,1.00] (45)   0.87 [0.79,0.93] (42)   
+  AGN                         1.10 [0.92,1.86] (30)   1.55 [1.10,2.68] (23)   1.15 [0.98,1.41] (36)   1.02 [0.94,1.11] (37)   0.84 [0.75,0.93] (36)   0.90 [0.78,1.03] (23)   
+  BROADLINE                   0.92 [0.90,3.87] (7)    4.13 [1.68,9.51] (4)    1.41 [1.03,1.95] (25)   0.99 [0.80,1.13] (28)   0.61 [0.46,0.84] (24)   1.06 [0.90,1.81] (11)   
+  STARFORMING BROADLINE       0.95 [0.86,1.79] (18)   1.66 [1.45,2.42] (17)   1.16 [1.03,1.57] (33)   1.05 [0.90,1.19] (33)   0.80 [0.60,0.91] (30)   0.96 [0.87,1.11] (20)   
+  STARBURST BROADLINE         1.17 [0.99,2.26] (36)   1.30 [1.09,1.63] (39)   1.08 [1.03,1.53] (39)   1.01 [0.88,1.31] (38)   0.97 [0.93,1.05] (35)   0.97 [0.89,1.07] (36)   
+  AGN BROADLINE               1.04 [0.85,2.06] (29)   2.11 [1.85,3.86] (14)   1.25 [1.08,1.63] (32)   0.99 [0.86,1.12] (35)   0.86 [0.67,0.93] (33)   0.95 [0.85,1.07] (27)   
+  <missing>                   0.93 [0.89,3.55] (3)    2.07 [1.20,2.57] (7)    1.21 [1.06,1.34] (20)   0.96 [0.79,1.12] (25)   0.76 [0.42,0.96] (14)   0.63 [0.54,0.72] (2)    
+  Star Forming [EM]           1.00 [0.82,1.05] (14)   1.10 [1.03,1.33] (18)   1.01 [0.98,1.03] (16)   1.00 [0.98,1.04] (16)   0.94 [0.85,0.97] (16)   0.86 [0.74,1.01] (10)   
+  Composite [EM]              1.02 [0.80,1.34] (11)   1.45 [1.10,1.68] (11)   1.06 [0.99,1.19] (18)   1.00 [0.95,1.06] (18)   0.85 [0.74,0.90] (17)   0.91 [0.85,1.00] (6)    
+  Seyfert [EM]                0.93 [0.69,1.00] (16)   1.27 [1.07,1.43] (10)   1.17 [1.01,1.62] (24)   1.02 [0.91,1.18] (24)   0.83 [0.62,0.90] (17)   0.84 [0.58,1.07] (7)    
+  LINER [EM]                  0.88 [0.75,1.17] (12)   1.72 [1.28,1.87] (7)    1.16 [1.00,1.37] (11)   0.98 [0.80,1.20] (16)   0.86 [0.77,0.92] (10)   0.96 [0.90,0.98] (7)    
+  Seyfert/LINER [EM]          1.14 [1.00,1.28] (18)   1.47 [1.16,1.73] (19)   1.07 [1.02,1.34] (19)   1.19 [0.97,1.68] (19)   0.93 [0.74,1.18] (15)   0.65 [0.53,0.98] (3)    
+
+  BPT ratios, unite − GELATO in dex, median [16–84%] (n); unite ratio must not be blanked
+  group                       log [NII]/Hα            log [SII]/Hα            log [OI]/Hα             log [OIII]/Hβ           
+  STARFORMING                 -0.01 [-0.04,+0.00] (37)-0.03 [-0.10,-0.01] (37)-0.11 [-0.13,+0.01] (21)-0.04 [-0.16,+0.02] (34)
+  STARBURST                   +0.00 [-0.01,+0.00] (44)-0.01 [-0.03,+0.00] (44)-0.07 [-0.11,-0.03] (41)-0.01 [-0.08,+0.14] (44)
+  AGN                         -0.06 [-0.13,-0.02] (23)-0.14 [-0.26,-0.04] (23)-0.10 [-0.27,+0.01] (16)-0.08 [-0.34,+0.16] (22)
+  BROADLINE                   -0.15 [-0.21,-0.08] (2) -0.19 [-0.20,-0.17] (2) -0.03 [-0.08,+0.02] (2) -0.83 [-1.28,-0.37] (2) 
+  STARFORMING BROADLINE       -0.05 [-0.05,-0.00] (11)-0.12 [-0.22,-0.05] (11)-0.09 [-0.14,+0.02] (10)-0.17 [-0.28,-0.08] (11)
+  STARBURST BROADLINE         -0.04 [-0.15,+0.00] (37)-0.05 [-0.19,-0.01] (34)-0.07 [-0.15,-0.00] (35)-0.03 [-0.18,+0.30] (36)
+  AGN BROADLINE               -0.11 [-0.23,-0.09] (11)-0.26 [-0.33,-0.12] (11)-0.13 [-0.30,-0.06] (9) -0.23 [-0.39,-0.04] (9) 
+  <missing>                   +0.00 [+0.00,+0.00] (1) -0.03 [-0.03,-0.03] (1) -0.13 [-0.13,-0.13] (1) -0.09 [-0.09,-0.09] (1) 
+  Star Forming [EM]           -0.01 [-0.02,+0.00] (13)-0.04 [-0.05,-0.01] (13)-0.06 [-0.14,+0.00] (9) -0.02 [-0.12,+0.00] (13)
+  Composite [EM]              -0.03 [-0.05,-0.01] (10)-0.09 [-0.15,-0.06] (10)-0.09 [-0.11,-0.08] (4) -0.11 [-0.21,+0.43] (8) 
+  Seyfert [EM]                +0.00 [-0.05,+0.01] (9) -0.09 [-0.12,-0.07] (7) -0.07 [-0.18,+0.01] (4) -0.12 [-0.35,-0.07] (6) 
+  LINER [EM]                  -0.09 [-0.19,-0.04] (6) -0.14 [-0.19,-0.11] (6) -0.13 [-0.17,-0.07] (5) -0.17 [-0.41,-0.11] (5) 
+  Seyfert/LINER [EM]          +0.01 [-0.07,+0.07] (16)-0.02 [-0.11,+0.04] (13)-0.17 [-0.31,-0.03] (3) -0.06 [-0.20,-0.02] (18)
+
+  [NII] BPT class: GELATO vs unite (objects where unite has valid [NII] and [OIII]/Hβ)
+  STARFORMING: 33 of 34 agree (97%); differ: GELATO composite → unite star-forming ×1
+  STARBURST: 43 of 44 agree (98%); differ: GELATO star-forming → unite composite ×1
+  AGN: 15 of 22 agree (68%); differ: GELATO AGN → unite composite ×6, GELATO composite → unite AGN ×1
+  BROADLINE: 2 of 2 agree (100%)
+  STARFORMING BROADLINE: 9 of 11 agree (82%); differ: GELATO AGN → unite composite ×1, GELATO composite → unite star-forming ×1
+  STARBURST BROADLINE: 26 of 35 agree (74%); differ: GELATO AGN → unite composite ×4, GELATO composite → unite AGN ×3, GELATO composite → unite star-forming ×1, GELATO star-forming → unite composite ×1
+  AGN BROADLINE: 5 of 9 agree (56%); differ: GELATO AGN → unite composite ×4
+  <missing>: 1 of 1 agree (100%)
+  Star Forming [EM]: 13 of 13 agree (100%)
+  Composite [EM]: 8 of 8 agree (100%)
+  Seyfert [EM]: 4 of 6 agree (67%); differ: GELATO AGN → unite composite ×2
+  LINER [EM]: 2 of 5 agree (40%); differ: GELATO AGN → unite composite ×3
+  Seyfert/LINER [EM]: 15 of 16 agree (94%); differ: GELATO AGN → unite composite ×1
+
+  Line detection, same rule in both codes (median / half the 16–84% width ≥ 3): GELATO-only / unite-only / both  (n)
+  group                       [OIII]           Hβ               Hα               [NII]            [SII]            [OI]             
+  STARFORMING                 5/9/32 (50)      6/0/44 (50)      0/0/49 (49)      0/0/49 (49)      1/0/48 (49)      11/4/18 (49)     
+  STARBURST                   0/6/42 (48)      0/0/48 (48)      0/0/45 (45)      0/0/45 (45)      0/0/45 (45)      2/0/42 (45)      
+  AGN                         2/10/25 (39)     12/2/21 (39)     1/0/36 (38)      1/0/37 (38)      1/0/36 (37)      3/1/22 (38)      
+  BROADLINE                   11/7/5 (40)      7/3/3 (39)       3/2/23 (29)      0/1/27 (29)      1/1/23 (28)      5/2/9 (33)       
+  STARFORMING BROADLINE       10/7/15 (38)     19/2/16 (38)     0/0/33 (33)      0/0/33 (33)      3/0/30 (33)      4/1/19 (34)      
+  STARBURST BROADLINE         0/8/31 (39)      0/1/38 (39)      0/0/39 (39)      1/0/38 (39)      0/1/34 (35)      0/0/36 (39)      
+  AGN BROADLINE               3/8/24 (38)      16/0/14 (38)     3/0/32 (35)      0/0/35 (35)      2/0/33 (35)      5/2/25 (35)      
+  <missing>                   5/2/2 (49)       3/3/4 (49)       8/2/19 (44)      2/2/23 (45)      5/0/14 (39)      4/0/2 (46)       
+  Star Forming [EM]           1/2/13 (18)      0/0/18 (18)      0/0/16 (16)      0/0/16 (16)      0/0/16 (16)      1/2/8 (16)       
+  Composite [EM]              2/6/9 (19)       4/1/11 (19)      0/0/18 (18)      0/0/18 (18)      0/0/17 (18)      4/0/6 (18)       
+  Seyfert [EM]                5/4/16 (38)      5/3/9 (38)       1/2/22 (30)      0/1/23 (31)      5/0/17 (27)      6/0/7 (33)       
+  LINER [EM]                  4/2/11 (20)      4/0/7 (20)       2/1/10 (16)      0/0/16 (16)      4/0/10 (16)      3/0/7 (17)       
+  Seyfert/LINER [EM]          1/3/16 (20)      1/0/19 (20)      1/0/19 (20)      0/3/17 (20)      1/2/13 (19)      2/0/3 (20)       
+
+  Objects where unite finds no emission at all but GELATO detects Hβ, [OIII], Hα or [NII] (a fit or data problem on the unite side is likely for these):
+  AGN: 1 of 1 unite-empty objects – 1735-0305
+  BROADLINE: 5 of 9 unite-empty objects – 1213-0490, 1330-0313, 1380-0597, 2168-0173, 2236-0298
+  STARFORMING BROADLINE: 2 of 2 unite-empty objects – 0747-0490, 1209-0640
+  AGN BROADLINE: 1 of 1 unite-empty objects – 0459-0104
+  <missing>: 9 of 20 unite-empty objects – 0266-0002, 0266-0011, 0266-0047, 0266-0090, 0266-0094, 0266-0096 ...
+  Composite [EM]: 1 of 1 unite-empty objects – 0335-0100
+  Seyfert [EM]: 7 of 11 unite-empty objects – 0266-0096, 0266-0135, 0266-0165, 0266-0171, 0454-0100, 0566-0306 ...
+  LINER [EM]: 2 of 2 unite-empty objects – 0531-0304, 0826-0505
+
+  Objects whose flux differs by more than a factor 2 (118 line measurements); largest first:
+    0352-0586 (STARBURST BROADLINE) [OIII] ×23.60; 6664-0682 (BROADLINE) Hβ ×12.81; 0348-0258 (STARFORMING BROADLINE) Hβ ×9.86; 0266-0091 (Seyfert [EM]) Hα ×8.25; 0266-0091 (<missing>) Hα ×8.25; 1739-0532 (AGN) [OIII] ×7.97; 0341-0475 (Composite [EM]) [OIII] ×7.94; 1739-0589 (STARBURST) [OIII] ×7.29; 6154-0633 (BROADLINE) [OIII] ×6.25; 0307-0539 (AGN BROADLINE) Hβ ×5.95 ...
+
+  Reading: the two codes model the continuum differently (GELATO: stellar population + power law; unite: a line in a local straight continuum plus optional Balmer absorption), so Hβ, [OIII]/Hβ and the Balmer decrement are where differences are expected.
+
+====================================================================================================
+GROUP: STARFORMING    N = 50    (survey: SDSS 50; fit code: unite 50)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             50   0.069 [0.029 – 0.129]             0.011    0.208
+  log [OIII]/Hβ                          37   -0.43 [-0.63 – 0.10]              -1.05     0.35
+  log [NII]/Hα                           37   -0.46 [-0.60 – -0.30]             -1.10    -0.25
+  log [SII]/Hα                           37   -0.48 [-0.60 – -0.38]             -0.78    -0.28
+  log [OI]/Hα                            21   -1.40 [-1.63 – -1.26]             -1.72    -1.10
+  Offset from Kauffmann+03 [dex]         33   -0.45 [-0.68 – -0.31]             -1.23    -0.03
+  Balmer decrement Hα/Hβ                 42   4.8 [3.9 – 5.7]                     3.0      6.6
+  E(B−V) [mag]                           42   0.43 [0.28 – 0.59]                 0.06     0.72
+  Narrow-line FWHM [km/s]                50   158 [101 – 316]                      64      645
+  Velocity offset [km/s]                 50   2 [-10 – 14]                        -26      107
+  Hα S/N                                 49   38 [15 – 58]                          4      104
+  Hβ S/N                                 44   10 [5 – 17]                           3       34
+  [OIII] S/N                             41   6 [4 – 19]                            3       46
+  Hβ absorption EW [Å]                   50   3.21 [2.39 – 3.77]                 1.56     5.06
+  Hα absorption EW [Å]                   49   2.67 [1.98 – 3.18]                 1.29     4.41
+  Reduced χ² (fitted windows)            50   1.3 [1.1 – 1.5]                     1.0      2.5
+  Hβ flux change without absorbers [%]   44   -32 [-66 – -20]                     -95      -14
+  ΔWAIC (without − with absorbers)       50   42 [25 – 90]                          1      246
+
+General character
+  Overall BPT class: star-forming 33 (66%), lines undetected 13 (26%), composite 4 (8%); 12 tentative.
+  No emission line detected: 0 of 50; 28 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only.
+  [NII] diagram alone: star-forming 33, composite 4.
+  [SII] diagram: star-forming 35, Seyfert 2.
+  [OI] diagram: star-forming 19, Seyfert 2.
+  Position in the [NII] diagram: median -0.45 dex from the Kauffmann+03 line (negative = star-forming side); 0 of 33 lie above it.
+  Excitation / nitrogen: log [OIII]/Hβ -0.43 (-1.05 to +0.35), log [NII]/Hα -0.46 (-1.10 to -0.25).
+  Balmer decrement Hα/Hβ: median 4.76 (Case B 2.86), range 3.05 – 6.61; E(B−V) median 0.43, up to 0.72. 4 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 158 km/s (64 – 645); velocity offset from the catalogue redshift median +2 km/s (-26 to +107).
+  Balmer absorption (unite): Hβ EW median 3.21 Å (1.56 – 5.06); WAIC prefers the absorber model in 48 of 50; removing the absorbers changes Hβ by a median -32% (-95% to -14%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 0 of 44 Hβ-detected objects.
+  Tallest feature in the fit: Hα+[NII] 47, [OII] 2, [OIII] 1.
+  Fit quality: good 26, acceptable 21, poor 3.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 82%   Hβ 88%   Hα 100% (of 49 fitted)   [NII] 100% (of 49 fitted)   [SII] 98% (of 49 fitted)   [OI] 45% (of 49 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0266-0420 ([OI]); 0266-0496 ([OI]); 0267-0629 ([OIII], [OI]); 0268-0028 ([OI]); 0268-0079 (Hbeta, [OIII]); 0270-0193 ([OI]); 0270-0212 ([OI]); 0270-0313 ([OI]); 0271-0558 (Hbeta, [OIII], [OI], [SII]); 0271-0591 ([OI]); 0273-0236 ([OIII], [OI]); 0273-0462 ([OI]); 0274-0500 (Hbeta, [OI]); 0274-0593 ([OIII], [OI]); 0351-0429 ([OI]); 0355-0051 ([OI]); 0358-0371 ([OI]); 0358-0385 ([OI]); 0358-0394 ([OI]); 0417-0129 (Hbeta, [OIII], [OI]); 0417-0236 (Hbeta, [OI]); 0419-0090 ([OIII], [OI]); 0419-0102 ([OI]); 0419-0118 ([OIII], [OI]); 0422-0169 (Hbeta, [OI]); 0428-0116 ([OI]); 0431-0199 ([OI]); 0439-0225 ([OIII], [OI])
+
+Lines on sky / telluric regions
+  0266-0496: Hbeta @5565 A ([OI] 5577 sky line); SII_6718 @7688 A (telluric O2 A-band); SII_6733 @7705 A (telluric O2 A-band)
+  0267-0629: OIII_4960 @5584 A ([OI] 5577 sky line); SII_6733 @7580 A (telluric O2 A-band)
+  0270-0193: NII_6585 @7582 A (telluric O2 A-band)
+  0271-0591: OIII_5008 @5570 A ([OI] 5577 sky line)
+  0274-0593: NII_6550 @7609 A (telluric O2 A-band); NII_6585 @7650 A (telluric O2 A-band); Halpha @7626 A (telluric O2 A-band)
+  0276-0208: OIII_4960 @5591 A ([OI] 5577 sky line); SII_6733 @7589 A (telluric O2 A-band)
+  0351-0429: SII_6718 @7586 A (telluric O2 A-band); SII_6733 @7602 A (telluric O2 A-band)
+  0355-0051: OIII_4960 @5582 A ([OI] 5577 sky line)
+  0358-0484: OIII_5008 @5569 A ([OI] 5577 sky line)
+  0417-0129: OI_6302 @7613 A (telluric O2 A-band)
+  0419-0102: SII_6718 @7612 A (telluric O2 A-band); SII_6733 @7629 A (telluric O2 A-band)
+  0420-0419: SII_6718 @7633 A (telluric O2 A-band); SII_6733 @7649 A (telluric O2 A-band)
+  0431-0199: SII_6718 @7586 A (telluric O2 A-band); SII_6733 @7602 A (telluric O2 A-band)
+  0439-0225: SII_6718 @7668 A (telluric O2 A-band); SII_6733 @7685 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0417-0129 (0.208)   lowest 0358-0371 (0.011)
+  log [OIII]/Hβ                          highest 0441-0293 (0.35)   lowest 0358-0394 (-1.05)
+  log [NII]/Hα                           highest 0271-0591 (-0.25)   lowest 0358-0371 (-1.10)
+  Balmer decrement Hα/Hβ                 highest 0358-0385 (6.6)   lowest 0355-0051 (3.0)
+  Narrow-line FWHM [km/s]                highest 0417-0129 (645)   lowest 0358-0378 (64)
+  Hβ absorption EW [Å]                   highest 0417-0129 (5.06)   lowest 0422-0169 (1.56)
+  Hα S/N                                 highest 0349-0275 (104)   lowest 0417-0129 (4)
+  Reduced χ² (fitted windows)            highest 0422-0169 (2.5)   lowest 0358-0378 (1.0)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0441-0293: log [OIII]/Hβ = 0.35 (+3.1 robust σ from the group median)
+  0358-0371: log [NII]/Hα = -1.10 (-4.4 robust σ from the group median)
+  0441-0293: log [NII]/Hα = -0.96 (-3.4 robust σ from the group median)
+  0358-0394: Offset from Kauffmann+03 [dex] = -1.23 (-3.8 robust σ from the group median)
+  0268-0079: Narrow-line FWHM [km/s] = 526 (+3.9 robust σ from the group median)
+  0417-0129: Narrow-line FWHM [km/s] = 645 (+5.2 robust σ from the group median)
+  0268-0079: Velocity offset [km/s] = 59 (+4.3 robust σ from the group median)
+  0417-0129: Velocity offset [km/s] = 107 (+7.9 robust σ from the group median)
+  0276-0204: [OIII] S/N = 38 (+7.2 robust σ from the group median)
+  0351-0472: [OIII] S/N = 46 (+9.0 robust σ from the group median)
+  0358-0371: [OIII] S/N = 39 (+7.4 robust σ from the group median)
+  0358-0378: [OIII] S/N = 29 (+5.2 robust σ from the group median)
+  0358-0513: [OIII] S/N = 23 (+3.8 robust σ from the group median)
+  0441-0293: [OIII] S/N = 41 (+7.9 robust σ from the group median)
+  0273-0327: Hβ absorption EW [Å] = 4.68 (+3.0 robust σ from the group median)
+  0358-0484: Hβ absorption EW [Å] = 1.68 (-3.1 robust σ from the group median)
+  0417-0129: Hβ absorption EW [Å] = 5.06 (+3.8 robust σ from the group median)
+  0422-0169: Hβ absorption EW [Å] = 1.56 (-3.4 robust σ from the group median)
+  0417-0129: Hα absorption EW [Å] = 4.41 (+3.7 robust σ from the group median)
+  0271-0558: Reduced χ² (fitted windows) = 2.2 (+4.5 robust σ from the group median)
+  0349-0275: Reduced χ² (fitted windows) = 2.2 (+4.1 robust σ from the group median)
+  0422-0169: Reduced χ² (fitted windows) = 2.5 (+5.6 robust σ from the group median)
+  0276-0208: Hβ flux change without absorbers [%] = -95 (-3.1 robust σ from the group median)
+  0268-0136: ΔWAIC (without − with absorbers) = 146 (+4.0 robust σ from the group median)
+  0349-0275: ΔWAIC (without − with absorbers) = 246 (+7.8 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Narrow-line FWHM [km/s]                median 158 here vs 472 elsewhere (shift -1.3 robust σ, Mann-Whitney p = 3.78e-13; n = 50 / 264)
+  log [OIII]/Hβ                          median -0.43 here vs 0.05 elsewhere (shift -1.0 robust σ, Mann-Whitney p = 9.22e-08; n = 37 / 131)
+  Hα S/N                                 median 38 here vs 17 elsewhere (shift +0.9 robust σ, Mann-Whitney p = 0.0147; n = 49 / 232)
+  [OIII] S/N                             median 6 here vs 21 elsewhere (shift -0.8 robust σ, Mann-Whitney p = 5.21e-08; n = 41 / 193)
+  Hβ detected                            88% here vs 54% elsewhere
+
+====================================================================================================
+GROUP: STARBURST    N = 49    (survey: SDSS 49; fit code: unite 49)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             49   0.079 [0.049 – 0.135]             0.003    0.230
+  log [OIII]/Hβ                          44   -0.04 [-0.51 – 0.33]              -0.89     0.81
+  log [NII]/Hα                           44   -0.58 [-0.89 – -0.40]             -1.52    -0.32
+  log [SII]/Hα                           44   -0.55 [-0.63 – -0.47]             -1.11    -0.39
+  log [OI]/Hα                            41   -1.52 [-1.70 – -1.40]             -2.05    -1.30
+  Offset from Kauffmann+03 [dex]         42   -0.38 [-0.51 – -0.25]             -0.78    -0.06
+  Balmer decrement Hα/Hβ                 42   4.1 [3.6 – 4.9]                     3.1      6.5
+  E(B−V) [mag]                           42   0.30 [0.20 – 0.45]                 0.08     0.71
+  Narrow-line FWHM [km/s]                49   158 [118 – 215]                      57      286
+  Velocity offset [km/s]                 49   0 [-9 – 13]                         -21       17
+  Hα S/N                                 45   82 [61 – 99]                         31      120
+  Hβ S/N                                 48   32 [22 – 50]                          7      108
+  [OIII] S/N                             48   35 [15 – 92]                          3      164
+  Hβ absorption EW [Å]                   48   4.12 [2.60 – 4.74]                 0.49     6.67
+  Hα absorption EW [Å]                   45   3.33 [2.20 – 3.85]                 0.40     4.91
+  Reduced χ² (fitted windows)            49   1.6 [1.3 – 2.6]                     1.1      7.8
+  Hβ flux change without absorbers [%]   48   -15 [-22 – -8]                      -28       -2
+  ΔWAIC (without − with absorbers)       49   81 [28 – 154]                        -5      271
+
+General character
+  Overall BPT class: star-forming 42 (86%), lines undetected 5 (10%), composite 2 (4%).
+  No emission line detected: 0 of 49; 3 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only.
+  [NII] diagram alone: star-forming 42, composite 2.
+  [SII] diagram: star-forming 42, Seyfert 2.
+  [OI] diagram: star-forming 39, Seyfert 2.
+  Position in the [NII] diagram: median -0.38 dex from the Kauffmann+03 line (negative = star-forming side); 0 of 42 lie above it.
+  Excitation / nitrogen: log [OIII]/Hβ -0.04 (-0.89 to +0.81), log [NII]/Hα -0.58 (-1.52 to -0.32).
+  Balmer decrement Hα/Hβ: median 4.08 (Case B 2.86), range 3.15 – 6.55; E(B−V) median 0.30, up to 0.71. 2 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 158 km/s (57 – 286); velocity offset from the catalogue redshift median +0 km/s (-21 to +17).
+  Balmer absorption (unite): Hβ EW median 4.12 Å (0.49 – 6.67); WAIC prefers the absorber model in 46 of 49; removing the absorbers changes Hβ by a median -15% (-28% to -2%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 10 of 48 Hβ-detected objects  -- the data want a stronger/wider absorber than allowed; Hβ is not reliable for these.
+  Tallest feature in the fit: Hα+[NII] 36, [OII] 7, [OIII] 6.
+  Fit quality: acceptable 26, poor 14, good 9.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 100% (of 48 fitted)   Hβ 100% (of 48 fitted)   Hα 100% (of 45 fitted)   [NII] 100% (of 45 fitted)   [SII] 100% (of 45 fitted)   [OI] 93% (of 45 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 1734-0383 ([OI]); 1737-0596 ([OI]); 1739-0622 ([OI])
+
+Lines on sky / telluric regions
+  1732-0184: OIII_4960 @5583 A ([OI] 5577 sky line); SII_6733 @7578 A (telluric O2 A-band)
+  1733-0100: OIII_5008 @5591 A ([OI] 5577 sky line)
+  1733-0136: OIII_5008 @5589 A ([OI] 5577 sky line)
+  1733-0326: OIII_5008 @5566 A ([OI] 5577 sky line)
+  1734-0200: Hbeta @5564 A ([OI] 5577 sky line); SII_6718 @7687 A (telluric O2 A-band); SII_6733 @7704 A (telluric O2 A-band)
+  1734-0229: SII_6718 @7586 A (telluric O2 A-band); SII_6733 @7602 A (telluric O2 A-band)
+  1734-0383: OIII_4960 @5571 A ([OI] 5577 sky line)
+  1734-0428: SII_6718 @7623 A (telluric O2 A-band); SII_6733 @7640 A (telluric O2 A-band)
+  1736-0424: SII_6718 @7622 A (telluric O2 A-band); SII_6733 @7638 A (telluric O2 A-band)
+  1739-0586: NII_6550 @7635 A (telluric O2 A-band); NII_6585 @7676 A (telluric O2 A-band); Halpha @7652 A (telluric O2 A-band)
+  1741-0064: NII_6550 @7665 A (telluric O2 A-band); NII_6585 @7706 A (telluric O2 A-band); Halpha @7682 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 1737-0596 (0.230)   lowest 1734-0402 (0.003)
+  log [OIII]/Hβ                          highest 1733-0326 (0.81)   lowest 1733-0190 (-0.89)
+  log [NII]/Hα                           highest 1732-0160 (-0.32)   lowest 1734-0402 (-1.52)
+  Balmer decrement Hα/Hβ                 highest 1738-0054 (6.5)   lowest 1741-0083 (3.1)
+  Narrow-line FWHM [km/s]                highest 1733-0100 (286)   lowest 1734-0237 (57)
+  Hβ absorption EW [Å]                   highest 1739-0582 (6.67)   lowest 1734-0428 (0.49)
+  Hα S/N                                 highest 1734-0229 (120)   lowest 1739-0622 (31)
+  Reduced χ² (fitted windows)            highest 1733-0326 (7.8)   lowest 1741-0094 (1.1)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  1732-0160: Redshift z = 0.229 (+3.4 robust σ from the group median)
+  1737-0596: Redshift z = 0.230 (+3.5 robust σ from the group median)
+  1734-0237: log [NII]/Hα = -1.52 (-3.6 robust σ from the group median)
+  1734-0402: log [NII]/Hα = -1.52 (-3.6 robust σ from the group median)
+  1733-0326: log [SII]/Hα = -1.11 (-6.8 robust σ from the group median)
+  1734-0237: log [SII]/Hα = -0.91 (-4.4 robust σ from the group median)
+  1734-0402: log [SII]/Hα = -1.02 (-5.7 robust σ from the group median)
+  1736-0424: Offset from Kauffmann+03 [dex] = -0.78 (-3.0 robust σ from the group median)
+  1733-0190: Balmer decrement Hα/Hβ = 6.2 (+3.3 robust σ from the group median)
+  1738-0054: Balmer decrement Hα/Hβ = 6.5 (+4.0 robust σ from the group median)
+  1738-0054: E(B−V) [mag] = 0.71 (+3.0 robust σ from the group median)
+  1733-0326: Hβ S/N = 82 (+3.5 robust σ from the group median)
+  1734-0193: Hβ S/N = 108 (+5.4 robust σ from the group median)
+  1734-0402: Hβ S/N = 99 (+4.7 robust σ from the group median)
+  1738-0461: Hβ S/N = 94 (+4.4 robust σ from the group median)
+  1733-0326: [OIII] S/N = 155 (+3.8 robust σ from the group median)
+  1734-0193: [OIII] S/N = 150 (+3.6 robust σ from the group median)
+  1734-0402: [OIII] S/N = 164 (+4.0 robust σ from the group median)
+  1734-0428: Hβ absorption EW [Å] = 0.49 (-4.3 robust σ from the group median)
+  1739-0582: Hβ absorption EW [Å] = 6.67 (+3.0 robust σ from the group median)
+  1734-0428: Hα absorption EW [Å] = 0.40 (-4.1 robust σ from the group median)
+  1733-0326: Reduced χ² (fitted windows) = 7.8 (+15.0 robust σ from the group median)
+  1734-0193: Reduced χ² (fitted windows) = 5.9 (+10.4 robust σ from the group median)
+  1734-0402: Reduced χ² (fitted windows) = 6.6 (+11.9 robust σ from the group median)
+  1737-0555: Reduced χ² (fitted windows) = 3.8 (+5.3 robust σ from the group median)
+  1737-0594: Reduced χ² (fitted windows) = 4.0 (+5.7 robust σ from the group median)
+  1738-0461: Reduced χ² (fitted windows) = 5.0 (+8.0 robust σ from the group median)
+  1739-0589: Reduced χ² (fitted windows) = 3.4 (+4.3 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Hα S/N                                 median 82 here vs 15 elsewhere (shift +3.0 robust σ, Mann-Whitney p = 5.47e-22; n = 45 / 236)
+  Hβ S/N                                 median 32 here vs 9 elsewhere (shift +2.0 robust σ, Mann-Whitney p = 1.61e-19; n = 48 / 152)
+  Narrow-line FWHM [km/s]                median 158 here vs 475 elsewhere (shift -1.3 robust σ, Mann-Whitney p = 4.08e-18; n = 49 / 265)
+  ΔWAIC (without − with absorbers)       median 81 here vs 30 elsewhere (shift +1.3 robust σ, Mann-Whitney p = 2.44e-08; n = 49 / 298)
+  BPT ratios blanked (lines undetected)  6% here vs 57% elsewhere
+  Hβ detected                            100% here vs 52% elsewhere
+  tentative classification               0% here vs 47% elsewhere
+  [OI] detected                          93% here vs 52% elsewhere
+
+====================================================================================================
+GROUP: AGN    N = 39    (survey: SDSS 39; fit code: unite 39)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             39   0.136 [0.073 – 0.170]             0.008    0.377
+  log [OIII]/Hβ                          23   0.46 [-0.04 – 0.79]               -0.49     1.02
+  log [NII]/Hα                           23   -0.11 [-0.21 – 0.01]              -0.28     0.09
+  log [SII]/Hα                           23   -0.38 [-0.45 – -0.23]             -0.50    -0.13
+  log [OI]/Hα                            16   -0.98 [-1.24 – -0.74]             -1.30    -0.70
+  Balmer decrement Hα/Hβ                 20   4.3 [3.4 – 5.4]                     3.2      6.5
+  E(B−V) [mag]                           20   0.34 [0.15 – 0.55]                 0.09     0.70
+  Narrow-line FWHM [km/s]                38   344 [260 – 452]                     163      791
+  Velocity offset [km/s]                 38   4 [-13 – 28]                        -92       59
+  Hα S/N                                 36   12 [7 – 31]                           4       68
+  Hβ S/N                                 23   4 [3 – 11]                            3       28
+  [OIII] S/N                             35   14 [5 – 41]                           3       95
+  Hβ absorption EW [Å]                   39   2.49 [1.80 – 3.84]                 1.24     5.92
+  Hα absorption EW [Å]                   38   2.10 [1.53 – 3.31]                 1.03     5.10
+  Reduced χ² (fitted windows)            39   1.4 [1.1 – 1.9]                     1.0     13.6
+  Hβ flux change without absorbers [%]   23   -61 [-93 – -39]                     -97       -5
+  ΔWAIC (without − with absorbers)       39   12 [2 – 60]                          -5      145
+
+General character
+  Overall BPT class: lines undetected 15 (38%), AGN (Seyfert) 14 (36%), composite 7 (18%), AGN (LINER) 2 (5%), no emission 1 (3%); 15 tentative.
+  No emission line detected: 1 of 39; 22 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  [NII] diagram alone: AGN 16, composite 7.
+  [SII] diagram: Seyfert 15, star-forming 6, LINER 2.
+  [OI] diagram: Seyfert 13, LINER 3.
+  Excitation / nitrogen: log [OIII]/Hβ +0.46 (-0.49 to +1.02), log [NII]/Hα -0.11 (-0.28 to +0.09).
+  Balmer decrement Hα/Hβ: median 4.29 (Case B 2.86), range 3.17 – 6.51; E(B−V) median 0.34, up to 0.70. 3 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 344 km/s (163 – 791); velocity offset from the catalogue redshift median +4 km/s (-92 to +59).
+  Balmer absorption (unite): Hβ EW median 2.49 Å (1.24 – 5.92); WAIC prefers the absorber model in 21 of 39; removing the absorbers changes Hβ by a median -61% (-97% to -5%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 3 of 23 Hβ-detected objects  -- the data want a stronger/wider absorber than allowed; Hβ is not reliable for these.
+  Tallest feature in the fit: Hα+[NII] 19, [OIII] 11, [OII] 8, Hgamma 1.
+  Fit quality: acceptable 19, good 14, poor 6.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 90%   Hβ 59%   Hα 95% (of 38 fitted)   [NII] 97% (of 38 fitted)   [SII] 97% (of 37 fitted)   [OI] 61% (of 38 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 1733-0080 ([OI]); 1733-0144 ([OI]); 1734-0216 (Hbeta); 1734-0255 ([OI]); 1735-0256 ([OI]); 1735-0310 (Hbeta); 1736-0243 (Hbeta); 1736-0332 (Hbeta); 1738-0474 (Hbeta); 1739-0515 (Hbeta, [OI]); 1739-0532 ([OI]); 1740-0590 (Halpha, Hbeta, [NII], [OI]); 1741-0113 (Hbeta, [OI]); 1742-0263 ([OI]); 1742-0307 (Hbeta, [OIII], [OI]); 1742-0355 ([OI]); 1787-0383 (Hbeta, [OI]); 1791-0471 (Hbeta); 1792-0514 (Hbeta, [OI]); 1792-0534 (Hbeta, [OIII], [OI]); 1792-0589 (Halpha, Hbeta, [OIII], [OI], [SII]); 1794-0600 (Hbeta)
+
+Lines on sky / telluric regions
+  1733-0144: SII_6718 @7660 A (telluric O2 A-band); SII_6733 @7676 A (telluric O2 A-band)
+  1734-0216: SII_6718 @7668 A (telluric O2 A-band); SII_6733 @7684 A (telluric O2 A-band)
+  1735-0256: NII_6550 @7665 A (telluric O2 A-band); NII_6585 @7706 A (telluric O2 A-band); Halpha @7682 A (telluric O2 A-band)
+  1735-0305: OIII_5008 @5594 A ([OI] 5577 sky line)
+  1738-0474: NII_6550 @7642 A (telluric O2 A-band); NII_6585 @7683 A (telluric O2 A-band); Halpha @7659 A (telluric O2 A-band)
+  1739-0421: NII_6550 @7633 A (telluric O2 A-band); NII_6585 @7674 A (telluric O2 A-band); Halpha @7650 A (telluric O2 A-band)
+  1739-0431: NII_6550 @7627 A (telluric O2 A-band); NII_6585 @7668 A (telluric O2 A-band); Halpha @7644 A (telluric O2 A-band)
+  1739-0473: NII_6550 @7612 A (telluric O2 A-band); NII_6585 @7653 A (telluric O2 A-band); Halpha @7629 A (telluric O2 A-band)
+  1740-0509: NII_6585 @7591 A (telluric O2 A-band)
+  1740-0604: SII_6718 @7623 A (telluric O2 A-band); SII_6733 @7640 A (telluric O2 A-band)
+  1742-0210: SII_6718 @7630 A (telluric O2 A-band); SII_6733 @7646 A (telluric O2 A-band)
+  1742-0307: NII_6550 @7630 A (telluric O2 A-band); NII_6585 @7671 A (telluric O2 A-band); Halpha @7647 A (telluric O2 A-band)
+  1742-0355: SII_6718 @7672 A (telluric O2 A-band); SII_6733 @7688 A (telluric O2 A-band)
+  1742-0360: SII_6718 @7664 A (telluric O2 A-band); SII_6733 @7681 A (telluric O2 A-band)
+  1787-0383: SII_6718 @7655 A (telluric O2 A-band); SII_6733 @7672 A (telluric O2 A-band)
+  1791-0471: NII_6585 @7583 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 1740-0590 (0.377)   lowest 1792-0514 (0.008)
+  log [OIII]/Hβ                          highest 1734-0129 (1.02)   lowest 1733-0080 (-0.49)
+  log [NII]/Hα                           highest 1739-0473 (0.09)   lowest 1732-0598 (-0.28)
+  Balmer decrement Hα/Hβ                 highest 1792-0532 (6.5)   lowest 1735-0256 (3.2)
+  Narrow-line FWHM [km/s]                highest 1792-0589 (791)   lowest 1736-0332 (163)
+  Hβ absorption EW [Å]                   highest 1733-0080 (5.92)   lowest 1734-0216 (1.24)
+  Hα S/N                                 highest 1734-0129 (68)   lowest 1794-0600 (4)
+  Reduced χ² (fitted windows)            highest 1734-0129 (13.6)   lowest 1736-0243 (1.0)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  1733-0080: Redshift z = 0.312 (+3.2 robust σ from the group median)
+  1740-0590: Redshift z = 0.377 (+4.3 robust σ from the group median)
+  1792-0589: Narrow-line FWHM [km/s] = 791 (+4.7 robust σ from the group median)
+  1732-0598: Velocity offset [km/s] = -54 (-3.6 robust σ from the group median)
+  1733-0080: Velocity offset [km/s] = -92 (-5.9 robust σ from the group median)
+  1792-0589: Velocity offset [km/s] = 59 (+3.4 robust σ from the group median)
+  1734-0129: Hα S/N = 68 (+7.6 robust σ from the group median)
+  1737-0500: Hα S/N = 41 (+3.9 robust σ from the group median)
+  1739-0421: Hα S/N = 56 (+5.9 robust σ from the group median)
+  1740-0509: Hα S/N = 45 (+4.5 robust σ from the group median)
+  1792-0578: Hα S/N = 35 (+3.1 robust σ from the group median)
+  1732-0598: Hβ S/N = 12 (+5.4 robust σ from the group median)
+  1734-0129: Hβ S/N = 14 (+6.7 robust σ from the group median)
+  1737-0500: Hβ S/N = 11 (+4.7 robust σ from the group median)
+  1739-0421: Hβ S/N = 28 (+16.2 robust σ from the group median)
+  1740-0509: Hβ S/N = 11 (+4.7 robust σ from the group median)
+  1792-0578: Hβ S/N = 9 (+3.4 robust σ from the group median)
+  1739-0421: [OIII] S/N = 95 (+6.1 robust σ from the group median)
+  1740-0591: [OIII] S/N = 80 (+4.9 robust σ from the group median)
+  1742-0360: [OIII] S/N = 55 (+3.1 robust σ from the group median)
+  1733-0080: Hβ absorption EW [Å] = 5.92 (+3.6 robust σ from the group median)
+  1733-0080: Hα absorption EW [Å] = 5.10 (+3.5 robust σ from the group median)
+  1734-0129: Reduced χ² (fitted windows) = 13.6 (+32.9 robust σ from the group median)
+  1739-0421: Reduced χ² (fitted windows) = 7.9 (+17.5 robust σ from the group median)
+  1792-0514: Reduced χ² (fitted windows) = 3.6 (+6.0 robust σ from the group median)
+  1732-0598: ΔWAIC (without − with absorbers) = 71 (+3.5 robust σ from the group median)
+  1739-0532: ΔWAIC (without − with absorbers) = 99 (+5.1 robust σ from the group median)
+  1742-0263: ΔWAIC (without − with absorbers) = 64 (+3.1 robust σ from the group median)
+  1792-0514: ΔWAIC (without − with absorbers) = 145 (+7.8 robust σ from the group median)
+  1792-0534: ΔWAIC (without − with absorbers) = 77 (+3.8 robust σ from the group median)
+  1792-0589: ΔWAIC (without − with absorbers) = 106 (+5.5 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Hβ flux change without absorbers [%]   median -61 here vs -29 elsewhere (shift -1.3 robust σ, Mann-Whitney p = 0.000191; n = 23 / 177)
+  log [OIII]/Hβ                          median 0.46 here vs -0.10 elsewhere (shift +1.2 robust σ, Mann-Whitney p = 6.9e-06; n = 23 / 145)
+  log [NII]/Hα                           median -0.11 here vs -0.40 elsewhere (shift +1.1 robust σ, Mann-Whitney p = 5.42e-09; n = 23 / 144)
+  log [OI]/Hα                            median -0.98 here vs -1.34 elsewhere (shift +1.0 robust σ, Mann-Whitney p = 0.0004; n = 16 / 120)
+
+====================================================================================================
+GROUP: BROADLINE    N = 40    (survey: SDSS 40; fit code: unite 40)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             40   0.117 [0.050 – 0.418]            -0.000    0.643
+  log [OIII]/Hβ                           2   0.29 [0.29 – 0.29]                 0.29     0.29
+  log [NII]/Hα                            2   0.02 [-0.03 – 0.06]               -0.05     0.08
+  log [SII]/Hα                            2   -0.48 [-0.51 – -0.46]             -0.52    -0.44
+  log [OI]/Hα                             2   -0.93 [-0.98 – -0.89]             -1.00    -0.87
+  Balmer decrement Hα/Hβ                  3   5.1 [4.7 – 7.9]                     4.5      9.2
+  E(B−V) [mag]                            3   0.49 [0.42 – 0.84]                 0.38     1.00
+  Narrow-line FWHM [km/s]                31   527 [379 – 753]                     212      831
+  Velocity offset [km/s]                 31   -6 [-39 – 29]                      -137      285
+  Hα S/N                                 25   5 [3 – 8]                             3       26
+  Hβ S/N                                  6   4 [3 – 5]                             3        6
+  [OIII] S/N                             12   12 [5 – 20]                           3       23
+  Hβ absorption EW [Å]                   39   3.04 [2.27 – 5.12]                 1.99     6.45
+  Hα absorption EW [Å]                   29   2.51 [1.77 – 4.50]                 1.67     5.60
+  Reduced χ² (fitted windows)            40   1.6 [1.1 – 2.8]                     0.8      6.6
+  Hβ flux change without absorbers [%]    6   -98 [-99 – -75]                     -99      -30
+  ΔWAIC (without − with absorbers)       40   45 [3 – 115]                         -3      471
+
+General character
+  Overall BPT class: lines undetected 29 (72%), no emission 9 (22%), AGN (Seyfert) 2 (5%); 26 tentative.
+  No emission line detected: 9 of 40; 26 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 1 of 40. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: AGN 2.
+  [SII] diagram: star-forming 2.
+  [OI] diagram: Seyfert 2.
+  Excitation / nitrogen: log [OIII]/Hβ +0.29 (+0.29 to +0.29), log [NII]/Hα +0.02 (-0.05 to +0.08).
+  Balmer decrement Hα/Hβ: median 5.08 (Case B 2.86), range 4.45 – 9.20; E(B−V) median 0.49, up to 1.00. 1 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 527 km/s (212 – 831); velocity offset from the catalogue redshift median -6 km/s (-137 to +285).
+  Balmer absorption (unite): Hβ EW median 3.04 Å (1.99 – 6.45); WAIC prefers the absorber model in 31 of 40; removing the absorbers changes Hβ by a median -98% (-99% to -30%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 0 of 6 Hβ-detected objects.
+  Tallest feature in the fit: Hα+[NII] 17, [OII] 10, Hgamma 10, Hβ 1, [OIII] 1, [SII] 6731 1.
+  Fit quality: acceptable 16, good 13, poor 11.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 30%   Hβ 15% (of 39 fitted)   Hα 86% (of 29 fitted)   [NII] 97% (of 29 fitted)   [SII] 86% (of 28 fitted)   [OI] 33% (of 33 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0268-0450 (Hbeta, [OIII], [OI]); 0300-0265 (Hbeta, [OIII], [OI]); 0564-0341 (Hbeta, [OIII], [OI]); 0667-0080 (Halpha, Hbeta, [OIII], [OI]); 0721-0618 (Hbeta, [OIII], [SII]); 0945-0018 (Hbeta, [OIII], [OI]); 1378-0508 (Hbeta); 2029-0019 (Hbeta, [OI]); 2099-0150 (Hbeta, [OIII]); 2132-0312 (Hbeta, [OIII], [OI]); 2240-0627 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 2355-0295 (Hbeta, [OIII], [OI]); 2356-0460 (Hbeta, [OIII], [OI]); 2496-0640 ([OIII], [OI]); 2497-0062 (Hbeta, [OIII]); 2502-0342 (Halpha, Hbeta); 2505-0117 (Hbeta, [OI]); 2611-0284 (Hbeta, [OIII], [OI], [SII]); 2614-0548 (Hbeta); 2974-0485 (Hbeta, [OIII], [OI]); 4359-0376 (Halpha, Hbeta, [OIII], [OI]); 5467-0459 (Hbeta, [OI]); 6154-0633 (Hbeta); 6591-0392 (Hbeta, [OI]); 6591-0586 (Hbeta, [OIII]); 6664-0682 ([OIII], [OI])
+
+Lines on sky / telluric regions
+  0275-0525: NII_6585 @7580 A (telluric O2 A-band)
+  1330-0313: Hgamma @6309 A ([OI] 6300 sky line)
+  1880-0640: OI_6302 @6302 A ([OI] 6300 sky line)
+  2168-0173: NII_6585 @7591 A (telluric O2 A-band)
+  2496-0640: NII_6585 @7612 A (telluric O2 A-band); Halpha @7588 A (telluric O2 A-band)
+  2497-0062: SII_6718 @7603 A (telluric O2 A-band); SII_6733 @7619 A (telluric O2 A-band)
+  2502-0342: NII_6550 @7627 A (telluric O2 A-band); NII_6585 @7668 A (telluric O2 A-band); Halpha @7644 A (telluric O2 A-band)
+  5467-0459: OI_6302 @9311 A (sky-residual-dominated red end); NII_6550 @9677 A (sky-residual-dominated red end); NII_6585 @9729 A (sky-residual-dominated red end); Halpha @9699 A (sky-residual-dominated red end)
+  6154-0633: OIII_4960 @7683 A (telluric O2 A-band); OI_6302 @9761 A (sky-residual-dominated red end)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 4716-0573 (0.643)   lowest 1880-0640 (-0.000)
+  log [OIII]/Hβ                          highest 0275-0525 (0.29)   lowest 1187-0517 (0.29)
+  log [NII]/Hα                           highest 0275-0525 (0.08)   lowest 1187-0517 (-0.05)
+  Balmer decrement Hα/Hβ                 highest 0275-0525 (9.2)   lowest 1187-0517 (4.5)
+  Narrow-line FWHM [km/s]                highest 4716-0573 (831)   lowest 2505-0117 (212)
+  Hβ absorption EW [Å]                   highest 1187-0517 (6.45)   lowest 2240-0627 (1.99)
+  Hα S/N                                 highest 0275-0525 (26)   lowest 2356-0460 (3)
+  Reduced χ² (fitted windows)            highest 1880-0640 (6.6)   lowest 6154-0633 (0.8)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  1330-0313: Redshift z = 0.453 (+3.2 robust σ from the group median)
+  1378-0503: Redshift z = 0.435 (+3.1 robust σ from the group median)
+  4716-0573: Redshift z = 0.643 (+5.1 robust σ from the group median)
+  5467-0459: Redshift z = 0.477 (+3.5 robust σ from the group median)
+  6154-0633: Redshift z = 0.549 (+4.1 robust σ from the group median)
+  1880-0640: Velocity offset [km/s] = 285 (+8.9 robust σ from the group median)
+  2496-0640: Velocity offset [km/s] = 113 (+3.6 robust σ from the group median)
+  2974-0485: Velocity offset [km/s] = -137 (-4.0 robust σ from the group median)
+  5467-0459: Velocity offset [km/s] = -111 (-3.2 robust σ from the group median)
+  0275-0525: Hα S/N = 26 (+14.2 robust σ from the group median)
+  1187-0517: Hα S/N = 20 (+10.1 robust σ from the group median)
+  6664-0682: Hα S/N = 13 (+5.4 robust σ from the group median)
+  1187-0517: Hα absorption EW [Å] = 5.60 (+3.2 robust σ from the group median)
+  1880-0640: Reduced χ² (fitted windows) = 6.6 (+7.5 robust σ from the group median)
+  2132-0312: Reduced χ² (fitted windows) = 4.6 (+4.5 robust σ from the group median)
+  2236-0298: Reduced χ² (fitted windows) = 4.9 (+5.0 robust σ from the group median)
+  2505-0117: Reduced χ² (fitted windows) = 4.5 (+4.3 robust σ from the group median)
+  6591-0586: Reduced χ² (fitted windows) = 4.3 (+4.0 robust σ from the group median)
+  0714-0414: Hβ flux change without absorbers [%] = -30 (+45.9 robust σ from the group median)
+  1880-0640: Hβ flux change without absorbers [%] = -86 (+8.1 robust σ from the group median)
+  0275-0525: ΔWAIC (without − with absorbers) = 341 (+4.7 robust σ from the group median)
+  2497-0062: ΔWAIC (without − with absorbers) = 245 (+3.2 robust σ from the group median)
+  2505-0117: ΔWAIC (without − with absorbers) = 471 (+6.8 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Hβ flux change without absorbers [%]   median -98 here vs -32 elsewhere (shift -2.6 robust σ, Mann-Whitney p = 0.00124; n = 6 / 194)
+  Hα S/N                                 median 5 here vs 25 elsewhere (shift -0.9 robust σ, Mann-Whitney p = 8.28e-11; n = 25 / 256)
+  Hβ S/N                                 median 4 here vs 12 elsewhere (shift -0.7 robust σ, Mann-Whitney p = 0.00164; n = 6 / 194)
+  Narrow-line FWHM [km/s]                median 527 here vs 360 elsewhere (shift +0.7 robust σ, Mann-Whitney p = 9.41e-06; n = 31 / 283)
+  Hβ detected                            15% here vs 64% elsewhere
+  [OIII] detected                        30% here vs 74% elsewhere
+
+====================================================================================================
+GROUP: STARFORMING BROADLINE  [file tag STARFORMING_BROADLINE]    N = 40    (survey: SDSS 40; fit code: unite 40)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             40   0.100 [0.061 – 0.160]             0.033    0.391
+  log [OIII]/Hβ                          12   -0.18 [-0.34 – 0.05]              -0.38     0.31
+  log [NII]/Hα                           12   -0.20 [-0.27 – -0.14]             -0.44     0.00
+  log [SII]/Hα                           12   -0.41 [-0.64 – -0.15]             -0.81    -0.07
+  log [OI]/Hα                            11   -1.10 [-1.48 – -0.74]             -1.59    -0.63
+  Offset from Kauffmann+03 [dex]          1   -0.01 [-0.01 – -0.01]             -0.01    -0.01
+  Balmer decrement Hα/Hβ                 15   5.0 [3.7 – 5.7]                     3.2      6.9
+  E(B−V) [mag]                           15   0.48 [0.21 – 0.58]                 0.10     0.76
+  Narrow-line FWHM [km/s]                38   522 [436 – 624]                     226      927
+  Velocity offset [km/s]                 38   -2 [-17 – 36]                       -57      201
+  Hα S/N                                 34   12 [6 – 37]                           3       63
+  Hβ S/N                                 19   7 [4 – 13]                            3       25
+  [OIII] S/N                             23   11 [5 – 23]                           3       43
+  Hβ absorption EW [Å]                   39   3.01 [2.00 – 4.70]                 0.68     6.43
+  Hα absorption EW [Å]                   34   2.46 [1.68 – 3.99]                 0.56     5.34
+  Reduced χ² (fitted windows)            40   1.8 [1.3 – 2.7]                     1.1     14.3
+  Hβ flux change without absorbers [%]   19   -70 [-96 – -42]                     -99      -14
+  ΔWAIC (without − with absorbers)       40   36 [2 – 67]                          -3      291
+
+General character
+  Overall BPT class: lines undetected 26 (65%), composite 9 (22%), no emission 2 (5%), AGN 1 (2%), star-forming 1 (2%), AGN (LINER) 1 (2%); 21 tentative.
+  No emission line detected: 2 of 40; 22 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 2 of 40. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: composite 9, AGN 2, star-forming 1.
+  [SII] diagram: star-forming 9, LINER 3.
+  [OI] diagram: LINER 6, star-forming 5.
+  Position in the [NII] diagram: median -0.01 dex from the Kauffmann+03 line (negative = star-forming side); 0 of 1 lie above it.
+  Excitation / nitrogen: log [OIII]/Hβ -0.18 (-0.38 to +0.31), log [NII]/Hα -0.20 (-0.44 to +0.00).
+  Balmer decrement Hα/Hβ: median 4.98 (Case B 2.86), range 3.22 – 6.92; E(B−V) median 0.48, up to 0.76. 1 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 522 km/s (226 – 927); velocity offset from the catalogue redshift median -2 km/s (-57 to +201).
+  Balmer absorption (unite): Hβ EW median 3.01 Å (0.68 – 6.43); WAIC prefers the absorber model in 27 of 40; removing the absorbers changes Hβ by a median -70% (-99% to -14%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 5 of 19 Hβ-detected objects  -- the data want a stronger/wider absorber than allowed; Hβ is not reliable for these.
+  Tallest feature in the fit: Hα+[NII] 28, [OII] 11, Hgamma 1.
+  Fit quality: poor 18, acceptable 15, good 7.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 59% (of 39 fitted)   Hβ 49% (of 39 fitted)   Hα 100% (of 34 fitted)   [NII] 100% (of 34 fitted)   [SII] 91% (of 34 fitted)   [OI] 60% (of 35 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0343-0034 (Hbeta); 0344-0130 (Hbeta); 0348-0258 ([OIII]); 0350-0109 (Hbeta, [OIII], [OI]); 0538-0578 ([OI]); 0573-0154 (Hbeta); 0600-0457 (Hbeta, [OIII], [OI]); 0615-0010 (Hbeta, [OIII]); 0677-0530 (Hbeta, [OIII], [OI]); 0718-0536 ([OIII]); 0746-0422 (Hbeta, [OIII], [OI]); 0898-0404 ([OIII], [OI]); 1012-0605 (Hbeta, [SII]); 1292-0577 ([OIII], [OI]); 1359-0107 (Hbeta); 1600-0350 (Hbeta); 1789-0525 (Hbeta, [OIII], [OI]); 1831-0309 (Hbeta, [SII]); 1834-0206 (Hbeta, [OIII], [OI], [SII]); 1834-0309 (Hbeta, [OIII], [OI]); 1936-0049 (Hbeta, [OIII], [OI]); 1949-0271 (Hbeta, [OIII], [OI])
+
+Lines on sky / telluric regions
+  0272-0487: NII_6550 @7685 A (telluric O2 A-band); Halpha @7702 A (telluric O2 A-band)
+  0343-0034: NII_6550 @7583 A (telluric O2 A-band); NII_6585 @7624 A (telluric O2 A-band); Halpha @7600 A (telluric O2 A-band)
+  0344-0130: SII_6718 @7649 A (telluric O2 A-band); SII_6733 @7666 A (telluric O2 A-band)
+  0348-0258: OIII_5008 @5571 A ([OI] 5577 sky line)
+  0552-0319: OI_6302 @7588 A (telluric O2 A-band)
+  0573-0154: NII_6550 @7626 A (telluric O2 A-band); NII_6585 @7667 A (telluric O2 A-band); Halpha @7643 A (telluric O2 A-band)
+  0718-0536: SII_6718 @7682 A (telluric O2 A-band); SII_6733 @7699 A (telluric O2 A-band)
+  0829-0154: NII_6585 @7587 A (telluric O2 A-band)
+  0898-0404: NII_6550 @7677 A (telluric O2 A-band); Halpha @7694 A (telluric O2 A-band)
+  0985-0603: NII_6585 @7591 A (telluric O2 A-band)
+  1236-0054: OIII_4960 @5564 A ([OI] 5577 sky line)
+  1292-0577: NII_6550 @7599 A (telluric O2 A-band); NII_6585 @7640 A (telluric O2 A-band); Halpha @7616 A (telluric O2 A-band)
+  1365-0196: Hbeta @5575 A ([OI] 5577 sky line); SII_6718 @7703 A (telluric O2 A-band)
+  2100-0077: NII_6550 @7582 A (telluric O2 A-band); NII_6585 @7623 A (telluric O2 A-band); Halpha @7599 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 1375-0425 (0.391)   lowest 1834-0309 (0.033)
+  log [OIII]/Hβ                          highest 0538-0578 (0.31)   lowest 1263-0494 (-0.38)
+  log [NII]/Hα                           highest 0899-0028 (0.00)   lowest 0552-0319 (-0.44)
+  Balmer decrement Hα/Hβ                 highest 0898-0404 (6.9)   lowest 0985-0603 (3.2)
+  Narrow-line FWHM [km/s]                highest 1375-0425 (927)   lowest 1936-0049 (226)
+  Hβ absorption EW [Å]                   highest 0835-0188 (6.43)   lowest 0344-0130 (0.68)
+  Hα S/N                                 highest 2100-0077 (63)   lowest 0677-0530 (3)
+  Reduced χ² (fitted windows)            highest 1236-0054 (14.3)   lowest 1375-0425 (1.1)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  1375-0425: Redshift z = 0.391 (+5.0 robust σ from the group median)
+  0552-0319: log [NII]/Hα = -0.44 (-3.2 robust σ from the group median)
+  0677-0530: Narrow-line FWHM [km/s] = 855 (+4.1 robust σ from the group median)
+  1375-0425: Narrow-line FWHM [km/s] = 927 (+5.0 robust σ from the group median)
+  1936-0049: Narrow-line FWHM [km/s] = 226 (-3.7 robust σ from the group median)
+  0350-0109: Velocity offset [km/s] = 83 (+4.2 robust σ from the group median)
+  1375-0425: Velocity offset [km/s] = 201 (+10.1 robust σ from the group median)
+  0548-0626: Hα S/N = 46 (+3.5 robust σ from the group median)
+  0718-0536: Hα S/N = 48 (+3.7 robust σ from the group median)
+  1236-0054: Hα S/N = 45 (+3.4 robust σ from the group median)
+  2100-0077: Hα S/N = 63 (+5.2 robust σ from the group median)
+  2100-0077: Hβ S/N = 25 (+4.0 robust σ from the group median)
+  2100-0077: [OIII] S/N = 43 (+3.6 robust σ from the group median)
+  1236-0054: Reduced χ² (fitted windows) = 14.3 (+17.0 robust σ from the group median)
+  1831-0309: Reduced χ² (fitted windows) = 4.3 (+3.3 robust σ from the group median)
+  1936-0049: Reduced χ² (fitted windows) = 5.3 (+4.7 robust σ from the group median)
+  1936-0049: ΔWAIC (without − with absorbers) = 291 (+6.0 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Hβ flux change without absorbers [%]   median -70 here vs -29 elsewhere (shift -1.6 robust σ, Mann-Whitney p = 0.000142; n = 19 / 181)
+  Reduced χ² (fitted windows)            median 1.8 here vs 1.4 elsewhere (shift +0.9 robust σ, Mann-Whitney p = 0.00351; n = 40 / 307)
+  log [NII]/Hα                           median -0.20 here vs -0.39 elsewhere (shift +0.7 robust σ, Mann-Whitney p = 0.00993; n = 12 / 155)
+  Narrow-line FWHM [km/s]                median 522 here vs 346 elsewhere (shift +0.7 robust σ, Mann-Whitney p = 4.94e-06; n = 38 / 276)
+
+====================================================================================================
+GROUP: STARBURST BROADLINE  [file tag STARBURST_BROADLINE]    N = 40    (survey: SDSS 40; fit code: unite 40)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             40   0.276 [0.163 – 0.474]             0.016    0.556
+  log [OIII]/Hβ                          38   -0.01 [-0.29 – 0.44]              -0.51     0.99
+  log [NII]/Hα                           37   -0.28 [-0.51 – -0.15]             -0.77    -0.07
+  log [SII]/Hα                           34   -0.40 [-0.56 – -0.24]             -0.92     0.03
+  log [OI]/Hα                            35   -1.05 [-1.29 – -0.82]             -1.54    -0.47
+  Offset from Kauffmann+03 [dex]          8   -0.14 [-0.35 – -0.08]             -0.53    -0.04
+  Balmer decrement Hα/Hβ                 38   4.5 [3.8 – 5.6]                     3.3      7.6
+  E(B−V) [mag]                           38   0.39 [0.25 – 0.57]                 0.13     0.84
+  Narrow-line FWHM [km/s]                40   534 [473 – 600]                     302      727
+  Velocity offset [km/s]                 40   -10 [-25 – 20]                      -76       83
+  Hα S/N                                 39   47 [21 – 73]                         14       93
+  Hβ S/N                                 39   17 [10 – 27]                          4       39
+  [OIII] S/N                             39   29 [16 – 59]                         10       94
+  Hβ absorption EW [Å]                   39   5.01 [2.46 – 6.60]                 1.77     7.12
+  Hα absorption EW [Å]                   39   4.21 [2.02 – 5.62]                 1.64     6.10
+  Reduced χ² (fitted windows)            40   1.7 [1.2 – 4.0]                     0.8      7.4
+  Hβ flux change without absorbers [%]   39   -29 [-45 – -16]                     -68       -3
+  ΔWAIC (without − with absorbers)       40   19 [0 – 61]                          -2      170
+
+General character
+  Overall BPT class: composite 23 (58%), star-forming 8 (20%), AGN (Seyfert) 6 (15%), lines undetected 3 (8%); 1 tentative.
+  No emission line detected: 0 of 40; 4 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only.
+  [NII] diagram alone: composite 23, star-forming 8, AGN 6.
+  [SII] diagram: star-forming 20, Seyfert 8, LINER 6.
+  [OI] diagram: LINER 14, Seyfert 11, star-forming 10.
+  Position in the [NII] diagram: median -0.14 dex from the Kauffmann+03 line (negative = star-forming side); 0 of 8 lie above it.
+  Excitation / nitrogen: log [OIII]/Hβ -0.01 (-0.51 to +0.99), log [NII]/Hα -0.28 (-0.77 to -0.07).
+  Balmer decrement Hα/Hβ: median 4.53 (Case B 2.86), range 3.33 – 7.61; E(B−V) median 0.39, up to 0.84. 4 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 534 km/s (302 – 727); velocity offset from the catalogue redshift median -10 km/s (-76 to +83).
+  Balmer absorption (unite): Hβ EW median 5.01 Å (1.77 – 7.12); WAIC prefers the absorber model in 24 of 40; removing the absorbers changes Hβ by a median -29% (-68% to -3%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 11 of 39 Hβ-detected objects  -- the data want a stronger/wider absorber than allowed; Hβ is not reliable for these.
+  Tallest feature in the fit: Hα+[NII] 24, [OII] 11, [OIII] 5.
+  Fit quality: acceptable 15, poor 14, good 11.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 100% (of 39 fitted)   Hβ 100% (of 39 fitted)   Hα 100% (of 39 fitted)   [NII] 97% (of 39 fitted)   [SII] 100% (of 35 fitted)   [OI] 92% (of 39 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0520-0231 ([OI]); 3807-0319 ([OI]); 5370-0577 ([OI]); 7166-0551 ([NII])
+
+Lines on sky / telluric regions
+  0352-0586: NII_6550 @7678 A (telluric O2 A-band); Halpha @7696 A (telluric O2 A-band)
+  0385-0240: OIII_5008 @6310 A ([OI] 6300 sky line)
+  0488-0440: OI_6302 @7587 A (telluric O2 A-band)
+  0520-0231: OIII_4960 @6294 A ([OI] 6300 sky line)
+  0812-0024: Hbeta @5564 A ([OI] 5577 sky line); SII_6718 @7687 A (telluric O2 A-band); SII_6733 @7704 A (telluric O2 A-band)
+  0940-0245: Hgamma @5593 A ([OI] 5577 sky line)
+  1162-0095: OIII_4960 @6292 A ([OI] 6300 sky line)
+  1164-0264: Hgamma @5573 A ([OI] 5577 sky line)
+  1382-0587: OIII_5008 @6309 A ([OI] 6300 sky line)
+  1423-0175: NII_6550 @7599 A (telluric O2 A-band); NII_6585 @7640 A (telluric O2 A-band); Halpha @7616 A (telluric O2 A-band)
+  1803-0567: SII_6718 @7625 A (telluric O2 A-band); SII_6733 @7642 A (telluric O2 A-band)
+  2772-0315: OIII_4960 @5575 A ([OI] 5577 sky line)
+  3807-0319: OIII_4960 @7601 A (telluric O2 A-band); OIII_5008 @7674 A (telluric O2 A-band); OI_6302 @9657 A (sky-residual-dominated red end)
+  3817-0677: OI_6302 @9304 A (sky-residual-dominated red end); NII_6550 @9670 A (sky-residual-dominated red end); NII_6585 @9722 A (sky-residual-dominated red end); Halpha @9692 A (sky-residual-dominated red end)
+  4571-0726: SII_6718 @9443 A (sky-residual-dominated red end); SII_6733 @9463 A (sky-residual-dominated red end)
+  4683-0227: OIII_4960 @7631 A (telluric O2 A-band); OIII_5008 @7705 A (telluric O2 A-band); OI_6302 @9695 A (sky-residual-dominated red end)
+  4740-0928: NII_6550 @9302 A (sky-residual-dominated red end); NII_6585 @9352 A (sky-residual-dominated red end); Halpha @9323 A (sky-residual-dominated red end); SII_6718 @9541 A (sky-residual-dominated red end); SII_6733 @9562 A (sky-residual-dominated red end)
+  4848-0125: NII_6550 @9531 A (sky-residual-dominated red end); NII_6585 @9582 A (sky-residual-dominated red end); Halpha @9552 A (sky-residual-dominated red end); SII_6718 @9776 A (sky-residual-dominated red end); SII_6733 @9797 A (sky-residual-dominated red end)
+  4861-0548: NII_6550 @9595 A (sky-residual-dominated red end); NII_6585 @9647 A (sky-residual-dominated red end); Halpha @9616 A (sky-residual-dominated red end); SII_6718 @9842 A (sky-residual-dominated red end); SII_6733 @9863 A (sky-residual-dominated red end)
+  5370-0577: OI_6302 @9313 A (sky-residual-dominated red end); NII_6550 @9679 A (sky-residual-dominated red end); NII_6585 @9731 A (sky-residual-dominated red end); Halpha @9701 A (sky-residual-dominated red end)
+  6014-0564: OIII_4960 @7667 A (telluric O2 A-band); OI_6302 @9740 A (sky-residual-dominated red end)
+  6381-0094: SII_6718 @9407 A (sky-residual-dominated red end); SII_6733 @9427 A (sky-residual-dominated red end)
+  6439-0751: NII_6550 @9382 A (sky-residual-dominated red end); NII_6585 @9433 A (sky-residual-dominated red end); Halpha @9403 A (sky-residual-dominated red end); SII_6718 @9623 A (sky-residual-dominated red end); SII_6733 @9644 A (sky-residual-dominated red end)
+  6647-0298: Hgamma @5562 A ([OI] 5577 sky line)
+  6808-0711: NII_6550 @9305 A (sky-residual-dominated red end); NII_6585 @9355 A (sky-residual-dominated red end); Halpha @9326 A (sky-residual-dominated red end); SII_6718 @9544 A (sky-residual-dominated red end); SII_6733 @9564 A (sky-residual-dominated red end)
+  7027-0390: OIII_4960 @6302 A ([OI] 6300 sky line)
+  7166-0551: OI_6302 @9805 A (sky-residual-dominated red end)
+  7749-0750: OI_6302 @9483 A (sky-residual-dominated red end); NII_6550 @9856 A (sky-residual-dominated red end); NII_6585 @9910 A (sky-residual-dominated red end); Halpha @9878 A (sky-residual-dominated red end)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 7166-0551 (0.556)   lowest 2028-0163 (0.016)
+  log [OIII]/Hβ                          highest 3817-0677 (0.99)   lowest 1803-0567 (-0.51)
+  log [NII]/Hα                           highest 6014-0564 (-0.07)   lowest 7027-0390 (-0.77)
+  Balmer decrement Hα/Hβ                 highest 2364-0460 (7.6)   lowest 6381-0094 (3.3)
+  Narrow-line FWHM [km/s]                highest 5370-0577 (727)   lowest 1828-0276 (302)
+  Hβ absorption EW [Å]                   highest 1423-0175 (7.12)   lowest 6647-0298 (1.77)
+  Hα S/N                                 highest 3817-0677 (93)   lowest 5370-0577 (14)
+  Reduced χ² (fitted windows)            highest 3817-0677 (7.4)   lowest 5370-0577 (0.8)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  3817-0677: log [OIII]/Hβ = 0.99 (+3.1 robust σ from the group median)
+  0520-0231: log [SII]/Hα = -0.92 (-3.5 robust σ from the group median)
+  1634-0072: Offset from Kauffmann+03 [dex] = -0.53 (-3.6 robust σ from the group median)
+  1164-0264: Velocity offset [km/s] = 49 (+3.1 robust σ from the group median)
+  3807-0319: Velocity offset [km/s] = 83 (+4.8 robust σ from the group median)
+  6647-0298: Velocity offset [km/s] = -76 (-3.4 robust σ from the group median)
+  7027-0390: Velocity offset [km/s] = 61 (+3.7 robust σ from the group median)
+  2199-0113: [OIII] S/N = 94 (+3.4 robust σ from the group median)
+  3817-0677: [OIII] S/N = 90 (+3.2 robust σ from the group median)
+  6381-0094: [OIII] S/N = 91 (+3.2 robust σ from the group median)
+  0450-0331: Reduced χ² (fitted windows) = 4.0 (+3.3 robust σ from the group median)
+  0812-0024: Reduced χ² (fitted windows) = 6.1 (+6.1 robust σ from the group median)
+  2028-0163: Reduced χ² (fitted windows) = 6.3 (+6.4 robust σ from the group median)
+  2199-0113: Reduced χ² (fitted windows) = 5.5 (+5.3 robust σ from the group median)
+  3817-0677: Reduced χ² (fitted windows) = 7.4 (+8.0 robust σ from the group median)
+  5138-0350: Reduced χ² (fitted windows) = 5.0 (+4.6 robust σ from the group median)
+  7027-0390: Reduced χ² (fitted windows) = 6.1 (+6.2 robust σ from the group median)
+  0450-0331: ΔWAIC (without − with absorbers) = 128 (+3.8 robust σ from the group median)
+  1803-0567: ΔWAIC (without − with absorbers) = 170 (+5.3 robust σ from the group median)
+  2141-0447: ΔWAIC (without − with absorbers) = 123 (+3.6 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Redshift z                             median 0.276 here vs 0.105 elsewhere (shift +2.6 robust σ, Mann-Whitney p = 2.28e-13; n = 40 / 307)
+  Hα S/N                                 median 47 here vs 16 elsewhere (shift +1.4 robust σ, Mann-Whitney p = 8.2e-06; n = 39 / 242)
+  Hβ absorption EW [Å]                   median 5.01 here vs 3.25 elsewhere (shift +1.4 robust σ, Mann-Whitney p = 4.83e-05; n = 39 / 302)
+  Hα absorption EW [Å]                   median 4.21 here vs 2.70 elsewhere (shift +1.4 robust σ, Mann-Whitney p = 7.86e-05; n = 39 / 274)
+  Hβ detected                            100% here vs 53% elsewhere
+  BPT ratios blanked (lines undetected)  10% here vs 55% elsewhere
+  tentative classification               2% here vs 46% elsewhere
+  [OI] detected                          92% here vs 53% elsewhere
+
+====================================================================================================
+GROUP: AGN BROADLINE  [file tag AGN_BROADLINE]    N = 39    (survey: SDSS 39; fit code: unite 39)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             39   0.103 [0.076 – 0.129]             0.023    0.274
+  log [OIII]/Hβ                          11   0.09 [-0.09 – 0.50]               -0.54     0.72
+  log [NII]/Hα                           11   -0.02 [-0.10 – 0.06]              -0.22     0.26
+  log [SII]/Hα                           11   -0.37 [-0.45 – -0.19]             -0.89    -0.02
+  log [OI]/Hα                             9   -1.00 [-1.05 – -0.84]             -1.09    -0.74
+  Balmer decrement Hα/Hβ                  9   4.6 [3.0 – 5.6]                     3.0      6.8
+  E(B−V) [mag]                            9   0.41 [0.05 – 0.57]                 0.04     0.74
+  Narrow-line FWHM [km/s]                38   530 [495 – 645]                     170      925
+  Velocity offset [km/s]                 38   1 [-27 – 32]                       -141       78
+  Hα S/N                                 32   8 [6 – 16]                            5       40
+  Hβ S/N                                 14   6 [4 – 9]                             3       29
+  [OIII] S/N                             32   16 [8 – 39]                           4      103
+  Hβ absorption EW [Å]                   38   3.29 [2.44 – 4.88]                 1.35     6.53
+  Hα absorption EW [Å]                   35   2.67 [2.04 – 3.82]                 1.11     5.54
+  Reduced χ² (fitted windows)            39   1.8 [1.5 – 2.7]                     1.2      7.8
+  Hβ flux change without absorbers [%]   14   -80 [-95 – -72]                     -99      -32
+  ΔWAIC (without − with absorbers)       39   24 [3 – 59]                          -2      337
+
+General character
+  Overall BPT class: lines undetected 27 (69%), composite 5 (13%), AGN (Seyfert) 3 (8%), no emission 1 (3%), AGN (LINER) 1 (3%), AGN 1 (3%), AGN (Seyfert/LINER; [SII] says LINER, [OI] says Seyfert) 1 (3%); 24 tentative.
+  No emission line detected: 1 of 39; 26 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 1 of 39. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: AGN 6, composite 5.
+  [SII] diagram: star-forming 7, Seyfert 3, LINER 1.
+  [OI] diagram: LINER 5, Seyfert 4.
+  Excitation / nitrogen: log [OIII]/Hβ +0.09 (-0.54 to +0.72), log [NII]/Hα -0.02 (-0.22 to +0.26).
+  Balmer decrement Hα/Hβ: median 4.61 (Case B 2.86), range 2.99 – 6.81; E(B−V) median 0.41, up to 0.74. 1 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 530 km/s (170 – 925); velocity offset from the catalogue redshift median +1 km/s (-141 to +78).
+  Balmer absorption (unite): Hβ EW median 3.29 Å (1.35 – 6.53); WAIC prefers the absorber model in 26 of 39; removing the absorbers changes Hβ by a median -80% (-99% to -32%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 2 of 14 Hβ-detected objects  -- the data want a stronger/wider absorber than allowed; Hβ is not reliable for these.
+  Tallest feature in the fit: Hα+[NII] 19, [OII] 11, [OIII] 8, Hgamma 1.
+  Fit quality: acceptable 22, poor 16, good 1.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 84% (of 38 fitted)   Hβ 37% (of 38 fitted)   Hα 91% (of 35 fitted)   [NII] 100% (of 35 fitted)   [SII] 94% (of 35 fitted)   [OI] 77% (of 35 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0307-0539 ([OI]); 0307-0569 (Hbeta, [OIII], [OI]); 0308-0468 (Hbeta); 0309-0304 (Hbeta, [OIII]); 0366-0632 (Hbeta); 0371-0291 (Hbeta); 0456-0559 (Hbeta, [OI]); 0473-0623 (Halpha, Hbeta, [OIII], [OI], [SII]); 0521-0604 (Hbeta); 0521-0632 (Hbeta); 0526-0058 (Hbeta); 0526-0066 (Hbeta); 0547-0463 (Hbeta); 0554-0284 (Hbeta); 1059-0598 (Hbeta); 1589-0543 (Hbeta, [OI]); 1594-0192 (Halpha, Hbeta, [OI]); 1773-0537 (Hbeta); 1774-0479 (Halpha, Hbeta, [OIII], [OI], [SII]); 1843-0135 ([OI]); 1844-0166 (Hbeta); 1846-0341 (Hbeta, [OIII]); 1930-0296 (Hbeta); 1932-0448 (Hbeta, [OIII]); 1935-0221 (Hbeta); 1969-0164 (Hbeta)
+
+Lines on sky / telluric regions
+  0371-0291: NII_6550 @7592 A (telluric O2 A-band); NII_6585 @7633 A (telluric O2 A-band); Halpha @7609 A (telluric O2 A-band)
+  0376-0491: SII_6718 @7584 A (telluric O2 A-band); SII_6733 @7601 A (telluric O2 A-band)
+  0473-0623: NII_6550 @7711 A (telluric O2 A-band)
+  0521-0632: NII_6585 @7608 A (telluric O2 A-band); Halpha @7584 A (telluric O2 A-band)
+  0526-0066: SII_6718 @7645 A (telluric O2 A-band); SII_6733 @7662 A (telluric O2 A-band)
+  0547-0463: OIII_5008 @5566 A ([OI] 5577 sky line)
+  1059-0100: OIII_5008 @5583 A ([OI] 5577 sky line)
+  1773-0505: OIII_5008 @5576 A ([OI] 5577 sky line)
+  1776-0449: OIII_5008 @5580 A ([OI] 5577 sky line)
+  1779-0003: OIII_4960 @5593 A ([OI] 5577 sky line); SII_6733 @7592 A (telluric O2 A-band)
+  1783-0609: OIII_4960 @5562 A ([OI] 5577 sky line)
+  1840-0483: OIII_4960 @5569 A ([OI] 5577 sky line)
+  1840-0638: OIII_4960 @5580 A ([OI] 5577 sky line)
+  1843-0135: NII_6550 @7583 A (telluric O2 A-band); NII_6585 @7624 A (telluric O2 A-band); Halpha @7600 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0459-0104 (0.274)   lowest 1059-0598 (0.023)
+  log [OIII]/Hβ                          highest 1779-0003 (0.72)   lowest 0307-0539 (-0.54)
+  log [NII]/Hα                           highest 1847-0484 (0.26)   lowest 1840-0483 (-0.22)
+  Balmer decrement Hα/Hβ                 highest 1776-0449 (6.8)   lowest 1781-0287 (3.0)
+  Narrow-line FWHM [km/s]                highest 1781-0287 (925)   lowest 1589-0543 (170)
+  Hβ absorption EW [Å]                   highest 1059-0100 (6.53)   lowest 1059-0598 (1.35)
+  Hα S/N                                 highest 1773-0588 (40)   lowest 0366-0632 (5)
+  Reduced χ² (fitted windows)            highest 1059-0100 (7.8)   lowest 1783-0609 (1.2)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0459-0104: Redshift z = 0.274 (+5.8 robust σ from the group median)
+  1840-0483: log [NII]/Hα = -0.22 (-3.5 robust σ from the group median)
+  1847-0484: log [NII]/Hα = 0.26 (+5.1 robust σ from the group median)
+  1781-0287: log [SII]/Hα = -0.89 (-3.4 robust σ from the group median)
+  1847-0484: log [OI]/Hα = -0.74 (+3.8 robust σ from the group median)
+  0307-0569: Narrow-line FWHM [km/s] = 309 (-4.1 robust σ from the group median)
+  0309-0304: Narrow-line FWHM [km/s] = 746 (+4.1 robust σ from the group median)
+  0473-0623: Narrow-line FWHM [km/s] = 722 (+3.6 robust σ from the group median)
+  0554-0284: Narrow-line FWHM [km/s] = 815 (+5.3 robust σ from the group median)
+  1059-0100: Narrow-line FWHM [km/s] = 325 (-3.8 robust σ from the group median)
+  1059-0598: Narrow-line FWHM [km/s] = 368 (-3.0 robust σ from the group median)
+  1589-0543: Narrow-line FWHM [km/s] = 170 (-6.7 robust σ from the group median)
+  1781-0287: Narrow-line FWHM [km/s] = 925 (+7.4 robust σ from the group median)
+  1969-0164: Narrow-line FWHM [km/s] = 759 (+4.3 robust σ from the group median)
+  1059-0598: Velocity offset [km/s] = -108 (-3.3 robust σ from the group median)
+  1781-0287: Velocity offset [km/s] = -141 (-4.4 robust σ from the group median)
+  0329-0213: Hα S/N = 27 (+6.4 robust σ from the group median)
+  1773-0588: Hα S/N = 40 (+10.8 robust σ from the group median)
+  1776-0449: Hα S/N = 39 (+10.5 robust σ from the group median)
+  1783-0609: Hα S/N = 21 (+4.4 robust σ from the group median)
+  1840-0638: Hα S/N = 24 (+5.4 robust σ from the group median)
+  1059-0100: Hβ S/N = 29 (+10.6 robust σ from the group median)
+  0376-0491: [OIII] S/N = 103 (+7.3 robust σ from the group median)
+  1059-0100: [OIII] S/N = 79 (+5.3 robust σ from the group median)
+  1847-0484: [OIII] S/N = 58 (+3.5 robust σ from the group median)
+  1776-0449: Hα absorption EW [Å] = 5.54 (+3.2 robust σ from the group median)
+  0307-0569: Reduced χ² (fitted windows) = 4.6 (+6.2 robust σ from the group median)
+  0309-0304: Reduced χ² (fitted windows) = 3.6 (+3.9 robust σ from the group median)
+  0366-0632: Reduced χ² (fitted windows) = 4.0 (+4.9 robust σ from the group median)
+  0521-0604: Reduced χ² (fitted windows) = 3.6 (+4.0 robust σ from the group median)
+  1059-0100: Reduced χ² (fitted windows) = 7.8 (+13.3 robust σ from the group median)
+  1059-0598: Reduced χ² (fitted windows) = 5.6 (+8.5 robust σ from the group median)
+  0376-0491: Hβ flux change without absorbers [%] = -33 (+4.6 robust σ from the group median)
+  1059-0100: Hβ flux change without absorbers [%] = -32 (+4.7 robust σ from the group median)
+  0307-0569: ΔWAIC (without − with absorbers) = 337 (+9.8 robust σ from the group median)
+  1059-0100: ΔWAIC (without − with absorbers) = 251 (+7.1 robust σ from the group median)
+  1589-0543: ΔWAIC (without − with absorbers) = 311 (+9.0 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Hβ flux change without absorbers [%]   median -80 here vs -30 elsewhere (shift -2.0 robust σ, Mann-Whitney p = 2.87e-05; n = 14 / 186)
+  log [NII]/Hα                           median -0.02 here vs -0.39 elsewhere (shift +1.4 robust σ, Mann-Whitney p = 2.11e-06; n = 11 / 156)
+  Reduced χ² (fitted windows)            median 1.8 here vs 1.4 elsewhere (shift +0.9 robust σ, Mann-Whitney p = 5.51e-06; n = 39 / 308)
+  log [OI]/Hα                            median -1.00 here vs -1.30 elsewhere (shift +0.8 robust σ, Mann-Whitney p = 0.00337; n = 9 / 127)
+
+====================================================================================================
+GROUP: <missing>  [file tag MISSING]    N = 50    (survey: SDSS 50; fit code: unite 50)
+====================================================================================================
+(objects whose SDSS subClass is missing, "<missing>" in the catalogue)
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             50   0.130 [0.089 – 0.331]             0.057    0.454
+  log [OIII]/Hβ                           1   -0.06 [-0.06 – -0.06]             -0.06    -0.06
+  log [NII]/Hα                            1   -0.38 [-0.38 – -0.38]             -0.38    -0.38
+  log [SII]/Hα                            1   -0.57 [-0.57 – -0.57]             -0.57    -0.57
+  log [OI]/Hα                             1   -1.51 [-1.51 – -1.51]             -1.51    -1.51
+  Balmer decrement Hα/Hβ                  7   5.7 [3.7 – 6.6]                     3.0      7.3
+  E(B−V) [mag]                            7   0.59 [0.23 – 0.71]                 0.03     0.80
+  Narrow-line FWHM [km/s]                30   328 [158 – 766]                      69      967
+  Velocity offset [km/s]                 30   9 [-5 – 40]                         -69      485
+  Hα S/N                                 21   7 [4 – 18]                            3       67
+  Hβ S/N                                  7   4 [4 – 7]                             3       20
+  [OIII] S/N                              4   5 [4 – 15]                            3       25
+  Hβ absorption EW [Å]                   49   3.24 [2.65 – 4.80]                 1.09     6.25
+  Hα absorption EW [Å]                   44   2.77 [2.16 – 4.19]                 0.91     5.43
+  Reduced χ² (fitted windows)            50   1.2 [1.0 – 1.4]                     0.9      2.0
+  Hβ flux change without absorbers [%]    7   -64 [-86 – -45]                     -90      -16
+  ΔWAIC (without − with absorbers)       50   19 [7 – 75]                          -1      345
+
+General character
+  Overall BPT class: lines undetected 29 (58%), no emission 20 (40%), composite 1 (2%); 42 tentative.
+  No emission line detected: 20 of 50; 42 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 15 of 50. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: composite 1.
+  [SII] diagram: star-forming 1.
+  [OI] diagram: star-forming 1.
+  Excitation / nitrogen: log [OIII]/Hβ -0.06 (-0.06 to -0.06), log [NII]/Hα -0.38 (-0.38 to -0.38).
+  Balmer decrement Hα/Hβ: median 5.70 (Case B 2.86), range 2.95 – 7.28; E(B−V) median 0.59, up to 0.80. 3 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 328 km/s (69 – 967); velocity offset from the catalogue redshift median +9 km/s (-69 to +485).
+  Balmer absorption (unite): Hβ EW median 3.24 Å (1.09 – 6.25); WAIC prefers the absorber model in 38 of 50; removing the absorbers changes Hβ by a median -64% (-90% to -16%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 0 of 7 Hβ-detected objects.
+  Tallest feature in the fit: Hgamma 24, Hα+[NII] 20, [OII] 3, Hβ 2, [OIII] 1.
+  Fit quality: good 37, acceptable 13.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 8% (of 49 fitted)   Hβ 14% (of 49 fitted)   Hα 48% (of 44 fitted)   [NII] 56% (of 45 fitted)   [SII] 36% (of 39 fitted)   [OI] 4% (of 46 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0266-0002 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0007 (Hbeta, [OIII], [OI], [SII]); 0266-0010 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0011 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0016 (Halpha, Hbeta, [OIII], [OI]); 0266-0018 ([OIII], [OI], [SII]); 0266-0019 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0020 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0022 (Hbeta, [OIII], [OI]); 0266-0023 (Hbeta, [OIII], [OI], [SII]); 0266-0028 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0030 (Hbeta, [OIII], [OI], [SII]); 0266-0033 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0034 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0040 (Hbeta, [OIII], [OI]); 0266-0050 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0052 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0060 (Halpha, Hbeta, [NII], [OI], [SII]); 0266-0061 (Halpha, Hbeta, [OIII], [OI]); 0266-0065 ([OIII], [OI]); 0266-0069 ([OIII], [OI]); 0266-0073 ([OIII], [OI]); 0266-0074 (Hbeta, [OIII], [OI], [SII]); 0266-0075 (Hbeta, [OIII], [OI], [SII]); 0266-0076 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0077 (Hbeta, [OIII], [OI]); 0266-0078 (Hbeta, [OIII], [OI]); 0266-0084 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0086 (Hbeta, [OIII], [OI]); 0266-0089 (Hbeta, [NII], [OIII], [OI]); 0266-0090 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0091 (Hbeta, [NII], [OIII], [OI]); 0266-0094 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0097 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0102 ([OIII], [OI], [SII]); 0266-0109 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0110 (Halpha, Hbeta, [OIII], [OI]); 0266-0112 (Hbeta, [OI]); 0266-0114 ([OIII], [OI]); 0266-0115 (Halpha, Hbeta, [NII], [OIII], [SII]); 0266-0116 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0117 (Halpha, Hbeta, [NII], [OIII], [OI], [SII])
+
+Lines on sky / telluric regions
+  0266-0002: OI_6302 @7586 A (telluric O2 A-band)
+  0266-0007: OI_6302 @7650 A (telluric O2 A-band)
+  0266-0009: Hgamma @6288 A ([OI] 6300 sky line)
+  0266-0011: OIII_4960 @5562 A ([OI] 5577 sky line)
+  0266-0016: OIII_4960 @5588 A ([OI] 5577 sky line); SII_6733 @7585 A (telluric O2 A-band)
+  0266-0023: OI_6302 @7661 A (telluric O2 A-band)
+  0266-0028: OI_6302 @7588 A (telluric O2 A-band)
+  0266-0030: SII_6718 @7616 A (telluric O2 A-band); SII_6733 @7632 A (telluric O2 A-band)
+  0266-0035: SII_6718 @7602 A (telluric O2 A-band); SII_6733 @7618 A (telluric O2 A-band)
+  0266-0040: OIII_4960 @5571 A ([OI] 5577 sky line)
+  0266-0047: SII_6718 @7662 A (telluric O2 A-band); SII_6733 @7679 A (telluric O2 A-band)
+  0266-0052: OI_6302 @7599 A (telluric O2 A-band)
+  0266-0054: OIII_5008 @5583 A ([OI] 5577 sky line)
+  0266-0060: OIII_4960 @6306 A ([OI] 6300 sky line)
+  0266-0061: OIII_4960 @5578 A ([OI] 5577 sky line)
+  0266-0063: Hgamma @6314 A ([OI] 6300 sky line)
+  0266-0073: OIII_4960 @5580 A ([OI] 5577 sky line)
+  0266-0074: SII_6718 @7601 A (telluric O2 A-band); SII_6733 @7617 A (telluric O2 A-band)
+  0266-0075: SII_6718 @7597 A (telluric O2 A-band); SII_6733 @7613 A (telluric O2 A-band)
+  0266-0077: OIII_4960 @5585 A ([OI] 5577 sky line); SII_6733 @7581 A (telluric O2 A-band)
+  0266-0086: SII_6718 @7664 A (telluric O2 A-band); SII_6733 @7680 A (telluric O2 A-band)
+  0266-0090: OI_6302 @7586 A (telluric O2 A-band)
+  0266-0097: OI_6302 @7586 A (telluric O2 A-band)
+  0266-0102: OIII_4960 @5587 A ([OI] 5577 sky line); SII_6733 @7584 A (telluric O2 A-band)
+  0266-0110: SII_6718 @7593 A (telluric O2 A-band); SII_6733 @7609 A (telluric O2 A-band)
+  0266-0112: OIII_4960 @5585 A ([OI] 5577 sky line); SII_6733 @7580 A (telluric O2 A-band)
+  0266-0116: SII_6718 @7593 A (telluric O2 A-band); SII_6733 @7609 A (telluric O2 A-band)
+  0266-0117: SII_6718 @7606 A (telluric O2 A-band); SII_6733 @7622 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0266-0063 (0.454)   lowest 0266-0115 (0.057)
+  Balmer decrement Hα/Hβ                 highest 0266-0069 (7.3)   lowest 0266-0018 (3.0)
+  Narrow-line FWHM [km/s]                highest 0266-0115 (967)   lowest 0266-0060 (69)
+  Hβ absorption EW [Å]                   highest 0266-0010 (6.25)   lowest 0266-0075 (1.09)
+  Hα S/N                                 highest 0266-0054 (67)   lowest 0266-0007 (3)
+  Reduced χ² (fitted windows)            highest 0266-0054 (2.0)   lowest 0266-0078 (0.9)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0266-0009: Redshift z = 0.448 (+4.9 robust σ from the group median)
+  0266-0010: Redshift z = 0.371 (+3.7 robust σ from the group median)
+  0266-0034: Redshift z = 0.328 (+3.1 robust σ from the group median)
+  0266-0039: Redshift z = 0.383 (+3.9 robust σ from the group median)
+  0266-0063: Redshift z = 0.454 (+5.0 robust σ from the group median)
+  0266-0076: Redshift z = 0.371 (+3.7 robust σ from the group median)
+  0266-0089: Redshift z = 0.351 (+3.4 robust σ from the group median)
+  0266-0091: Redshift z = 0.374 (+3.8 robust σ from the group median)
+  0266-0096: Redshift z = 0.385 (+4.0 robust σ from the group median)
+  0266-0018: E(B−V) [mag] = 0.03 (-3.1 robust σ from the group median)
+  0266-0019: Narrow-line FWHM [km/s] = 941 (+3.2 robust σ from the group median)
+  0266-0033: Narrow-line FWHM [km/s] = 924 (+3.1 robust σ from the group median)
+  0266-0091: Narrow-line FWHM [km/s] = 922 (+3.1 robust σ from the group median)
+  0266-0115: Narrow-line FWHM [km/s] = 967 (+3.3 robust σ from the group median)
+  0266-0019: Velocity offset [km/s] = 127 (+7.2 robust σ from the group median)
+  0266-0060: Velocity offset [km/s] = -69 (-4.8 robust σ from the group median)
+  0266-0074: Velocity offset [km/s] = 86 (+4.7 robust σ from the group median)
+  0266-0089: Velocity offset [km/s] = 485 (+29.2 robust σ from the group median)
+  0266-0091: Velocity offset [km/s] = 76 (+4.1 robust σ from the group median)
+  0266-0110: Velocity offset [km/s] = 70 (+3.7 robust σ from the group median)
+  0266-0054: Hα S/N = 67 (+10.1 robust σ from the group median)
+  0266-0054: Hβ S/N = 20 (+10.8 robust σ from the group median)
+  0266-0054: Reduced χ² (fitted windows) = 2.0 (+4.3 robust σ from the group median)
+  0266-0010: ΔWAIC (without − with absorbers) = 74 (+3.1 robust σ from the group median)
+  0266-0020: ΔWAIC (without − with absorbers) = 82 (+3.5 robust σ from the group median)
+  0266-0050: ΔWAIC (without − with absorbers) = 345 (+18.3 robust σ from the group median)
+  0266-0084: ΔWAIC (without − with absorbers) = 174 (+8.7 robust σ from the group median)
+  0266-0089: ΔWAIC (without − with absorbers) = 86 (+3.8 robust σ from the group median)
+  0266-0094: ΔWAIC (without − with absorbers) = 92 (+4.1 robust σ from the group median)
+  0266-0110: ΔWAIC (without − with absorbers) = 95 (+4.3 robust σ from the group median)
+  0266-0115: ΔWAIC (without − with absorbers) = 116 (+5.4 robust σ from the group median)
+  0266-0117: ΔWAIC (without − with absorbers) = 89 (+3.9 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (subClass / missing / DESI)
+  Hβ flux change without absorbers [%]   median -64 here vs -32 elsewhere (shift -1.3 robust σ, Mann-Whitney p = 0.0912; n = 7 / 193)
+  Balmer decrement Hα/Hβ                 median 5.7 here vs 4.4 elsewhere (shift +1.2 robust σ, Mann-Whitney p = 0.127; n = 7 / 169)
+  E(B−V) [mag]                           median 0.59 here vs 0.37 elsewhere (shift +1.0 robust σ, Mann-Whitney p = 0.132; n = 7 / 169)
+  Reduced χ² (fitted windows)            median 1.2 here vs 1.5 elsewhere (shift -0.8 robust σ, Mann-Whitney p = 4.16e-12; n = 50 / 297)
+  [OIII] detected                        8% here vs 78% elsewhere
+  [OI] detected                          4% here vs 66% elsewhere
+  [SII] detected                         36% here vs 96% elsewhere
+  Hβ detected                            14% here vs 66% elsewhere
+
+====================================================================================================
+GROUP: Star Forming [EM]  [file tag STAR_FORMING]    N = 39    (survey: SDSS 39; fit code: unite 39)
+====================================================================================================
+(Portsmouth emission-line class from the SDSS DR12 emissionlinesport table, as chosen by EM_CLASS in the loop; independent of this fit's own BPT class below.)
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             39   0.082 [0.051 – 0.133]             0.025    0.245
+  log [OIII]/Hβ                          14   -0.38 [-0.61 – -0.04]             -0.74     0.33
+  log [NII]/Hα                           14   -0.42 [-0.60 – -0.35]             -0.82    -0.22
+  log [SII]/Hα                           14   -0.45 [-0.62 – -0.36]             -0.71    -0.31
+  log [OI]/Hα                             9   -1.49 [-1.70 – -1.22]             -1.82    -1.10
+  Offset from Kauffmann+03 [dex]         12   -0.37 [-0.60 – -0.28]             -0.74    -0.28
+  Balmer decrement Hα/Hβ                 22   4.5 [3.9 – 5.7]                     3.6      7.2
+  E(B−V) [mag]                           22   0.39 [0.27 – 0.59]                 0.20     0.79
+  Narrow-line FWHM [km/s]                32   198 [128 – 318]                      75      999
+  Velocity offset [km/s]                 32   4 [-7 – 17]                         -34      153
+  Hα S/N                                 28   22 [14 – 53]                          3       64
+  Hβ S/N                                 26   6 [4 – 16]                            3       31
+  [OIII] S/N                             16   7 [5 – 19]                            3       53
+  Hβ absorption EW [Å]                   37   3.35 [2.56 – 4.50]                 1.69     5.34
+  Hα absorption EW [Å]                   35   2.81 [1.98 – 3.89]                 1.40     4.57
+  Reduced χ² (fitted windows)            39   1.2 [1.0 – 1.7]                     0.9      3.3
+  Hβ flux change without absorbers [%]   26   -42 [-67 – -23]                     -95      -18
+  ΔWAIC (without − with absorbers)       39   27 [9 – 94]                          -0      238
+
+General character
+  Overall BPT class: lines undetected 18 (46%), star-forming 12 (31%), no emission 7 (18%), composite 2 (5%); 19 tentative.
+  No emission line detected: 7 of 39; 24 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 9 of 39. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: star-forming 12, composite 2.
+  [SII] diagram: star-forming 14.
+  [OI] diagram: star-forming 8, Seyfert 1.
+  Position in the [NII] diagram: median -0.37 dex from the Kauffmann+03 line (negative = star-forming side); 0 of 12 lie above it.
+  Excitation / nitrogen: log [OIII]/Hβ -0.38 (-0.74 to +0.33), log [NII]/Hα -0.42 (-0.82 to -0.22).
+  Balmer decrement Hα/Hβ: median 4.51 (Case B 2.86), range 3.63 – 7.21; E(B−V) median 0.39, up to 0.79. 3 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 198 km/s (75 – 999); velocity offset from the catalogue redshift median +4 km/s (-34 to +153).
+  Balmer absorption (unite): Hβ EW median 3.35 Å (1.69 – 5.34); WAIC prefers the absorber model in 31 of 39; removing the absorbers changes Hβ by a median -42% (-95% to -18%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 0 of 26 Hβ-detected objects.
+  Tallest feature in the fit: Hα+[NII] 25, Hgamma 9, [OII] 5.
+  Fit quality: good 22, acceptable 13, poor 4.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 43% (of 37 fitted)   Hβ 70% (of 37 fitted)   Hα 80% (of 35 fitted)   [NII] 80% (of 35 fitted)   [SII] 71% (of 35 fitted)   [OI] 32% (of 34 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0285-0518 (Hbeta, [NII], [OIII], [SII]); 0285-0537 (Halpha, Hbeta, [OIII], [OI], [SII]); 0285-0559 ([OIII], [OI]); 0285-0562 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0285-0568 (Halpha, Hbeta, [NII], [OIII], [SII]); 0285-0583 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0285-0594 ([OI]); 0285-0596 (Hbeta, [OIII], [OI]); 0285-0627 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0285-0637 ([OIII], [OI]); 0286-0364 ([OIII], [OI]); 0286-0369 ([OIII], [OI]); 0286-0373 (Hbeta, [OIII], [OI]); 0286-0379 ([OIII], [OI], [SII]); 0286-0385 ([OIII], [OI]); 0286-0389 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0286-0395 ([OIII], [OI]); 0286-0402 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0349-0181 ([OIII], [OI]); 0376-0205 ([OI]); 0377-0356 ([OI]); 0379-0222 ([OI]); 0385-0195 ([OIII], [OI]); 0385-0587 ([OI])
+
+Lines on sky / telluric regions
+  0285-0594: NII_6550 @7614 A (telluric O2 A-band); NII_6585 @7655 A (telluric O2 A-band); Halpha @7631 A (telluric O2 A-band)
+  0285-0627: OI_6302 @7625 A (telluric O2 A-band)
+  0286-0369: SII_6718 @7678 A (telluric O2 A-band); SII_6733 @7695 A (telluric O2 A-band)
+  0286-0382: SII_6718 @7614 A (telluric O2 A-band); SII_6733 @7630 A (telluric O2 A-band)
+  0286-0385: OIII_4960 @5581 A ([OI] 5577 sky line)
+  0377-0356: OIII_4960 @5592 A ([OI] 5577 sky line); SII_6733 @7590 A (telluric O2 A-band)
+  0385-0099: SII_6718 @7614 A (telluric O2 A-band); SII_6733 @7630 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0286-0389 (0.245)   lowest 0382-0124 (0.025)
+  log [OIII]/Hβ                          highest 0385-0169 (0.33)   lowest 0383-0556 (-0.74)
+  log [NII]/Hα                           highest 0385-0527 (-0.22)   lowest 0382-0124 (-0.82)
+  Balmer decrement Hα/Hβ                 highest 0286-0395 (7.2)   lowest 0385-0169 (3.6)
+  Narrow-line FWHM [km/s]                highest 0285-0518 (999)   lowest 0382-0124 (75)
+  Hβ absorption EW [Å]                   highest 0285-0518 (5.34)   lowest 0385-0527 (1.69)
+  Hα S/N                                 highest 0383-0588 (64)   lowest 0285-0518 (3)
+  Reduced χ² (fitted windows)            highest 0285-0568 (3.3)   lowest 0385-0195 (0.9)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0285-0562: Redshift z = 0.200 (+3.3 robust σ from the group median)
+  0285-0627: Redshift z = 0.210 (+3.6 robust σ from the group median)
+  0286-0389: Redshift z = 0.245 (+4.5 robust σ from the group median)
+  0382-0124: log [NII]/Hα = -0.82 (-3.4 robust σ from the group median)
+  0385-0169: log [NII]/Hα = -0.82 (-3.4 robust σ from the group median)
+  0285-0518: Narrow-line FWHM [km/s] = 999 (+7.9 robust σ from the group median)
+  0285-0537: Narrow-line FWHM [km/s] = 953 (+7.4 robust σ from the group median)
+  0285-0518: Velocity offset [km/s] = 61 (+4.0 robust σ from the group median)
+  0285-0537: Velocity offset [km/s] = 153 (+10.6 robust σ from the group median)
+  0383-0588: Hβ S/N = 21 (+3.4 robust σ from the group median)
+  0385-0169: Hβ S/N = 31 (+5.6 robust σ from the group median)
+  0382-0124: [OIII] S/N = 20 (+3.5 robust σ from the group median)
+  0385-0169: [OIII] S/N = 53 (+12.4 robust σ from the group median)
+  0385-0532: [OIII] S/N = 22 (+4.0 robust σ from the group median)
+  0285-0518: Reduced χ² (fitted windows) = 2.0 (+3.1 robust σ from the group median)
+  0285-0568: Reduced χ² (fitted windows) = 3.3 (+7.9 robust σ from the group median)
+  0285-0570: Reduced χ² (fitted windows) = 2.8 (+6.1 robust σ from the group median)
+  0285-0583: Reduced χ² (fitted windows) = 2.3 (+4.2 robust σ from the group median)
+  0285-0518: ΔWAIC (without − with absorbers) = 136 (+3.2 robust σ from the group median)
+  0285-0568: ΔWAIC (without − with absorbers) = 238 (+6.2 robust σ from the group median)
+  0285-0583: ΔWAIC (without − with absorbers) = 149 (+3.6 robust σ from the group median)
+  0385-0169: ΔWAIC (without − with absorbers) = 176 (+4.4 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (EM classes)
+  log [OI]/Hα                            median -1.49 here vs -1.23 elsewhere (shift -1.1 robust σ, Mann-Whitney p = 0.106; n = 9 / 16)
+  log [OIII]/Hβ                          median -0.38 here vs -0.06 elsewhere (shift -0.8 robust σ, Mann-Whitney p = 0.0185; n = 14 / 43)
+  Narrow-line FWHM [km/s]                median 198 here vs 319 elsewhere (shift -0.8 robust σ, Mann-Whitney p = 2.99e-05; n = 32 / 113)
+  Hα S/N                                 median 22 here vs 12 elsewhere (shift +0.8 robust σ, Mann-Whitney p = 0.000426; n = 28 / 88)
+  Hβ detected                            70% here vs 34% elsewhere
+
+====================================================================================================
+GROUP: Composite [EM]  [file tag COMPOSITE]    N = 40    (survey: SDSS 40; fit code: unite 40)
+====================================================================================================
+(Portsmouth emission-line class from the SDSS DR12 emissionlinesport table, as chosen by EM_CLASS in the loop; independent of this fit's own BPT class below.)
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             40   0.096 [0.062 – 0.152]             0.026    0.371
+  log [OIII]/Hβ                          10   -0.10 [-0.21 – 0.04]              -0.48     0.14
+  log [NII]/Hα                           10   -0.21 [-0.24 – -0.18]             -0.28    -0.14
+  log [SII]/Hα                           10   -0.47 [-0.53 – -0.34]             -0.55    -0.12
+  log [OI]/Hα                             4   -1.25 [-1.32 – -1.07]             -1.37    -0.92
+  Balmer decrement Hα/Hβ                 12   4.7 [4.4 – 7.5]                     3.9      8.2
+  E(B−V) [mag]                           12   0.43 [0.37 – 0.82]                 0.26     0.90
+  Narrow-line FWHM [km/s]                34   282 [235 – 465]                     156      951
+  Velocity offset [km/s]                 34   -2 [-15 – 19]                       -36       47
+  Hα S/N                                 30   12 [6 – 34]                           3       52
+  Hβ S/N                                 13   6 [4 – 9]                             3       10
+  [OIII] S/N                             18   6 [4 – 14]                            3       19
+  Hβ absorption EW [Å]                   39   2.91 [2.14 – 3.92]                 1.46     5.69
+  Hα absorption EW [Å]                   38   2.48 [1.76 – 3.21]                 1.20     4.93
+  Reduced χ² (fitted windows)            40   1.3 [1.1 – 1.5]                     1.0      2.6
+  Hβ flux change without absorbers [%]   13   -67 [-85 – -49]                     -96      -27
+  ΔWAIC (without − with absorbers)       40   23 [6 – 49]                          -1      158
+
+General character
+  Overall BPT class: lines undetected 24 (60%), composite 10 (25%), no emission 6 (15%); 27 tentative.
+  No emission line detected: 6 of 40; 33 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 6 of 40. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: composite 10.
+  [SII] diagram: star-forming 9, LINER 1.
+  [OI] diagram: star-forming 3, LINER 1.
+  Excitation / nitrogen: log [OIII]/Hβ -0.10 (-0.48 to +0.14), log [NII]/Hα -0.21 (-0.28 to -0.14).
+  Balmer decrement Hα/Hβ: median 4.73 (Case B 2.86), range 3.86 – 8.20; E(B−V) median 0.43, up to 0.90. 4 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 282 km/s (156 – 951); velocity offset from the catalogue redshift median -2 km/s (-36 to +47).
+  Balmer absorption (unite): Hβ EW median 2.91 Å (1.46 – 5.69); WAIC prefers the absorber model in 31 of 40; removing the absorbers changes Hβ by a median -67% (-96% to -27%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 0 of 13 Hβ-detected objects.
+  Tallest feature in the fit: Hα+[NII] 27, Hgamma 7, [OII] 6.
+  Fit quality: good 23, acceptable 14, poor 3.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 46% (of 39 fitted)   Hβ 33% (of 39 fitted)   Hα 79% (of 38 fitted)   [NII] 87% (of 38 fitted)   [SII] 73% (of 37 fitted)   [OI] 18% (of 38 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0266-0022 (Hbeta, [OIII], [OI]); 0266-0023 (Hbeta, [OIII], [OI], [SII]); 0266-0033 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0069 ([OIII], [OI]); 0266-0076 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0086 (Hbeta, [OIII], [OI]); 0266-0090 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0123 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0129 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0142 (Hbeta, [OI]); 0266-0143 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0144 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0148 (Hbeta, [OIII], [OI], [SII]); 0266-0159 (Hbeta, [OIII], [OI]); 0266-0160 (Hbeta, [OIII], [OI], [SII]); 0266-0167 (Halpha, Hbeta, [OIII], [OI]); 0266-0177 (Hbeta); 0266-0180 (Hbeta, [OI]); 0266-0183 (Hbeta, [OIII], [OI]); 0266-0186 (Hbeta, [OIII], [OI]); 0271-0057 (Hbeta, [OI]); 0275-0534 (Hbeta, [OIII], [OI]); 0333-0578 ([OI]); 0341-0576 ([OI]); 0344-0564 (Hbeta, [OI]); 0344-0580 ([OI]); 0401-0374 ([OIII], [OI]); 0404-0244 ([OI]); 0415-0437 ([OI]); 0452-0273 ([OI]); 0505-0167 (Hbeta, [OIII], [OI], [SII]); 0569-0271 (Hbeta, [OI]); 0575-0622 (Hbeta)
+
+Lines on sky / telluric regions
+  0266-0023: OI_6302 @7661 A (telluric O2 A-band)
+  0266-0086: SII_6718 @7664 A (telluric O2 A-band); SII_6733 @7680 A (telluric O2 A-band)
+  0266-0090: OI_6302 @7586 A (telluric O2 A-band)
+  0266-0123: Hbeta @5571 A ([OI] 5577 sky line); SII_6718 @7697 A (telluric O2 A-band)
+  0266-0129: OI_6302 @7591 A (telluric O2 A-band)
+  0266-0159: SII_6718 @7582 A (telluric O2 A-band); SII_6733 @7598 A (telluric O2 A-band)
+  0266-0183: Hbeta @5568 A ([OI] 5577 sky line); SII_6718 @7693 A (telluric O2 A-band); SII_6733 @7710 A (telluric O2 A-band)
+  0333-0578: NII_6585 @7587 A (telluric O2 A-band)
+  0341-0475: OIII_5008 @5586 A ([OI] 5577 sky line)
+  0401-0374: OIII_5008 @5588 A ([OI] 5577 sky line)
+  0415-0437: Hbeta @5593 A ([OI] 5577 sky line)
+  0505-0167: SII_6718 @7594 A (telluric O2 A-band); SII_6733 @7610 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0266-0076 (0.371)   lowest 0275-0476 (0.026)
+  log [OIII]/Hβ                          highest 0337-0090 (0.14)   lowest 0451-0064 (-0.48)
+  log [NII]/Hα                           highest 0275-0476 (-0.14)   lowest 0415-0437 (-0.28)
+  Balmer decrement Hα/Hβ                 highest 0344-0580 (8.2)   lowest 0333-0578 (3.9)
+  Narrow-line FWHM [km/s]                highest 0266-0144 (951)   lowest 0415-0437 (156)
+  Hβ absorption EW [Å]                   highest 0266-0033 (5.69)   lowest 0271-0057 (1.46)
+  Hα S/N                                 highest 0341-0475 (52)   lowest 0344-0564 (3)
+  Reduced χ² (fitted windows)            highest 0275-0476 (2.6)   lowest 0266-0069 (1.0)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0266-0076: Redshift z = 0.371 (+5.6 robust σ from the group median)
+  0575-0622: Redshift z = 0.276 (+3.6 robust σ from the group median)
+  0451-0064: log [OIII]/Hβ = -0.48 (-3.8 robust σ from the group median)
+  0275-0476: log [SII]/Hα = -0.12 (+5.3 robust σ from the group median)
+  0333-0578: log [SII]/Hα = -0.27 (+3.1 robust σ from the group median)
+  0266-0069: Balmer decrement Hα/Hβ = 7.3 (+4.2 robust σ from the group median)
+  0341-0475: Balmer decrement Hα/Hβ = 8.1 (+5.6 robust σ from the group median)
+  0344-0580: Balmer decrement Hα/Hβ = 8.2 (+5.8 robust σ from the group median)
+  0415-0437: Balmer decrement Hα/Hβ = 6.7 (+3.3 robust σ from the group median)
+  0266-0069: E(B−V) [mag] = 0.80 (+3.1 robust σ from the group median)
+  0341-0475: E(B−V) [mag] = 0.89 (+3.9 robust σ from the group median)
+  0344-0580: E(B−V) [mag] = 0.90 (+4.0 robust σ from the group median)
+  0266-0033: Narrow-line FWHM [km/s] = 924 (+8.9 robust σ from the group median)
+  0266-0144: Narrow-line FWHM [km/s] = 951 (+9.3 robust σ from the group median)
+  0575-0622: Narrow-line FWHM [km/s] = 624 (+4.8 robust σ from the group median)
+  0275-0476: Hα S/N = 45 (+3.4 robust σ from the group median)
+  0341-0475: Hα S/N = 52 (+4.1 robust σ from the group median)
+  0275-0476: [OIII] S/N = 19 (+4.4 robust σ from the group median)
+  0337-0090: [OIII] S/N = 18 (+4.0 robust σ from the group median)
+  0341-0576: [OIII] S/N = 15 (+3.0 robust σ from the group median)
+  0266-0033: Hβ absorption EW [Å] = 5.69 (+3.1 robust σ from the group median)
+  0266-0033: Hα absorption EW [Å] = 4.93 (+3.1 robust σ from the group median)
+  0266-0144: Reduced χ² (fitted windows) = 2.0 (+3.7 robust σ from the group median)
+  0275-0476: Reduced χ² (fitted windows) = 2.6 (+6.1 robust σ from the group median)
+  0372-0047: Reduced χ² (fitted windows) = 2.0 (+3.4 robust σ from the group median)
+  0266-0143: ΔWAIC (without − with absorbers) = 144 (+5.9 robust σ from the group median)
+  0266-0144: ΔWAIC (without − with absorbers) = 158 (+6.5 robust σ from the group median)
+  0275-0476: ΔWAIC (without − with absorbers) = 96 (+3.5 robust σ from the group median)
+  0341-0475: ΔWAIC (without − with absorbers) = 109 (+4.2 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (EM classes)
+  Hβ flux change without absorbers [%]   median -67 here vs -39 elsewhere (shift -1.0 robust σ, Mann-Whitney p = 0.00361; n = 13 / 65)
+  log [NII]/Hα                           median -0.21 here vs -0.42 elsewhere (shift +0.8 robust σ, Mann-Whitney p = 0.00035; n = 10 / 46)
+  Balmer decrement Hα/Hβ                 median 4.7 here vs 4.2 elsewhere (shift +0.6 robust σ, Mann-Whitney p = 0.0166; n = 12 / 55)
+  E(B−V) [mag]                           median 0.43 here vs 0.33 elsewhere (shift +0.6 robust σ, Mann-Whitney p = 0.0155; n = 12 / 55)
+
+====================================================================================================
+GROUP: Seyfert [EM]  [file tag SEYFERT]    N = 40    (survey: SDSS 40; fit code: unite 40)
+====================================================================================================
+(Portsmouth emission-line class from the SDSS DR12 emissionlinesport table, as chosen by EM_CLASS in the loop; independent of this fit's own BPT class below.)
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             40   0.146 [0.102 – 0.347]             0.051    0.402
+  log [OIII]/Hβ                           9   -0.25 [-0.53 – 0.38]              -0.68     0.51
+  log [NII]/Hα                            9   -0.39 [-0.45 – -0.26]             -0.47    -0.14
+  log [SII]/Hα                            7   -0.60 [-0.67 – -0.37]             -0.73    -0.30
+  log [OI]/Hα                             4   -1.44 [-1.56 – -1.26]             -1.59    -1.18
+  Offset from Kauffmann+03 [dex]          5   -0.42 [-0.56 – -0.39]             -0.60    -0.37
+  Balmer decrement Hα/Hβ                 10   5.0 [4.3 – 5.9]                     3.8      7.5
+  E(B−V) [mag]                           10   0.47 [0.34 – 0.63]                 0.24     0.82
+  Narrow-line FWHM [km/s]                29   363 [231 – 564]                      81      922
+  Velocity offset [km/s]                 29   3 [-10 – 30]                        -39      135
+  Hα S/N                                 24   9 [4 – 44]                            3       49
+  Hβ S/N                                 12   8 [4 – 12]                            3       14
+  [OIII] S/N                             20   6 [5 – 23]                            3       29
+  Hβ absorption EW [Å]                   38   3.28 [2.53 – 4.70]                 2.21     6.18
+  Hα absorption EW [Å]                   30   2.79 [2.11 – 3.95]                 1.94     5.35
+  Reduced χ² (fitted windows)            40   1.2 [1.0 – 1.5]                     0.9      2.5
+  Hβ flux change without absorbers [%]   12   -46 [-81 – -28]                     -96      -21
+  ΔWAIC (without − with absorbers)       40   22 [10 – 55]                          4      114
+
+General character
+  Overall BPT class: lines undetected 20 (50%), no emission 11 (28%), star-forming 5 (12%), composite 3 (8%), AGN (Seyfert) 1 (2%); 20 tentative.
+  No emission line detected: 11 of 40; 25 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 3 of 40. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: star-forming 5, composite 3, AGN 1.
+  [SII] diagram: star-forming 5, Seyfert 2.
+  [OI] diagram: star-forming 3, Seyfert 1.
+  Position in the [NII] diagram: median -0.42 dex from the Kauffmann+03 line (negative = star-forming side); 0 of 5 lie above it.
+  Excitation / nitrogen: log [OIII]/Hβ -0.25 (-0.68 to +0.51), log [NII]/Hα -0.39 (-0.47 to -0.14).
+  Balmer decrement Hα/Hβ: median 4.97 (Case B 2.86), range 3.77 – 7.45; E(B−V) median 0.47, up to 0.82. 2 flagged as unphysically high for narrow lines.
+  Narrow-line width: FWHM median 363 km/s (81 – 922); velocity offset from the catalogue redshift median +3 km/s (-39 to +135).
+  Balmer absorption (unite): Hβ EW median 3.28 Å (2.21 – 6.18); WAIC prefers the absorber model in 33 of 40; removing the absorbers changes Hβ by a median -46% (-96% to -21%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 0 of 12 Hβ-detected objects.
+  Tallest feature in the fit: Hα+[NII] 20, [OII] 11, Hgamma 6, [OIII] 2, [OI] 6300 1.
+  Fit quality: good 24, acceptable 14, poor 2.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 53% (of 38 fitted)   Hβ 32% (of 38 fitted)   Hα 80% (of 30 fitted)   [NII] 77% (of 31 fitted)   [SII] 63% (of 27 fitted)   [OI] 21% (of 33 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0266-0074 (Hbeta, [OIII], [OI], [SII]); 0266-0077 (Hbeta, [OIII], [OI]); 0266-0091 (Hbeta, [NII], [OIII], [OI]); 0266-0102 ([OIII], [OI], [SII]); 0266-0112 (Hbeta, [OI]); 0266-0134 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0135 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0165 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0170 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0171 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0178 (Halpha, Hbeta, [OIII], [OI]); 0266-0203 (Hbeta); 0266-0214 (Hbeta, [OIII], [OI], [SII]); 0266-0239 (Hbeta, [OIII], [OI]); 0266-0243 (Hbeta); 0364-0145 ([OI], [SII]); 0429-0414 (Hbeta, [OIII], [OI], [SII]); 0434-0288 (Hbeta, [OI]); 0489-0591 (Hbeta, [OI]); 0581-0370 ([OI]); 0671-0033 ([OI]); 0886-0084 (Hbeta, [OI]); 2517-0147 ([OI]); 5022-0474 ([OI], [SII]); 5024-0448 (Hbeta)
+
+Lines on sky / telluric regions
+  0266-0035: SII_6718 @7602 A (telluric O2 A-band); SII_6733 @7618 A (telluric O2 A-band)
+  0266-0074: SII_6718 @7601 A (telluric O2 A-band); SII_6733 @7617 A (telluric O2 A-band)
+  0266-0077: OIII_4960 @5585 A ([OI] 5577 sky line); SII_6733 @7581 A (telluric O2 A-band)
+  0266-0102: OIII_4960 @5587 A ([OI] 5577 sky line); SII_6733 @7584 A (telluric O2 A-band)
+  0266-0112: OIII_4960 @5585 A ([OI] 5577 sky line); SII_6733 @7580 A (telluric O2 A-band)
+  0266-0135: Hbeta @5567 A ([OI] 5577 sky line); SII_6718 @7691 A (telluric O2 A-band); SII_6733 @7708 A (telluric O2 A-band)
+  0266-0178: OIII_4960 @5576 A ([OI] 5577 sky line)
+  0266-0203: SII_6718 @7681 A (telluric O2 A-band); SII_6733 @7697 A (telluric O2 A-band)
+  0266-0214: Hbeta @5570 A ([OI] 5577 sky line); SII_6718 @7696 A (telluric O2 A-band); SII_6733 @7712 A (telluric O2 A-band)
+  0266-0239: Hbeta @5567 A ([OI] 5577 sky line); SII_6718 @7692 A (telluric O2 A-band); SII_6733 @7708 A (telluric O2 A-band)
+  0364-0145: Hbeta @5575 A ([OI] 5577 sky line); SII_6718 @7703 A (telluric O2 A-band)
+  0371-0020: Hbeta @5576 A ([OI] 5577 sky line); SII_6718 @7703 A (telluric O2 A-band)
+  0401-0506: OI_6302 @7681 A (telluric O2 A-band)
+  0434-0288: OI_6302 @7591 A (telluric O2 A-band)
+  0454-0099: Hbeta @5574 A ([OI] 5577 sky line); SII_6718 @7701 A (telluric O2 A-band)
+  0454-0100: Hbeta @5571 A ([OI] 5577 sky line); SII_6718 @7697 A (telluric O2 A-band)
+  0489-0591: Hbeta @5586 A ([OI] 5577 sky line)
+  0541-0340: Hbeta @5586 A ([OI] 5577 sky line)
+  0566-0046: NII_6550 @7624 A (telluric O2 A-band); NII_6585 @7665 A (telluric O2 A-band); Halpha @7641 A (telluric O2 A-band)
+  0703-0597: Hbeta @6296 A ([OI] 6300 sky line)
+  0886-0084: OIII_4960 @5583 A ([OI] 5577 sky line); SII_6733 @7578 A (telluric O2 A-band)
+  2517-0147: Hbeta @5586 A ([OI] 5577 sky line)
+  2765-0200: Hbeta @5571 A ([OI] 5577 sky line); SII_6718 @7697 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0266-0220 (0.402)   lowest 0566-0306 (0.051)
+  log [OIII]/Hβ                          highest 0671-0033 (0.51)   lowest 0541-0340 (-0.68)
+  log [NII]/Hα                           highest 0581-0370 (-0.14)   lowest 0371-0020 (-0.47)
+  Balmer decrement Hα/Hβ                 highest 0371-0020 (7.5)   lowest 0266-0102 (3.8)
+  Narrow-line FWHM [km/s]                highest 0266-0091 (922)   lowest 0364-0145 (81)
+  Hβ absorption EW [Å]                   highest 0266-0091 (6.18)   lowest 0266-0220 (2.21)
+  Hα S/N                                 highest 0364-0145 (49)   lowest 0429-0414 (3)
+  Reduced χ² (fitted windows)            highest 0541-0340 (2.5)   lowest 5022-0474 (0.9)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0266-0039: Redshift z = 0.383 (+6.5 robust σ from the group median)
+  0266-0091: Redshift z = 0.374 (+6.2 robust σ from the group median)
+  0266-0096: Redshift z = 0.385 (+6.5 robust σ from the group median)
+  0266-0134: Redshift z = 0.369 (+6.1 robust σ from the group median)
+  0266-0170: Redshift z = 0.369 (+6.1 robust σ from the group median)
+  0266-0220: Redshift z = 0.402 (+7.0 robust σ from the group median)
+  0671-0033: Redshift z = 0.299 (+4.2 robust σ from the group median)
+  0703-0597: Redshift z = 0.295 (+4.1 robust σ from the group median)
+  5022-0474: Redshift z = 0.290 (+3.9 robust σ from the group median)
+  5024-0448: Redshift z = 0.362 (+5.9 robust σ from the group median)
+  0581-0370: log [NII]/Hα = -0.14 (+4.1 robust σ from the group median)
+  0371-0020: Balmer decrement Hα/Hβ = 7.5 (+3.3 robust σ from the group median)
+  0266-0091: Narrow-line FWHM [km/s] = 922 (+4.2 robust σ from the group median)
+  0266-0074: Velocity offset [km/s] = 86 (+4.7 robust σ from the group median)
+  0266-0091: Velocity offset [km/s] = 76 (+4.1 robust σ from the group median)
+  0429-0414: Velocity offset [km/s] = 135 (+7.4 robust σ from the group median)
+  0364-0145: Hα S/N = 49 (+5.4 robust σ from the group median)
+  0371-0020: Hα S/N = 46 (+5.0 robust σ from the group median)
+  0541-0340: Hα S/N = 48 (+5.3 robust σ from the group median)
+  2517-0147: Hα S/N = 44 (+4.7 robust σ from the group median)
+  2765-0200: Hα S/N = 44 (+4.7 robust σ from the group median)
+  0266-0203: [OIII] S/N = 24 (+6.1 robust σ from the group median)
+  0348-0165: [OIII] S/N = 29 (+7.8 robust σ from the group median)
+  0566-0046: [OIII] S/N = 28 (+7.4 robust σ from the group median)
+  0671-0033: [OIII] S/N = 23 (+5.7 robust σ from the group median)
+  0541-0340: Reduced χ² (fitted windows) = 2.5 (+5.1 robust σ from the group median)
+  0566-0306: Reduced χ² (fitted windows) = 2.2 (+3.9 robust σ from the group median)
+  0266-0165: ΔWAIC (without − with absorbers) = 114 (+5.7 robust σ from the group median)
+  0266-0171: ΔWAIC (without − with absorbers) = 86 (+4.0 robust σ from the group median)
+  0454-0099: ΔWAIC (without − with absorbers) = 107 (+5.2 robust σ from the group median)
+  0541-0340: ΔWAIC (without − with absorbers) = 83 (+3.7 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (EM classes)
+  log [SII]/Hα                           median -0.60 here vs -0.46 elsewhere (shift -0.9 robust σ, Mann-Whitney p = 0.24; n = 7 / 43)
+  Balmer decrement Hα/Hβ                 median 5.0 here vs 4.2 elsewhere (shift +0.9 robust σ, Mann-Whitney p = 0.0395; n = 10 / 57)
+  E(B−V) [mag]                           median 0.47 here vs 0.33 elsewhere (shift +0.8 robust σ, Mann-Whitney p = 0.042; n = 10 / 57)
+  log [OI]/Hα                            median -1.44 here vs -1.27 elsewhere (shift -0.7 robust σ, Mann-Whitney p = 0.394; n = 4 / 21)
+
+====================================================================================================
+GROUP: LINER [EM]  [file tag LINER]    N = 40    (survey: SDSS 40; fit code: unite 40)
+====================================================================================================
+(Portsmouth emission-line class from the SDSS DR12 emissionlinesport table, as chosen by EM_CLASS in the loop; independent of this fit's own BPT class below.)
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             40   0.130 [0.084 – 0.289]             0.029    0.385
+  log [OIII]/Hβ                           6   -0.06 [-0.33 – 0.30]              -0.52     0.39
+  log [NII]/Hα                            6   -0.18 [-0.23 – -0.02]             -0.31     0.03
+  log [SII]/Hα                            6   -0.37 [-0.47 – -0.28]             -0.56    -0.14
+  log [OI]/Hα                             5   -1.01 [-1.14 – -0.79]             -1.18    -0.72
+  Balmer decrement Hα/Hβ                  6   4.2 [3.0 – 4.3]                     3.0      4.6
+  E(B−V) [mag]                            6   0.33 [0.05 – 0.35]                 0.05     0.41
+  Narrow-line FWHM [km/s]                28   476 [315 – 720]                     165      963
+  Velocity offset [km/s]                 28   12 [-21 – 40]                       -93      485
+  Hα S/N                                 15   6 [3 – 19]                            3       27
+  Hβ S/N                                  8   6 [5 – 7]                             3       10
+  [OIII] S/N                             13   10 [4 – 25]                           3       59
+  Hβ absorption EW [Å]                   39   3.18 [2.19 – 4.62]                 0.96     6.18
+  Hα absorption EW [Å]                   33   2.69 [1.91 – 3.95]                 0.79     5.36
+  Reduced χ² (fitted windows)            40   1.2 [1.1 – 1.8]                     1.0      3.9
+  Hβ flux change without absorbers [%]    8   -66 [-90 – -45]                     -96      -34
+  ΔWAIC (without − with absorbers)       40   22 [4 – 80]                          -4      405
+
+General character
+  Overall BPT class: lines undetected 22 (55%), no emission 12 (30%), composite 4 (10%), AGN (Seyfert) 2 (5%); 27 tentative.
+  No emission line detected: 12 of 40; 28 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 7 of 40. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: composite 4, AGN 2.
+  [SII] diagram: star-forming 5, Seyfert 1.
+  [OI] diagram: LINER 3, Seyfert 2.
+  Excitation / nitrogen: log [OIII]/Hβ -0.06 (-0.52 to +0.39), log [NII]/Hα -0.18 (-0.31 to +0.03).
+  Balmer decrement Hα/Hβ: median 4.19 (Case B 2.86), range 3.05 – 4.62; E(B−V) median 0.33, up to 0.41.
+  Narrow-line width: FWHM median 476 km/s (165 – 963); velocity offset from the catalogue redshift median +12 km/s (-93 to +485).
+  Balmer absorption (unite): Hβ EW median 3.18 Å (0.96 – 6.18); WAIC prefers the absorber model in 28 of 40; removing the absorbers changes Hβ by a median -66% (-96% to -34%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 1 of 8 Hβ-detected objects  -- the data want a stronger/wider absorber than allowed; Hβ is not reliable for these.
+  Tallest feature in the fit: Hα+[NII] 14, Hgamma 13, [OII] 11, [NeIII] 3869 1, [OIII] 1.
+  Fit quality: good 23, acceptable 12, poor 5.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 33% (of 39 fitted)   Hβ 21% (of 39 fitted)   Hα 45% (of 33 fitted)   [NII] 73% (of 33 fitted)   [SII] 45% (of 31 fitted)   [OI] 21% (of 34 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0266-0007 (Hbeta, [OIII], [OI], [SII]); 0266-0016 (Halpha, Hbeta, [OIII], [OI]); 0266-0020 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0028 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0061 (Halpha, Hbeta, [OIII], [OI]); 0266-0089 (Hbeta, [NII], [OIII], [OI]); 0266-0097 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0110 (Halpha, Hbeta, [OIII], [OI]); 0266-0116 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0117 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0119 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0122 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0132 (Hbeta, [OIII], [OI]); 0266-0136 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0139 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0169 ([NII], [OIII], [OI], [SII]); 0266-0184 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0293-0483 (Halpha, Hbeta, [OIII], [OI], [SII]); 0362-0535 (Halpha, Hbeta, [OIII], [OI], [SII]); 0366-0564 (Hbeta); 0373-0130 (Halpha, Hbeta, [OI]); 0459-0082 (Hbeta, [OIII], [OI]); 0508-0171 (Hbeta, [OI], [SII]); 0512-0584 (Hbeta, [OIII], [OI], [SII]); 0539-0283 (Halpha, Hbeta, [OI], [SII]); 0601-0366 (Hbeta); 0754-0595 (Halpha, Hbeta, [OIII], [OI], [SII]); 0886-0040 ([OI])
+
+Lines on sky / telluric regions
+  0266-0007: OI_6302 @7650 A (telluric O2 A-band)
+  0266-0016: OIII_4960 @5588 A ([OI] 5577 sky line); SII_6733 @7585 A (telluric O2 A-band)
+  0266-0028: OI_6302 @7588 A (telluric O2 A-band)
+  0266-0047: SII_6718 @7662 A (telluric O2 A-band); SII_6733 @7679 A (telluric O2 A-band)
+  0266-0061: OIII_4960 @5578 A ([OI] 5577 sky line)
+  0266-0097: OI_6302 @7586 A (telluric O2 A-band)
+  0266-0110: SII_6718 @7593 A (telluric O2 A-band); SII_6733 @7609 A (telluric O2 A-band)
+  0266-0116: SII_6718 @7593 A (telluric O2 A-band); SII_6733 @7609 A (telluric O2 A-band)
+  0266-0117: SII_6718 @7606 A (telluric O2 A-band); SII_6733 @7622 A (telluric O2 A-band)
+  0266-0119: SII_6718 @7595 A (telluric O2 A-band); SII_6733 @7611 A (telluric O2 A-band)
+  0266-0122: SII_6718 @7670 A (telluric O2 A-band); SII_6733 @7687 A (telluric O2 A-band)
+  0266-0132: NII_6585 @7597 A (telluric O2 A-band)
+  0266-0176: OIII_4960 @5582 A ([OI] 5577 sky line)
+  0266-0184: OIII_4960 @5590 A ([OI] 5577 sky line); SII_6733 @7588 A (telluric O2 A-band)
+  0293-0483: SII_6718 @7582 A (telluric O2 A-band); SII_6733 @7598 A (telluric O2 A-band)
+  0355-0096: OIII_5008 @5577 A ([OI] 5577 sky line)
+  0566-0156: SII_6718 @7631 A (telluric O2 A-band); SII_6733 @7648 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0434-0137 (0.385)   lowest 0366-0564 (0.029)
+  log [OIII]/Hβ                          highest 0382-0514 (0.39)   lowest 0355-0096 (-0.52)
+  log [NII]/Hα                           highest 0355-0096 (0.03)   lowest 0273-0356 (-0.31)
+  Balmer decrement Hα/Hβ                 highest 0431-0354 (4.6)   lowest 0355-0096 (3.0)
+  Narrow-line FWHM [km/s]                highest 0266-0169 (963)   lowest 0431-0354 (165)
+  Hβ absorption EW [Å]                   highest 0266-0097 (6.18)   lowest 0366-0564 (0.96)
+  Hα S/N                                 highest 0355-0096 (27)   lowest 0266-0007 (3)
+  Reduced χ² (fitted windows)            highest 0382-0514 (3.9)   lowest 0266-0136 (1.0)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0266-0089: Redshift z = 0.351 (+3.1 robust σ from the group median)
+  0266-0136: Redshift z = 0.368 (+3.4 robust σ from the group median)
+  0266-0145: Redshift z = 0.366 (+3.3 robust σ from the group median)
+  0434-0137: Redshift z = 0.385 (+3.6 robust σ from the group median)
+  0355-0096: Balmer decrement Hα/Hβ = 3.0 (-3.3 robust σ from the group median)
+  0566-0156: Balmer decrement Hα/Hβ = 3.0 (-3.3 robust σ from the group median)
+  0355-0096: E(B−V) [mag] = 0.05 (-3.7 robust σ from the group median)
+  0566-0156: E(B−V) [mag] = 0.05 (-3.7 robust σ from the group median)
+  0266-0119: Narrow-line FWHM [km/s] = 958 (+4.0 robust σ from the group median)
+  0266-0169: Narrow-line FWHM [km/s] = 963 (+4.1 robust σ from the group median)
+  0266-0089: Velocity offset [km/s] = 485 (+12.8 robust σ from the group median)
+  0355-0096: Hα S/N = 27 (+4.7 robust σ from the group median)
+  0431-0354: Hα S/N = 23 (+3.8 robust σ from the group median)
+  0434-0137: [OIII] S/N = 59 (+5.5 robust σ from the group median)
+  0266-0169: Reduced χ² (fitted windows) = 2.7 (+6.5 robust σ from the group median)
+  0366-0564: Reduced χ² (fitted windows) = 2.7 (+6.6 robust σ from the group median)
+  0382-0514: Reduced χ² (fitted windows) = 3.9 (+11.9 robust σ from the group median)
+  0434-0137: Reduced χ² (fitted windows) = 2.4 (+5.1 robust σ from the group median)
+  0531-0304: Reduced χ² (fitted windows) = 2.4 (+5.0 robust σ from the group median)
+  0266-0169: ΔWAIC (without − with absorbers) = 405 (+14.3 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (EM classes)
+  log [OI]/Hα                            median -1.01 here vs -1.36 elsewhere (shift +1.4 robust σ, Mann-Whitney p = 0.00278; n = 5 / 20)
+  Narrow-line FWHM [km/s]                median 476 here vs 275 elsewhere (shift +1.3 robust σ, Mann-Whitney p = 2.86e-06; n = 28 / 117)
+  [OIII] S/N                             median 10 here vs 6 elsewhere (shift +0.9 robust σ, Mann-Whitney p = 0.611; n = 13 / 73)
+  log [NII]/Hα                           median -0.18 here vs -0.40 elsewhere (shift +0.9 robust σ, Mann-Whitney p = 0.00176; n = 6 / 50)
+
+====================================================================================================
+GROUP: Seyfert/LINER [EM]  [file tag SEYFERT_LINER]    N = 40    (survey: SDSS 40; fit code: unite 40)
+====================================================================================================
+(Portsmouth emission-line class from the SDSS DR12 emissionlinesport table, as chosen by EM_CLASS in the loop; independent of this fit's own BPT class below.)
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             40   0.313 [0.089 – 0.394]             0.007    0.501
+  log [OIII]/Hβ                          18   0.06 [-0.26 – 0.41]               -0.72     0.73
+  log [NII]/Hα                           17   -0.70 [-1.22 – -0.40]             -1.22    -0.10
+  log [SII]/Hα                           13   -0.50 [-0.73 – -0.36]             -1.07    -0.30
+  log [OI]/Hα                             3   -1.41 [-1.78 – -1.28]             -1.96    -1.22
+  Offset from Kauffmann+03 [dex]         15   -0.38 [-0.61 – -0.10]             -0.85    -0.07
+  Balmer decrement Hα/Hβ                 17   3.6 [3.3 – 4.5]                     3.1      5.0
+  E(B−V) [mag]                           17   0.19 [0.13 – 0.39]                 0.07     0.48
+  Narrow-line FWHM [km/s]                22   217 [121 – 336]                      76      971
+  Velocity offset [km/s]                 22   -12 [-19 – 3]                       -61       19
+  Hα S/N                                 19   17 [10 – 43]                          5       59
+  Hβ S/N                                 19   8 [5 – 22]                            3       55
+  [OIII] S/N                             19   11 [5 – 44]                           3      115
+  Hβ absorption EW [Å]                   39   4.18 [2.01 – 5.18]                 1.41     5.76
+  Hα absorption EW [Å]                   39   3.55 [1.68 – 4.44]                 1.17     4.92
+  Reduced χ² (fitted windows)            40   1.1 [0.9 – 1.5]                     0.8      2.6
+  Hβ flux change without absorbers [%]   19   -21 [-40 – -12]                     -77       -0
+  ΔWAIC (without − with absorbers)       40   14 [1 – 49]                         -10      322
+
+General character
+  Overall BPT class: no emission 18 (45%), star-forming 15 (38%), lines undetected 5 (12%), composite 2 (5%); 22 tentative.
+  No emission line detected: 18 of 40; 36 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 12 of 40. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: star-forming 15, composite 2.
+  [SII] diagram: star-forming 13.
+  [OI] diagram: star-forming 3.
+  Position in the [NII] diagram: median -0.38 dex from the Kauffmann+03 line (negative = star-forming side); 0 of 15 lie above it.
+  Excitation / nitrogen: log [OIII]/Hβ +0.06 (-0.72 to +0.73), log [NII]/Hα -0.70 (-1.22 to -0.10).
+  Balmer decrement Hα/Hβ: median 3.59 (Case B 2.86), range 3.11 – 5.00; E(B−V) median 0.19, up to 0.48.
+  Narrow-line width: FWHM median 217 km/s (76 – 971); velocity offset from the catalogue redshift median -12 km/s (-61 to +19).
+  Balmer absorption (unite): Hβ EW median 4.18 Å (1.41 – 5.76); WAIC prefers the absorber model in 22 of 40; removing the absorbers changes Hβ by a median -21% (-77% to -0%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 2 of 19 Hβ-detected objects  -- the data want a stronger/wider absorber than allowed; Hβ is not reliable for these.
+  Tallest feature in the fit: Hα+[NII] 16, Hgamma 15, [OII] 4, [OIII] 3, [OI] 6300 1, Hβ 1.
+  Fit quality: good 28, acceptable 10, poor 2.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 49% (of 39 fitted)   Hβ 49% (of 39 fitted)   Hα 49% (of 39 fitted)   [NII] 54% (of 39 fitted)   [SII] 45% (of 33 fitted)   [OI] 10% (of 39 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0266-0052 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0163 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0288 (Halpha, Hbeta, [NII], [OIII], [OI]); 0266-0292 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0327 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0356 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0367 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0548 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0266-0572 (Halpha, Hbeta, [OIII], [OI], [SII]); 0266-0578 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0267-0044 (Halpha, Hbeta, [NII], [OIII], [OI]); 0267-0055 (Halpha, Hbeta, [NII], [OIII], [SII]); 0267-0237 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0267-0331 (Halpha, Hbeta, [NII], [OIII], [OI]); 0267-0333 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0267-0356 (Halpha, Hbeta, [NII], [OIII], [OI]); 0267-0406 (Halpha, Hbeta, [NII], [OIII], [OI]); 0267-0459 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0267-0461 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 1759-0498 ([OI]); 3694-0821 ([OI]); 4026-0860 ([OI]); 4074-0024 ([OI]); 4871-0089 ([OI]); 5030-0725 ([OI]); 5047-0625 ([OIII], [OI], [SII]); 5159-0856 ([OI], [SII]); 5185-0531 ([OI], [SII]); 5346-0924 (Hbeta, [OI]); 6143-0077 ([OI]); 6143-0223 ([OI]); 6156-0041 ([OI]); 6183-0425 (Halpha, [OI]); 6253-0102 ([OI], [SII]); 6422-0511 ([OI]); 7239-0044 ([OI])
+
+Lines on sky / telluric regions
+  0266-0052: OI_6302 @7599 A (telluric O2 A-band)
+  0266-0163: OIII_4960 @6309 A ([OI] 6300 sky line)
+  0266-0327: SII_6718 @7633 A (telluric O2 A-band); SII_6733 @7650 A (telluric O2 A-band)
+  0267-0333: OI_6302 @7675 A (telluric O2 A-band)
+  0267-0459: SII_6718 @7674 A (telluric O2 A-band); SII_6733 @7691 A (telluric O2 A-band)
+  0267-0461: NII_6550 @7625 A (telluric O2 A-band); NII_6585 @7667 A (telluric O2 A-band); Halpha @7643 A (telluric O2 A-band)
+  4026-0860: SII_6718 @9372 A (sky-residual-dominated red end); SII_6733 @9392 A (sky-residual-dominated red end)
+  4871-0089: NII_6550 @9611 A (sky-residual-dominated red end); NII_6585 @9663 A (sky-residual-dominated red end); Halpha @9632 A (sky-residual-dominated red end); SII_6718 @9858 A (sky-residual-dominated red end); SII_6733 @9879 A (sky-residual-dominated red end)
+  5030-0725: SII_6733 @9292 A (sky-residual-dominated red end)
+  5047-0625: NII_6550 @9641 A (sky-residual-dominated red end); NII_6585 @9693 A (sky-residual-dominated red end); Halpha @9662 A (sky-residual-dominated red end); SII_6718 @9889 A (sky-residual-dominated red end); SII_6733 @9910 A (sky-residual-dominated red end)
+  5159-0856: OI_6302 @9461 A (sky-residual-dominated red end); NII_6550 @9833 A (sky-residual-dominated red end); NII_6585 @9886 A (sky-residual-dominated red end); Halpha @9855 A (sky-residual-dominated red end)
+  5185-0531: NII_6550 @9530 A (sky-residual-dominated red end); NII_6585 @9582 A (sky-residual-dominated red end); Halpha @9552 A (sky-residual-dominated red end); SII_6718 @9775 A (sky-residual-dominated red end); SII_6733 @9796 A (sky-residual-dominated red end)
+  5346-0924: Hbeta @6296 A ([OI] 6300 sky line)
+  5956-0110: SII_6718 @9383 A (sky-residual-dominated red end); SII_6733 @9404 A (sky-residual-dominated red end)
+  6143-0223: SII_6718 @9344 A (sky-residual-dominated red end); SII_6733 @9364 A (sky-residual-dominated red end)
+  6156-0041: SII_6718 @9371 A (sky-residual-dominated red end); SII_6733 @9391 A (sky-residual-dominated red end)
+  6253-0102: Hgamma @5594 A ([OI] 5577 sky line)
+  6422-0511: SII_6718 @9289 A (sky-residual-dominated red end); SII_6733 @9309 A (sky-residual-dominated red end)
+  7239-0044: Hgamma @5580 A ([OI] 5577 sky line)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 5159-0856 (0.501)   lowest 7328-0608 (0.007)
+  log [OIII]/Hβ                          highest 1771-0219 (0.73)   lowest 6253-0102 (-0.72)
+  log [NII]/Hα                           highest 1759-0498 (-0.10)   lowest 7328-0608 (-1.22)
+  Balmer decrement Hα/Hβ                 highest 6156-0041 (5.0)   lowest 5185-0531 (3.1)
+  Narrow-line FWHM [km/s]                highest 0267-0055 (971)   lowest 3694-0821 (76)
+  Hβ absorption EW [Å]                   highest 0267-0459 (5.76)   lowest 6156-0041 (1.41)
+  Hα S/N                                 highest 1771-0219 (59)   lowest 1759-0498 (5)
+  Reduced χ² (fitted windows)            highest 0266-0367 (2.6)   lowest 6183-0425 (0.8)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  6156-0041: Balmer decrement Hα/Hβ = 5.0 (+3.2 robust σ from the group median)
+  0266-0572: Narrow-line FWHM [km/s] = 928 (+6.7 robust σ from the group median)
+  0267-0055: Narrow-line FWHM [km/s] = 971 (+7.1 robust σ from the group median)
+  4871-0089: Velocity offset [km/s] = -61 (-4.8 robust σ from the group median)
+  6253-0102: Velocity offset [km/s] = -45 (-3.2 robust σ from the group median)
+  1771-0219: Hα S/N = 59 (+3.5 robust σ from the group median)
+  1771-0219: Hβ S/N = 53 (+10.1 robust σ from the group median)
+  4026-0860: Hβ S/N = 55 (+10.6 robust σ from the group median)
+  5956-0110: Hβ S/N = 38 (+6.7 robust σ from the group median)
+  1771-0219: [OIII] S/N = 115 (+11.7 robust σ from the group median)
+  3694-0821: [OIII] S/N = 38 (+3.0 robust σ from the group median)
+  4026-0860: [OIII] S/N = 114 (+11.6 robust σ from the group median)
+  5030-0725: [OIII] S/N = 43 (+3.6 robust σ from the group median)
+  5956-0110: [OIII] S/N = 48 (+4.2 robust σ from the group median)
+  0266-0367: Reduced χ² (fitted windows) = 2.6 (+5.0 robust σ from the group median)
+  4026-0860: Reduced χ² (fitted windows) = 2.0 (+3.1 robust σ from the group median)
+  0266-0292: ΔWAIC (without − with absorbers) = 277 (+12.9 robust σ from the group median)
+  0266-0367: ΔWAIC (without − with absorbers) = 322 (+15.2 robust σ from the group median)
+  0266-0578: ΔWAIC (without − with absorbers) = 145 (+6.4 robust σ from the group median)
+  0267-0055: ΔWAIC (without − with absorbers) = 156 (+7.0 robust σ from the group median)
+  0267-0459: ΔWAIC (without − with absorbers) = 116 (+5.0 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (EM classes)
+  Redshift z                             median 0.313 here vs 0.125 elsewhere (shift +2.3 robust σ, Mann-Whitney p = 1.67e-07; n = 40 / 159)
+  log [NII]/Hα                           median -0.70 here vs -0.33 elsewhere (shift -1.5 robust σ, Mann-Whitney p = 2.78e-05; n = 17 / 39)
+  E(B−V) [mag]                           median 0.19 here vs 0.42 elsewhere (shift -1.3 robust σ, Mann-Whitney p = 6.13e-05; n = 17 / 50)
+  Balmer decrement Hα/Hβ                 median 3.6 here vs 4.7 elsewhere (shift -1.2 robust σ, Mann-Whitney p = 5.99e-05; n = 17 / 50)
+
+====================================================================================================
+GROUP: QSO <missing>  [file tag QSO_MISSING]    N = 23    (survey: SDSS 23; fit code: unite 23)
+====================================================================================================
+
+Ranges of the metrics (median [16% – 84%] and full range; n = objects with a value)
+  metric                                  n   median [16% – 84%]                  min      max
+  Redshift z                             23   0.286 [0.178 – 0.395]             0.091    1.172
+  log [OIII]/Hβ                           3   0.35 [-0.09 – 0.68]               -0.30     0.84
+  log [NII]/Hα                            3   -0.14 [-0.17 – -0.01]             -0.19     0.06
+  Balmer decrement Hα/Hβ                  2   4.2 [4.0 – 4.3]                     4.0      4.4
+  E(B−V) [mag]                            2   0.33 [0.29 – 0.36]                 0.28     0.37
+  Narrow-line FWHM [km/s]                14   610 [451 – 824]                     277      978
+  Velocity offset [km/s]                 14   14 [-126 – 99]                     -802      237
+  Hα S/N                                 10   8 [4 – 10]                            3       12
+  Hβ S/N                                  4   5 [3 – 7]                             3        8
+  [OIII] S/N                             12   10 [5 – 15]                           3       49
+  Hβ absorption EW [Å]                   20   2.65 [2.06 – 3.29]                 1.16     5.75
+  Hα absorption EW [Å]                   16   2.30 [1.84 – 3.10]                 0.97     4.95
+  Reduced χ² (fitted windows)            23   1.2 [1.0 – 1.6]                     0.9      1.7
+  Hβ flux change without absorbers [%]    4   -38 [-52 – -31]                     -63      -27
+  ΔWAIC (without − with absorbers)       23   -0 [-3 – 6]                          -6       14
+
+General character
+  Overall BPT class: lines undetected 11 (48%), no emission 9 (39%), AGN (Seyfert) 2 (9%), composite 1 (4%); 13 tentative.
+  No emission line detected: 9 of 23; 16 object(s) had ratios blanked because a line they use is undetected (BPT_NEED_DETECTED), so BPT numbers below describe detected objects only. Absorber-removal flux changes of undetected lines are not physical.
+  Narrow-line FWHM at the prior cap (>= 900 km/s): 2 of 23. A width pinned near the upper prior limit means the lines are not constrained by the data (usually weak or absent lines); FWHM and velocity offset of undetected-emission objects are blanked.
+  [NII] diagram alone: AGN 2, composite 1.
+  Excitation / nitrogen: log [OIII]/Hβ +0.35 (-0.30 to +0.84), log [NII]/Hα -0.14 (-0.19 to +0.06).
+  Balmer decrement Hα/Hβ: median 4.18 (Case B 2.86), range 3.95 – 4.41; E(B−V) median 0.33, up to 0.37.
+  Narrow-line width: FWHM median 610 km/s (277 – 978); velocity offset from the catalogue redshift median +14 km/s (-802 to +237).
+  Balmer absorption (unite): Hβ EW median 2.65 Å (1.16 – 5.75); WAIC prefers the absorber model in 2 of 23; removing the absorbers changes Hβ by a median -38% (-63% to -27%).
+  Absorber at its prior ceiling (tau or EW within 10% of the maximum the priors allow): 0 of 4 Hβ-detected objects.
+  Tallest feature in the fit: Hα+[NII] 10, Hgamma 4, [OIII] 3, [OII] 3, Hβ 1, [NeIII] 3869 1.
+  Fit quality: good 14, acceptable 9.
+
+Line detection (median flux / scatter ≥ 3)
+  [OIII] 60% (of 20 fitted)   Hβ 20% (of 20 fitted)   Hα 62% (of 16 fitted)   [NII] 50% (of 16 fitted)   [SII] 0% (of 15 fitted)   [OI] 0% (of 18 fitted)
+  Objects with weakly detected lines (their panels deserve less weight): 0267-0227 (Hbeta, [OI], [SII]); 0343-0494 (Hbeta, [NII], [OIII], [OI], [SII]); 0409-0087 (Hbeta, [OI], [SII]); 0412-0154 (Hbeta, [OI], [SII]); 0426-0397 (Hbeta, [OI], [SII]); 0431-0196 ([OI], [SII]); 0435-0264 ([OI]); 0453-0538 (Halpha, Hbeta, [NII], [OI], [SII]); 0454-0525 (Hbeta, [NII], [OIII], [OI], [SII]); 0462-0576 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0465-0017 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0475-0614 (Hbeta, [OI], [SII]); 0476-0563 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0507-0091 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0524-0222 (Halpha, Hbeta, [NII], [OIII], [OI], [SII]); 0571-0633 ([OI], [SII])
+
+Lines on sky / telluric regions
+  0267-0227: SII_6718 @7644 A (telluric O2 A-band); SII_6733 @7660 A (telluric O2 A-band)
+  0435-0117: OII_3728 @7589 A (telluric O2 A-band)
+  0453-0538: Hbeta @6306 A ([OI] 6300 sky line)
+  0465-0017: OIII_4960 @6299 A ([OI] 6300 sky line)
+  0475-0614: Hgamma @5585 A ([OI] 5577 sky line)
+  0524-0222: NII_6550 @7671 A (telluric O2 A-band); NII_6585 @7713 A (telluric O2 A-band); Halpha @7688 A (telluric O2 A-band)
+
+Extremes (what sets the ends of the range)
+  Redshift z                             highest 0351-0318 (1.172)   lowest 0454-0525 (0.091)
+  log [OIII]/Hβ                          highest 0435-0264 (0.84)   lowest 0431-0196 (-0.30)
+  log [NII]/Hα                           highest 0435-0264 (0.06)   lowest 0571-0633 (-0.19)
+  Balmer decrement Hα/Hβ                 highest 0571-0633 (4.4)   lowest 0435-0264 (4.0)
+  Narrow-line FWHM [km/s]                highest 0431-0196 (978)   lowest 0435-0264 (277)
+  Hβ absorption EW [Å]                   highest 0507-0091 (5.75)   lowest 0267-0227 (1.16)
+  Hα S/N                                 highest 0431-0196 (12)   lowest 0343-0494 (3)
+  Reduced χ² (fitted windows)            highest 0409-0087 (1.7)   lowest 0524-0222 (0.9)
+
+Outlying objects (> 3 robust σ from the group median, groups of ≥ 5)
+  0292-0440: Redshift z = 0.807 (+4.1 robust σ from the group median)
+  0351-0318: Redshift z = 1.172 (+6.9 robust σ from the group median)
+  0435-0117: Redshift z = 1.035 (+5.8 robust σ from the group median)
+  0343-0494: Velocity offset [km/s] = -427 (-5.3 robust σ from the group median)
+  0453-0538: Velocity offset [km/s] = -802 (-9.8 robust σ from the group median)
+  0435-0264: [OIII] S/N = 49 (+5.2 robust σ from the group median)
+  0507-0091: Hβ absorption EW [Å] = 5.75 (+4.5 robust σ from the group median)
+  0507-0091: Hα absorption EW [Å] = 4.95 (+4.3 robust σ from the group median)
+  0412-0154: ΔWAIC (without − with absorbers) = 8 (+3.1 robust σ from the group median)
+  0431-0196: ΔWAIC (without − with absorbers) = 14 (+5.4 robust σ from the group median)
+  0435-0264: ΔWAIC (without − with absorbers) = 9 (+3.6 robust σ from the group median)
+  0507-0091: ΔWAIC (without − with absorbers) = 12 (+4.5 robust σ from the group median)
+
+What sets this group apart from the other groups of the same type (QSOs)
+  (too few objects: need ≥ 3 in this group and in the rest)
+

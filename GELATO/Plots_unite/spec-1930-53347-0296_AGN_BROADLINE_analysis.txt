@@ -1,0 +1,54 @@
+Analysis of spec-1930-53347-0296 (z = 0.0609):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): [OIII] (8), Halpha (6), [NII] (31), [SII] (19), [OI] (5)
+  Not detected / not fitted: Hbeta
+  Tallest line feature in the fit: 3956 A observed (3729 A rest, i.e. [OII] 3727).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII]/Halpha = 1.19 [0.98-1.37],  [OIII]/Hbeta = 0.80 [0.50-1.28]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Posterior draws: composite 30%, AGN 70%  (400/400 usable)
+    Caution: Hbeta not securely detected, so this ratio is poorly constrained (posterior draws with flux > 0 only).
+  [SII]/Halpha = 0.753: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.128: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as AGN (LINER). Tentative: Hbeta only weakly detected.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: [NII]/Halpha = 1.187, [OIII]/Hbeta = 0.795 -> above the Kewley+01 line: AGN, +0.07 dex from Kewley+01; posterior draws: composite 30%, AGN 70%.
+      Role: the classic BPT diagram: separates star formation from AGN with a composite zone in between, but nitrogen enrichment shifts star-forming galaxies to the right.
+      Caution: rests on weakly detected Hbeta.
+  [SII]/Halpha panel: [SII]/Halpha = 0.753, [OIII]/Hbeta = 0.795 -> above Kewley+01 and below Kewley+06: LINER-like, +0.07 dex from Kewley+01, -0.29 dex from Kewley+06; 68% of posterior draws on the AGN side.
+      Role: insensitive to metallicity: separates star formation from AGN and, with the Kewley+06 line, Seyferts (above) from LINERs (below).
+      Caution: rests on weakly detected Hbeta.
+  [OI]/Halpha panel: [OI]/Halpha = 0.128, [OIII]/Hbeta = 0.795 -> above Kewley+01 and below Kewley+06: LINER-like, +0.20 dex from Kewley+01, -0.22 dex from Kewley+06; 89% of posterior draws on the AGN side.
+      Role: traces partly ionized gas that hard AGN light or shocks produce but H II regions do not, so it is the most sensitive AGN / LINER test, though [OI] is the weakest of the lines.
+      Caution: rests on weakly detected Hbeta.
+
+  Reading the panels together:
+    The panels agree on AGN-type ionization, low-ionization, LINER-like: this can be a weak AGN, shocks, or ionization by evolved stars, which the diagrams cannot tell apart.
+    Note: [SII] (+0.07 dex) lies within 0.1 dex of the Kewley+01 line, so its AGN-side placement is marginal (comparable to the measurement scatter).
+    Weakly detected: Hbeta; panels that depend on them deserve less weight.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 2.33 A [1.70-3.22], tau = 0.20
+  Hbeta absorption: EW = 2.61 A [1.90-3.60], tau = 0.20
+  Halpha absorption: EW = 2.17 A [1.57-3.03], tau = 0.12
+  Narrow-line FWHM (instrument-corrected) = 625 km/s [605-644]
+  Velocity offset of the emission lines from the SDSS redshift = +38 km/s [+29 to +46]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 2.09 (poor).
+
+Fit diagnostics
+  chi2_nu = 0.96  (937 pixels, 26 free parameters);  WAIC = -3567.6  (effective parameters 18.1)
+  continuum-scaling chi2_nu per window: 1.90, 1.56, 7.98, 1.83, 0.77, 1.08  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -3567.6, without = -3553.5; dWAIC (without - with) = +14.1  -> absorption clearly preferred
+  chi2_nu with = 0.96, without = 0.97
+  Hbeta       flux with =    112.85, without =      2.24  (-98% when absorption is removed)
+  Halpha      flux with =    326.79, without =    175.29  (-46% when absorption is removed)
+  [OIII]5008  flux with =     88.81, without =     91.35  (+3% when absorption is removed)
+  log([OIII]/Hbeta): with = -0.10, without = 1.61

@@ -1,0 +1,41 @@
+Analysis of spec-1213-52972-0490 (z = 0.1866):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): none
+  Not detected / not fitted: [OIII], Hbeta, Halpha, [NII], [SII], [OI]  (no column at all: Halpha, [NII], [SII], [OI])
+  Tallest line feature in the fit: 5770 A observed (4863 A rest, i.e. Hbeta).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 2.11 A [1.08-3.74], tau = 0.28
+  Hbeta absorption: EW = 2.37 A [1.21-4.19], tau = 0.28
+  Narrow-line FWHM (instrument-corrected) = 642 km/s [172-938]
+  Velocity offset of the emission lines from the SDSS redshift = -196 km/s [-733 to +101]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.03 (good).
+
+Fit diagnostics
+  chi2_nu = 1.06  (583 pixels, 17 free parameters);  WAIC = -62.5  (effective parameters 18.3)
+  continuum-scaling chi2_nu per window: 1.01, 1.37, 1.07, 0.80  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -62.5, without = -62.3; dWAIC (without - with) = +0.2  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 1.06, without = 1.07
+  Hbeta       flux with =      9.80, without =      2.23  (-77% when absorption is removed)
+  [OIII]5008  flux with =      1.59, without =      1.62  (+2% when absorption is removed)
+  log([OIII]/Hbeta): with = -0.79, without = -0.14

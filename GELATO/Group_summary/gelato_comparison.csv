@@ -1,0 +1,456 @@
+group,quantity,n,min,p16,med,p84,max,mean,std
+STARFORMING,flux ratio unite/GELATO [OIII],35,0.71,0.8688,1.01,1.0512,3.34,1.1211428571428572,0.5566167306809503
+STARFORMING,flux ratio unite/GELATO Hβ,44,0.92,1.0088,1.14,1.5903999999999996,2.23,1.281590909090909,0.37193362237140803
+STARFORMING,flux ratio unite/GELATO Hα,49,0.9,0.99,1.02,1.09,2.22,1.056938775510204,0.1791787292253261
+STARFORMING,flux ratio unite/GELATO [NII],49,0.86,0.9468,0.99,1.0432000000000001,1.1,0.9922448979591838,0.051001033736355506
+STARFORMING,flux ratio unite/GELATO [SII],48,0.6,0.8204,0.925,0.97,1.02,0.895,0.0916515138991168
+STARFORMING,flux ratio unite/GELATO [OI],22,0.69,0.7636000000000001,0.82,1.1388,1.7,0.9245454545454547,0.2521663712469979
+STARFORMING,"detection [OIII], GELATO only [objects]",50,,,5.0,,,,
+STARFORMING,"detection [OIII], unite only [objects]",50,,,9.0,,,,
+STARFORMING,"detection [OIII], both [objects]",50,,,32.0,,,,
+STARFORMING,"detection [OIII], neither [objects]",50,,,4.0,,,,
+STARFORMING,"detection Hβ, GELATO only [objects]",50,,,6.0,,,,
+STARFORMING,"detection Hβ, unite only [objects]",50,,,0.0,,,,
+STARFORMING,"detection Hβ, both [objects]",50,,,44.0,,,,
+STARFORMING,"detection Hβ, neither [objects]",50,,,0.0,,,,
+STARFORMING,"detection Hα, GELATO only [objects]",49,,,0.0,,,,
+STARFORMING,"detection Hα, unite only [objects]",49,,,0.0,,,,
+STARFORMING,"detection Hα, both [objects]",49,,,49.0,,,,
+STARFORMING,"detection Hα, neither [objects]",49,,,0.0,,,,
+STARFORMING,"detection [NII], GELATO only [objects]",49,,,0.0,,,,
+STARFORMING,"detection [NII], unite only [objects]",49,,,0.0,,,,
+STARFORMING,"detection [NII], both [objects]",49,,,49.0,,,,
+STARFORMING,"detection [NII], neither [objects]",49,,,0.0,,,,
+STARFORMING,"detection [SII], GELATO only [objects]",49,,,1.0,,,,
+STARFORMING,"detection [SII], unite only [objects]",49,,,0.0,,,,
+STARFORMING,"detection [SII], both [objects]",49,,,48.0,,,,
+STARFORMING,"detection [SII], neither [objects]",49,,,0.0,,,,
+STARFORMING,"detection [OI], GELATO only [objects]",49,,,11.0,,,,
+STARFORMING,"detection [OI], unite only [objects]",49,,,4.0,,,,
+STARFORMING,"detection [OI], both [objects]",49,,,18.0,,,,
+STARFORMING,"detection [OI], neither [objects]",49,,,16.0,,,,
+STARFORMING,unite - GELATO log_nii_ha [dex],37,-0.12999999999999998,-0.042400000000000014,-0.010000000000000009,0.0,0.020000000000000018,-0.01891891891891892,0.02875024480898513
+STARFORMING,unite - GELATO log_sii_ha [dex],37,-0.15999999999999992,-0.10240000000000002,-0.030000000000000027,-0.010000000000000009,0.010000000000000009,-0.05243243243243245,0.04704639585944243
+STARFORMING,unite - GELATO log_oi_ha [dex],21,-0.16000000000000014,-0.1299999999999999,-0.10999999999999988,0.008000000000000014,0.1299999999999999,-0.07190476190476189,0.08103203364219902
+STARFORMING,unite - GELATO log_oiii_hb [dex],34,-0.44999999999999996,-0.15879999999999997,-0.03999999999999999,0.020000000000000004,0.32000000000000006,-0.04999999999999999,0.13225320068304242
+STARFORMING,[NII] BPT class agreement fraction,34,,,0.9705882352941176,,,,
+STARBURST,flux ratio unite/GELATO [OIII],46,0.65,0.95,1.025,1.3159999999999996,7.29,1.360217391304348,1.1869615534921925
+STARBURST,flux ratio unite/GELATO Hβ,48,0.97,1.0452000000000001,1.07,1.1547999999999998,1.3,1.0908333333333333,0.06427445584179504
+STARBURST,flux ratio unite/GELATO Hα,45,0.98,1.0,1.01,1.03,1.13,1.0144444444444445,0.02445362545676608
+STARBURST,flux ratio unite/GELATO [NII],45,0.85,0.98,1.0,1.02,1.19,1.004,0.044384682042344296
+STARBURST,flux ratio unite/GELATO [SII],45,0.92,0.9503999999999999,0.98,1.0,1.04,0.9795555555555555,0.02485919946377595
+STARBURST,flux ratio unite/GELATO [OI],42,0.69,0.7912,0.87,0.93,1.28,0.8678571428571428,0.099964279334456
+STARBURST,"detection [OIII], GELATO only [objects]",48,,,0.0,,,,
+STARBURST,"detection [OIII], unite only [objects]",48,,,6.0,,,,
+STARBURST,"detection [OIII], both [objects]",48,,,42.0,,,,
+STARBURST,"detection [OIII], neither [objects]",48,,,0.0,,,,
+STARBURST,"detection Hβ, GELATO only [objects]",48,,,0.0,,,,
+STARBURST,"detection Hβ, unite only [objects]",48,,,0.0,,,,
+STARBURST,"detection Hβ, both [objects]",48,,,48.0,,,,
+STARBURST,"detection Hβ, neither [objects]",48,,,0.0,,,,
+STARBURST,"detection Hα, GELATO only [objects]",45,,,0.0,,,,
+STARBURST,"detection Hα, unite only [objects]",45,,,0.0,,,,
+STARBURST,"detection Hα, both [objects]",45,,,45.0,,,,
+STARBURST,"detection Hα, neither [objects]",45,,,0.0,,,,
+STARBURST,"detection [NII], GELATO only [objects]",45,,,0.0,,,,
+STARBURST,"detection [NII], unite only [objects]",45,,,0.0,,,,
+STARBURST,"detection [NII], both [objects]",45,,,45.0,,,,
+STARBURST,"detection [NII], neither [objects]",45,,,0.0,,,,
+STARBURST,"detection [SII], GELATO only [objects]",45,,,0.0,,,,
+STARBURST,"detection [SII], unite only [objects]",45,,,0.0,,,,
+STARBURST,"detection [SII], both [objects]",45,,,45.0,,,,
+STARBURST,"detection [SII], neither [objects]",45,,,0.0,,,,
+STARBURST,"detection [OI], GELATO only [objects]",45,,,2.0,,,,
+STARBURST,"detection [OI], unite only [objects]",45,,,0.0,,,,
+STARBURST,"detection [OI], both [objects]",45,,,42.0,,,,
+STARBURST,"detection [OI], neither [objects]",45,,,1.0,,,,
+STARBURST,unite - GELATO log_nii_ha [dex],44,-0.07000000000000006,-0.010000000000000009,0.0,0.0011999999999999754,0.02999999999999997,-0.004999999999999998,0.014547436440031088
+STARBURST,unite - GELATO log_sii_ha [dex],44,-0.04999999999999999,-0.030000000000000027,-0.014999999999999958,0.0,0.019999999999999796,-0.016136363636363636,0.015434167637271236
+STARBURST,unite - GELATO log_oi_ha [dex],41,-0.16999999999999993,-0.1060000000000001,-0.06999999999999984,-0.030000000000000027,0.09000000000000008,-0.06780487804878049,0.04793287990106328
+STARBURST,unite - GELATO log_oiii_hb [dex],44,-0.19000000000000006,-0.08120000000000001,-0.010000000000000009,0.14239999999999997,1.5799999999999998,0.08613636363636366,0.32731618956180586
+STARBURST,[NII] BPT class agreement fraction,44,,,0.9772727272727273,,,,
+AGN,flux ratio unite/GELATO [OIII],30,0.56,0.9156,1.1,1.8607999999999998,7.97,1.4533333333333331,1.304716466314143
+AGN,flux ratio unite/GELATO Hβ,23,0.83,1.0956000000000001,1.55,2.6844,5.35,1.938695652173913,1.024483481156263
+AGN,flux ratio unite/GELATO Hα,36,0.88,0.976,1.15,1.408,2.23,1.2080555555555557,0.28584530725995777
+AGN,flux ratio unite/GELATO [NII],37,0.67,0.9376,1.02,1.1068,1.79,1.0364864864864862,0.18127965222912448
+AGN,flux ratio unite/GELATO [SII],36,0.59,0.75,0.84,0.9319999999999999,1.32,0.8441666666666667,0.12922571614924683
+AGN,flux ratio unite/GELATO [OI],23,0.6,0.7756000000000001,0.9,1.0348,2.97,0.9782608695652174,0.45228362153443097
+AGN,"detection [OIII], GELATO only [objects]",39,,,2.0,,,,
+AGN,"detection [OIII], unite only [objects]",39,,,10.0,,,,
+AGN,"detection [OIII], both [objects]",39,,,25.0,,,,
+AGN,"detection [OIII], neither [objects]",39,,,2.0,,,,
+AGN,"detection Hβ, GELATO only [objects]",39,,,12.0,,,,
+AGN,"detection Hβ, unite only [objects]",39,,,2.0,,,,
+AGN,"detection Hβ, both [objects]",39,,,21.0,,,,
+AGN,"detection Hβ, neither [objects]",39,,,4.0,,,,
+AGN,"detection Hα, GELATO only [objects]",38,,,1.0,,,,
+AGN,"detection Hα, unite only [objects]",38,,,0.0,,,,
+AGN,"detection Hα, both [objects]",38,,,36.0,,,,
+AGN,"detection Hα, neither [objects]",38,,,1.0,,,,
+AGN,"detection [NII], GELATO only [objects]",38,,,1.0,,,,
+AGN,"detection [NII], unite only [objects]",38,,,0.0,,,,
+AGN,"detection [NII], both [objects]",38,,,37.0,,,,
+AGN,"detection [NII], neither [objects]",38,,,0.0,,,,
+AGN,"detection [SII], GELATO only [objects]",37,,,1.0,,,,
+AGN,"detection [SII], unite only [objects]",37,,,0.0,,,,
+AGN,"detection [SII], both [objects]",37,,,36.0,,,,
+AGN,"detection [SII], neither [objects]",37,,,0.0,,,,
+AGN,"detection [OI], GELATO only [objects]",38,,,3.0,,,,
+AGN,"detection [OI], unite only [objects]",38,,,1.0,,,,
+AGN,"detection [OI], both [objects]",38,,,22.0,,,,
+AGN,"detection [OI], neither [objects]",38,,,12.0,,,,
+AGN,unite - GELATO log_nii_ha [dex],23,-0.33,-0.13,-0.060000000000000026,-0.015199999999999995,0.020000000000000018,-0.07695652173913045,0.07418862830090579
+AGN,unite - GELATO log_sii_ha [dex],23,-0.46,-0.25920000000000004,-0.14,-0.040400000000000026,-0.019999999999999962,-0.15826086956521743,0.11574471022324967
+AGN,unite - GELATO log_oi_ha [dex],16,-0.33,-0.27,-0.10000000000000009,0.012000000000000004,0.07000000000000006,-0.124375,0.13170516314860253
+AGN,unite - GELATO log_oiii_hb [dex],22,-0.5,-0.34,-0.07500000000000001,0.15919999999999995,0.34,-0.08090909090909092,0.23838562378571748
+AGN,[NII] BPT class agreement fraction,22,,,0.6818181818181818,,,,
+BROADLINE,flux ratio unite/GELATO [OIII],7,0.64,0.8992,0.92,3.8692,6.25,2.1485714285714286,2.103500483887343
+BROADLINE,flux ratio unite/GELATO Hβ,4,1.09,1.6804,4.13,9.5124,12.81,5.540000000000001,5.265731984570933
+BROADLINE,flux ratio unite/GELATO Hα,25,0.7,1.0252000000000001,1.41,1.9516,4.77,1.5608000000000002,0.8225261900592182
+BROADLINE,flux ratio unite/GELATO [NII],28,0.41,0.7996,0.995,1.13,1.37,0.9771428571428572,0.21371246073408046
+BROADLINE,flux ratio unite/GELATO [SII],24,0.27,0.4572,0.615,0.8428,1.98,0.6829166666666667,0.3233181118484941
+BROADLINE,flux ratio unite/GELATO [OI],11,0.62,0.896,1.06,1.81,5.19,1.5672727272727272,1.2813671675916385
+BROADLINE,"detection [OIII], GELATO only [objects]",40,,,11.0,,,,
+BROADLINE,"detection [OIII], unite only [objects]",40,,,7.0,,,,
+BROADLINE,"detection [OIII], both [objects]",40,,,5.0,,,,
+BROADLINE,"detection [OIII], neither [objects]",40,,,17.0,,,,
+BROADLINE,"detection Hβ, GELATO only [objects]",39,,,7.0,,,,
+BROADLINE,"detection Hβ, unite only [objects]",39,,,3.0,,,,
+BROADLINE,"detection Hβ, both [objects]",39,,,3.0,,,,
+BROADLINE,"detection Hβ, neither [objects]",39,,,26.0,,,,
+BROADLINE,"detection Hα, GELATO only [objects]",29,,,3.0,,,,
+BROADLINE,"detection Hα, unite only [objects]",29,,,2.0,,,,
+BROADLINE,"detection Hα, both [objects]",29,,,23.0,,,,
+BROADLINE,"detection Hα, neither [objects]",29,,,1.0,,,,
+BROADLINE,"detection [NII], GELATO only [objects]",29,,,0.0,,,,
+BROADLINE,"detection [NII], unite only [objects]",29,,,1.0,,,,
+BROADLINE,"detection [NII], both [objects]",29,,,27.0,,,,
+BROADLINE,"detection [NII], neither [objects]",29,,,1.0,,,,
+BROADLINE,"detection [SII], GELATO only [objects]",28,,,1.0,,,,
+BROADLINE,"detection [SII], unite only [objects]",28,,,1.0,,,,
+BROADLINE,"detection [SII], both [objects]",28,,,23.0,,,,
+BROADLINE,"detection [SII], neither [objects]",28,,,3.0,,,,
+BROADLINE,"detection [OI], GELATO only [objects]",33,,,5.0,,,,
+BROADLINE,"detection [OI], unite only [objects]",33,,,2.0,,,,
+BROADLINE,"detection [OI], both [objects]",33,,,9.0,,,,
+BROADLINE,"detection [OI], neither [objects]",33,,,17.0,,,,
+BROADLINE,unite - GELATO log_nii_ha [dex],2,-0.24,-0.20959999999999998,-0.14500000000000002,-0.08040000000000001,-0.05,-0.145,0.13435028842544403
+BROADLINE,unite - GELATO log_sii_ha [dex],2,-0.21000000000000002,-0.202,-0.18500000000000003,-0.16800000000000004,-0.16000000000000003,-0.18500000000000003,0.03535533905932737
+BROADLINE,unite - GELATO log_oi_ha [dex],2,-0.09999999999999998,-0.07759999999999997,-0.02999999999999997,0.01760000000000003,0.040000000000000036,-0.02999999999999997,0.09899494936611666
+BROADLINE,unite - GELATO log_oiii_hb [dex],2,-1.5,-1.284,-0.8250000000000001,-0.3660000000000001,-0.15000000000000002,-0.825,0.954594154601839
+BROADLINE,[NII] BPT class agreement fraction,2,,,1.0,,,,
+STARFORMING_BROADLINE,flux ratio unite/GELATO [OIII],18,0.82,0.8644,0.9450000000000001,1.7931999999999997,3.06,1.2444444444444445,0.6282583041488796
+STARFORMING_BROADLINE,flux ratio unite/GELATO Hβ,17,1.13,1.4456,1.66,2.4244,9.86,2.2888235294117645,2.0126968299800554
+STARFORMING_BROADLINE,flux ratio unite/GELATO Hα,33,0.95,1.0324,1.16,1.57,2.87,1.3518181818181818,0.45612124584269353
+STARFORMING_BROADLINE,flux ratio unite/GELATO [NII],33,0.59,0.9048,1.05,1.1876,3.9,1.1766666666666665,0.5945306271897746
+STARFORMING_BROADLINE,flux ratio unite/GELATO [SII],30,0.23,0.6028,0.795,0.9136000000000001,0.98,0.7613333333333333,0.17172016798254658
+STARFORMING_BROADLINE,flux ratio unite/GELATO [OI],20,0.5,0.8704,0.965,1.1092000000000002,1.27,0.9545,0.1870118206227392
+STARFORMING_BROADLINE,"detection [OIII], GELATO only [objects]",38,,,10.0,,,,
+STARFORMING_BROADLINE,"detection [OIII], unite only [objects]",38,,,7.0,,,,
+STARFORMING_BROADLINE,"detection [OIII], both [objects]",38,,,15.0,,,,
+STARFORMING_BROADLINE,"detection [OIII], neither [objects]",38,,,6.0,,,,
+STARFORMING_BROADLINE,"detection Hβ, GELATO only [objects]",38,,,19.0,,,,
+STARFORMING_BROADLINE,"detection Hβ, unite only [objects]",38,,,2.0,,,,
+STARFORMING_BROADLINE,"detection Hβ, both [objects]",38,,,16.0,,,,
+STARFORMING_BROADLINE,"detection Hβ, neither [objects]",38,,,1.0,,,,
+STARFORMING_BROADLINE,"detection Hα, GELATO only [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection Hα, unite only [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection Hα, both [objects]",33,,,33.0,,,,
+STARFORMING_BROADLINE,"detection Hα, neither [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection [NII], GELATO only [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection [NII], unite only [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection [NII], both [objects]",33,,,33.0,,,,
+STARFORMING_BROADLINE,"detection [NII], neither [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection [SII], GELATO only [objects]",33,,,3.0,,,,
+STARFORMING_BROADLINE,"detection [SII], unite only [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection [SII], both [objects]",33,,,30.0,,,,
+STARFORMING_BROADLINE,"detection [SII], neither [objects]",33,,,0.0,,,,
+STARFORMING_BROADLINE,"detection [OI], GELATO only [objects]",34,,,4.0,,,,
+STARFORMING_BROADLINE,"detection [OI], unite only [objects]",34,,,1.0,,,,
+STARFORMING_BROADLINE,"detection [OI], both [objects]",34,,,19.0,,,,
+STARFORMING_BROADLINE,"detection [OI], neither [objects]",34,,,10.0,,,,
+STARFORMING_BROADLINE,unite - GELATO log_nii_ha [dex],11,-0.06,-0.05399999999999999,-0.04999999999999999,-0.003999999999999972,0.04999999999999999,-0.03181818181818181,0.03544522021886218
+STARFORMING_BROADLINE,unite - GELATO log_sii_ha [dex],11,-0.62,-0.216,-0.12,-0.04600000000000004,-0.03,-0.16272727272727278,0.16894323952682505
+STARFORMING_BROADLINE,unite - GELATO log_oi_ha [dex],10,-0.16999999999999993,-0.14,-0.08500000000000008,0.01560000000000001,0.040000000000000036,-0.07500000000000001,0.07472170590486632
+STARFORMING_BROADLINE,unite - GELATO log_oiii_hb [dex],11,-0.44999999999999996,-0.276,-0.17,-0.08399999999999998,0.04999999999999999,-0.17909090909090908,0.1348669377908867
+STARFORMING_BROADLINE,[NII] BPT class agreement fraction,11,,,0.8181818181818182,,,,
+STARBURST_BROADLINE,flux ratio unite/GELATO [OIII],36,0.8,0.99,1.165,2.264,23.6,2.166388888888889,3.8015772311560956
+STARBURST_BROADLINE,flux ratio unite/GELATO Hβ,39,1.0,1.09,1.3,1.6267999999999998,2.01,1.3435897435897435,0.24386673646726745
+STARBURST_BROADLINE,flux ratio unite/GELATO Hα,39,0.99,1.03,1.08,1.5268,1.99,1.2117948717948717,0.2548773884260904
+STARBURST_BROADLINE,flux ratio unite/GELATO [NII],38,0.47,0.8844,1.01,1.3079999999999998,2.02,1.0542105263157893,0.27794255267753565
+STARBURST_BROADLINE,flux ratio unite/GELATO [SII],35,0.79,0.93,0.97,1.0456,2.43,1.0171428571428571,0.25420662541200884
+STARBURST_BROADLINE,flux ratio unite/GELATO [OI],36,0.84,0.89,0.97,1.068,1.35,0.9838888888888891,0.10642979652006099
+STARBURST_BROADLINE,"detection [OIII], GELATO only [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection [OIII], unite only [objects]",39,,,8.0,,,,
+STARBURST_BROADLINE,"detection [OIII], both [objects]",39,,,31.0,,,,
+STARBURST_BROADLINE,"detection [OIII], neither [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection Hβ, GELATO only [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection Hβ, unite only [objects]",39,,,1.0,,,,
+STARBURST_BROADLINE,"detection Hβ, both [objects]",39,,,38.0,,,,
+STARBURST_BROADLINE,"detection Hβ, neither [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection Hα, GELATO only [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection Hα, unite only [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection Hα, both [objects]",39,,,39.0,,,,
+STARBURST_BROADLINE,"detection Hα, neither [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection [NII], GELATO only [objects]",39,,,1.0,,,,
+STARBURST_BROADLINE,"detection [NII], unite only [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection [NII], both [objects]",39,,,38.0,,,,
+STARBURST_BROADLINE,"detection [NII], neither [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection [SII], GELATO only [objects]",35,,,0.0,,,,
+STARBURST_BROADLINE,"detection [SII], unite only [objects]",35,,,1.0,,,,
+STARBURST_BROADLINE,"detection [SII], both [objects]",35,,,34.0,,,,
+STARBURST_BROADLINE,"detection [SII], neither [objects]",35,,,0.0,,,,
+STARBURST_BROADLINE,"detection [OI], GELATO only [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection [OI], unite only [objects]",39,,,0.0,,,,
+STARBURST_BROADLINE,"detection [OI], both [objects]",39,,,36.0,,,,
+STARBURST_BROADLINE,"detection [OI], neither [objects]",39,,,3.0,,,,
+STARBURST_BROADLINE,unite - GELATO log_nii_ha [dex],37,-0.51,-0.15480000000000002,-0.040000000000000036,0.0,0.09000000000000002,-0.06972972972972973,0.10970886945017724
+STARBURST_BROADLINE,unite - GELATO log_sii_ha [dex],34,-0.26,-0.1872,-0.04999999999999999,-0.012799999999999987,0.38,-0.06970588235294117,0.11392409206233843
+STARBURST_BROADLINE,unite - GELATO log_oi_ha [dex],35,-0.33999999999999997,-0.15000000000000005,-0.06999999999999995,-0.004400000000000017,0.09000000000000008,-0.0822857142857143,0.09318184985745424
+STARBURST_BROADLINE,unite - GELATO log_oiii_hb [dex],36,-0.32,-0.178,-0.02500000000000001,0.304,1.19,0.08388888888888889,0.346725727569689
+STARBURST_BROADLINE,[NII] BPT class agreement fraction,35,,,0.7428571428571429,,,,
+AGN_BROADLINE,flux ratio unite/GELATO [OIII],29,0.77,0.85,1.04,2.058,4.66,1.459310344827586,0.9666397284055832
+AGN_BROADLINE,flux ratio unite/GELATO Hβ,14,1.12,1.8532000000000002,2.1100000000000003,3.8644000000000003,5.95,2.634285714285714,1.3370099492507916
+AGN_BROADLINE,flux ratio unite/GELATO Hα,32,0.83,1.0796000000000001,1.255,1.6323999999999999,1.96,1.3446875,0.2867277496500031
+AGN_BROADLINE,flux ratio unite/GELATO [NII],35,0.46,0.8632,0.99,1.1192,1.57,1.0074285714285713,0.2122060992795178
+AGN_BROADLINE,flux ratio unite/GELATO [SII],33,0.36,0.67,0.86,0.93,0.98,0.7987878787878788,0.15119849486183667
+AGN_BROADLINE,flux ratio unite/GELATO [OI],27,0.77,0.8532,0.95,1.0684,3.43,1.065185185185185,0.5137671604498435
+AGN_BROADLINE,"detection [OIII], GELATO only [objects]",38,,,3.0,,,,
+AGN_BROADLINE,"detection [OIII], unite only [objects]",38,,,8.0,,,,
+AGN_BROADLINE,"detection [OIII], both [objects]",38,,,24.0,,,,
+AGN_BROADLINE,"detection [OIII], neither [objects]",38,,,3.0,,,,
+AGN_BROADLINE,"detection Hβ, GELATO only [objects]",38,,,16.0,,,,
+AGN_BROADLINE,"detection Hβ, unite only [objects]",38,,,0.0,,,,
+AGN_BROADLINE,"detection Hβ, both [objects]",38,,,14.0,,,,
+AGN_BROADLINE,"detection Hβ, neither [objects]",38,,,8.0,,,,
+AGN_BROADLINE,"detection Hα, GELATO only [objects]",35,,,3.0,,,,
+AGN_BROADLINE,"detection Hα, unite only [objects]",35,,,0.0,,,,
+AGN_BROADLINE,"detection Hα, both [objects]",35,,,32.0,,,,
+AGN_BROADLINE,"detection Hα, neither [objects]",35,,,0.0,,,,
+AGN_BROADLINE,"detection [NII], GELATO only [objects]",35,,,0.0,,,,
+AGN_BROADLINE,"detection [NII], unite only [objects]",35,,,0.0,,,,
+AGN_BROADLINE,"detection [NII], both [objects]",35,,,35.0,,,,
+AGN_BROADLINE,"detection [NII], neither [objects]",35,,,0.0,,,,
+AGN_BROADLINE,"detection [SII], GELATO only [objects]",35,,,2.0,,,,
+AGN_BROADLINE,"detection [SII], unite only [objects]",35,,,0.0,,,,
+AGN_BROADLINE,"detection [SII], both [objects]",35,,,33.0,,,,
+AGN_BROADLINE,"detection [SII], neither [objects]",35,,,0.0,,,,
+AGN_BROADLINE,"detection [OI], GELATO only [objects]",35,,,5.0,,,,
+AGN_BROADLINE,"detection [OI], unite only [objects]",35,,,2.0,,,,
+AGN_BROADLINE,"detection [OI], both [objects]",35,,,25.0,,,,
+AGN_BROADLINE,"detection [OI], neither [objects]",35,,,3.0,,,,
+AGN_BROADLINE,unite - GELATO log_nii_ha [dex],11,-0.3,-0.23199999999999998,-0.11000000000000001,-0.09,-0.07,-0.14818181818181816,0.07717748140723196
+AGN_BROADLINE,unite - GELATO log_sii_ha [dex],11,-0.4,-0.33399999999999996,-0.26,-0.12000000000000001,-0.10999999999999999,-0.23272727272727273,0.1055548112679767
+AGN_BROADLINE,unite - GELATO log_oi_ha [dex],9,-0.33999999999999997,-0.30439999999999995,-0.13,-0.056800000000000066,-0.039999999999999925,-0.16999999999999998,0.11554220008291342
+AGN_BROADLINE,unite - GELATO log_oiii_hb [dex],9,-0.49,-0.3872,-0.22999999999999998,-0.043600000000000035,0.0,-0.2411111111111111,0.17186073173098942
+AGN_BROADLINE,[NII] BPT class agreement fraction,9,,,0.5555555555555556,,,,
+MISSING,flux ratio unite/GELATO [OIII],3,0.87,0.8892,0.93,3.548,4.78,2.1933333333333334,2.240319917630813
+MISSING,flux ratio unite/GELATO Hβ,7,1.08,1.1952,2.07,2.5668,3.21,1.9385714285714286,0.7991126030672726
+MISSING,flux ratio unite/GELATO Hα,20,0.96,1.06,1.21,1.3392000000000002,8.25,1.5405,1.5860692060297337
+MISSING,flux ratio unite/GELATO [NII],25,0.4,0.7876000000000001,0.96,1.1216000000000002,1.76,0.9571999999999999,0.2792477991557558
+MISSING,flux ratio unite/GELATO [SII],14,0.35,0.41719999999999996,0.76,0.9628,1.11,0.7307142857142856,0.246497442199689
+MISSING,flux ratio unite/GELATO [OI],2,0.5,0.5416,0.63,0.7184,0.76,0.63,0.18384776310850237
+MISSING,"detection [OIII], GELATO only [objects]",49,,,5.0,,,,
+MISSING,"detection [OIII], unite only [objects]",49,,,2.0,,,,
+MISSING,"detection [OIII], both [objects]",49,,,2.0,,,,
+MISSING,"detection [OIII], neither [objects]",49,,,40.0,,,,
+MISSING,"detection Hβ, GELATO only [objects]",49,,,3.0,,,,
+MISSING,"detection Hβ, unite only [objects]",49,,,3.0,,,,
+MISSING,"detection Hβ, both [objects]",49,,,4.0,,,,
+MISSING,"detection Hβ, neither [objects]",49,,,39.0,,,,
+MISSING,"detection Hα, GELATO only [objects]",44,,,8.0,,,,
+MISSING,"detection Hα, unite only [objects]",44,,,2.0,,,,
+MISSING,"detection Hα, both [objects]",44,,,19.0,,,,
+MISSING,"detection Hα, neither [objects]",44,,,15.0,,,,
+MISSING,"detection [NII], GELATO only [objects]",45,,,2.0,,,,
+MISSING,"detection [NII], unite only [objects]",45,,,2.0,,,,
+MISSING,"detection [NII], both [objects]",45,,,23.0,,,,
+MISSING,"detection [NII], neither [objects]",45,,,18.0,,,,
+MISSING,"detection [SII], GELATO only [objects]",39,,,5.0,,,,
+MISSING,"detection [SII], unite only [objects]",39,,,0.0,,,,
+MISSING,"detection [SII], both [objects]",39,,,14.0,,,,
+MISSING,"detection [SII], neither [objects]",39,,,20.0,,,,
+MISSING,"detection [OI], GELATO only [objects]",46,,,4.0,,,,
+MISSING,"detection [OI], unite only [objects]",46,,,0.0,,,,
+MISSING,"detection [OI], both [objects]",46,,,2.0,,,,
+MISSING,"detection [OI], neither [objects]",46,,,40.0,,,,
+MISSING,unite - GELATO log_nii_ha [dex],1,0.0,0.0,0.0,0.0,0.0,0.0,
+MISSING,unite - GELATO log_sii_ha [dex],1,-0.029999999999999916,-0.029999999999999916,-0.029999999999999916,-0.029999999999999916,-0.029999999999999916,-0.029999999999999916,
+MISSING,unite - GELATO log_oi_ha [dex],1,-0.13000000000000012,-0.13000000000000012,-0.13000000000000012,-0.13000000000000012,-0.13000000000000012,-0.13000000000000012,
+MISSING,unite - GELATO log_oiii_hb [dex],1,-0.09,-0.09,-0.09,-0.09,-0.09,-0.09,
+MISSING,[NII] BPT class agreement fraction,1,,,1.0,,,,
+STAR_FORMING,flux ratio unite/GELATO [OIII],14,0.72,0.8196000000000001,1.005,1.0468,1.14,0.9571428571428572,0.12356428233163443
+STAR_FORMING,flux ratio unite/GELATO Hβ,18,0.93,1.0344,1.1,1.334,1.79,1.1772222222222224,0.20817994353176505
+STAR_FORMING,flux ratio unite/GELATO Hα,16,0.96,0.984,1.01,1.03,1.08,1.010625,0.03234578797927176
+STAR_FORMING,flux ratio unite/GELATO [NII],16,0.89,0.984,1.0,1.036,1.06,1.0,0.03898717737923587
+STAR_FORMING,flux ratio unite/GELATO [SII],16,0.77,0.85,0.935,0.97,1.06,0.9175,0.07767453465154028
+STAR_FORMING,flux ratio unite/GELATO [OI],10,0.59,0.7376,0.865,1.0056,1.11,0.8719999999999999,0.15817009128712606
+STAR_FORMING,"detection [OIII], GELATO only [objects]",18,,,1.0,,,,
+STAR_FORMING,"detection [OIII], unite only [objects]",18,,,2.0,,,,
+STAR_FORMING,"detection [OIII], both [objects]",18,,,13.0,,,,
+STAR_FORMING,"detection [OIII], neither [objects]",18,,,2.0,,,,
+STAR_FORMING,"detection Hβ, GELATO only [objects]",18,,,0.0,,,,
+STAR_FORMING,"detection Hβ, unite only [objects]",18,,,0.0,,,,
+STAR_FORMING,"detection Hβ, both [objects]",18,,,18.0,,,,
+STAR_FORMING,"detection Hβ, neither [objects]",18,,,0.0,,,,
+STAR_FORMING,"detection Hα, GELATO only [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection Hα, unite only [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection Hα, both [objects]",16,,,16.0,,,,
+STAR_FORMING,"detection Hα, neither [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection [NII], GELATO only [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection [NII], unite only [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection [NII], both [objects]",16,,,16.0,,,,
+STAR_FORMING,"detection [NII], neither [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection [SII], GELATO only [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection [SII], unite only [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection [SII], both [objects]",16,,,16.0,,,,
+STAR_FORMING,"detection [SII], neither [objects]",16,,,0.0,,,,
+STAR_FORMING,"detection [OI], GELATO only [objects]",16,,,1.0,,,,
+STAR_FORMING,"detection [OI], unite only [objects]",16,,,2.0,,,,
+STAR_FORMING,"detection [OI], both [objects]",16,,,8.0,,,,
+STAR_FORMING,"detection [OI], neither [objects]",16,,,5.0,,,,
+STAR_FORMING,unite - GELATO log_nii_ha [dex],13,-0.040000000000000036,-0.020800000000000016,-0.010000000000000009,0.0008000000000000014,0.03,-0.007692307692307697,0.017394369852458087
+STAR_FORMING,unite - GELATO log_sii_ha [dex],13,-0.1499999999999999,-0.05080000000000004,-0.039999999999999925,-0.009200000000000007,0.030000000000000027,-0.03692307692307692,0.041710233633289434
+STAR_FORMING,unite - GELATO log_oi_ha [dex],9,-0.22999999999999998,-0.14320000000000005,-0.06000000000000005,0.0015999999999999938,0.020000000000000018,-0.07555555555555557,0.08079466429027216
+STAR_FORMING,unite - GELATO log_oiii_hb [dex],13,-0.16000000000000003,-0.1232,-0.020000000000000018,0.001600000000000003,0.39,-0.020769230769230762,0.13714114009914133
+STAR_FORMING,[NII] BPT class agreement fraction,13,,,1.0,,,,
+COMPOSITE,flux ratio unite/GELATO [OIII],11,0.65,0.796,1.02,1.344,7.94,1.630909090909091,2.1090777820908104
+COMPOSITE,flux ratio unite/GELATO Hβ,11,1.06,1.104,1.45,1.6800000000000002,2.11,1.4381818181818184,0.3217706693226771
+COMPOSITE,flux ratio unite/GELATO Hα,18,0.96,0.99,1.06,1.1884,1.35,1.086666666666667,0.10884419517608375
+COMPOSITE,flux ratio unite/GELATO [NII],18,0.84,0.9488,1.005,1.0584,1.22,1.0061111111111112,0.08059622592892877
+COMPOSITE,flux ratio unite/GELATO [SII],17,0.54,0.738,0.85,0.9044,0.96,0.8223529411764706,0.10455437650839311
+COMPOSITE,flux ratio unite/GELATO [OI],6,0.83,0.846,0.91,1.002,1.21,0.9433333333333332,0.13837148068394248
+COMPOSITE,"detection [OIII], GELATO only [objects]",19,,,2.0,,,,
+COMPOSITE,"detection [OIII], unite only [objects]",19,,,6.0,,,,
+COMPOSITE,"detection [OIII], both [objects]",19,,,9.0,,,,
+COMPOSITE,"detection [OIII], neither [objects]",19,,,2.0,,,,
+COMPOSITE,"detection Hβ, GELATO only [objects]",19,,,4.0,,,,
+COMPOSITE,"detection Hβ, unite only [objects]",19,,,1.0,,,,
+COMPOSITE,"detection Hβ, both [objects]",19,,,11.0,,,,
+COMPOSITE,"detection Hβ, neither [objects]",19,,,3.0,,,,
+COMPOSITE,"detection Hα, GELATO only [objects]",18,,,0.0,,,,
+COMPOSITE,"detection Hα, unite only [objects]",18,,,0.0,,,,
+COMPOSITE,"detection Hα, both [objects]",18,,,18.0,,,,
+COMPOSITE,"detection Hα, neither [objects]",18,,,0.0,,,,
+COMPOSITE,"detection [NII], GELATO only [objects]",18,,,0.0,,,,
+COMPOSITE,"detection [NII], unite only [objects]",18,,,0.0,,,,
+COMPOSITE,"detection [NII], both [objects]",18,,,18.0,,,,
+COMPOSITE,"detection [NII], neither [objects]",18,,,0.0,,,,
+COMPOSITE,"detection [SII], GELATO only [objects]",18,,,0.0,,,,
+COMPOSITE,"detection [SII], unite only [objects]",18,,,0.0,,,,
+COMPOSITE,"detection [SII], both [objects]",18,,,17.0,,,,
+COMPOSITE,"detection [SII], neither [objects]",18,,,1.0,,,,
+COMPOSITE,"detection [OI], GELATO only [objects]",18,,,4.0,,,,
+COMPOSITE,"detection [OI], unite only [objects]",18,,,0.0,,,,
+COMPOSITE,"detection [OI], both [objects]",18,,,6.0,,,,
+COMPOSITE,"detection [OI], neither [objects]",18,,,8.0,,,,
+COMPOSITE,unite - GELATO log_nii_ha [dex],10,-0.06,-0.05000000000000002,-0.03499999999999999,-0.009999999999999981,0.03,-0.029000000000000005,0.027264140062238044
+COMPOSITE,unite - GELATO log_sii_ha [dex],10,-0.19,-0.1536,-0.09000000000000002,-0.06440000000000001,-0.03999999999999998,-0.10400000000000001,0.04948624949305502
+COMPOSITE,unite - GELATO log_oi_ha [dex],4,-0.1299999999999999,-0.11079999999999998,-0.08500000000000008,-0.08000000000000007,-0.08000000000000007,-0.09500000000000003,0.023804761428476078
+COMPOSITE,unite - GELATO log_oiii_hb [dex],8,-0.32999999999999996,-0.214,-0.11000000000000001,0.426,0.6000000000000001,0.02125000000000002,0.3380379310922709
+COMPOSITE,[NII] BPT class agreement fraction,8,,,1.0,,,,
+SEYFERT,flux ratio unite/GELATO [OIII],16,0.58,0.69,0.925,1.0,1.01,0.8687499999999999,0.1464638749544292
+SEYFERT,flux ratio unite/GELATO Hβ,10,1.02,1.0676,1.2650000000000001,1.428,2.54,1.354,0.4403836711071129
+SEYFERT,flux ratio unite/GELATO Hα,24,0.62,1.01,1.1749999999999998,1.6152,8.25,1.5391666666666666,1.4775241237394008
+SEYFERT,flux ratio unite/GELATO [NII],24,0.67,0.9144,1.0150000000000001,1.1840000000000002,1.62,1.0595833333333333,0.22073945228957478
+SEYFERT,flux ratio unite/GELATO [SII],17,0.41,0.6204,0.83,0.8988,1.01,0.7794117647058824,0.15785557434864686
+SEYFERT,flux ratio unite/GELATO [OI],7,0.52,0.5776,0.84,1.0688,1.28,0.852857142857143,0.26436806953653874
+SEYFERT,"detection [OIII], GELATO only [objects]",38,,,5.0,,,,
+SEYFERT,"detection [OIII], unite only [objects]",38,,,4.0,,,,
+SEYFERT,"detection [OIII], both [objects]",38,,,16.0,,,,
+SEYFERT,"detection [OIII], neither [objects]",38,,,13.0,,,,
+SEYFERT,"detection Hβ, GELATO only [objects]",38,,,5.0,,,,
+SEYFERT,"detection Hβ, unite only [objects]",38,,,3.0,,,,
+SEYFERT,"detection Hβ, both [objects]",38,,,9.0,,,,
+SEYFERT,"detection Hβ, neither [objects]",38,,,21.0,,,,
+SEYFERT,"detection Hα, GELATO only [objects]",30,,,1.0,,,,
+SEYFERT,"detection Hα, unite only [objects]",30,,,2.0,,,,
+SEYFERT,"detection Hα, both [objects]",30,,,22.0,,,,
+SEYFERT,"detection Hα, neither [objects]",30,,,5.0,,,,
+SEYFERT,"detection [NII], GELATO only [objects]",31,,,0.0,,,,
+SEYFERT,"detection [NII], unite only [objects]",31,,,1.0,,,,
+SEYFERT,"detection [NII], both [objects]",31,,,23.0,,,,
+SEYFERT,"detection [NII], neither [objects]",31,,,7.0,,,,
+SEYFERT,"detection [SII], GELATO only [objects]",27,,,5.0,,,,
+SEYFERT,"detection [SII], unite only [objects]",27,,,0.0,,,,
+SEYFERT,"detection [SII], both [objects]",27,,,17.0,,,,
+SEYFERT,"detection [SII], neither [objects]",27,,,5.0,,,,
+SEYFERT,"detection [OI], GELATO only [objects]",33,,,6.0,,,,
+SEYFERT,"detection [OI], unite only [objects]",33,,,0.0,,,,
+SEYFERT,"detection [OI], both [objects]",33,,,7.0,,,,
+SEYFERT,"detection [OI], neither [objects]",33,,,20.0,,,,
+SEYFERT,unite - GELATO log_nii_ha [dex],9,-0.08999999999999997,-0.053200000000000004,0.0,0.007200000000000003,0.03,-0.015555555555555553,0.03876567783204335
+SEYFERT,unite - GELATO log_sii_ha [dex],7,-0.15,-0.1212,-0.09,-0.06920000000000005,-0.04999999999999993,-0.09285714285714285,0.0330223589477825
+SEYFERT,unite - GELATO log_oi_ha [dex],4,-0.2599999999999999,-0.1784,-0.07000000000000006,0.012399999999999897,0.06999999999999984,-0.08250000000000005,0.1364734406395617
+SEYFERT,unite - GELATO log_oiii_hb [dex],6,-1.05,-0.354,-0.12499999999999997,-0.07400000000000001,-0.04999999999999999,-0.26833333333333337,0.3858194741931344
+SEYFERT,[NII] BPT class agreement fraction,6,,,0.6666666666666666,,,,
+LINER,flux ratio unite/GELATO [OIII],12,0.46,0.75,0.88,1.174,4.75,1.2166666666666666,1.1311967382405506
+LINER,flux ratio unite/GELATO Hβ,7,1.21,1.2772000000000001,1.72,1.8672000000000002,2.28,1.6700000000000002,0.35981476716036354
+LINER,flux ratio unite/GELATO Hα,11,0.8,1.004,1.16,1.374,3.66,1.3863636363636365,0.7766243973411178
+LINER,flux ratio unite/GELATO [NII],16,0.64,0.798,0.98,1.202,1.31,0.9824999999999999,0.1886619551826317
+LINER,flux ratio unite/GELATO [SII],10,0.62,0.772,0.86,0.9212,1.04,0.85,0.11195237082497778
+LINER,flux ratio unite/GELATO [OI],7,0.84,0.8976000000000001,0.96,0.9756,1.11,0.9514285714285714,0.08335237877600767
+LINER,"detection [OIII], GELATO only [objects]",20,,,4.0,,,,
+LINER,"detection [OIII], unite only [objects]",20,,,2.0,,,,
+LINER,"detection [OIII], both [objects]",20,,,11.0,,,,
+LINER,"detection [OIII], neither [objects]",20,,,3.0,,,,
+LINER,"detection Hβ, GELATO only [objects]",20,,,4.0,,,,
+LINER,"detection Hβ, unite only [objects]",20,,,0.0,,,,
+LINER,"detection Hβ, both [objects]",20,,,7.0,,,,
+LINER,"detection Hβ, neither [objects]",20,,,9.0,,,,
+LINER,"detection Hα, GELATO only [objects]",16,,,2.0,,,,
+LINER,"detection Hα, unite only [objects]",16,,,1.0,,,,
+LINER,"detection Hα, both [objects]",16,,,10.0,,,,
+LINER,"detection Hα, neither [objects]",16,,,3.0,,,,
+LINER,"detection [NII], GELATO only [objects]",16,,,0.0,,,,
+LINER,"detection [NII], unite only [objects]",16,,,0.0,,,,
+LINER,"detection [NII], both [objects]",16,,,16.0,,,,
+LINER,"detection [NII], neither [objects]",16,,,0.0,,,,
+LINER,"detection [SII], GELATO only [objects]",16,,,4.0,,,,
+LINER,"detection [SII], unite only [objects]",16,,,0.0,,,,
+LINER,"detection [SII], both [objects]",16,,,10.0,,,,
+LINER,"detection [SII], neither [objects]",16,,,2.0,,,,
+LINER,"detection [OI], GELATO only [objects]",17,,,3.0,,,,
+LINER,"detection [OI], unite only [objects]",17,,,0.0,,,,
+LINER,"detection [OI], both [objects]",17,,,7.0,,,,
+LINER,"detection [OI], neither [objects]",17,,,7.0,,,,
+LINER,unite - GELATO log_nii_ha [dex],6,-0.35,-0.18999999999999997,-0.085,-0.04199999999999998,0.03,-0.11666666666666665,0.12863384728238003
+LINER,unite - GELATO log_sii_ha [dex],6,-0.2,-0.192,-0.145,-0.11400000000000003,-0.04999999999999999,-0.14333333333333334,0.053541261347363374
+LINER,unite - GELATO log_oi_ha [dex],5,-0.19999999999999996,-0.17439999999999994,-0.13,-0.07279999999999992,-0.06000000000000005,-0.12599999999999995,0.0572712842531054
+LINER,unite - GELATO log_oiii_hb [dex],5,-0.43,-0.4108,-0.17000000000000004,-0.10559999999999999,-0.07999999999999996,-0.24000000000000005,0.16324827717314508
+LINER,[NII] BPT class agreement fraction,5,,,0.4,,,,
+SEYFERT_LINER,flux ratio unite/GELATO [OIII],18,0.75,0.9972,1.1400000000000001,1.2835999999999999,2.39,1.1877777777777778,0.3510916681966751
+SEYFERT_LINER,flux ratio unite/GELATO Hβ,19,1.03,1.1552,1.47,1.7308,2.63,1.4773684210526317,0.3781951598677175
+SEYFERT_LINER,flux ratio unite/GELATO Hα,19,1.0,1.0188,1.07,1.336,1.85,1.1673684210526316,0.22085294517350876
+SEYFERT_LINER,flux ratio unite/GELATO [NII],19,0.77,0.9663999999999999,1.19,1.6824,2.33,1.2857894736842106,0.39759437439393885
+SEYFERT_LINER,flux ratio unite/GELATO [SII],15,0.58,0.7412,0.93,1.1827999999999999,1.25,0.9506666666666665,0.2084454936176933
+SEYFERT_LINER,flux ratio unite/GELATO [OI],3,0.47,0.5276,0.65,0.9831999999999999,1.14,0.7533333333333333,0.34674678561355593
+SEYFERT_LINER,"detection [OIII], GELATO only [objects]",20,,,1.0,,,,
+SEYFERT_LINER,"detection [OIII], unite only [objects]",20,,,3.0,,,,
+SEYFERT_LINER,"detection [OIII], both [objects]",20,,,16.0,,,,
+SEYFERT_LINER,"detection [OIII], neither [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection Hβ, GELATO only [objects]",20,,,1.0,,,,
+SEYFERT_LINER,"detection Hβ, unite only [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection Hβ, both [objects]",20,,,19.0,,,,
+SEYFERT_LINER,"detection Hβ, neither [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection Hα, GELATO only [objects]",20,,,1.0,,,,
+SEYFERT_LINER,"detection Hα, unite only [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection Hα, both [objects]",20,,,19.0,,,,
+SEYFERT_LINER,"detection Hα, neither [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection [NII], GELATO only [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection [NII], unite only [objects]",20,,,3.0,,,,
+SEYFERT_LINER,"detection [NII], both [objects]",20,,,17.0,,,,
+SEYFERT_LINER,"detection [NII], neither [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection [SII], GELATO only [objects]",19,,,1.0,,,,
+SEYFERT_LINER,"detection [SII], unite only [objects]",19,,,2.0,,,,
+SEYFERT_LINER,"detection [SII], both [objects]",19,,,13.0,,,,
+SEYFERT_LINER,"detection [SII], neither [objects]",19,,,3.0,,,,
+SEYFERT_LINER,"detection [OI], GELATO only [objects]",20,,,2.0,,,,
+SEYFERT_LINER,"detection [OI], unite only [objects]",20,,,0.0,,,,
+SEYFERT_LINER,"detection [OI], both [objects]",20,,,3.0,,,,
+SEYFERT_LINER,"detection [OI], neither [objects]",20,,,15.0,,,,
+SEYFERT_LINER,unite - GELATO log_nii_ha [dex],16,-0.11000000000000004,-0.06799999999999991,0.010000000000000009,0.06600000000000006,0.16999999999999993,0.01062500000000001,0.0802054653166894
+SEYFERT_LINER,unite - GELATO log_sii_ha [dex],13,-0.31,-0.10800000000000004,-0.020000000000000018,0.040799999999999934,0.05999999999999994,-0.04923076923076925,0.1086632058596299
+SEYFERT_LINER,unite - GELATO log_oi_ha [dex],3,-0.3699999999999999,-0.3059999999999999,-0.16999999999999993,-0.02719999999999996,0.040000000000000036,-0.1666666666666666,0.20502032419575705
+SEYFERT_LINER,unite - GELATO log_oiii_hb [dex],18,-0.32,-0.19799999999999998,-0.060000000000000005,-0.021599999999999998,0.04999999999999993,-0.10111111111111111,0.11012767397508855
+SEYFERT_LINER,[NII] BPT class agreement fraction,16,,,0.9375,,,,

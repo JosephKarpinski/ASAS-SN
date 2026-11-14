@@ -1,0 +1,20 @@
+GELATO vs unite for spec-1734-53034-0402
+  (line fluxes in 1e-17 erg/s/cm^2: median [16-84%]; GELATO = bootstraps, unite = posterior draws)
+
+  line                         GELATO                      unite  unite/GELATO
+  [OIII]     5153.72 [5122.27-5177.45]   5258.90 [5227.79-5286.64]          1.02
+  Hbeta      1179.70 [1168.33-1190.53]   1229.23 [1217.76-1243.26]          1.04
+  Halpha     4302.51 [4269.01-4329.88]   4218.70 [4145.39-4285.53]          0.98
+  [NII]        114.06 [111.38-115.47]     111.95 [106.94-117.84]          0.98
+  [SII]        412.70 [408.41-417.08]     403.73 [394.67-412.87]          0.98
+  [OI]            38.59 [36.83-40.40]        39.88 [37.10-42.69]          1.03
+
+  BPT ratios (log10, median [16-84%])
+  log [NII]/Halpha   GELATO   -1.58 [-1.59, -1.57]   unite   -1.57 [-1.60, -1.55]
+  log [SII]/Halpha   GELATO   -1.02 [-1.02, -1.01]   unite   -1.02 [-1.03, -1.01]
+  log [OI]/Halpha    GELATO   -2.05 [-2.07, -2.03]   unite   -2.02 [-2.06, -1.99]
+  log [OIII]/Hbeta   GELATO   +0.64 [+0.64, +0.64]   unite   +0.63 [+0.63, +0.64]
+
+  [NII] BPT class: GELATO star-forming, unite star-forming  (agree)
+
+  Note: the two codes model the continuum differently (GELATO: SSP + power law; unite: local lines + optional Balmer absorption), so Hbeta -- and hence [OIII]/Hbeta and the Balmer decrement -- is where differences are expected.

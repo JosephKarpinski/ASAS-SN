@@ -1,0 +1,54 @@
+Analysis of spec-0601-52316-0366 (z = 0.1204):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): [OIII] (5), Halpha (6), [NII] (21), [SII] (13), [OI] (5)
+  Not detected / not fitted: Hbeta
+  Tallest line feature in the fit: 4177 A observed (3728 A rest, i.e. [OII] 3727).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII]/Halpha = 1.54 [1.31-1.78],  [OIII]/Hbeta = 1.95 [0.86-5.95]
+  [NII] BPT: beyond the Kewley+01 maximum-starburst line -> AGN.
+    Posterior draws: composite 3%, AGN 97%  (400/400 usable)
+    Caution: Hbeta not securely detected, so this ratio is poorly constrained (posterior draws with flux > 0 only).
+  [SII]/Halpha = 1.143: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+  [OI]/Halpha = 0.268: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as AGN (LINER). Tentative: Hbeta only weakly detected.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: [NII]/Halpha = 1.541, [OIII]/Hbeta = 1.948 -> above the Kewley+01 line: AGN, +0.33 dex from Kewley+01; posterior draws: composite 3%, AGN 97%.
+      Role: the classic BPT diagram: separates star formation from AGN with a composite zone in between, but nitrogen enrichment shifts star-forming galaxies to the right.
+      Caution: rests on weakly detected Hbeta.
+  [SII]/Halpha panel: [SII]/Halpha = 1.143, [OIII]/Hbeta = 1.948 -> above Kewley+01 and below Kewley+06: LINER-like, +0.39 dex from Kewley+01, -0.27 dex from Kewley+06; 100% of posterior draws on the AGN side.
+      Role: insensitive to metallicity: separates star formation from AGN and, with the Kewley+06 line, Seyferts (above) from LINERs (below).
+      Caution: rests on weakly detected Hbeta.
+  [OI]/Halpha panel: [OI]/Halpha = 0.268, [OIII]/Hbeta = 1.948 -> above Kewley+01 and below Kewley+06: LINER-like, +0.64 dex from Kewley+01, -0.22 dex from Kewley+06; 100% of posterior draws on the AGN side.
+      Role: traces partly ionized gas that hard AGN light or shocks produce but H II regions do not, so it is the most sensitive AGN / LINER test, though [OI] is the weakest of the lines.
+      Caution: rests on weakly detected Hbeta.
+
+  Reading the panels together:
+    The panels agree on AGN-type ionization, low-ionization, LINER-like: this can be a weak AGN, shocks, or ionization by evolved stars, which the diagrams cannot tell apart.
+    Weakly detected: Hbeta; panels that depend on them deserve less weight.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 1.22 A [0.78-1.88], tau = 0.17
+  Hbeta absorption: EW = 1.36 A [0.88-2.10], tau = 0.17
+  Halpha absorption: EW = 1.13 A [0.72-1.76], tau = 0.10
+  Narrow-line FWHM (instrument-corrected) = 413 km/s [395-434]
+  Velocity offset of the emission lines from the SDSS redshift = -8 km/s [-18 to +1]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.27 (good).
+Portsmouth (Thomas+13) class: LINER -> consistent with this fit.
+
+Fit diagnostics
+  chi2_nu = 1.00  (933 pixels, 26 free parameters);  WAIC = -2267.0  (effective parameters 24.4)
+  continuum-scaling chi2_nu per window: 1.29, 1.33, 2.42, 1.24, 0.98, 0.97  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -2267.0, without = -2264.8; dWAIC (without - with) = +2.2  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 1.00, without = 1.01
+  Hbeta       flux with =     12.90, without =      1.28  (-90% when absorption is removed)
+  Halpha      flux with =     82.36, without =     57.53  (-30% when absorption is removed)
+  [OIII]5008  flux with =     26.46, without =     26.35  (-0% when absorption is removed)
+  log([OIII]/Hbeta): with = 0.31, without = 1.31

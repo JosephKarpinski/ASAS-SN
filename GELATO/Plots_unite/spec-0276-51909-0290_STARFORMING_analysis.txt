@@ -1,0 +1,49 @@
+Analysis of spec-0276-51909-0290 (z = 0.0261):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): [OIII] (9), Hbeta (9), Halpha (35), [NII] (25), [SII] (27), [OI] (3)
+  Tallest line feature in the fit: 6736 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+  Balmer decrement Halpha/Hbeta = 4.43 (Case B: 2.86) -> E(B-V) ~ 0.37 (Calzetti)
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII]/Halpha = 0.29 [0.28-0.31],  [OIII]/Hbeta = 0.55 [0.48-0.65]
+  [NII] BPT: left of / below the Kauffmann+03 line -> star-forming.
+    -0.52 dex from the Kauffmann+03 line in log [OIII]/Hbeta (negative = below the line).
+    Posterior draws: star-forming 100%  (400/400 usable)
+  [SII]/Halpha = 0.464: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.029: star-forming side of the Kewley+01 line.
+
+Overall: the line ratios classify this object as star-forming.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: [NII]/Halpha = 0.292, [OIII]/Hbeta = 0.549 -> below the Kauffmann+03 line: star-forming, -0.55 dex from Kewley+01; posterior draws: star-forming 100%.
+      Role: the classic BPT diagram: separates star formation from AGN with a composite zone in between, but nitrogen enrichment shifts star-forming galaxies to the right.
+  [SII]/Halpha panel: [SII]/Halpha = 0.464, [OIII]/Hbeta = 0.549 -> below the Kewley+01 line: star-forming, -0.18 dex from Kewley+01; 0% of posterior draws on the AGN side.
+      Role: insensitive to metallicity: separates star formation from AGN and, with the Kewley+06 line, Seyferts (above) from LINERs (below).
+  [OI]/Halpha panel: [OI]/Halpha = 0.029, [OIII]/Hbeta = 0.549 -> below the Kewley+01 line: star-forming, -0.47 dex from Kewley+01; 0% of posterior draws on the AGN side.
+      Role: traces partly ionized gas that hard AGN light or shocks produce but H II regions do not, so it is the most sensitive AGN / LINER test, though [OI] is the weakest of the lines.
+
+  Reading the panels together:
+    All 3 available panel(s) agree: star-forming. Ionization by young stars is the simplest reading, with no sign of a hard AGN field in the line ratios.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 2.64 A [2.28-2.98], tau = 0.40
+  Hbeta absorption: EW = 2.95 A [2.55-3.33], tau = 0.40
+  Halpha absorption: EW = 2.53 A [2.14-2.86], tau = 0.24
+  Narrow-line FWHM (instrument-corrected) = 93 km/s [85-100]
+  Velocity offset of the emission lines from the SDSS redshift = +5 km/s [+3 to +6]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.22 (good).
+
+Fit diagnostics
+  chi2_nu = 0.99  (821 pixels, 23 free parameters);  WAIC = -1693.0  (effective parameters 19.8)
+  continuum-scaling chi2_nu per window: 1.45, 1.40, 1.43, 0.81, 1.13  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -1693.0, without = -1644.0; dWAIC (without - with) = +49.0  -> absorption clearly preferred
+  chi2_nu with = 0.99, without = 1.05
+  Hbeta       flux with =     35.38, without =     22.37  (-37% when absorption is removed)
+  Halpha      flux with =    156.61, without =    140.06  (-11% when absorption is removed)
+  [OIII]5008  flux with =     19.41, without =     19.26  (-1% when absorption is removed)
+  log([OIII]/Hbeta): with = -0.26, without = -0.06

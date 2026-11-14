@@ -1,0 +1,18 @@
+=== Galaxy 1874727: plate 275, MJD 51910, fiber 174, RA 161.82630, Dec 0.12181 ===
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra      dec
+   275 51910      174 1.276381 161.82628 0.121809
+
+z = 1.2764   RA = 161.82628   Dec = 0.12181
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=161.826280&dec=0.121809&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=161.826280&dec=0.121809&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=161.826280&dec=0.121809&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=161.826280&dec=0.121809&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=161.826280+0.121809&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+
+Fitting with unite (optimise, then NUTS) ...
+Galaxy 1874727 failed: ValueError: Could not estimate line flux scale: no emission line peak was found above the continuum in any spectrum. This can happen if (a) the configured lines fall outside the spectral coverage, (b) the continuum model over-subtracts the flux, or (c) the lines are too faint relative to noise. Check that line_config wavelengths match the observed data, or set spectra.line_scale manually.

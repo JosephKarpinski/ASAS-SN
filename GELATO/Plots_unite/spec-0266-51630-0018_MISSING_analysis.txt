@@ -1,0 +1,55 @@
+Analysis of spec-0266-51630-0018 (z = 0.0843):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): Hbeta (5), Halpha (12), [NII] (6)
+  Not detected / not fitted: [OIII], [SII], [OI]
+  Tallest line feature in the fit: 7119 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+  Balmer decrement Halpha/Hbeta = 2.95 (Case B: 2.86) -> E(B-V) ~ 0.03 (Calzetti)
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII]/Halpha = 0.30 [0.25-0.34],  [OIII]/Hbeta = 0.16 [0.06-0.28]
+  [NII] BPT: left of / below the Kauffmann+03 line -> star-forming.
+    -1.04 dex from the Kauffmann+03 line in log [OIII]/Hbeta (negative = below the line).
+    Posterior draws: star-forming 100%  (400/400 usable)
+    Caution: [OIII] not securely detected, so this ratio is poorly constrained (posterior draws with flux > 0 only).
+  [SII]/Halpha = 0.209: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.104: star-forming side of the Kewley+01 line.
+
+Overall: the line ratios classify this object as star-forming. Tentative: [OIII] only weakly detected.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: [NII]/Halpha = 0.300, [OIII]/Hbeta = 0.157 -> below the Kauffmann+03 line: star-forming, -0.68 dex from Kewley+01; posterior draws: star-forming 100%.
+      Role: the classic BPT diagram: separates star formation from AGN with a composite zone in between, but nitrogen enrichment shifts star-forming galaxies to the right.
+      Caution: rests on weakly detected [OIII].
+  [SII]/Halpha panel: [SII]/Halpha = 0.209, [OIII]/Hbeta = 0.157 -> below the Kewley+01 line: star-forming, -0.65 dex from Kewley+01; 0% of posterior draws on the AGN side.
+      Role: insensitive to metallicity: separates star formation from AGN and, with the Kewley+06 line, Seyferts (above) from LINERs (below).
+      Caution: rests on weakly detected [OIII], [SII].
+  [OI]/Halpha panel: [OI]/Halpha = 0.104, [OIII]/Hbeta = 0.157 -> below the Kewley+01 line: star-forming, -0.05 dex from Kewley+01; 43% of posterior draws on the AGN side.
+      Role: traces partly ionized gas that hard AGN light or shocks produce but H II regions do not, so it is the most sensitive AGN / LINER test, though [OI] is the weakest of the lines.
+      Caution: rests on weakly detected [OIII], [OI].
+
+  Reading the panels together:
+    All 3 available panel(s) agree: star-forming. Ionization by young stars is the simplest reading, with no sign of a hard AGN field in the line ratios.
+    Weakly detected: [OIII], [OI], [SII]; panels that depend on them deserve less weight.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 2.64 A [2.00-3.26], tau = 0.42
+  Hbeta absorption: EW = 2.96 A [2.23-3.65], tau = 0.42
+  Halpha absorption: EW = 2.54 A [1.89-3.13], tau = 0.25
+  Narrow-line FWHM (instrument-corrected) = 132 km/s [108-156]
+  Velocity offset of the emission lines from the SDSS redshift = -2 km/s [-11 to +6]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.07 (good).
+
+Fit diagnostics
+  chi2_nu = 1.03  (915 pixels, 26 free parameters);  WAIC = 46.3  (effective parameters 21.9)
+  continuum-scaling chi2_nu per window: 0.92, 1.12, 0.83, 1.02, 1.28, 1.24  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = 46.3, without = 56.0; dWAIC (without - with) = +9.7  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 1.03, without = 1.04
+  Hbeta       flux with =     11.04, without =      5.98  (-46% when absorption is removed)
+  Halpha      flux with =     32.60, without =     26.91  (-17% when absorption is removed)
+  [OIII]5008  flux with =      1.68, without =      1.66  (-1% when absorption is removed)
+  log([OIII]/Hbeta): with = -0.82, without = -0.56

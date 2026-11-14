@@ -1,0 +1,36 @@
+Analysis of spec-0351-51695-0318 (z = 1.1717):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): none
+  Not detected / not fitted: [OIII], Hbeta, Halpha, [NII], [SII], [OI]  (no column at all: [OIII], Hbeta, Halpha, [NII], [SII], [OI])
+  Tallest line feature in the fit: 8406 A observed (3871 A rest, i.e. [NeIII] 3869).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing [OIII], Hbeta, Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines.
+  Narrow-line FWHM (instrument-corrected) = 663 km/s [297-917]
+  Velocity offset of the emission lines from the SDSS redshift = -76 km/s [-519 to +587]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.68 (acceptable).
+
+Fit diagnostics
+  chi2_nu = 0.97  (191 pixels, 8 free parameters);  WAIC = 42.0  (effective parameters 4.1)
+  continuum-scaling chi2_nu per window: 1.56, 2.15  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = 42.0, without = 42.0; dWAIC (without - with) = +0.0  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 0.97, without = 0.97

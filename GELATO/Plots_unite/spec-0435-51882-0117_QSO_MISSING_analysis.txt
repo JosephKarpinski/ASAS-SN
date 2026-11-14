@@ -1,0 +1,40 @@
+Analysis of spec-0435-51882-0117 (z = 1.0354):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): none
+  Not detected / not fitted: [OIII], Hbeta, Halpha, [NII], [SII], [OI]  (no column at all: [OIII], Hbeta, Halpha, [NII], [SII], [OI])
+  Tallest line feature in the fit: 7596 A observed (3732 A rest, i.e. [OII] 3727).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing [OIII], Hbeta, Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 2.63 A [0.92-4.40], tau = 0.38
+  Narrow-line FWHM (instrument-corrected) = 648 km/s [384-887]
+  Velocity offset of the emission lines from the SDSS redshift = +542 km/s [-241 to +802]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.24 (good).
+
+CAUTION - lines on sky/telluric regions (kept in the fit - treat with care):
+  OII_3728 at 7589 A observed: telluric O2 A-band
+
+Fit diagnostics
+  chi2_nu = 1.07  (249 pixels, 13 free parameters);  WAIC = 400.0  (effective parameters 9.5)
+  continuum-scaling chi2_nu per window: 1.08, 1.11, 1.54  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = 400.0, without = 399.5; dWAIC (without - with) = -0.5  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 1.07, without = 1.06

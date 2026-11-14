@@ -1,0 +1,42 @@
+Analysis of spec-0286-51999-0382 (z = 0.1333):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): Halpha (10), [NII] (12)
+  Not detected / not fitted: [OIII], Hbeta, [SII], [OI]  (no column at all: [OIII], Hbeta)
+  Tallest line feature in the fit: 7440 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing [OIII], Hbeta).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Halpha absorption: EW = 1.98 A [0.77-3.19], tau = 0.15
+  Narrow-line FWHM (instrument-corrected) = 303 km/s [285-326]
+  Velocity offset of the emission lines from the SDSS redshift = +11 km/s [+3 to +19]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.05 (good).
+
+CAUTION - lines on sky/telluric regions (kept in the fit - treat with care):
+  SII_6718 at 7614 A observed: telluric O2 A-band
+  SII_6733 at 7630 A observed: telluric O2 A-band
+
+Fit diagnostics
+  chi2_nu = 1.09  (339 pixels, 13 free parameters);  WAIC = -684.9  (effective parameters 10.9)
+  continuum-scaling chi2_nu per window: 0.93, 1.04  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -684.9, without = -685.2; dWAIC (without - with) = -0.3  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 1.09, without = 1.08
+  Halpha      flux with =    124.22, without =    105.34  (-15% when absorption is removed)

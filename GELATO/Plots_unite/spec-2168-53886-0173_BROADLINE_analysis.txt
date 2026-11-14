@@ -1,0 +1,44 @@
+Analysis of spec-2168-53886-0173 (z = 0.1527):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): none
+  Not detected / not fitted: [OIII], Hbeta, Halpha, [NII], [SII], [OI]  (no column at all: Halpha, [NII], [SII], [OI])
+  Tallest line feature in the fit: 5004 A observed (4341 A rest, i.e. Hgamma).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 2.99 A [2.01-4.76], tau = 0.34
+  Hbeta absorption: EW = 3.35 A [2.24-5.33], tau = 0.34
+  Narrow-line FWHM (instrument-corrected) = 803 km/s [584-941]
+  Velocity offset of the emission lines from the SDSS redshift = -78 km/s [-186 to +38]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.40 (acceptable).
+
+CAUTION - lines on sky/telluric regions (kept in the fit - treat with care):
+  NII_6585 at 7591 A observed: telluric O2 A-band
+
+Fit diagnostics
+  chi2_nu = 1.05  (584 pixels, 17 free parameters);  WAIC = -629.0  (effective parameters 12.2)
+  continuum-scaling chi2_nu per window: 1.14, 0.96, 2.27, 1.33  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -629.0, without = -606.0; dWAIC (without - with) = +23.0  -> absorption clearly preferred
+  chi2_nu with = 1.05, without = 1.09
+  Hbeta       flux with =     21.22, without =      1.46  (-93% when absorption is removed)
+  [OIII]5008  flux with =      3.37, without =      4.81  (+43% when absorption is removed)
+  log([OIII]/Hbeta): with = -0.80, without = 0.52

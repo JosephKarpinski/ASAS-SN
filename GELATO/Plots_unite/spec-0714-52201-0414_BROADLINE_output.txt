@@ -1,0 +1,100 @@
+=== Galaxy 351142: plate 714, MJD 52201, fiber 414, RA 54.94752, Dec 1.12729 ===
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra      dec
+   714 52201      414 0.413279 54.947519 1.127292
+
+z = 0.4133   RA = 54.94752   Dec = 1.12729
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=54.947519&dec=1.127292&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=54.947519&dec=1.127292&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=54.947519&dec=1.127292&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=54.947519&dec=1.127292&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=54.947519+1.127292&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+
+Fitting with unite (optimise, then NUTS) ...
+  lines fitted: OII_3728, NeIII_3870, Hgamma, Hbeta, OIII_4960, OIII_5008, OI_6302
+  time 17 s (model set-up 2 s); MAP loss 136.0 -> -111.4; 400 draws, 8 gradient steps per draw, 0 divergences
+  effective sample size: min 26 (flux_Hbeta), median 581
+  caution: effective sample size of flux_Hbeta is only 26 (or there are divergences): the error bars on it are rough; raise N_SAMPLES / MAX_TREE_DEPTH for a firmer estimate.
+
+Fit diagnostics
+  chi2_nu = 0.98  (656 pixels, 20 free parameters);  WAIC = -253.1  (effective parameters 18.3)
+  continuum-scaling chi2_nu per window: 1.53, 0.93, 0.88, 1.04, 1.00  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -253.1, without = -250.8; dWAIC (without - with) = +2.4  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 0.98, without = 0.98
+  Hbeta       flux with =     42.05, without =     29.45  (-30% when absorption is removed)
+  [OIII]5008  flux with =     44.92, without =     44.76  (-0% when absorption is removed)
+  log([OIII]/Hbeta): with = 0.03, without = 0.18
+
+  plot_bpt skipped for spec-0714-52201-0414: ValueError: no flux column in the unite output for [NII], Halpha (z = 0.4133: Halpha would be at 9278 A, [NII] at 9307 A)
+  plot_bpt_panels skipped for spec-0714-52201-0414: ValueError: none of the three panels could be drawn: Halpha: no flux column for Halpha; [NII]: no flux column for [NII]; [SII]: no flux column for [SII]
+
+Analysis of spec-0714-52201-0414 (z = 0.4133):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): [OIII] (19), Hbeta (5), [OI] (4)
+  Not detected / not fitted: Halpha, [NII], [SII]  (no column at all: Halpha, [NII], [SII])
+  Tallest line feature in the fit: 5269 A observed (3728 A rest, i.e. [OII] 3727).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 3.58 A [0.64-5.56], tau = 0.34
+  Hbeta absorption: EW = 3.99 A [0.72-6.19], tau = 0.34
+  Narrow-line FWHM (instrument-corrected) = 701 km/s [674-728]
+  Velocity offset of the emission lines from the SDSS redshift = -33 km/s [-50 to -19]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.00 (good).
+
+Fit diagnostics
+  chi2_nu = 0.98  (656 pixels, 20 free parameters);  WAIC = -253.1  (effective parameters 18.3)
+  continuum-scaling chi2_nu per window: 1.53, 0.93, 0.88, 1.04, 1.00  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -253.1, without = -250.8; dWAIC (without - with) = +2.4  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 0.98, without = 0.98
+  Hbeta       flux with =     42.05, without =     29.45  (-30% when absorption is removed)
+  [OIII]5008  flux with =     44.92, without =     44.76  (-0% when absorption is removed)
+  log([OIII]/Hbeta): with = 0.03, without = 0.18
+
+
+GELATO vs unite for spec-0714-52201-0414
+  (line fluxes in 1e-17 erg/s/cm^2: median [16-84%]; GELATO = bootstraps, unite = posterior draws)
+
+  line                         GELATO                      unite  unite/GELATO
+  [OIII]          48.67 [46.68-50.97]        44.92 [42.45-47.24]          0.92
+  Hbeta           38.49 [35.36-41.13]        42.05 [31.73-49.16]          1.09
+  Halpha                   not fitted                 not fitted             -
+  [NII]                    not fitted                 not fitted             -
+  [SII]                    not fitted                 not fitted             -
+  [OI]            35.46 [29.10-39.95]        37.73 [29.22-46.39]          1.06
+
+  BPT ratios (log10, median [16-84%])
+  log [NII]/Halpha   GELATO                    n/a   unite                    n/a
+  log [SII]/Halpha   GELATO                    n/a   unite                    n/a
+  log [OI]/Halpha    GELATO                    n/a   unite                    n/a
+  log [OIII]/Hbeta   GELATO   +0.10 [+0.07, +0.14]   unite   +0.03 [-0.05, +0.15]
+
+  [NII] BPT class: GELATO n/a, unite n/a  (agree)
+
+  Note: the two codes model the continuum differently (GELATO: SSP + power law; unite: local lines + optional Balmer absorption), so Hbeta -- and hence [OIII]/Hbeta and the Balmer decrement -- is where differences are expected.
+

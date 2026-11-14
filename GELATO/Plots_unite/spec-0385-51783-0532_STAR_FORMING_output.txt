@@ -1,0 +1,132 @@
+=== Galaxy 92: plate 385, MJD 51783, fiber 532, RA 356.00720, Dec 0.94586 ===
+Portsmouth emission-line record:  class: Star Forming,  bpt: Star Forming,  z: 0.049575876,  redshift: 0.04984369,  error_warning: 0
+  line                flux       aon
+  hb_4861            132.5     12.23
+  oiii_5006          118.1     10.67
+  oi_6300            21.31      2.37
+  ha_6562            420.8     36.64
+  nii_6583             106      8.72
+  sii_6716           101.4      8.96
+  sii_6730            66.2      6.16
+
+SDSS query match:
+
+ plate   mjd  fiberID        z        ra      dec
+   385 51783      532 0.049576 356.00718 0.945859
+
+z = 0.0496   RA = 356.00718   Dec = 0.94586
+
+SDSS DR17: https://skyserver.sdss.org/dr17/VisualTools/navi?ra=356.007180&dec=0.945859&scale=0.2
+Legacy Survey DESI: https://www.legacysurvey.org/viewer/jpeg-cutout?ra=356.007180&dec=0.945859&size=5120&layer=ls-dr10&pixscale=0.512
+Legacy Survey DESI DR1: https://www.legacysurvey.org/viewer/desi-dr1/?ra=356.007180&dec=0.945859&zoom=15
+Legacy Survey DESI DR2: https://www.legacysurvey.org/viewer/desi-dr2/?ra=356.007180&dec=0.945859&zoom=15
+Simbad: http://simbad.cds.unistra.fr/simbad/sim-coo?Coord=356.007180+0.945859&CooFrame=FK5&CooEpoch=2000&CooEqui=2000&CooDefinedFrames=none&Radius=2&Radius.unit=arcmin&submit=submit+query
+
+Making GELATO for spec-0385-51783-0532.fits
+Gathering ingredients: spec-0385-51783-0532.fits
+Ingredients gathered: spec-0385-51783-0532.fits
+Making the base: spec-0385-51783-0532.fits
+Base created: spec-0385-51783-0532.fits
+Adding flavor: spec-0385-51783-0532.fits
+Flavor added: spec-0385-51783-0532.fits
+Scooping portions (this may take a while): spec-0385-51783-0532.fits
+Portions scooped: spec-0385-51783-0532.fits
+Presenting GELATO: spec-0385-51783-0532.fits
+GELATO presented: spec-0385-51783-0532.fits
+Measuring texture: spec-0385-51783-0532.fits
+Measured texture: spec-0385-51783-0532.fits
+Freezing results: spec-0385-51783-0532.fits
+Results freezed: spec-0385-51783-0532.fits
+GELATO finished for spec-0385-51783-0532.fits
+
+Fitting with unite (optimise, then NUTS) ...
+  lines fitted: OII_3728, NeIII_3870, Hgamma, Hbeta, OIII_4960, OIII_5008, OI_6302, NII_6550, NII_6585, Halpha, SII_6718, SII_6733
+  time 14 s (model set-up 1 s); MAP loss 1239.4 -> -696.2; 400 draws, 13 gradient steps per draw, 0 divergences
+  effective sample size: min 207 (flux_Hbeta), median 621
+
+Fit diagnostics
+  chi2_nu = 1.11  (936 pixels, 26 free parameters);  WAIC = -1430.8  (effective parameters 34.9)
+  continuum-scaling chi2_nu per window: 1.22, 1.69, 0.89, 1.07, 0.65, 1.00  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -1430.8, without = -1336.9; dWAIC (without - with) = +93.8  -> absorption clearly preferred
+  chi2_nu with = 1.11, without = 1.21
+  Hbeta       flux with =     64.56, without =     46.51  (-28% when absorption is removed)
+  Halpha      flux with =    266.03, without =    247.99  (-7% when absorption is removed)
+  [OIII]5008  flux with =     59.99, without =     59.01  (-2% when absorption is removed)
+  log([OIII]/Hbeta): with = -0.03, without = 0.10
+
+
+Analysis of spec-0385-51783-0532 (z = 0.0496):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): [OIII] (22), Hbeta (17), Halpha (58), [NII] (31), [SII] (35), [OI] (9)
+  Tallest line feature in the fit: 3913 A observed (3728 A rest, i.e. [OII] 3727).
+  Balmer decrement Halpha/Hbeta = 4.12 (Case B: 2.86) -> E(B-V) ~ 0.31 (Calzetti)
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII]/Halpha = 0.25 [0.24-0.26],  [OIII]/Hbeta = 0.94 [0.86-1.00]
+  [NII] BPT: left of / below the Kauffmann+03 line -> star-forming.
+    -0.39 dex from the Kauffmann+03 line in log [OIII]/Hbeta (negative = below the line).
+    Posterior draws: star-forming 100%  (400/400 usable)
+  [SII]/Halpha = 0.413: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.054: star-forming side of the Kewley+01 line.
+
+Overall: the line ratios classify this object as star-forming.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: [NII]/Halpha = 0.251, [OIII]/Hbeta = 0.935 -> below the Kauffmann+03 line: star-forming, -0.51 dex from Kewley+01; posterior draws: star-forming 100%.
+      Role: the classic BPT diagram: separates star formation from AGN with a composite zone in between, but nitrogen enrichment shifts star-forming galaxies to the right.
+  [SII]/Halpha panel: [SII]/Halpha = 0.413, [OIII]/Hbeta = 0.935 -> below the Kewley+01 line: star-forming, -0.15 dex from Kewley+01; 0% of posterior draws on the AGN side.
+      Role: insensitive to metallicity: separates star formation from AGN and, with the Kewley+06 line, Seyferts (above) from LINERs (below).
+  [OI]/Halpha panel: [OI]/Halpha = 0.054, [OIII]/Hbeta = 0.935 -> below the Kewley+01 line: star-forming, -0.13 dex from Kewley+01; 0% of posterior draws on the AGN side.
+      Role: traces partly ionized gas that hard AGN light or shocks produce but H II regions do not, so it is the most sensitive AGN / LINER test, though [OI] is the weakest of the lines.
+
+  Reading the panels together:
+    All 3 available panel(s) agree: star-forming. Ionization by young stars is the simplest reading, with no sign of a hard AGN field in the line ratios.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 4.00 A [3.67-4.37], tau = 0.42
+  Hbeta absorption: EW = 4.47 A [4.11-4.89], tau = 0.42
+  Halpha absorption: EW = 3.83 A [3.50-4.19], tau = 0.25
+  Narrow-line FWHM (instrument-corrected) = 166 km/s [162-169]
+  Velocity offset of the emission lines from the SDSS redshift = -4 km/s [-6 to -3]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.17 (good).
+Portsmouth (Thomas+13) class: Star Forming -> consistent with this fit.
+
+Fit diagnostics
+  chi2_nu = 1.11  (936 pixels, 26 free parameters);  WAIC = -1430.8  (effective parameters 34.9)
+  continuum-scaling chi2_nu per window: 1.22, 1.69, 0.89, 1.07, 0.65, 1.00  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -1430.8, without = -1336.9; dWAIC (without - with) = +93.8  -> absorption clearly preferred
+  chi2_nu with = 1.11, without = 1.21
+  Hbeta       flux with =     64.56, without =     46.51  (-28% when absorption is removed)
+  Halpha      flux with =    266.03, without =    247.99  (-7% when absorption is removed)
+  [OIII]5008  flux with =     59.99, without =     59.01  (-2% when absorption is removed)
+  log([OIII]/Hbeta): with = -0.03, without = 0.10
+
+
+GELATO vs unite for spec-0385-51783-0532
+  (line fluxes in 1e-17 erg/s/cm^2: median [16-84%]; GELATO = bootstraps, unite = posterior draws)
+
+  line                         GELATO                      unite  unite/GELATO
+  [OIII]          61.71 [58.68-63.78]        59.99 [57.17-62.95]          0.97
+  Hbeta           58.73 [56.23-62.09]        64.56 [61.12-68.52]          1.10
+  Halpha       259.47 [256.05-262.16]     266.03 [261.73-270.70]          1.03
+  [NII]           67.49 [64.97-69.77]        66.84 [64.57-68.86]          0.99
+  [SII]        109.29 [105.07-113.09]     110.08 [106.95-112.78]          1.01
+  [OI]            14.39 [12.90-16.35]        14.27 [12.61-15.76]          0.99
+
+  BPT ratios (log10, median [16-84%])
+  log [NII]/Halpha   GELATO   -0.58 [-0.60, -0.57]   unite   -0.60 [-0.62, -0.59]
+  log [SII]/Halpha   GELATO   -0.38 [-0.39, -0.36]   unite   -0.38 [-0.40, -0.37]
+  log [OI]/Halpha    GELATO   -1.25 [-1.30, -1.20]   unite   -1.27 [-1.32, -1.23]
+  log [OIII]/Hbeta   GELATO   +0.02 [-0.01, +0.05]   unite   -0.03 [-0.07, -0.00]
+
+  [NII] BPT class: GELATO star-forming, unite star-forming  (agree)
+
+  Note: the two codes model the continuum differently (GELATO: SSP + power law; unite: local lines + optional Balmer absorption), so Hbeta -- and hence [OIII]/Hbeta and the Balmer decrement -- is where differences are expected.
+

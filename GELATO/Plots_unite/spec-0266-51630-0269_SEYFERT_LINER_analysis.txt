@@ -1,0 +1,37 @@
+Analysis of spec-0266-51630-0269 (z = 0.3662):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): none
+  Not detected / not fitted: [OIII], Hbeta, Halpha, [NII], [SII], [OI]  (no column at all: [OIII], Hbeta, Halpha, [NII], [SII], [OI])
+  Tallest line feature in the fit: 5921 A observed (4334 A rest, i.e. Hgamma).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII] diagram: not available (missing [OIII], Hbeta, Halpha, [NII]).
+  [SII] diagram: not available (line not fitted).
+  [OI] diagram: not available (line not fitted).
+
+Overall: BPT classification not possible from this fit.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: not available (line missing, zero or too weak).
+  [SII]/Halpha panel: not available (line missing, zero or too weak).
+  [OI]/Halpha panel: not available (line missing, zero or too weak).
+
+  Reading the panels together:
+    No panel could be evaluated, so the line ratios say nothing about the ionizing source here.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 1.91 A [0.63-4.06], tau = 0.27
+  Narrow-line FWHM (instrument-corrected) = 879 km/s [736-962]
+  Velocity offset of the emission lines from the SDSS redshift = -812 km/s [-870 to -687]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.15 (good).
+
+Fit diagnostics
+  chi2_nu = 0.98  (340 pixels, 13 free parameters);  WAIC = 220.3  (effective parameters 8.5)
+  continuum-scaling chi2_nu per window: 0.88, 1.18, 1.72  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = 220.3, without = 219.1; dWAIC (without - with) = -1.2  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 0.98, without = 0.97

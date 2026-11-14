@@ -1,0 +1,53 @@
+Analysis of spec-1012-52649-0605 (z = 0.0716):
+
+Emission lines
+  Detected (median flux / posterior scatter >= 3): [OIII] (14), Halpha (8), [NII] (15), [OI] (11)
+  Not detected / not fitted: Hbeta, [SII]
+  Tallest line feature in the fit: 7036 A observed (6565 A rest, i.e. the Halpha + [NII] complex).
+
+BPT / VO87 diagnostics (median of the posterior draws; 16-84% in brackets)
+  [NII]/Halpha = 0.63 [0.55-0.76],  [OIII]/Hbeta = 1.49 [1.00-3.34]
+  [NII] BPT: between the Kauffmann+03 and Kewley+01 lines -> composite.
+    Posterior draws: composite 60%, AGN 40%  (400/400 usable)
+    Caution: Hbeta not securely detected, so this ratio is poorly constrained (posterior draws with flux > 0 only).
+  [SII]/Halpha = 0.13: star-forming side of the Kewley+01 line.
+  [OI]/Halpha = 0.24: AGN side of Kewley+01, below the Kewley+06 line -> LINER-like.
+
+Overall: the line ratios classify this object as composite (star formation + AGN). Tentative: Hbeta only weakly detected.
+
+What the three BPT panels tell us
+  [NII]/Halpha panel: [NII]/Halpha = 0.63, [OIII]/Hbeta = 1.49 -> between Kauffmann+03 and Kewley+01: composite, -0.06 dex from Kewley+01; posterior draws: composite 60%, AGN 40%.
+      Role: the classic BPT diagram: separates star formation from AGN with a composite zone in between, but nitrogen enrichment shifts star-forming galaxies to the right.
+      Caution: rests on weakly detected Hbeta.
+  [SII]/Halpha panel: [SII]/Halpha = 0.13, [OIII]/Hbeta = 1.49 -> below the Kewley+01 line: star-forming, -0.45 dex from Kewley+01; 9% of posterior draws on the AGN side.
+      Role: insensitive to metallicity: separates star formation from AGN and, with the Kewley+06 line, Seyferts (above) from LINERs (below).
+      Caution: rests on weakly detected Hbeta, [SII].
+  [OI]/Halpha panel: [OI]/Halpha = 0.24, [OIII]/Hbeta = 1.49 -> above Kewley+01 and below Kewley+06: LINER-like, +0.55 dex from Kewley+01, -0.26 dex from Kewley+06; 100% of posterior draws on the AGN side.
+      Role: traces partly ionized gas that hard AGN light or shocks produce but H II regions do not, so it is the most sensitive AGN / LINER test, though [OI] is the weakest of the lines.
+      Caution: rests on weakly detected Hbeta.
+
+  Reading the panels together:
+    Composite in [NII] and AGN-side in [OI]: the low-ionization lines support a real non-stellar contribution on top of star formation (shocks are the alternative).
+    Weakly detected: Hbeta, [SII]; panels that depend on them deserve less weight.
+
+Continuum, absorption and kinematics
+  unite has no stellar-population model: the continuum is a straight line under each group of lines, with Balmer absorption lines (optical-depth Gaussians) in front of it.
+  Hgamma absorption: EW = 1.79 A [0.65-2.73], tau = 0.30
+  Hbeta absorption: EW = 2.00 A [0.73-3.05], tau = 0.30
+  Halpha absorption: EW = 1.67 A [0.60-2.60], tau = 0.18
+  Narrow-line FWHM (instrument-corrected) = 527 km/s [501-559]
+  Velocity offset of the emission lines from the SDSS redshift = +13 km/s [+2 to +26]
+
+Fit quality (inside the fitted line windows, at the posterior median): reduced chi^2 = 1.96 (acceptable).
+
+Fit diagnostics
+  chi2_nu = 1.04  (933 pixels, 26 free parameters);  WAIC = -2376.1  (effective parameters 26.1)
+  continuum-scaling chi2_nu per window: 1.10, 1.20, 3.30, 1.47, 0.99, 3.16  (far from 1 = sky residuals / bad errors / lines leaking into the continuum fit)
+
+Balmer-absorption model test (with vs without absorbers)
+  WAIC with = -2376.1, without = -2379.2; dWAIC (without - with) = -3.1  -> models not clearly distinguished: the flux changes below are a systematic
+  chi2_nu with = 1.04, without = 1.04
+  Hbeta       flux with =     48.78, without =      7.60  (-84% when absorption is removed)
+  Halpha      flux with =    179.61, without =    138.77  (-23% when absorption is removed)
+  [OIII]5008  flux with =     72.91, without =     73.85  (+1% when absorption is removed)
+  log([OIII]/Hbeta): with = 0.17, without = 0.99
